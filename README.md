@@ -7,6 +7,11 @@ Install powerline
 
 
 	pip install powerline-status
+	
+Install powerline fonts
+	
+	git clone https://github.com/powerline/fonts.git
+	./install.sh
 
 
 ### Zsh
@@ -34,16 +39,14 @@ Install Vundle
 		mv .vimrc ~/.vim/vimrc
 		ln -s ~/.vim/vimrc ~/.vimrc
 	
-- Make a new Github repository to store your configuration
-	- First add a .gitignore file
-			
-			cd ~/.vim
-			touch .gitignore 
-	
-		Add the following lines to the .gitignore file
-		
-			bundle/
-			.netrwhistmacvim s
+### iTerm
+
+#### Font
+For iTerm2, open the Preferences dialog, select Profiles, select Text, and select Change Font for the Regular Font to set the **Inconsolata 14pt** for Powerline font and save. Do the exact same for the Non-ASCII Font setting as well.
+
+#### Colors
+For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set Report Terminal Type to **xterm-256color**
+
 
 
 
