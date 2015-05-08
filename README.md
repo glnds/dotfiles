@@ -50,6 +50,8 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 
 	ln -s ~/Sources/dotfiles/.zshrc ~/.zshrc
 	ln -s ~/Sources/dotfiles/.tmux.conf ~/.tmux.conf
+	ln -s ~/Sources/dotfiles/.vim/vimrc ~/.vimrc
+	ln -s ~/Sources/dotfiles/.vim/ftplugin ~/.vim/ftplugin
 
 link naar complete dir
 			ln -s ~/.vim/vimrc ~/.vimrc
