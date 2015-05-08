@@ -33,6 +33,11 @@ Install vim
 Install Vundle
 
 	https://github.com/gmarik/Vundle.vim
+
+- Put everything in one directory
+
+		mv .vimrc ~/.vim/vimrc
+		ln -s ~/.vim/vimrc ~/.vimrc
 	
 ### iTerm
 
@@ -47,14 +52,6 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 
 
 ## Config
-
-	ln -s ~/Sources/dotfiles/.zshrc ~/.zshrc
-	ln -s ~/Sources/dotfiles/.tmux.conf ~/.tmux.conf
-
-link naar complete dir
-			ln -s ~/.vim/vimrc ~/.vimrc
-
-
 - Global: ~/.vimrc
 - Language specific: ~/.vim/ftplugin/
 
