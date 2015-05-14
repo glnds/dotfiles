@@ -12,6 +12,8 @@ powerline-daemon -q
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
+DEFAULT_USER="glnd"
+
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to use case-sensitive completion.
