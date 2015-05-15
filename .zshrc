@@ -1,7 +1,10 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/glnd/.oh-my-zsh
+# Pat to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 # Enable powerline
 powerline-daemon -q
@@ -12,7 +15,7 @@ powerline-daemon -q
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
-DEFAULT_USER="glnd"
+DEFAULT_USER=$USER
 
 DISABLE_AUTO_TITLE="true"
 
@@ -54,7 +57,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime brew osx npm github zsh-syntax-highlighting vagrant)
+plugins=(git gitflow github sublime brew osx npm tmux history zsh-syntax-highlighting history-substring-search vagrant aws docker knife pip python sudo virtualenv)
 
 # User configuration
 
