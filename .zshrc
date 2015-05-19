@@ -63,7 +63,7 @@ plugins=(git gitflow github sublime brew osx npm tmux history zsh-syntax-highlig
 # User configuration
 
 # ===== History
-setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
+#setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
 setopt extended_history # save timestamp of command and duration
 setopt inc_append_history # Add comamnds as they are typed, don't wait until shell exit
 setopt hist_expire_dups_first # when trimming history, lose oldest duplicates first
