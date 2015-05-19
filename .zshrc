@@ -2,6 +2,7 @@
 export ZSH=~/.oh-my-zsh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export EDITOR=vim
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
