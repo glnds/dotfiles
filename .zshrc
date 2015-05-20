@@ -9,7 +9,7 @@ bindkey '^R' history-incremental-search-backward
 
 # Enable powerline
 powerline-daemon -q
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /home/glnds/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh 
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
