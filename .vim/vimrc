@@ -1,5 +1,8 @@
 set nocompatible              " be iMproved, required
 set modifiable
+set exrc
+set secure
+
 filetype off                  " required
 
 python from powerline.vim import setup as powerline_setup
@@ -34,6 +37,7 @@ Plugin 'tmhedberg/matchit'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
+Plugin 'Valloric/YouCompleteMe'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler'
 "Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
