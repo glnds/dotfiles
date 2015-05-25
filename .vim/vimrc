@@ -40,7 +40,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'Valloric/YouCompleteMe'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler'
-"Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,6 +74,7 @@ set termencoding=utf-8
 set foldmethod=indent
 set foldlevel=99
 set colorcolumn=120
+highlight ColorColumn ctermbg=darkgray
 
 let g:indentLine_color_term = 239
 
