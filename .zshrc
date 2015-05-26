@@ -76,7 +76,7 @@ setopt share_history # imports new commands and appends typed commands to histor
 
 PATH=$PATH:/usr/local/mongodb-2.6.4/bin
 
-export PATH="$PATH:/Users/glnd/.rvm/gems/ruby-2.1.5/bin:/Users/glnd/.rvm/gems/ruby-2.1.5@global/bin:/Users/glnd/.rvm/rubies/ruby-2.1.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/CrossPack-AVR/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin:/Users/glnd/.rvm/bin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/CrossPack-AVR/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -113,3 +113,5 @@ alias ll='ls -l -G'
 alias hl='history | less'
 alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
