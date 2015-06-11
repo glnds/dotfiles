@@ -58,7 +58,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitflow github sublime brew osx npm tmux history zsh-syntax-highlighting history-substring-search vagrant aws docker knife pip python sudo virtualenv)
+plugins=(git gitflow github sublime brew osx npm tmux history zsh-syntax-highlighting history-substring-search vagrant aws docker knife pip python sudo virtualenv ruby rails rbenv jruby)
 
 # User configuration
 
@@ -118,4 +118,3 @@ alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
 eval "$(rbenv init -)"
-
