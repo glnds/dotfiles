@@ -117,4 +117,5 @@ alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+eval "$(rbenv init -)"
+
