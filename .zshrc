@@ -58,7 +58,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git gitflow github sublime brew osx npm tmux history zsh-syntax-highlighting history-substring-search vagrant aws docker knife pip python sudo virtualenv ruby rails rbenv jruby)
+plugins=(git gitflow github brew osx tmux history zsh-syntax-highlighting history-substring-search vagrant aws docker knife pip python sudo virtualenv ruby rails rbenv jruby)
 
 # User configuration
 
@@ -103,8 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 
 alias gcr!='git commit -v --amend --no-edit'
 
