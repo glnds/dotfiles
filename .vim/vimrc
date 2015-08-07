@@ -40,6 +40,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'Valloric/YouCompleteMe'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler'
+Bundle 'chase/vim-ansible-yaml'
+Plugin 'avakhov/vim-yaml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -77,6 +77,7 @@ setopt share_history # imports new commands and appends typed commands to histor
 PATH=$PATH:/usr/local/mongodb-2.6.4/bin
 
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/CrossPack-AVR/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin"
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -116,5 +117,6 @@ alias ucp='knife cookbook upload parleys && knife environment from file environm
 alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
+alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table"
 
 eval "$(rbenv init - zsh)"
