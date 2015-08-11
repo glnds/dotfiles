@@ -119,5 +119,6 @@ alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table"
+alias lsssh="lsof -i tcp | grep ^ssh"
 
 eval "$(rbenv init - zsh)"
