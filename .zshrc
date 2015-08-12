@@ -122,5 +122,7 @@ alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend 
 alias lsssh="lsof -i tcp | grep ^ssh"
 alias glup="git log origin/master..HEAD"
 alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 eval "$(rbenv init - zsh)"
