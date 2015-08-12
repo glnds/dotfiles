@@ -120,5 +120,7 @@ alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table"
 alias lsssh="lsof -i tcp | grep ^ssh"
+alias glup="git log origin/master..HEAD"
+alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
 
 eval "$(rbenv init - zsh)"
