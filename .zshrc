@@ -125,5 +125,7 @@ alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias dm='docker-machine'
+# alias fuck='$(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
+eval "$(thefuck --alias)"
 eval "$(rbenv init - zsh)"
