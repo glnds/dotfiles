@@ -132,6 +132,7 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias dm='docker-machine'
 alias drc='docker rm $(docker ps -aq)'
 alias dri='docker rmi $(docker images --filter dangling=true --quiet)'
+alias ap='ansible-playbook'
 
 eval "$(thefuck --alias)"
 eval "$(rbenv init - zsh)"
