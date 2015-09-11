@@ -24,7 +24,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'Yggdroot/indentLine'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'L9'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -67,7 +67,8 @@ set modeline
 set number
 set ruler
 set encoding=utf-8
-"set cursorline
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
 
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
