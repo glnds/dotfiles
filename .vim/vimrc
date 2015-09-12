@@ -24,7 +24,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'Yggdroot/indentLine'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'L9'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -63,21 +62,21 @@ set path+=/usr/local/CrossPack-AVR/avr/include
 syntax on
 syntax enable
 
+" Solorized config
+set background=dark
 set modeline
 set number
 set ruler
 set encoding=utf-8
-"set cursorline
-
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
-
 set foldmethod=indent
 set foldlevel=99
 set colorcolumn=120
 highlight ColorColumn ctermbg=darkgray
-
 let g:indentLine_color_term = 239
 
 " Highlight excess line length
@@ -89,14 +88,11 @@ augroup vimrc_autocmds
     autocmd FileType python set nowrap
     augroup END
 
-" Solorized config
 set t_Co=256
-set background=dark
-let g:solarized_termtrans = 1
-colorscheme solarized
 let g:solarized_termcolors = 256 
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
+colorscheme solarized
 
 "NERDTree config
 set autochdir

@@ -78,8 +78,13 @@ setopt no_share_history
 PATH=$PATH:/usr/local/mongodb-2.6.4/bin
 
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/CrossPack-AVR/bin:/usr/local/git/bin:/usr/local/MacGPG2/bin"
+
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-# export MANPATH="/usr/local/man:$MANPATH"
+export GRADLE_HOME=/usr/local/Cellar/gradle/2.6
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+setjdk() {
+	export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+}
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,7 +130,9 @@ alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias dm='docker-machine'
-# alias fuck='$(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+alias drc='docker rm $(docker ps -aq)'
+alias dri='docker rmi $(docker images --filter dangling=true --quiet)'
+alias ap='ansible-playbook'
 
 eval "$(thefuck --alias)"
 eval "$(rbenv init - zsh)"
