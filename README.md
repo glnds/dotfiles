@@ -2,6 +2,18 @@
 
 ## Setup (OS X)
 
+## Homebrew dependencies
+- fish
+- git
+- ack
+- python
+- vim
+- tmux
+
+Run:
+
+	brew install fish git ack python vim tmux
+
 ### Powerline
 Install powerline	
 
@@ -14,6 +26,21 @@ Install powerline fonts
 	./install.sh
 
 
+### fish - the friendly interactive shell
+https://github.com/fish-shell/fish-shell/
+
+Make Fish your default shell:
+
+	chsh -s /usr/local/bin/fish
+
+Tweak the local fish shell (theme and color)
+
+	fish_config
+
+Fish can parse your installed man pages and automatically generate completion files for your command-line tools. You should periodically run the following command to update those completions, which are stored in ~/.config/fish/completions by default:
+
+	fish_update_completions
+
 ### Zsh
 Make zsh your default shell
 
@@ -23,12 +50,6 @@ Make zsh your default shell
 Install tmux
 
 	brew install tmux
-
-### vim
-Install vim
-
-	brew install vim
-	brew install macvim with params
 
 Install Vundle
 
@@ -52,6 +73,7 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 	ln -s ~/Sources/dotfiles/.tmux.conf ~/.tmux.conf
 	ln -s ~/Sources/dotfiles/.vim/vimrc ~/.vimrc
 	ln -s ~/Sources/dotfiles/.vim/ftplugin ~/.vim/ftplugin
+    ln -s ~/Sources/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
 
 link naar complete dir
 			ln -s ~/.vim/vimrc ~/.vimrc
