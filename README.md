@@ -73,7 +73,10 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 	ln -s ~/Sources/dotfiles/.tmux.conf ~/.tmux.conf
 	ln -s ~/Sources/dotfiles/.vim/vimrc ~/.vimrc
 	ln -s ~/Sources/dotfiles/.vim/ftplugin ~/.vim/ftplugin
-        ln -s ~/Sources/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
+    ln -s ~/Sources/dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
+    ln -s ~/Sources/dotfiles/.config/fish/aliases.fish ~/.config/fish/aliases.fish
+    ln -s ~/Sources/dotfiles/.config/fish/utils.fish ~/.config/fish/utils.fish
+    ln -s ~/Sources/dotfiles/.config/fish/export.fish ~/.config/fish/export.fish
 	ln -s ~/Sources/dotfiles/.vim/colors ~/.vim/colors
 
 link naar complete dir
