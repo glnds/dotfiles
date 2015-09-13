@@ -16,7 +16,7 @@ set -x GROOVY_HOME /usr/local/opt/groovy/libexec
 set -x GRADLE_HOME /usr/local/Cellar/gradle/2.6
 
 # Java home
-set -x JAVA_HOME $(/usr/libexec/java_home -v 1.8)
+#set -x JAVA_HOME $(/usr/libexec/java_home -v 1.8)
 
 # MongoDB
 set -x PATH /usr/local/mongodb-2.6.4/bin $PATH

@@ -69,8 +69,8 @@ alias md='gollum --host localhost --port 4566 ~/Dropbox/md_wiki'
 
 # Docker
 alias dm='docker-machine'
-alias drc='docker rm $(docker ps -aq)'
-alias dri='docker rmi $(docker images --filter dangling=true --quiet)'
+#alias drc='docker rm $(docker ps -aq)'
+#alias dri='docker rmi $(docker images --filter dangling=true --quiet)'
 
 # Ansible
 alias ap='ansible-playbook'
@@ -85,6 +85,6 @@ alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
 alias lsssh="lsof -i tcp | grep ^ssh"
 
 # Parleys
-alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
-alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
+#alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
+#alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
 alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table"

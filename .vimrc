@@ -67,6 +67,9 @@ Plug 'vim-scripts/avr.vim'
 Plug 'klen/python-mode'
 Plug 'tomtom/tcomment_vim'
 Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'dag/vim-fish'
 " Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
@@ -126,8 +129,8 @@ call matchadd('ColorColumn', '\%81v', 100)
 
 set virtualedit=onemore                           " Allow for cursor beyond last character
 
-set foldlevelstart=0
-set foldenable
+" set foldlevelstart=0
+" set foldenable
 
 set wrap
 set autoindent
@@ -247,7 +250,7 @@ nnoremap k gk
 " nnoremap : ;
 
 " faster movement
-nmap J 5j
+"nmap J 5j
 nmap K 5k
 xmap J 5j
 xmap K 5k
