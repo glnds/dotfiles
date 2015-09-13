@@ -1,0 +1,7 @@
+[submodule "bundle/vundle"]
+	path = .vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+	ignore=untracked
+[submodule "plugins/virtualfish"]
+	path = plugins/virtualfish
+	url = git@github.com:adambrenecki/virtualfish.git
