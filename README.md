@@ -78,6 +78,7 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
     ln -s ~/Sources/dotfiles/.config/fish/utils.fish ~/.config/fish/utils.fish
     ln -s ~/Sources/dotfiles/.config/fish/export.fish ~/.config/fish/export.fish
 	ln -s ~/Sources/dotfiles/.vim/colors ~/.vim/colors
+	ln -s ~/Sources/dotfiles/.gitconfig ~/.gitconfig
 
 link naar complete dir
 			ln -s ~/.vim/vimrc ~/.vimrc
