@@ -1,3 +1,6 @@
 [submodule "modules/vim-plug"]
 	path = modules/vim-plug
 	url = git@github.com:junegunn/vim-plug.git
+[submodule "modules/virtualfish"]
+	path = modules/virtualfish
+	url = git@github.com:adambrenecki/virtualfish.git
