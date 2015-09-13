@@ -9,6 +9,18 @@ set -x PATH "/usr/local/bin" $PATH
 set -x PATH "/usr/local/sbin" $PATH
 set -x PATH "/usr/texbin" $PATH
 
+# Groovy home
+set -x GROOVY_HOME /usr/local/opt/groovy/libexec
+
+# Gradle home
+set -x GRADLE_HOME /usr/local/Cellar/gradle/2.6
+
+# Java home
+set -x JAVA_HOME $(/usr/libexec/java_home -v 1.8)
+
+# MongoDB
+set -x PATH /usr/local/mongodb-2.6.4/bin $PATH
+
 # ruby
 # setup rbenv (from https://gist.github.com/2937920)
 set -x PATH "$HOME/.rbenv/bin" $PATH

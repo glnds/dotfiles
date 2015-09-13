@@ -34,6 +34,7 @@ alias gdc="git diff --cached"
 alias ga="git add"
 alias gca="git commit -a -m"
 alias gcm="git commit -m"
+alias gcr!='git commit -v --amend --no-edit'
 alias gbd="git branch -D"
 alias gst="git status -sb --ignore-submodules"
 alias gstl="git status"
@@ -46,6 +47,8 @@ alias gba="git branch -a"
 alias gcp="git cherry-pick"
 alias gl="git lg"
 alias gpom="git pull origin master"
+alias glup="git log origin/master..HEAD"
+
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -63,3 +66,25 @@ alias jcc='java -jar ~/tools/closure_compiler/compiler.jar'
 
 # start local markdown
 alias md='gollum --host localhost --port 4566 ~/Dropbox/md_wiki'
+
+# Docker
+alias dm='docker-machine'
+alias drc='docker rm $(docker ps -aq)'
+alias dri='docker rmi $(docker images --filter dangling=true --quiet)'
+
+# Ansible
+alias ap='ansible-playbook'
+# Tmux
+
+alias tml="tmux list-sessions"
+alias tma="tmux -2 attach -t $1"
+alias tmk="tmux kill-session -t $1"
+
+# ACSL
+alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
+alias lsssh="lsof -i tcp | grep ^ssh"
+
+# Parleys
+alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
+alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
+alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table"
