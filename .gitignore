@@ -2,6 +2,7 @@
 .DS_Store
 .vundle
 .vim/bundle
+.vim/autoload
 .vim/credentials.vim
 fish/fish_history
 fishd.*

@@ -12,6 +12,9 @@ alias la="ls -Gla"
 # List only directories
 alias lsd='ls -l | grep "^d"'
 
+# List only symbolic links
+alias lss='ls -al | grep "\->"'
+
 alias ll='ls -ahlF'
 alias l='ls -CF'
 alias c=clear
