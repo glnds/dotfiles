@@ -7,6 +7,14 @@
 "                                             "
 """""""""""""""""""""""""""""""""""""""""""""""
 
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
 let $JS_CMD = 'node'
 let mapleader = ','
 let maplocalleader = ','
@@ -244,20 +252,22 @@ inoremap <c-f> function () {<cr>});<esc>O
 cnoremap <Up> <nop>
 cnoremap <Down> <nop>
 
+nnoremap J jo
+
 nnoremap j gj
 nnoremap k gk
 " nnoremap ; :
 " nnoremap : ;
 
 " faster movement
-"nmap J 5j
+nmap J 5j
 nmap K 5k
 xmap J 5j
 xmap K 5k
 
 " Disabling escape key. It's too far away!
 inoremap  <esc> <nop>
-" `jk` is much better :)
+" `jj` is much better :)
 inoremap  jj <esc>
 " Search for non breaking spaces (ascii 160) Thank you Stø!
 nnoremap <leader>hw :/\%xa0<cr>
