@@ -5,5 +5,5 @@
 .vim/plugged
 .vim/autoload
 .vim/credentials.vim
-fish/fish_history
-fishd.*
+.config/fish/fish_history
+.config/fish/fishd.*
