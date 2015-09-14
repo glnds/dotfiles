@@ -13,6 +13,10 @@ cd to your home directory and clone this repository via git clone.
 
 ### Step 2:
 
+You should now have dotfiles folder in your home directory. To setup the dotfiles, execute boostrap.sh.
+
+	$ bash ~/dotfiles/bootstrap.sh
+
 	
 ### Step 3:
 
@@ -37,13 +41,6 @@ For iTerm2, open the Preferences dialog, select Profiles, select Text, and selec
 #### Colors
 For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set Report Terminal Type to **xterm-256color**
 
-
-ln -s ~/dotfiles/.ackrc ~/.ackrc
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.vim ~/
-ln -s ~/dotfiles/.config ~/
 
 			
 
