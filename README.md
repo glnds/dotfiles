@@ -1,18 +1,14 @@
 # Dotfiles
+These are my personal dotfiles to setup my machine and developing environment. 
 
-## Setup (OS X)
+##Installation
 
-## Homebrew dependencies
-- fish
-- git
-- ack
-- python
-- vim
-- tmux
+Step 1:
 
-Run:
+cd to your home directory and clone this repository via git clone.
 
-	brew install fish git ack python vim tmux
+$ cd ~
+$ git clone https://github.com/glnds/dotfiles.git
 
 ### Powerline
 Install powerline	
@@ -46,10 +42,6 @@ Make zsh your default shell
 
 	chsh -s $(which zsh)
 
-### tmux
-Install tmux
-
-	brew install tmux
 
 Install Vundle
 
@@ -90,31 +82,8 @@ link naar complete dir
  
 font book powerline
 
-## Plugins
-- Powerline
-	
-	https://github.com/Lokaltog/powerline
-	
-	http://powerline.readthedocs.org/en/latest/index.html
-- NERDtree
-	
-	https://github.com/scrooloose/nerdtree
-	
-- Syntastic
-	
-	It requires either flake8, pyflakes or pylint to be installed (flake8 merges pyflakes and pep8 functionality).
-	
-		pip install flake8
-	
-	Check file syntax on open
-	
-		let g:syntastic_check_on_open = 1
 
-##Vimscript
-http://learnvimscriptthehardway.stevelosh.com/
 
-## Tutorials
-http://derekwyatt.org/vim/tutorials/
-http://www.openvim.com/tutorial.html
+
 
 
