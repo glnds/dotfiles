@@ -72,8 +72,8 @@ alias md='gollum --host localhost --port 4566 ~/Dropbox/md_wiki'
 
 # Docker
 alias dm='docker-machine'
-#alias drc='docker rm $(docker ps -aq)'
-#alias dri='docker rmi $(docker images --filter dangling=true --quiet)'
+alias drc='docker rm (docker ps -aq)'
+alias dri='docker rmi (docker images --filter dangling=true --quiet)'
 
 # Ansible
 alias ap='ansible-playbook'
