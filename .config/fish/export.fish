@@ -2,12 +2,7 @@
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
 
-set -x PATH "$HOME/bin" $PATH
-
-# add homebrew to the beginning of PATH
-set -x PATH "/usr/local/bin" $PATH
-set -x PATH "/usr/local/sbin" $PATH
-set -x PATH "/usr/texbin" $PATH
+set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
 
 # Groovy home
 set -x GROOVY_HOME /usr/local/opt/groovy/libexec
@@ -16,10 +11,16 @@ set -x GROOVY_HOME /usr/local/opt/groovy/libexec
 set -x GRADLE_HOME /usr/local/Cellar/gradle/2.6
 
 # Java home
-#set -x JAVA_HOME $(/usr/libexec/java_home -v 1.8)
+set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
+
+# Go Home
+set -x GOPATH "$HOME/go"
 
 # MongoDB
 set -x PATH /usr/local/mongodb-2.6.4/bin $PATH
+
+# go
+set -x PATH "$GOPATH/bin" $PATH
 
 # ruby
 # setup rbenv (from https://gist.github.com/2937920)
@@ -34,9 +35,14 @@ set -x  RUBY_GC_HEAP_GROWTH_MAX_SLOTS 300000
 # python
 set -x PATH "/usr/local/share/python" $PATH
 
-# go
-set -x GOPATH "$HOME/go"
-set -x PATH "$GOPATH/bin" $PATH
+# Add Ansible developer version to the beginning of PATH
+set -x PATH "/Users/glnd/Sources/ansible/bin" $PATH
+
+set -x PATH "$HOME/bin" $PATH
+
+# Add homebrew to the beginning of PATH
+set -x PATH "/usr/local/bin" $PATH
+set -x PATH "/usr/local/sbin" $PATH
 
 # respect local bins
 set -x PATH "./bin" $PATH

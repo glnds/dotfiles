@@ -80,6 +80,7 @@ Plug 'dag/vim-fish'
 call plug#end()
 
 set guioptions=TlrLR
+set cpoptions+=$
 set t_Co=256
 set shell=bash
 
