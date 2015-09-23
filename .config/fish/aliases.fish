@@ -87,6 +87,10 @@ alias tmk="tmux kill-session -t $1"
 alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
 alias lsssh="lsof -i tcp | grep '^ssh'"
 alias pf="p4"
+alias pfs="p4 sync"
+alias pfa="p4 add"
+alias pfA="find . -type f -print | p4 -x - add"
+alias pfsm="p4 submit"
 
 # Parleys
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
