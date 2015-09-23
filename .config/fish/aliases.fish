@@ -91,6 +91,10 @@ alias pfs="p4 sync"
 alias pfa="p4 add"
 alias pfA="find . -type f -print | p4 -x - add"
 alias pfsm="p4 submit"
+alias pfo="p4 opened"
+function pfe
+  p4 edit $argv ; vim $argv
+end
 
 # Parleys
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
