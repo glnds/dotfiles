@@ -15,7 +15,7 @@ alias lsd='ls -l | grep "^d"'
 # List only symbolic links
 alias lss='ls -al | grep "\->"'
 
-alias ll='ls -ahlF'
+alias ll='ls -hlF'
 alias l='ls -CF'
 alias c=clear
 
