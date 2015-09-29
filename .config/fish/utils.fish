@@ -31,3 +31,7 @@ function fuck -d 'Correct your previous console command'
         history --delete $fucked_up_commandd
     end
 end
+
+function ideaDiff
+  /Applications/IntelliJ\ IDEA\ 14.app/Contents/MacOS/idea diff $argv[1] $argv[2]
+end
