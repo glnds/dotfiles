@@ -85,7 +85,7 @@ alias tmk="tmux kill-session -t $1"
 
 # ACSL
 alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
-alias lsssh="lsof -i 4tcp | ack '^ssh'"
+alias lssh="lsof -i 4tcp -P | grep '^ssh'"
 alias pf="p4"
 alias pfs="p4 sync"
 alias pfa="p4 add"
