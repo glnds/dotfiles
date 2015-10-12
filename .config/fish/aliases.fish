@@ -92,6 +92,7 @@ alias pfa="p4 add"
 alias pfA="find . -type f -print | p4 -x - add"
 alias pfsm="p4 submit"
 alias pfo="p4 opened"
+alias pfd="p4 delete"
 function pfe
   p4 edit $argv ; vim $argv
 end
