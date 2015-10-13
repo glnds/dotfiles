@@ -94,6 +94,7 @@ alias pfsm="p4 submit"
 alias pfo="p4 opened"
 alias pfe="p4 edit"
 alias pfd="p4 delete"
+alias pfr="p4 revert"
 function pfE
   p4 edit $argv ; vim $argv
 end

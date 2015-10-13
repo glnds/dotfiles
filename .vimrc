@@ -252,10 +252,10 @@ inoremap <c-f> function () {<cr>});<esc>O
 cnoremap <Up> <nop>
 cnoremap <Down> <nop>
 
-nnoremap J jo
-
-nnoremap j gj
-nnoremap k gk
+" nnoremap J jo
+" 
+" nnoremap j gj
+" nnoremap k gk
 " nnoremap ; :
 " nnoremap : ;
 
