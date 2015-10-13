@@ -260,10 +260,10 @@ nnoremap k gk
 " nnoremap : ;
 
 " faster movement
-nmap J 5j
-nmap K 5k
-xmap J 5j
-xmap K 5k
+" nmap J 5j
+" nmap K 5k
+" xmap J 5j
+" xmap K 5k
 
 " Disabling escape key. It's too far away!
 inoremap  <esc> <nop>
