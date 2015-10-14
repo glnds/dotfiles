@@ -293,10 +293,10 @@ nnoremap <leader><space> :Goyo<cr>
 nnoremap <silent> n   n:call HLNext(0.2)<cr>
 nnoremap <silent> N   N:call HLNext(0.2)<cr>
 
-cnoreabbrev q qall!
-cnoreabbrev Q qall!
-cnoreabbrev qalL qall!
-cnoreabbrev Qall qall!
+" cnoreabbrev q qall!
+" cnoreabbrev Q qall!
+" cnoreabbrev qalL qall!
+" cnoreabbrev Qall qall!
 
 inoreabbrev zipyy zippy
 

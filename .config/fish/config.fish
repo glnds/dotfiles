@@ -9,6 +9,13 @@ set fish_greeting
 . $fish_path/export.fish
 . $fish_path/utils.fish
 
+# set -gx RBENV_ROOT /usr/local/var/rbenv  
+# . (rbenv init -|psub)
+# set PATH $HOME/.rbenv/bin $PATH
+# set PATH $HOME/.rbenv/shims $PATH
+# rbenv rehash >/dev/null ^&1
+. (rbenv init -)
+
 # git prompt
 # https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish
 set -g __fish_git_prompt_showupstream verbose
