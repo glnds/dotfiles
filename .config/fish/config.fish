@@ -16,6 +16,8 @@ set fish_greeting
 # rbenv rehash >/dev/null ^&1
 . (rbenv init -)
 
+eval (python -m virtualfish)
+
 # git prompt
 # https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish
 set -g __fish_git_prompt_showupstream verbose
