@@ -98,8 +98,11 @@ alias pfr="p4 revert"
 function pfE
   p4 edit $argv ; vim $argv
 end
+alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --output table --profile acsl"
+alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"
+alias elbp="aws elb describe-instance-health --load-balancer-name prod-ga-elb --output table --profile acsl"
 
 # Parleys
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
-alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table"
+#alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"
