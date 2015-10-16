@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 DOTFILES_PATH=$HOME/dotfiles
 
 brew update
-brew install fish git ack python vim tmux
+brew install fish git python vim tmux the_silver_searcher
 brew upgrade
 
 pip install powerline-status --upgrade
@@ -14,7 +14,6 @@ pip install powerline-status --upgrade
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
 ~/dotfiles/powerline/install.sh
 
-ln -s ~/dotfiles/.ackrc ~/.ackrc
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
