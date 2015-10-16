@@ -4,12 +4,16 @@
 " |___/_/_/_/_/_/  \__/ 
 "                       
 
+let mapleader = " "
+
 set background=dark
 colorscheme badwolf
 syntax on
 
 set laststatus=2          " Always display the statusline in all windows
 set backspace=2           " Backspace deletes like most programs in insert mode
+set nobackup              " Don't make a backup file
+set nowritebackup         " Dont't make a backup file
 set encoding=utf8         " Sets charachter encoding
 set mouse=                " Disabling mouse support
 set history=1000          " Remember ALL THE commands!
@@ -19,6 +23,7 @@ set cryptmethod=blowfish2 " Use strong blowfish algorithm when encrypting files
 set virtualedit=onemore   " Allow for cursor beyond last character
 set tabstop=2             " Number of spaces for a tab
 set softtabstop=2         " Number of spaces for a tab while editing
+set expandtab             " Insert spaces when tab key is pressed
 set nocompatible          " Don't care about Vi-compatibility
 set autoread              " Autoread a file when it's changed from outside
 set ttyfast               " Terminal performance optimisation
@@ -39,6 +44,8 @@ set list                  " Show specials charcters like tabs (^I), end of line 
 set cpoptions+=$          " Show a dollar sign in the change buffer
 set splitbelow            " Split current window below
 set splitright            " Split current window right
+set showcmd               " Display incomplete commands
+set autowrite             " Automatically :write before running commands
 
 set wildmenu                                     " Enable command-line completion
 set wildmode=list:longest,full                   " Wildmenu completion mode
@@ -49,8 +56,6 @@ set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.DS_Store                       " OSX bullshit
 set wildignore+=*.zip                            " zip
 
-let mapleader = ','
-let maplocalleader = ','
 let g:netrw_liststyle=3
 
 call plug#begin('~/.vim/plugged')
