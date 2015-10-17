@@ -3,15 +3,14 @@
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/ 
 "                       
-
 let mapleader = " "
 
 set background=dark
 colorscheme badwolf
 syntax on
 
-set laststatus=2          " Always display the statusline in all windows
-set backspace=2           " Backspace deletes like most programs in insert mode
+set laststatus=2          " Always display the statusline in all windows 
+set backspace=2           " Backspace deletes like most programs in insert mode 
 set nobackup              " Don't make a backup file
 set nowritebackup         " Dont't make a backup file
 set encoding=utf8         " Sets charachter encoding
@@ -22,6 +21,8 @@ set undoreload=10000      " Maximum number lines to save for undo on a buffer re
 set virtualedit=onemore   " Allow for cursor beyond last character
 set tabstop=2             " Number of spaces for a tab
 set softtabstop=2         " Number of spaces for a tab while editing
+set shiftwidth=2          " Shift width value
+set shiftround            " Round the shift indent
 set expandtab             " Insert spaces when tab key is pressed
 set autoread              " Autoread a file when it's changed from outside
 set lazyredraw            " Terminal performance optimisation
@@ -43,6 +44,10 @@ set splitbelow            " Split current window below
 set splitright            " Split current window right
 set showcmd               " Display incomplete commands
 set autowrite             " Automatically :write before running commands
+set colorcolumn=81        " Make it obvious where 80 characters is
+set number                " Show line numbers
+set numberwidth=5         " Line number reserved space
+set autochdir             " Change the current dir if you open a file
 
 set wildmenu                                     " Enable command-line completion
 set wildmode=list:longest,full                   " Wildmenu completion mode
@@ -53,7 +58,8 @@ set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.DS_Store                       " OSX bullshit
 set wildignore+=*.zip                            " zip
 
-let g:netrw_liststyle=3
+set list listchars=tab:»·,trail:·,nbsp:· "Display extra whitespace
+
 
 call plug#begin('~/.vim/plugged')
 
@@ -97,22 +103,22 @@ if &term =~ '256color'
 endif
 
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
+let g:netrw_liststyle=3
 
+highlight ColorColumn ctermbg=237
 
+" Personal key mappings
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
 
-highlight ColorColumn ctermbg=blue
-call matchadd('ColorColumn', '\%81v', 100)
-
 "NERDTree config
-set autochdir
 let NERDTreeChDirMode=2
 nnoremap <leader>n :NERDTree .<CR>
 nmap <F8> :TagbarToggle<CR>
 map <F2> :NERDTreeToggle<CR>
 
+" Ctrl p
 let g:ctrlp_map = ',t'
 nnoremap <silent> ,t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 0
@@ -156,7 +162,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " Use vim way instead
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-
 " Disabling arrow keys in normal and insert mode
 nnoremap  <up> <nop>
 nnoremap  <down> <nop>
@@ -166,32 +171,17 @@ inoremap  <up> <nop>
 inoremap  <down> <nop>
 inoremap  <left> <nop>
 inoremap  <right> <nop>
-" insert equals sign for faster assignments
-inoremap <c-l> <space>=<space>
 " Disable arrow keys in command mode
 cnoremap <Up> <nop>
 cnoremap <Down> <nop>
-
-
 " Disabling escape key. It's too far away!
 inoremap  <esc> <nop>
 " `jj` is much better :)
 inoremap  jj <esc>
-" Search for non breaking spaces (ascii 160) Thank you Stø!
-nnoremap <leader>hw :/\%xa0<cr>
-
-" Keep search pattern at the center of the screen
-nnoremap <silent> n nzz
-nnoremap <silent> N Nzz
-nnoremap <silent> * *zz
-nnoremap <silent> # #zz
-nnoremap <silent> g* g*zz
-nnoremap <silent> g# g#zz
-
-" Use just CTRL instead of CTRL-W to switch between windows
-nnoremap <C-h> <C-w>h
+" Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
@@ -200,3 +190,15 @@ set spellfile=$HOME/.vim-spell-en.utf-8.add
 
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  "
+  " Use ag in CtrlP for listing files. Lightning fast and respects      .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
