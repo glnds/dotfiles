@@ -1,8 +1,8 @@
-"        _              
+"        _
 "  _  __(_)_ _  ________
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/ 
-"                       
+"
 let mapleader = " "
 
 set background=dark
@@ -107,18 +107,15 @@ let g:netrw_liststyle=3
 
 highlight ColorColumn ctermbg=237
 
-" Personal key mappings
-nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
-nmap <Leader><Leader> V
-
-"NERDTree config
+" NERDTree config
 let NERDTreeChDirMode=2
 nnoremap <leader>n :NERDTree .<CR>
-nmap <F8> :TagbarToggle<CR>
 map <F2> :NERDTreeToggle<CR>
 
-" Ctrl p
+" Tagbar config
+nmap <F8> :TagbarToggle<CR>
+
+" Ctrl P config
 let g:ctrlp_map = ',t'
 nnoremap <silent> ,t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 0
@@ -143,6 +140,10 @@ let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 
+" Personal key mappings
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+nmap <Leader><Leader> V
 " Open up .vimrc quickly in a new buffer
 nnoremap  <leader>ev :vsp $MYVIMRC<cr>
 " Source .vimrc explitly
