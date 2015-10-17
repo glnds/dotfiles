@@ -19,14 +19,11 @@ set mouse=                " Disabling mouse support
 set history=1000          " Remember ALL THE commands!
 set undolevels=1000       " Do ALL THE undo's!
 set undoreload=10000      " Maximum number lines to save for undo on a buffer reload
-set cryptmethod=blowfish2 " Use strong blowfish algorithm when encrypting files
 set virtualedit=onemore   " Allow for cursor beyond last character
 set tabstop=2             " Number of spaces for a tab
 set softtabstop=2         " Number of spaces for a tab while editing
 set expandtab             " Insert spaces when tab key is pressed
-set nocompatible          " Don't care about Vi-compatibility
 set autoread              " Autoread a file when it's changed from outside
-set ttyfast               " Terminal performance optimisation
 set lazyredraw            " Terminal performance optimisation
 set magic                 " Better searching
 set noswapfile            " Don't pollute my hard drive, even temporary
@@ -100,6 +97,11 @@ if &term =~ '256color'
 endif
 
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
+
+
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+nmap <Leader><Leader> V
 
 highlight ColorColumn ctermbg=blue
 call matchadd('ColorColumn', '\%81v', 100)
