@@ -5,6 +5,7 @@
 .vim/plugged
 .vim/autoload
 .vim/credentials.vim
+.vim/shada
 .config/fish/fishd.*
 .config/fish/fish_history
 powerline

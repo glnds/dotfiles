@@ -10,6 +10,7 @@ brew install fish git python vim tmux the_silver_searcher archey
 brew upgrade
 
 pip install powerline-status --upgrade
+pip install virtualfish --upgrade
 
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
 ~/dotfiles/powerline/install.sh
