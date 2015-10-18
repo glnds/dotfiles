@@ -102,7 +102,21 @@ alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --o
 alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"
 alias elbp="aws elb describe-instance-health --load-balancer-name prod-ga-elb --output table --profile acsl"
 
-# Parleys
+
+function lockme
+  /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
+end
+
+function update
+  brew update --all ;and brew upgrade --all; brew cleanup
+end
+
+function upgrade
+  brew cask update; brew cask  cleanup
+end
+
+#alias vim="nvim"
+
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"

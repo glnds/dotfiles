@@ -49,6 +49,13 @@ set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
 set autochdir             " Change the current dir if you open a file
 
+" https://neovim.io/doc/user/nvim_from_vim.html
+if !has('nvim')
+  set cryptmethod=blowfish2 " Use strong blowfish algorithm when encrypting files
+  set nocompatible          " Don't care about Vi-compatibility
+  set ttyfast               " Terminal performance optimisation
+endif
+
 set wildmenu                                     " Enable command-line completion
 set wildmode=list:longest,full                   " Wildmenu completion mode
 set wildignore+=.git,.svn                        " Version control
@@ -108,7 +115,9 @@ let g:netrw_liststyle=3
 highlight ColorColumn ctermbg=237
 
 " NERDTree config
-let NERDTreeChDirMode=2
+let NERDTreeChDirMode=2     " Display the current working directory
+let NERDTreeShowBookmarks=1 " Show Bookmarks on startup
+"let NERDTreeShowHidden=1   " Show hidden files on startup
 nnoremap <leader>n :NERDTree .<CR>
 map <F2> :NERDTreeToggle<CR>
 
@@ -193,7 +202,6 @@ set spellfile=$HOME/.vim-spell-en.utf-8.add
 
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
-
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
