@@ -92,6 +92,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'dag/vim-fish'
+Plug 'rking/ag.vim'
 
 call plug#end()
 

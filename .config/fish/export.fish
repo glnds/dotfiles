@@ -41,7 +41,7 @@ set -x  RUBY_GC_HEAP_GROWTH_FACTOR 1.25
 set -x  RUBY_GC_HEAP_GROWTH_MAX_SLOTS 300000
 
 # python
-set -x PATH "/usr/local/share/python" $PATH
+# set -x PATH "/usr/local/share/python" $PATH
 
 # Add Ansible developer version to the beginning of PATH
 set -x PATH "/Users/glnd/Sources/ansible/bin" $PATH
