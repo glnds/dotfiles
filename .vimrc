@@ -1,4 +1,4 @@
-"        _
+"        _              
 "  _  __(_)_ _  ________
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/ 
@@ -6,6 +6,9 @@
 let mapleader = " "
 
 colorscheme badwolf
+let g:badwolf_darkgutter = 1 " Make the gutters darker than the background.
+let g:badwolf_tabline = 0    " Make the tab line darker than the background
+
 syntax on
 
 set laststatus=2          " Always display the statusline in all windows 

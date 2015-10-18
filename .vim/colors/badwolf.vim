@@ -154,6 +154,22 @@ else
     let s:gutter = 'blackgravel'
 endif
 
+if exists('g:badwolf_tabline')
+    if g:badwolf_tabline == 0
+        let s:tabline = 'blackestgravel'
+    elseif  g:badwolf_tabline == 1
+        let s:tabline = 'blackgravel'
+    elseif  g:badwolf_tabline == 2
+        let s:tabline = 'darkgravel'
+    elseif  g:badwolf_tabline == 3
+        let s:tabline = 'deepgravel'
+    else
+        let s:tabline = 'blackestgravel'
+    endif
+else
+    let s:tabline = 'blackgravel'
+endif
+
 " }}}
 
 " Actual colorscheme ----------------------------------------------------------
@@ -170,6 +186,10 @@ call s:HL('VertSplit', 'lightgravel', 'bg', 'none')
 call s:HL('CursorLine',   '', 'darkgravel', 'none')
 call s:HL('CursorColumn', '', 'darkgravel')
 call s:HL('ColorColumn',  '', 'darkgravel')
+
+call s:HL('TabLine', 'plain', s:tabline, 'none')
+call s:HL('TabLineFill', 'plain', s:tabline, 'none')
+call s:HL('TabLineSel', 'coal', 'tardis', 'none')
 
 call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 
@@ -321,13 +341,13 @@ endif
     " the line prefix '>' in the match window
     call s:HL('CtrlPLinePre', 'deepgravel', 'bg', 'none')
 
-    " the promptâ€™s base
+    " the prompt’s base
     call s:HL('CtrlPPrtBase', 'deepgravel', 'bg', 'none')
 
-    " the promptâ€™s text
+    " the prompt’s text
     call s:HL('CtrlPPrtText', 'plain', 'bg', 'none')
 
-    " the promptâ€™s cursor when moving over the text
+    " the prompt’s cursor when moving over the text
     call s:HL('CtrlPPrtCursor', 'coal', 'tardis', 'bold')
 
     " 'prt' or 'win', also for 'regex'
@@ -340,7 +360,7 @@ endif
     call s:HL('CtrlPStats', 'coal', 'tardis', 'bold')
 
     " TODO: CtrlP extensions.
-    " CtrlPTabExtra  : the part of each line thatâ€™s not matched against (Comment)
+    " CtrlPTabExtra  : the part of each line that’s not matched against (Comment)
     " CtrlPqfLineCol : the line and column numbers in quickfix mode (|s:HL-Search|)
     " CtrlPUndoT     : the elapsed time in undo mode (|s:HL-Directory|)
     " CtrlPUndoBr    : the square brackets [] in undo mode (Comment)
@@ -359,13 +379,37 @@ call s:HL('EasyMotionShade',  'deepgravel', 'bg')
 " from my Vimrc.
 call s:HL('InterestingWord1', 'coal', 'orange')
 call s:HL('InterestingWord2', 'coal', 'lime')
-call s:HL('InterestingWord3', 'coal', 'taffy')
+call s:HL('InterestingWord3', 'coal', 'saltwatertaffy')
+call s:HL('InterestingWord4', 'coal', 'toffee')
+call s:HL('InterestingWord5', 'coal', 'dress')
+call s:HL('InterestingWord6', 'coal', 'taffy')
+
 
 " }}}
 " Makegreen {{{
 
 " hi GreenBar term=reverse ctermfg=white ctermbg=green guifg=coal guibg=#9edf1c
 " hi RedBar   term=reverse ctermfg=white ctermbg=red guifg=white guibg=#C50048
+
+" }}}
+" Rainbow Parentheses {{{
+
+call s:HL('level16c', 'mediumgravel',   '', 'bold')
+call s:HL('level15c', 'dalespale',      '', '')
+call s:HL('level14c', 'dress',          '', '')
+call s:HL('level13c', 'orange',         '', '')
+call s:HL('level12c', 'tardis',         '', '')
+call s:HL('level11c', 'lime',           '', '')
+call s:HL('level10c', 'toffee',         '', '')
+call s:HL('level9c',  'saltwatertaffy', '', '')
+call s:HL('level8c',  'coffee',         '', '')
+call s:HL('level7c',  'dalespale',      '', '')
+call s:HL('level6c',  'dress',          '', '')
+call s:HL('level5c',  'orange',         '', '')
+call s:HL('level4c',  'tardis',         '', '')
+call s:HL('level3c',  'lime',           '', '')
+call s:HL('level2c',  'toffee',         '', '')
+call s:HL('level1c',  'saltwatertaffy', '', '')
 
 " }}}
 " ShowMarks {{{
@@ -508,6 +552,12 @@ augroup END
 call s:HL('lessVariable', 'lime', '', 'none')
 
 " }}}
+" Lispyscript {{{
+
+call s:HL('lispyscriptDefMacro', 'lime', '', '')
+call s:HL('lispyscriptRepeat', 'dress', '', 'none')
+
+" }}}
 " Mail {{{
 
 call s:HL('mailSubject', 'orange', '', 'bold')
@@ -597,3 +647,4 @@ call s:HL('VimBracket', 'dress', '', 'none')
 " }}}
 
 " }}}
+
