@@ -108,11 +108,11 @@ function lockme
 end
 
 function update
-  brew update --all ;and brew upgrade --all; brew cleanup
+  brew update; brew upgradel; brew cleanup
 end
 
 function upgrade
-  brew cask update; brew cask  cleanup
+  brew cask update; brew cask cleanup
 end
 
 #alias vim="nvim"

@@ -4,12 +4,14 @@
 " |___/_/_/_/_/_/  \__/ 
 "
 let mapleader = " "
+let maplocalleader = " "
 
 colorscheme badwolf
 let g:badwolf_darkgutter = 1 " Make the gutters darker than the background.
 let g:badwolf_tabline = 0    " Make the tab line darker than the background
 "
 syntax on
+filetype plugin indent on
 
 set laststatus=2          " Always display the statusline in all windows 
 set backspace=2           " Backspace deletes like most programs in insert mode 
@@ -25,7 +27,7 @@ set tabstop=2             " Number of spaces for a tab
 set softtabstop=2         " Number of spaces for a tab while editing
 set shiftwidth=2          " Shift width value
 set shiftround            " Round the shift indent
-set expandtab             " Insert spaces when tab key is pressed
+set expandtab             " Conver tabs to spaces
 set autoread              " Autoread a file when it's changed from outside
 set lazyredraw            " Terminal performance optimisation
 set magic                 " Better searching
@@ -79,14 +81,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'mileszs/ack.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'chase/vim-ansible-yaml'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
-Plug 'klen/python-mode'
-Plug 'davidhalter/jedi-vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/syntastic'
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'tomtom/tcomment_vim'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
@@ -97,14 +100,14 @@ Plug 'rking/ag.vim'
 call plug#end()
 
 " Interesting plugins: 
-  "- Plug 'benmills/vimux'
-  "- Plug 'christoomey/vim-tmux-navigator'
   "- Plug 'noahfrederick/vim-hemisu'
   "- Plug 'editorconfig/editorconfig-vim'
   "- Plug 'tpope/vim-unimpaired'
   "- Plug 'junegunn/goyo.vim'
-  "- Plug 'scrooloose/syntastic'
-  "- Plug 'Valloric/YouCompleteMe'
+  "- Plug 'rizzatti/dash.vim'
+  "- Plug 'easymotion/vim-easymotion'
+  "- Plug 'klen/python-mode'
+  "- Plug 'davidhalter/jedi-vim'
 
 if &term =~ '256color'
   " Disable Background Color Erase (BCE) so that color schemes
@@ -137,16 +140,21 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_custom_ignore = {'dir': 'dist'}
 
+" Jedi-vim
+" Rename default command because of conflic with python mode
+let g:jedi#rename_command = "<leader>f" " Refactor variable name
+
 " Python mode config
 let g:pymode_rope = 0 "Replaced by jedi-vim
 let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_write = 1
 let g:pymode_virtualenv = 1
 let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_key = '<leader>b'
+let g:pymode_doc_bind = 'K'
+let g:pymode_breakpoint_bind = '<leader>b'
+let g:pymode_run_bind = '<leader>r'
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
@@ -154,11 +162,14 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 
 " Personal key mappings
+" Check a key binding, ex: verbose nmap <Leader>r
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+" Start vimux
+nmap <leader>m :VimuxRunCommand<CR>
 " Open up .vimrc quickly in a new buffer
 nnoremap  <leader>ev :vsp $MYVIMRC<cr>
 " Source .vimrc explitly
@@ -171,8 +182,8 @@ nnoremap <leader>w :w!<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 " Folding
-nnoremap <Space> za
-vnoremap <Space> za
+" nnoremap <Space> za
+" vnoremap <Space> za
 " Remove trailing whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " Use vim way instead
@@ -199,6 +210,21 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Run the current file with rspec
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
+" Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <Leader>vz :call VimuxZoomRunner()<CR> 
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.

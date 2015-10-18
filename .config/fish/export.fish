@@ -10,7 +10,7 @@ set -x P4EDITOR "vim"
 set -x P4DIFF "vimdiff"
 set -x P4MERGE "vim"
 
-set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
+# set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
 
 # Groovy home
 set -x GROOVY_HOME /usr/local/opt/groovy/libexec
@@ -41,7 +41,7 @@ set -x  RUBY_GC_HEAP_GROWTH_FACTOR 1.25
 set -x  RUBY_GC_HEAP_GROWTH_MAX_SLOTS 300000
 
 # python
-# set -x PATH "/usr/local/share/python" $PATH
+set -x PATH "/usr/local/share/python" $PATH
 
 # Add Ansible developer version to the beginning of PATH
 set -x PATH "/Users/glnd/Sources/ansible/bin" $PATH
