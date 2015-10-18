@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 DOTFILES_PATH=$HOME/dotfiles
 
 brew update
-brew install fish git python vim tmux the_silver_searcher
+brew install fish git python vim tmux the_silver_searcher archey
 brew upgrade
 
 pip install powerline-status --upgrade

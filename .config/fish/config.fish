@@ -1,7 +1,3 @@
-# powerline-daemon -q
-# set fish_function_path $fish_function_path "/usr/local/lib/python2.7/site-packages/powerline/bindings/fish"
-# powerline-setup
-
 set fish_path $HOME/.config/fish
 set fish_greeting
  
@@ -30,3 +26,5 @@ set -g __fish_git_prompt_showcolorhints 1
 set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
+
+archey -c
