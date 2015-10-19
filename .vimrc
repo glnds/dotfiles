@@ -182,8 +182,8 @@ let g:pymode_folding = 0
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nmap <S-Enter> Ojj
+nmap <CR> ojj
 nmap <Leader>cs :colorscheme solarized<CR>
 nmap <Leader>cb :colorscheme badwolf<CR>
 " Start vimux

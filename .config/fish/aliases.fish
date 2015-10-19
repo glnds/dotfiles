@@ -115,6 +115,9 @@ function upgrade
   brew cask update; brew cask cleanup
 end
 
+# http://osxnotes.net/spotlight.html
+alias spotlight="mdfind"
+
 #alias vim="nvim"
 
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'

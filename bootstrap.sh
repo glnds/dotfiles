@@ -15,6 +15,8 @@ pip install virtualfish --upgrade
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
 ~/dotfiles/powerline/install.sh
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
