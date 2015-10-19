@@ -9,12 +9,12 @@ let maplocalleader = " "
 set background=dark
 colorscheme badwolf
 "colorscheme solarized
-let g:solarized_termcolors=256 
-let g:solarized_termtrans=1 
-let g:solarized_degrade=1 
-let g:solarized_bold=0 
-let g:solarized_underline=0 
-let g:solarized_italic=0 
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_degrade=1
+let g:solarized_bold=0
+let g:solarized_underline=0
+let g:solarized_italic=0
 let g:solarized_contrast='high'
 let g:solarized_visibility='high'
 let g:badwolf_darkgutter = 1 " Make the gutters darker than the background.
@@ -120,6 +120,10 @@ call plug#end()
   "- Plug 'easymotion/vim-easymotion'
   "- Plug 'klen/python-mode'
   "- Plug 'davidhalter/jedi-vim'
+  "
+set guioptions=TlrLR
+set cpoptions+=$
+set t_Co=256
 
 if &term =~ '256color'
   " Disable Background Color Erase (BCE) so that color schemes
