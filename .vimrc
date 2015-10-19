@@ -2,11 +2,21 @@
 "  _  __(_)_ _  ________
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/ 
-"
+"                       
 let mapleader = " "
 let maplocalleader = " "
 
+set background=dark
 colorscheme badwolf
+"colorscheme solarized
+let g:solarized_termcolors=256 
+let g:solarized_termtrans=1 
+let g:solarized_degrade=1 
+let g:solarized_bold=0 
+let g:solarized_underline=0 
+let g:solarized_italic=0 
+let g:solarized_contrast='high'
+let g:solarized_visibility='high'
 let g:badwolf_darkgutter = 1 " Make the gutters darker than the background.
 let g:badwolf_tabline = 0    " Make the tab line darker than the background
 "
@@ -26,6 +36,7 @@ set virtualedit=onemore   " Allow for cursor beyond last character
 set tabstop=2             " Number of spaces for a tab
 set softtabstop=2         " Number of spaces for a tab while editing
 set shiftwidth=2          " Shift width value
+set smarttab              " Insers blanks according to shiftwidth
 set shiftround            " Round the shift indent
 set expandtab             " Conver tabs to spaces
 set autoread              " Autoread a file when it's changed from outside
@@ -52,6 +63,7 @@ set colorcolumn=81        " Make it obvious where 80 characters is
 set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
 set autochdir             " Change the current dir if you open a file
+set modeline              " Disable modeline support
 
 " https://neovim.io/doc/user/nvim_from_vim.html
 if !has('nvim')
@@ -72,11 +84,11 @@ set wildignore+=*.zip                            " zip
 "set list listchars=tab:»·,trail:·,nbsp:· "Display extra whitespace
 set listchars-=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail
 
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
 Plug 'sjl/badwolf'
+Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -168,6 +180,8 @@ nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+nmap <Leader>cs :colorscheme solarized<CR>
+nmap <Leader>cb :colorscheme badwolf<CR>
 " Start vimux
 nmap <leader>m :VimuxRunCommand<CR>
 " Open up .vimrc quickly in a new buffer
