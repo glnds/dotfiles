@@ -23,6 +23,7 @@ let g:solarized_contrast='high'
 let g:solarized_visibility='high'
 let g:badwolf_darkgutter = 1 " Make the gutters darker than the background.
 let g:badwolf_tabline = 0    " Make the tab line darker than the background
+highlight ColorColumn ctermbg=237
 "}}}
 " Options {{{
 set laststatus=2          " Always display the statusline in all windows 
@@ -63,7 +64,27 @@ set colorcolumn=81        " Make it obvious where 80 characters is
 set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
 set autochdir             " Change the current dir if you open a file
-set modelines=1            " Disable modeline support
+set modelines=1           " Disable modeline support
+set guioptions=TlrLR      " Options when running vim in GUI mode
+set cpoptions+=$          " Show a $ sign in the change buffer
+set t_Co=256              " Number of colors
+set complete+=kspell      " Autocomplete with dictionary words when spell check is on
+
+set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
+set listchars=tab:»·,trail:·,nbsp:· "Display extra whitespace
+
+if &term =~ '256color'
+  " Disable Background Color Erase (BCE) so that color schemes
+  " work properly when Vim is used inside tmux and GNU screen.
+  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
+" https://neovim.io/doc/user/nvim_from_vim.html
+if !has('nvim')
+  set cryptmethod=blowfish2 " Use strong blowfish algorithm when encrypting files
+  set ttyfast               " Terminal performance optimisation
+endif
 " }}}
 " Backup {{{
 set backup
@@ -72,12 +93,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 " }}}
-" https://neovim.io/doc/user/nvim_from_vim.html
-if !has('nvim')
-  set cryptmethod=blowfish2 " Use strong blowfish algorithm when encrypting files
-  set ttyfast               " Terminal performance optimisation
-endif
-
+" Wildmenu {{{
 set wildmenu                                     " Enable command-line completion
 set wildmode=list:longest,full                   " Wildmenu completion mode
 set wildignore+=.git,.svn                        " Version control
@@ -86,10 +102,7 @@ set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
 set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.DS_Store                       " OSX bullshit
 set wildignore+=*.zip                            " zip
-
-"set list listchars=tab:»·,trail:·,nbsp:· "Display extra whitespace
-set listchars-=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail
-
+" }}}
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
@@ -128,34 +141,16 @@ call plug#end()
   "- Plug 'klen/python-mode'
   "- Plug 'davidhalter/jedi-vim'
 " }}}
-
-set guioptions=TlrLR
-set cpoptions+=$
-set t_Co=256
-
-if &term =~ '256color'
-  " Disable Background Color Erase (BCE) so that color schemes
-  " work properly when Vim is used inside tmux and GNU screen.
-  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
-
+" Airline {{{
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
 let g:netrw_liststyle=3
-
-highlight ColorColumn ctermbg=237
-
-" NERDTree config
+" }}}
+" NERDTree {{{
 let NERDTreeChDirMode=2     " Display the current working directory
 let NERDTreeShowBookmarks=1 " Show Bookmarks on startup
 "let NERDTreeShowHidden=1   " Show hidden files on startup
-nnoremap <leader>n :NERDTree .<CR>
-map <F2> :NERDTreeToggle<CR>
-
-" Tagbar config
-nmap <F8> :TagbarToggle<CR>
-
-" Ctrl P config
+" }}}
+" Ctrl P {{{
 "let g:ctrlp_map = ',t'
 "nnoremap <silent> ,t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 0
@@ -163,28 +158,7 @@ let g:ctrlp_open_new_file = 'v'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_custom_ignore = {'dir': 'dist'}
-
-" Jedi-vim
-" Rename default command because of conflic with python mode
-let g:jedi#rename_command = "<leader>f" " Refactor variable name
-
-" Python mode config
-let g:pymode_rope = 0 "Replaced by jedi-vim
-let g:pymode_doc = 1
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_write = 1
-let g:pymode_virtualenv = 1
-let g:pymode_breakpoint = 1
-let g:pymode_doc_bind = 'K'
-let g:pymode_breakpoint_bind = '<leader>b'
-let g:pymode_run_bind = '<leader>r'
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-let g:pymode_folding = 0
-
+" }}}
 " Leader shortcuts {{{
 " Check a key binding, ex: verbose nmap <Leader>r
 let mapleader = ","
@@ -201,25 +175,40 @@ nmap <Leader>gg :Goyo<CR>
 nnoremap <leader>a :Ag
 map <leader>r :w<CR>:!./%<CR>
 nnoremap <Leader>r :w<CR>:!python %<CR>
-" }}}
+" Fast saving
+nnoremap <leader>w :w!<cr>
 " Start vimux
 nmap <leader>m :VimuxRunCommand<CR>
+" Run the current file with rspec
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
+" Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <Leader>vz :call VimuxZoomRunner()<CR> 
 " Open up .vimrc quickly in a new buffer
 nnoremap  <leader>ev :vsp $MYVIMRC<cr>
 " Source .vimrc explitly
 nnoremap  <leader>sv :source $MYVIMRC<cr>
+" Remove trailing whitespaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+" }}}
+" Shortcuts {{{
+map <F2> :NERDTreeToggle<CR>
+" Tagbar config
+nmap <F8> :TagbarToggle<CR>
 " Ex-mode is shitty
 nnoremap  Q <nop>
-" Fast saving
-nnoremap <leader>w :w!<cr>
-" e2e matching
-nnoremap <tab> %
-vnoremap <tab> %
 " Folding
 nnoremap <Space> za
 vnoremap <Space> za
-" Remove trailing whitespaces
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " Use vim way instead
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
@@ -244,28 +233,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" Run the current file with rspec
-map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
-" Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
-" Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
-" Inspect runner pane
-map <Leader>vi :VimuxInspectRunner<CR>
-" Close vim tmux runner opened by VimuxRunCommand
-map <Leader>vq :VimuxCloseRunner<CR>
-" Interrupt any command running in the runner pane
-map <Leader>vx :VimuxInterruptRunner<CR>
-" Zoom the runner pane (use <bind-key> z to restore runner pane)
-map <Leader>vz :call VimuxZoomRunner()<CR> 
-
-" Set spellfile to location that is guaranteed to exist, can be symlinked to
-" Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
-set spellfile=$HOME/.vim-spell-en.utf-8.add
-
-" Autocomplete with dictionary words when spell check is on
-set complete+=kspell
+" }}}
+" Silerver Searcher {{{
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
@@ -277,5 +246,5 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
+" }}}
 " vim:foldmethod=marker:foldlevel=0
