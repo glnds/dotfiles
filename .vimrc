@@ -4,12 +4,11 @@
 " |___/_/_/_/_/_/  \__/ 
 "                       
 
+" Colors {{{
 " Must be on top
 set nocompatible          " Don't care about Vi-compatibility
-syntax on
-filetype plugin indent on
 
-" Colors {{{
+syntax on
 set background=dark
 colorscheme badwolf
 "colorscheme solarized
@@ -26,6 +25,7 @@ let g:badwolf_tabline = 0    " Make the tab line darker than the background
 highlight ColorColumn ctermbg=237
 "}}}
 " Options {{{
+filetype plugin indent on
 set laststatus=2          " Always display the statusline in all windows 
 set backspace=2           " Backspace deletes like most programs in insert mode 
 set encoding=utf8         " Sets charachter encoding
@@ -247,4 +247,5 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 " }}}
+
 " vim:foldmethod=marker:foldlevel=0
