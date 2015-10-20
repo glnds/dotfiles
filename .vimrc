@@ -3,9 +3,13 @@
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/ 
 "                       
-let mapleader = " "
-let maplocalleader = " "
 
+" Must be on top
+set nocompatible          " Don't care about Vi-compatibility
+syntax on
+filetype plugin indent on
+
+" Colors {{{
 set background=dark
 colorscheme badwolf
 "colorscheme solarized
@@ -19,14 +23,10 @@ let g:solarized_contrast='high'
 let g:solarized_visibility='high'
 let g:badwolf_darkgutter = 1 " Make the gutters darker than the background.
 let g:badwolf_tabline = 0    " Make the tab line darker than the background
-"
-syntax on
-filetype plugin indent on
-
+"}}}
+" Options {{{
 set laststatus=2          " Always display the statusline in all windows 
 set backspace=2           " Backspace deletes like most programs in insert mode 
-set nobackup              " Don't make a backup file
-set nowritebackup         " Dont't make a backup file
 set encoding=utf8         " Sets charachter encoding
 set mouse=                " Disabling mouse support
 set history=1000          " Remember ALL THE commands!
@@ -63,12 +63,18 @@ set colorcolumn=81        " Make it obvious where 80 characters is
 set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
 set autochdir             " Change the current dir if you open a file
-set modeline              " Disable modeline support
-
+set modelines=1            " Disable modeline support
+" }}}
+" Backup {{{
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+" }}}
 " https://neovim.io/doc/user/nvim_from_vim.html
 if !has('nvim')
   set cryptmethod=blowfish2 " Use strong blowfish algorithm when encrypting files
-  set nocompatible          " Don't care about Vi-compatibility
   set ttyfast               " Terminal performance optimisation
 endif
 
@@ -84,6 +90,7 @@ set wildignore+=*.zip                            " zip
 "set list listchars=tab:»·,trail:·,nbsp:· "Display extra whitespace
 set listchars-=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail
 
+" Plugins {{{
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
@@ -105,9 +112,10 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tomtom/tcomment_vim'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -115,12 +123,12 @@ call plug#end()
   "- Plug 'noahfrederick/vim-hemisu'
   "- Plug 'editorconfig/editorconfig-vim'
   "- Plug 'tpope/vim-unimpaired'
-  "- Plug 'junegunn/goyo.vim'
   "- Plug 'rizzatti/dash.vim'
   "- Plug 'easymotion/vim-easymotion'
   "- Plug 'klen/python-mode'
   "- Plug 'davidhalter/jedi-vim'
-  "
+" }}}
+
 set guioptions=TlrLR
 set cpoptions+=$
 set t_Co=256
@@ -148,8 +156,8 @@ map <F2> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Ctrl P config
-let g:ctrlp_map = ',t'
-nnoremap <silent> ,t :CtrlP<cr>
+"let g:ctrlp_map = ',t'
+"nnoremap <silent> ,t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_open_new_file = 'v'
 let g:ctrlp_by_filename = 1
@@ -177,8 +185,11 @@ let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 
-" Personal key mappings
+" Leader shortcuts {{{
 " Check a key binding, ex: verbose nmap <Leader>r
+let mapleader = ","
+let maplocalleader = ","
+
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
@@ -186,6 +197,11 @@ nmap <S-Enter> Ojj
 nmap <CR> ojj
 nmap <Leader>cs :colorscheme solarized<CR>
 nmap <Leader>cb :colorscheme badwolf<CR>
+nmap <Leader>gg :Goyo<CR>
+nnoremap <leader>a :Ag
+map <leader>r :w<CR>:!./%<CR>
+nnoremap <Leader>r :w<CR>:!python %<CR>
+" }}}
 " Start vimux
 nmap <leader>m :VimuxRunCommand<CR>
 " Open up .vimrc quickly in a new buffer
@@ -200,8 +216,8 @@ nnoremap <leader>w :w!<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 " Folding
-" nnoremap <Space> za
-" vnoremap <Space> za
+nnoremap <Space> za
+vnoremap <Space> za
 " Remove trailing whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " Use vim way instead
@@ -261,3 +277,5 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" vim:foldmethod=marker:foldlevel=0
