@@ -3,7 +3,6 @@
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/ 
 "                       
-
 " Colors {{{
 " Must be on top
 set nocompatible          " Don't care about Vi-compatibility
@@ -45,6 +44,7 @@ set lazyredraw            " Terminal performance optimisation
 set magic                 " Better searching
 set noswapfile            " Don't pollute my hard drive, even temporary
 set autoindent            " Copy indent form current line when starting a new line
+set wrap                  " Wrap long lines
 set smartindent           " Auto indent when starting a new line
 set relativenumber        " Use relative line numbers
 set showmatch             " Show matching brackets (Damn this is so cool!)
@@ -117,7 +117,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'chase/vim-ansible-yaml'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
-Plug 'Yggdroot/indentLine'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/syntastic'
 Plug 'benmills/vimux'
@@ -129,6 +128,7 @@ Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
+Plug 'rizzatti/dash.vim'
 
 call plug#end()
 
@@ -140,6 +140,7 @@ call plug#end()
   "- Plug 'easymotion/vim-easymotion'
   "- Plug 'klen/python-mode'
   "- Plug 'davidhalter/jedi-vim'
+  "- Plug 'Yggdroot/indentLine'
 " }}}
 " Airline {{{
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
