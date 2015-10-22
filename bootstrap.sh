@@ -24,6 +24,7 @@ ln -s ~/dotfiles/.vim ~/
 ln -s ~/dotfiles/.vimrc ~/.nvimrc
 ln -s ~/dotfiles/.vim ~/.nvim
 ln -s ~/dotfiles/.config ~/
+ln -s ~/dotfiles/gradle.properties ~/.gradle/gradle.properties
 
 if [ ! -e $HOME/.vim/autoload/plug.vim ]; then
   echo "Installing Plug"
