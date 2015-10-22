@@ -230,6 +230,7 @@ cnoremap <Down> <nop>
 inoremap  <esc> <nop>
 " `jj` is much better :)
 inoremap  jj <esc>
+inoremap  jk <esc>
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
