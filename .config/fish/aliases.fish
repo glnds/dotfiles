@@ -108,7 +108,7 @@ function lockme
 end
 
 function update
-  brew update; brew upgradel; brew cleanup
+  brew update; brew upgrade; brew cleanup
 end
 
 function upgrade
