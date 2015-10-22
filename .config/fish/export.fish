@@ -16,7 +16,7 @@ set -x P4MERGE "vim"
 set -x GROOVY_HOME /usr/local/opt/groovy/libexec
 
 # Gradle home
-set -x GRADLE_HOME /usr/local/Cellar/gradle/2.6
+set -x GRADLE_HOME /usr/local/opt/gradle/libexec
 
 # Java home
 set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
