@@ -55,7 +55,6 @@ set smartcase             " Case sensitive when uc present
 set cursorline            " Highlight cursorline!
 set ruler                 " Always show current position
 set list                  " Show specials charcters like tabs (^I), end of line ($), ...
-set cpoptions+=$          " Show a dollar sign in the change buffer
 set splitbelow            " Split current window below
 set splitright            " Split current window right
 set showcmd               " Display incomplete commands
