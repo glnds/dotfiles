@@ -129,6 +129,7 @@ Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'rizzatti/dash.vim'
+Plug 'markcornick/vim-terraform'
 
 call plug#end()
 
