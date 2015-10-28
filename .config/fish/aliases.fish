@@ -118,6 +118,8 @@ end
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
 
+alias history="history | nl"
+
 #alias vim="nvim"
 
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
