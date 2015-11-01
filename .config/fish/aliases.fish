@@ -43,6 +43,7 @@ alias gst="git status -sb --ignore-submodules"
 alias gstl="git status"
 alias gm="git merge --no-ff"
 alias gp="git push"
+alias gpl="git pull"
 alias gpt="git push --tags"
 alias gcob="git checkout -b"
 alias gco="git checkout"
@@ -51,6 +52,9 @@ alias gcp="git cherry-pick"
 alias gl="git lg"
 alias gpom="git pull origin master"
 alias glup="git log origin/master..HEAD"
+alias gr="git remote -v"
+alias glg="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
