@@ -7,6 +7,7 @@ DOTFILES_PATH=$HOME/dotfiles
 
 brew update
 brew install cmake fish git python vim tmux the_silver_searcher archey
+brew install caskroom/cask/brew-cask
 brew upgrade
 
 pip install powerline-status --upgrade
