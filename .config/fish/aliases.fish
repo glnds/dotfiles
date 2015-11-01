@@ -115,6 +115,9 @@ function upgrade
   brew cask update; brew cask cleanup
 end
 
+# Python pip update all packages
+alias pupdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
 
