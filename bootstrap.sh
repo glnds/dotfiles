@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 DOTFILES_PATH=$HOME/dotfiles
 
 brew update
-brew install cmake fish git python vim tmux the_silver_searcher archey
+brew install cmake fish git python vim tmux the_silver_searcher archey tig
 brew install caskroom/cask/brew-cask
 brew upgrade
 
