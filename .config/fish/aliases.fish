@@ -35,6 +35,7 @@ alias undopush="git push -f origin HEAD^:master"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias ga="git add"
+alias grm="git rm"
 alias gca="git commit -a -m"
 alias gcm="git commit -m"
 alias gcr!='git commit -v --amend --no-edit'
