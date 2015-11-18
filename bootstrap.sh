@@ -24,6 +24,7 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/
+ln -s ~/dotfiles/.virtualenvs ~/
 ln -s ~/dotfiles/.vimrc ~/.nvimrc
 ln -s ~/dotfiles/.vim ~/.nvim
 ln -s ~/dotfiles/.config ~/
