@@ -202,6 +202,12 @@ nnoremap  <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " }}}
 " Shortcuts {{{
+" Clipboad
+nmap pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+imap pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nmap cc :.w !pbcopy<CR><CR>
+vmap cc :w !pbcopy<CR><CR>
+" NERDTree
 map <F2> :NERDTreeToggle<CR>
 " Tagbar config
 nmap <F8> :TagbarToggle<CR>
