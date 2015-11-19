@@ -25,6 +25,8 @@ highlight ColorColumn ctermbg=237
 "}}}
 " Options {{{
 filetype plugin indent on
+set timeout timeoutlen=400 ttimeoutlen=100
+
 set laststatus=2          " Always display the statusline in all windows 
 set backspace=2           " Backspace deletes like most programs in insert mode 
 set encoding=utf8         " Sets charachter encoding
@@ -127,7 +129,6 @@ Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
-Plug 'rizzatti/dash.vim'
 Plug 'markcornick/vim-terraform'
 
 call plug#end()
@@ -141,7 +142,18 @@ call plug#end()
   "- Plug 'klen/python-mode'
   "- Plug 'davidhalter/jedi-vim'
   "- Plug 'Yggdroot/indentLine'
+  "- Plug 'rizzatti/dash.vim'
 " }}}
+" Syntastic {{{
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" }}}"
 " Airline {{{
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
 let g:netrw_liststyle=3
