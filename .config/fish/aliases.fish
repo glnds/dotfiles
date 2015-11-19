@@ -42,8 +42,7 @@ alias gcm="git commit -m"
 alias gcr!='git commit -v --amend --no-edit'
 alias gbd="git branch -D"
 alias gst="git status -sb --ignore-submodules"
-alias gsta="git stash"
-alias gstl="git status"
+alias gst="git status"
 alias gm="git merge --no-ff"
 alias gp="git push"
 alias gpl="git pull"
@@ -58,6 +57,18 @@ alias glup="git log origin/master..HEAD"
 alias gr="git remote -v"
 alias glg="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+alias gs="git stash"
+alias gsl="git stash list"
+function gss
+  git stash show -p stash@\{$argv[1]\}
+end
+alias gsal="git stash apply"
+function gsa
+  git stash apply stash@\{$argv[1]\}
+end
+function gsd
+  git stash drop stash@\{$argv[1]\}
+end
 
 alias tig="tig --all"
 
