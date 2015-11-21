@@ -143,7 +143,7 @@ alias spotlight="mdfind"
 
 alias history="history | nl"
 
-alias tplink="java -cp /Users/glnd/CloudStation/misc/TP-Link/patch.jar:/Users/glnd/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
+alias tplink="java -cp ~/CloudStation/misc/TP-Link/patch.jar:~/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
 
 #alias vim="nvim"
 
