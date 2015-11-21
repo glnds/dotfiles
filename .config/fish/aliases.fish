@@ -143,6 +143,8 @@ alias spotlight="mdfind"
 
 alias history="history | nl"
 
+alias tplink="java -cp /Users/glnd/CloudStation/misc/TP-Link/patch.jar:/Users/glnd/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
+
 #alias vim="nvim"
 
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
