@@ -97,8 +97,9 @@ alias dri='docker rmi (docker images --filter dangling=true --quiet)'
 
 # Ansible
 alias ap='ansible-playbook'
-# Tmux
+alias aga='ansible-galaxy'
 
+# Tmux
 alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
