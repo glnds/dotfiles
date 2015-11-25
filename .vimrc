@@ -177,6 +177,12 @@ let g:ctrlp_custom_ignore = {'dir': 'dist'}
 let mapleader = ","
 let maplocalleader = ","
 
+" Clipboad
+nmap <Leader>p :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+"imap pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nmap <Leader>c :.w !pbcopy<CR><CR>
+vmap <Leader>c :w !pbcopy<CR><CR>
+
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
@@ -214,11 +220,6 @@ nnoremap  <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " }}}
 " Shortcuts {{{
-" Clipboad
-nmap pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-"imap pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-nmap cc :.w !pbcopy<CR><CR>
-vmap cc :w !pbcopy<CR><CR>
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
 " Tagbar config
