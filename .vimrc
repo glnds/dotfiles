@@ -122,7 +122,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/syntastic'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'dag/vim-fish'
@@ -223,6 +223,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
 " Tagbar config
+"let g:tagbar_ctags_bin = '/usr/bin/ctags'"
 nmap <F8> :TagbarToggle<CR>
 " Ex-mode is shitty
 nnoremap  Q <nop>
