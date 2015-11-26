@@ -27,6 +27,7 @@ highlight ColorColumn ctermbg=237
 filetype plugin indent on
 set timeout timeoutlen=400 ttimeoutlen=100
 
+set hidden                " hide buffers instead of closing them
 set laststatus=2          " Always display the statusline in all windows 
 set backspace=2           " Backspace deletes like most programs in insert mode 
 set encoding=utf8         " Sets charachter encoding
