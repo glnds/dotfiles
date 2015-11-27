@@ -228,6 +228,9 @@ map <F2> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 " Ex-mode is shitty
 nnoremap  Q <nop>
+" Move single row on wrapped lines
+nmap j gj
+nmap k gk
 " Folding
 nnoremap <Space> za
 vnoremap <Space> za
