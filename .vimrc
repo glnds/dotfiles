@@ -25,7 +25,7 @@ highlight ColorColumn ctermbg=237
 "}}}
 " Options {{{
 filetype plugin indent on
-set timeout timeoutlen=400 ttimeoutlen=100
+set timeout timeoutlen=500 ttimeoutlen=100
 
 set hidden                " hide buffers instead of closing them
 set laststatus=2          " Always display the statusline in all windows 
@@ -158,6 +158,10 @@ let g:syntastic_check_on_wq = 0
 " Airline {{{
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
 let g:netrw_liststyle=3
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
 " NERDTree {{{
 let NERDTreeChDirMode=2     " Display the current working directory
