@@ -168,14 +168,18 @@ let NERDTreeChDirMode=2     " Display the current working directory
 let NERDTreeShowBookmarks=1 " Show Bookmarks on startup
 "let NERDTreeShowHidden=1   " Show hidden files on startup
 " }}}
-" Ctrl P {{{
-"let g:ctrlp_map = ',t'
-"nnoremap <silent> ,t :CtrlP<cr>
-let g:ctrlp_working_path_mode = 0
+" CtrlP {{{
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_open_new_file = 'v'
-let g:ctrlp_by_filename = 1
-let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_by_filename = 1
 let g:ctrlp_custom_ignore = {'dir': 'dist'}
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \}
+" Use the nearest .git directory as the cwd
+let g:ctrlp_working_path_mode = 'r'
 " }}}
 " Leader shortcuts {{{
 " Check a key binding, ex: verbose nmap <Leader>r
@@ -183,48 +187,35 @@ let mapleader = ","
 let maplocalleader = ","
 
 " Clipboad
-nmap <Leader>p :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-"imap pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-nmap <Leader>c :.w !pbcopy<CR><CR>
-vmap <Leader>c :w !pbcopy<CR><CR>
+"nmap <Leader>p :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+""imap pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+"nmap <Leader>c :.w !pbcopy<CR><CR>
+"vmap <Leader>c :w !pbcopy<CR><CR>
 
-nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
-nmap <Leader><Leader> V
-nmap <S-Enter> Ojj
-nmap <CR> ojj
-nmap <Leader>cs :colorscheme solarized<CR>
-nmap <Leader>cb :colorscheme badwolf<CR>
-nmap <Leader>gg :Goyo<CR>
-nnoremap <leader>a :Ag
-map <leader>r :w<CR>:!./%<CR>
-nnoremap <Leader>r :w<CR>:!python %<CR>
-" Fast saving
-nnoremap <leader>w :w!<cr>
-" Start vimux
-nmap <leader>m :VimuxRunCommand<CR>
-" Run the current file with rspec
-map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
-" Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
-" Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
-" Inspect runner pane
-map <Leader>vi :VimuxInspectRunner<CR>
-" Close vim tmux runner opened by VimuxRunCommand
-map <Leader>vq :VimuxCloseRunner<CR>
-" Interrupt any command running in the runner pane
-map <Leader>vx :VimuxInterruptRunner<CR>
-" Zoom the runner pane (use <bind-key> z to restore runner pane)
-map <Leader>vz :call VimuxZoomRunner()<CR> 
-" Open up .vimrc quickly in a new buffer
-nnoremap  <leader>ev :vsp $MYVIMRC<cr>
-" Source .vimrc explitly
-nnoremap  <leader>sv :source $MYVIMRC<cr>
-" Remove trailing whitespaces
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+nmap <Leader><Leader> V|                      " Select viual line
+nmap <leader>a :Ag|                           " Silver Searcher
+nmap <leader>b :CtrlPBuffer<cr>|              " CTRLP find buffer mode
+nmap <leader>bm :CtrlPMixed<cr>|              " CTRLP find files, buffers and MRU files
+nmap <leader>bs :CtrlPMRU<cr>|                " CTRLP find MRU files
+nmap <Leader>cs :colorscheme solarized<CR>|   " Switch color scheme
+nmap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
+nmap <leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
+nmap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
+nmap <leader>m :VimuxRunCommand<CR>|          " Start vimux
+nmap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
+nmap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
+nmap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
+nmap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened by VimuxRunCommand
+nmap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
+nmap <Leader>vz :call VimuxZoomRunner()<CR> | " Zoom the runner pane (use <bind-key> z to restore runner pane)
+nmap <leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explitly
+nmap <Leader>p :CtrlP<CR>|                    " CTRLP find files
+nmap <Leader>w :w<CR>|                        " Save buffer
+nmap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
 " }}}
 " Shortcuts {{{
+nmap <S-Enter> Ojj
+nmap <CR> ojj
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
 " Tagbar config
