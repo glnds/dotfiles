@@ -23,6 +23,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/dotfiles/.vim ~/
 ln -s ~/dotfiles/.virtualenvs ~/
 ln -s ~/dotfiles/.vimrc ~/.nvimrc
