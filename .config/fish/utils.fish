@@ -35,5 +35,5 @@ function fuck -d 'Correct your previous console command'
 end
 
 function ideaDiff
-  /Applications/IntelliJ\ IDEA\ 14.app/Contents/MacOS/idea diff $argv[1] $argv[2]
+  /Applications/IntelliJ\ IDEA\ 15.app/Contents/MacOS/idea diff $argv[1] $argv[2]
 end
