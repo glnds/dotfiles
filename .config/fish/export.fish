@@ -21,6 +21,9 @@ set -x GRADLE_HOME /usr/local/opt/gradle/libexec
 # Java home
 set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
 
+# Maven home
+set -x M2_HOME /usr/local/opt/maven/libexec
+
 # Go Home
 set -x GOPATH "$HOME/go"
 
