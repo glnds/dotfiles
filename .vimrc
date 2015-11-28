@@ -192,26 +192,26 @@ let maplocalleader = ","
 "nmap <Leader>c :.w !pbcopy<CR><CR>
 "vmap <Leader>c :w !pbcopy<CR><CR>
 
-nmap <Leader><Leader> V|                      " Select viual line
-nmap <leader>a :Ag|                           " Silver Searcher
-nmap <leader>b :CtrlPBuffer<cr>|              " CTRLP find buffer mode
-nmap <leader>bm :CtrlPMixed<cr>|              " CTRLP find files, buffers and MRU files
-nmap <leader>bs :CtrlPMRU<cr>|                " CTRLP find MRU files
-nmap <Leader>cs :colorscheme solarized<CR>|   " Switch color scheme
-nmap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
-nmap <leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
-nmap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
-nmap <leader>m :VimuxRunCommand<CR>|          " Start vimux
-nmap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
-nmap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
-nmap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
-nmap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened by VimuxRunCommand
-nmap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
-nmap <Leader>vz :call VimuxZoomRunner()<CR> | " Zoom the runner pane (use <bind-key> z to restore runner pane)
-nmap <leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explitly
-nmap <Leader>p :CtrlP<CR>|                    " CTRLP find files
-nmap <Leader>w :w<CR>|                        " Save buffer
-nmap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
+nnoremap <Leader><Leader> V|                      " Select viual line
+nnoremap <leader>a :Ag|                           " Silver Searcher
+nnoremap <leader>b :CtrlPBuffer<cr>|              " CTRLP find buffer mode
+nnoremap <leader>bm :CtrlPMixed<cr>|              " CTRLP find files, buffers and MRU files
+nnoremap <leader>bs :CtrlPMRU<cr>|                " CTRLP find MRU files
+nnoremap <Leader>cs :colorscheme solarized<CR>|   " Switch color scheme
+nnoremap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
+nnoremap <leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
+nnoremap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
+nnoremap <leader>m :VimuxRunCommand<CR>|          " Start vimux
+nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
+nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
+nnoremap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
+nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened by VimuxRunCommand
+nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
+nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
+nnoremap <leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explitly
+nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
+nnoremap <Leader>w :w<CR>|                        " Save buffer
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
 " }}}
 " Shortcuts {{{
 nmap <S-Enter> Ojj
