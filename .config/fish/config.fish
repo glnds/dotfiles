@@ -1,9 +1,17 @@
 set fish_path $HOME/.config/fish
 set fish_greeting
+
+ # Set favourite editor and pager
+ set --universal --export VISUAL "vim -f"
+ set --universal --export EDITOR $VISUAL
+ set --universal PAGER 'less'
  
 . $fish_path/aliases.fish
 . $fish_path/export.fish
 . $fish_path/utils.fish
+
+fish_vi_mode
+set fish_key_bindings fish_user_key_bindings
 
 # set -gx RBENV_ROOT /usr/local/var/rbenv  
 # . (rbenv init -|psub)
