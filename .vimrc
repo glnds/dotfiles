@@ -202,6 +202,7 @@ nnoremap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
 nnoremap <leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
 nnoremap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
 nnoremap <leader>m :VimuxRunCommand<CR>|          " Start vimux
+nnoremap <leader>t :TagbarToggle<CR>              " Toggle Tagbar
 nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
 nnoremap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
@@ -220,7 +221,6 @@ nmap <CR> ojj
 map <F2> :NERDTreeToggle<CR>
 " Tagbar config
 "let g:tagbar_ctags_bin = '/usr/bin/ctags'"
-nmap <F8> :TagbarToggle<CR>
 " Ex-mode is shitty
 nnoremap  Q <nop>
 " Move single row on wrapped lines
