@@ -107,22 +107,12 @@ alias tmk="tmux kill-session -t $1"
 # ACSL
 alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
 alias lssh="lsof -i 4tcp -P | ag '^ssh'"
-alias pf="p4"
-alias pfs="p4 sync"
-alias pfa="p4 add"
-alias pfA="find . -type f -print | p4 -x - add"
-alias pfsm="p4 submit"
-alias pfo="p4 opened"
-alias pfe="p4 edit"
-alias pfd="p4 delete"
-alias pfr="p4 revert"
-function pfE
-  p4 edit $argv ; vim $argv
-end
 alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --output table --profile acsl"
 alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"
 alias elbp="aws elb describe-instance-health --load-balancer-name prod-ga-elb --output table --profile acsl"
-
+alias dmongo="mongo --port 27018"
+alias tmongo="mongo --port 27019"
+alias pmongo="mongo --port 27020"
 
 function lockme
   /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
