@@ -1,6 +1,7 @@
 alias ..="cd .."
-
 alias -="cd -"
+
+alias trash="rmtrash"
 
 alias ea='vim ~/.config/fish/aliases.fish'
 alias ef='vim ~/.config/fish/config.fish'
