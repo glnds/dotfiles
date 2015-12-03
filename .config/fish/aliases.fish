@@ -2,6 +2,7 @@ alias ..="cd .."
 alias -="cd -"
 
 alias trash="rmtrash"
+alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
 
 alias ea='vim ~/.config/fish/aliases.fish'
 alias ef='vim ~/.config/fish/config.fish'
