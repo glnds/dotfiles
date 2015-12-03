@@ -10,8 +10,8 @@ set fish_greeting
 . $fish_path/export.fish
 . $fish_path/utils.fish
 
-fish_vi_mode
-set fish_key_bindings fish_user_key_bindings
+# fish_vi_mode
+# set fish_key_bindings fish_user_key_bindings
 
 # set -gx RBENV_ROOT /usr/local/var/rbenv  
 # . (rbenv init -|psub)
