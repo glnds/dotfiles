@@ -182,21 +182,19 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 'r'
 " }}}
 " Leader shortcuts {{{
+
 " Check a key binding, ex: verbose nmap <Leader>r
+
 let mapleader = ","
 let maplocalleader = ","
-
-" Clipboad
-"nmap <Leader>p :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-""imap pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-"nmap <Leader>c :.w !pbcopy<CR><CR>
-"vmap <Leader>c :w !pbcopy<CR><CR>
 
 nnoremap <Leader><Leader> V|                      " Select viual line
 nnoremap <leader>a :Ag|                           " Silver Searcher
 nnoremap <leader>b :CtrlPBuffer<cr>|              " CTRLP find buffer mode
 nnoremap <leader>bm :CtrlPMixed<cr>|              " CTRLP find files, buffers and MRU files
 nnoremap <leader>bs :CtrlPMRU<cr>|                " CTRLP find MRU files
+nnoremap <Leader>c :.w !pbcopy<CR><CR>|           " Copy to clipboard
+vnoremap <Leader>c :w !pbcopy<CR><CR>|            " Copy to clipboard
 nnoremap <Leader>cs :colorscheme solarized<CR>|   " Switch color scheme
 nnoremap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
 nnoremap <leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
@@ -211,6 +209,10 @@ nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command runnin
 nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
 nnoremap <leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explitly
 nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
+
+nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+
 nnoremap <Leader>w :w<CR>|                        " Save buffer
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
 " }}}
