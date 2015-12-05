@@ -25,6 +25,9 @@ highlight ColorColumn ctermbg=237
 "}}}
 " Options {{{
 filetype plugin indent on
+
+" autocmd BufNewFile,BufReadPost *.json setlocal filetype=json
+
 set timeout timeoutlen=500 ttimeoutlen=100
 
 set hidden                " hide buffers instead of closing them
@@ -131,6 +134,8 @@ Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'markcornick/vim-terraform'
+Plug 'krisajenkins/vim-pipe'
+Plug 'elzr/vim-json'
 
 call plug#end()
 
