@@ -34,3 +34,5 @@
 [gc "refs/remotes/*"]
   reflogExpire = 6 months
   reflogExpireUnreachable = 3 months
+[branch]
+	autosetuprebase = always

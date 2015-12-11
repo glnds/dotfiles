@@ -2,13 +2,7 @@
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
 
-# Perforce config
-set -x P4PORT localhost:1666
-set -x P4USER gleenders
-set -x P4CLIENT gleenders_mac15
-set -x P4EDITOR "vim"
-set -x P4DIFF "vimdiff"
-set -x P4MERGE "vim"
+set -x HOMEBREW_GITHUB_API_TOKEN d2a244a09a19930ff66ecab4e6137ccfd00ac584
 
 # set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
 
