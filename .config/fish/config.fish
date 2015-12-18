@@ -37,9 +37,10 @@ set __fish_git_prompt_color_upstream_behind red
 
 
 # SSH Agent
+# http://www.maxbucknell.com/blog/2015/5/5/ssh-identities
 #
 # Start SSH Agent if it's not already running, and add the
-# id_(nice_hostname) identity.
+# id_(hostname) identity.
 setenv SSH_ENV "$HOME/.ssh/environment"
 if [ -n "$SSH_AGENT_PID" ]
     ps -ef | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
