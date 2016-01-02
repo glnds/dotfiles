@@ -141,8 +141,9 @@ alias pupdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 
 alias spotlight="mdfind"
 
 alias history="history | nl"
-
-alias tplink="java -cp ~/CloudStation/misc/TP-Link/patch.jar:~/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
+#https://www.shredzone.de/cilla/page/383/setting-up-tp-link-tl-sg108e-with-linux.html
+#
+alias tplink="java -cp /Users/glnds/CloudStation/misc/TP-Link/patch.jar:/Users/glnds/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
 
 #alias vim="nvim"
 
