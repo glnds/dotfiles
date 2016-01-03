@@ -112,8 +112,13 @@ set wildignore+=*.zip                            " zip
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+
 Plug 'sjl/badwolf'
 Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+Plug 'fatih/molokai'
+Plug 'jonathanfilip/vim-lucius'
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -186,6 +191,15 @@ let g:ctrlp_custom_ignore = {
   \}
 " Use the nearest .git directory as the cwd
 let g:ctrlp_working_path_mode = 'r'
+" }}}
+" vim-go {{{
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:go_fmt_command = "goimports"
 " }}}
 " Leader shortcuts {{{
 
