@@ -9,4 +9,6 @@
 .vim/shada
 .config/fish/fishd.*
 .config/fish/fish_history
+.config/nvim/autoload
+.config/nvim/plugged
 powerline
