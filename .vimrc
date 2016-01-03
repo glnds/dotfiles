@@ -136,6 +136,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'markcornick/vim-terraform'
 Plug 'krisajenkins/vim-pipe'
 Plug 'elzr/vim-json'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
