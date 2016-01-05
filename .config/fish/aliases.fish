@@ -121,6 +121,7 @@ alias pmongo="mongo --port 27020"
 alias goansible="cd ~/Sources/acsl/aws-ansible"
 alias gogaone="cd ~/Sources/acsl/ga1"
 alias gogatwo="cd ~/Sources/acsl/ga2"
+alias godoc="cd ~/Sources/acsl/documentation"
 
 function lockme
   /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
