@@ -95,6 +95,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'markcornick/vim-terraform'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
+Plug 'krisajenkins/vim-pipe'
+Plug 'vim-scripts/SQLComplete.vim'
 
 call plug#end()
 

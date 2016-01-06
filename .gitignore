@@ -11,4 +11,5 @@
 .config/fish/fish_history
 .config/nvim/autoload
 .config/nvim/plugged
+.config/nvim/ftplugin/sql.vim
 powerline
