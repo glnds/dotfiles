@@ -149,6 +149,8 @@ alias tplink="java -cp /Users/glnds/CloudStation/misc/TP-Link/patch.jar:/Users/g
 alias vim="nvim"
 alias vimdiff="nvim -d"
 
+alias sqlplus="rlwrap sqlplus"
+
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"

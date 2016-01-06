@@ -7,7 +7,7 @@ DOTFILES_PATH=$HOME/dotfiles
 
 brew update
 brew install cmake fish git python vim tmux the_silver_searcher archey tig htop 
-brew install httpie rmtrash nmap ipcalc rmtrash
+brew install httpie rmtrash nmap ipcalc rmtrash rlwrap
 brew install caskroom/cask/brew-cask
 brew install neovim/neovim/neovim
 brew tap caskroom/versions
