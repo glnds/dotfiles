@@ -74,18 +74,17 @@ Plug 'bling/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'fatih/molokai'
 
-" Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-commentary'
-" Plug 'tpope/vim-repeat'
-" Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'scrooloose/syntastic'
-" Plug 'benmills/vimux'
-" Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
+"Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
@@ -93,8 +92,7 @@ Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
-" Plug 'markcornick/vim-terraform'
-" Plug 'krisajenkins/vim-pipe'
+Plug 'markcornick/vim-terraform'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 
@@ -112,6 +110,7 @@ call plug#end()
   "- Plug 'rizzatti/dash.vim'
 " }}}
 colorscheme molokai
+"nmap <bs> :<c-u>TmuxNavigateLeft<cr>
 " Syntastic {{{
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
