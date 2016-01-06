@@ -52,3 +52,8 @@ set -x EDITOR "vim"
 
 # grep colors
 setenv -x GREP_OPTIONS "--color=auto"
+
+# Oracle
+set -x ORACLE_HOME "/opt/oracle/product/instantclient_64/11.2.0.4.0"
+set -x PATH "$ORACLE_HOME/bin" $PATH
+set -x DYLD_LIBRARY_PATH "$ORACLE_HOME/lib"
