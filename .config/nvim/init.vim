@@ -192,6 +192,12 @@ inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
 nnoremap <Leader>w :w<CR>|                        " Save buffer
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
+
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
 " }}}
 " Shortcuts {{{
 nmap <S-Enter> Ojj
