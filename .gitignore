@@ -12,4 +12,5 @@
 .config/nvim/autoload
 .config/nvim/plugged
 .config/nvim/ftplugin/sql.vim
+.config/Fritzing
 powerline

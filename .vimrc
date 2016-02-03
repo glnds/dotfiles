@@ -237,6 +237,7 @@ nnoremap <Leader>w :w<CR>|                        " Save buffer
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
 " }}}
 " Shortcuts {{{
+" Insert new line on enter
 nmap <S-Enter> Ojj
 nmap <CR> ojj
 " NERDTree
