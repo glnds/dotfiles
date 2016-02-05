@@ -81,7 +81,7 @@ Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 " Plug 'scrooloose/syntastic'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -110,9 +110,10 @@ call plug#end()
   "- Plug 'davidhalter/jedi-vim'
   "- Plug 'Yggdroot/indentLine'
   "- Plug 'rizzatti/dash.vim'
-" }}}
+" colorscheme has to be set after plugins are loaded!
 colorscheme molokai
-"nmap <bs> :<c-u>TmuxNavigateLeft<cr>
+
+" }}}
 " Syntastic {{{
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -177,14 +178,14 @@ nnoremap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
 nnoremap <leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
 nnoremap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
 nnoremap <leader>m :VimuxRunCommand<CR>|          " Start vimux
-nnoremap <leader>t :TagbarToggle<CR>              " Toggle Tagbar
+nnoremap <leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
 nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
 nnoremap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
 nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened by VimuxRunCommand
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
 nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
-nnoremap <leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explitly
+nnoremap <leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
 nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
 
 nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
