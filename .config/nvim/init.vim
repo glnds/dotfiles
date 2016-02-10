@@ -82,7 +82,6 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe'
-" Plug 'scrooloose/syntastic'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
@@ -92,11 +91,12 @@ Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
-Plug 'markcornick/vim-terraform'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'krisajenkins/vim-pipe'
 Plug 'vim-scripts/SQLComplete.vim'
+Plug 'hashivim/vim-terraform'
+" Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -110,9 +110,10 @@ call plug#end()
   "- Plug 'davidhalter/jedi-vim'
   "- Plug 'Yggdroot/indentLine'
   "- Plug 'rizzatti/dash.vim'
+  "
 " colorscheme has to be set after plugins are loaded!
 colorscheme molokai
-
+highlight LineNr guifg=#b3b3b3
 " }}}
 " Syntastic {{{
 set statusline+=%#warningmsg#
