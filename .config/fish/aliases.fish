@@ -104,6 +104,10 @@ alias dri='docker rmi (docker images --filter dangling=true --quiet)'
 alias ap='ansible-playbook'
 alias aga='ansible-galaxy'
 
+# Terraform
+alias tf='terraform'
+alias tfgi = 'terraform graph | dot -Tpng > graph.png'
+
 # Tmux
 alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
@@ -118,9 +122,10 @@ alias elbp="aws elb describe-instance-health --load-balancer-name prod-ga-elb --
 alias dmongo="mongo --port 27018"
 alias tmongo="mongo --port 27019"
 alias pmongo="mongo --port 27020"
-alias goansible="cd ~/Sources/acsl/aws-ansible"
-alias gogaone="cd ~/Sources/acsl/ga1"
-alias gogatwo="cd ~/Sources/acsl/ga2"
+alias jpa="cd ~/Sources/acsl/aws-ansible"
+alias jptf="cd ~/Sources/acsl/aws-terraform"
+alias jpgo="cd ~/Sources/acsl/ga1"
+alias jpgt="cd ~/Sources/acsl/ga2"
 alias godoc="cd ~/Sources/acsl/documentation"
 
 function lockme
