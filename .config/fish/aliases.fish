@@ -106,7 +106,7 @@ alias aga='ansible-galaxy'
 
 # Terraform
 alias tf='terraform'
-alias tfgi = 'terraform graph | dot -Tpng > graph.png'
+alias tfgi='terraform graph | dot -Tpng > graph.png'
 
 # Tmux
 alias tml="tmux list-sessions"
