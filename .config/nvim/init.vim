@@ -96,6 +96,7 @@ Plug 'fatih/vim-go'
 Plug 'krisajenkins/vim-pipe'
 Plug 'vim-scripts/SQLComplete.vim'
 Plug 'hashivim/vim-terraform'
+Plug 'ekalinin/Dockerfile.vim'
 " Plug 'scrooloose/syntastic'
 
 call plug#end()
