@@ -1,8 +1,8 @@
-"        _              
+"        _
 "  _  __(_)_ _  ________
 " | |/ / /  ' \/ __/ __/
-" |___/_/_/_/_/_/  \__/ 
-"                       
+" |___/_/_/_/_/_/  \__/
+"
 " Colors {{{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark    " Setting dark mode
@@ -40,7 +40,7 @@ set splitbelow            " Split current window below
 set splitright            " Split current window right
 set showcmd               " Display incomplete commands
 set autowrite             " Automatically :write before running commands
-set colorcolumn=81        " Make it obvious where 80 characters is
+set colorcolumn=101        " Make it obvious where 80 characters is
 set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
 set autochdir             " Change the current dir if you open a file
@@ -101,7 +101,7 @@ Plug 'ekalinin/Dockerfile.vim'
 
 call plug#end()
 
-" Interesting plugins: 
+" Interesting plugins:
   "- Plug 'noahfrederick/vim-hemisu'
   "- Plug 'editorconfig/editorconfig-vim'
   "- Plug 'tpope/vim-unimpaired'
@@ -169,30 +169,29 @@ let mapleader = ","
 let maplocalleader = ","
 
 nnoremap <Leader><Leader> V|                      " Select viual line
-nnoremap <leader>a :Ag|                           " Silver Searcher
-nnoremap <leader>b :CtrlPBuffer<cr>|              " CTRLP find buffer mode
-nnoremap <leader>bm :CtrlPMixed<cr>|              " CTRLP find files, buffers and MRU files
-nnoremap <leader>bs :CtrlPMRU<cr>|                " CTRLP find MRU files
-nnoremap <Leader>c :.w !pbcopy<CR><CR>|           " Copy to clipboard
+nnoremap <Leader>a :bprev<CR>|                    " Open the previous buffer
+nnoremap <Leader>b :CtrlPBuffer<CR>|              " CTRLP find buffer mode
+nnoremap <Leader>bm :CtrlPMixed<CR>|              " CTRLP find files, buffers and MRU files
+nnoremap <Leader>bs :CtrlPMRU<CR>|                " CTRLP find MRU files
 vnoremap <Leader>c :w !pbcopy<CR><CR>|            " Copy to clipboard
 nnoremap <Leader>cs :colorscheme solarized<CR>|   " Switch color scheme
 nnoremap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
-nnoremap <leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
+nnoremap <Leader>d :bd<CR>|                       " delete the current buffer
+nnoremap <Leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
 nnoremap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
-nnoremap <leader>m :VimuxRunCommand<CR>|          " Start vimux
-nnoremap <leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
+nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
+nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
+nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
+nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
+nnoremap <Leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
 nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
 nnoremap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
 nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened by VimuxRunCommand
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
 nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
-nnoremap <leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
-nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
-
-nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-
 nnoremap <Leader>w :w<CR>|                        " Save buffer
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
 
