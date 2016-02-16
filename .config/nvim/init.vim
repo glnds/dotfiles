@@ -184,7 +184,7 @@ nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
 nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
-nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
+" nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
 nnoremap <Leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
 nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
