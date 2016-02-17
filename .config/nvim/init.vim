@@ -126,6 +126,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " }}}"
+" Ansible {{{
+let g:ansible_options = {'ignore_blank_lines': 0}"
+" }}}
 " Airline {{{
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
 let g:netrw_liststyle=3
