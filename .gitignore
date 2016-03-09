@@ -13,4 +13,6 @@
 .config/nvim/plugged
 .config/nvim/ftplugin/sql.vim
 .config/Fritzing
+.config/SoundTouch
+.config/SoundTouchPersist
 powerline

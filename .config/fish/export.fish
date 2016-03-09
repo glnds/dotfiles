@@ -35,8 +35,10 @@ set -x  RUBY_GC_HEAP_FREE_SLOTS 600000
 set -x  RUBY_GC_HEAP_GROWTH_FACTOR 1.25
 set -x  RUBY_GC_HEAP_GROWTH_MAX_SLOTS 300000
 
+set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
+
 # Add Ansible developer version to the beginning of PATH
-set -x PATH "/Users/glnd/Sources/ansible/bin" $PATH
+set -x PATH "/Users/glnds/Sources/ansible/bin" $PATH
 
 set -x PATH "$HOME/bin" $PATH
 
