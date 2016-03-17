@@ -5,13 +5,19 @@ cd "$(dirname "$0")"
 
 DOTFILES_PATH=$HOME/dotfiles
 
+mkdir -p /data/db
+
 brew update
 brew install cmake fish git python vim tmux the_silver_searcher archey tig htop 
 brew install httpie rmtrash nmap ipcalc rmtrash rlwrap ctags
 brew install caskroom/cask/brew-cask
 brew install neovim/neovim/neovim
+brew install mongodb
 brew tap caskroom/versions
 brew cask install iterm2-nightly
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
 brew upgrade
 
 pip install pip --upgrade

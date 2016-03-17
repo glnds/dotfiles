@@ -115,7 +115,7 @@ alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 
 # ACSL
-alias iacsl="~/Scripts/start_acsl_ssh_tunnels.sh"
+alias iacsl="~/Scripts/start_acsl_dev_env.sh"
 alias lssh="lsof -i 4tcp -P | ag '^ssh'"
 alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --output table --profile acsl"
 alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"
@@ -128,6 +128,9 @@ alias jptf="cd ~/Sources/acsl/aws-terraform"
 alias jpgo="cd ~/Sources/acsl/ga1"
 alias jpgt="cd ~/Sources/acsl/ga2"
 alias godoc="cd ~/Sources/acsl/documentation"
+
+# Kubernetes
+alias kn="kubectl"
 
 function lockme
   /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
