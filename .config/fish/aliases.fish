@@ -146,6 +146,8 @@ end
 
 # Python pip update all packages
 alias pupdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+alias ptc="pip-compile"
+alias pts="pip-sync dev-requirements.txt requirements.txt"
 
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
