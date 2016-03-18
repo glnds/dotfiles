@@ -23,7 +23,6 @@ brew upgrade
 pip install pip --upgrade
 pip install powerline-status --upgrade
 pip install virtualfish --upgrade
-#pip install pip-tools --upgrade #Should be installed in a virtual environment
 pip install neovim --upgrade
 pip install ansible-role-manager
 
