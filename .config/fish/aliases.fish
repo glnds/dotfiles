@@ -97,9 +97,11 @@ alias md='gollum --host localhost --port 4566 ~/Dropbox/md_wiki'
 
 # Docker
 alias dm='docker-machine'
-alias drc='docker rm (docker ps -aq)'
-alias dri='docker rmi (docker images --filter dangling=true --quiet)'
-alias dss="eval (docker-machine env default)"
+alias dmse="eval (docker-machine env default)"
+alias dk="docker"
+alias dkls="docker ps -a"
+alias dkrm='docker rm (docker ps -aq)'
+alias dkrmi='docker rmi (docker images --filter dangling=true --quiet)'
 
 # Ansible
 alias ap='ansible-playbook'
@@ -131,6 +133,8 @@ alias godoc="cd ~/Sources/acsl/documentation"
 
 # Kubernetes
 alias kn="kubectl"
+# Google Cloud
+alias gcl="gcloud"
 
 function lockme
   /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend

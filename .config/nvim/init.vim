@@ -97,11 +97,12 @@ Plug 'krisajenkins/vim-pipe'
 Plug 'vim-scripts/SQLComplete.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
-" Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
 " Interesting plugins:
+  "- Plug 'klen/python-mode'
   "- Plug 'noahfrederick/vim-hemisu'
   "- Plug 'editorconfig/editorconfig-vim'
   "- Plug 'tpope/vim-unimpaired'
@@ -115,6 +116,9 @@ call plug#end()
 " colorscheme has to be set after plugins are loaded!
 colorscheme molokai
 highlight LineNr guifg=#b3b3b3
+
+" Python ignore long lines
+let g:pep8_ignore="E501,W601"
 " }}}
 " Syntastic {{{
 set statusline+=%#warningmsg#

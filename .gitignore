@@ -15,4 +15,5 @@
 .config/Fritzing
 .config/SoundTouch
 .config/SoundTouchPersist
+.config/gcloud
 powerline

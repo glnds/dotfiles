@@ -11,7 +11,8 @@ brew update
 brew install cmake fish git python vim tmux the_silver_searcher archey tig htop 
 brew install httpie rmtrash nmap ipcalc rmtrash rlwrap ctags
 brew install caskroom/cask/brew-cask
-brew install neovim/neovim/neovim
+brew tap neovim/neovim
+brew install --HEAD neovim
 brew install mongodb
 brew tap caskroom/versions
 brew cask install iterm2-nightly
