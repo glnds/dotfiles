@@ -9,7 +9,7 @@ mkdir -p /data/db
 
 brew update
 brew install cmake fish git python vim tmux the_silver_searcher archey tig htop 
-brew install httpie rmtrash nmap ipcalc rmtrash rlwrap ctags
+brew install httpie rmtrash nmap ipcalc rmtrash rlwrap ctags gradle
 brew install caskroom/cask/brew-cask
 brew tap neovim/neovim
 brew install --HEAD neovim
