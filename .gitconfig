@@ -5,7 +5,7 @@
   editor = vim
   autoctrl = input
   whitespace = space-before-tab, trailing-space
-  excludesfile = /Users/glnds/.gitignore_global
+	excludesfile = /Users/glnds/.gitignore_global
 [credential]
   helper = osxkeychain
 [color]
