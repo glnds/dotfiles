@@ -5,12 +5,12 @@ cd "$(dirname "$0")"
 
 DOTFILES_PATH=$HOME/dotfiles
 
-mkdir -p /data/db
+sudo mkdir -p /data/db
+sudo chown -R glnds:staff /data/db
 
 brew update
 brew install cmake fish git python vim tmux the_silver_searcher archey tig htop 
 brew install httpie rmtrash nmap ipcalc rmtrash rlwrap ctags gradle
-brew install caskroom/cask/brew-cask
 brew tap neovim/neovim
 brew install --HEAD neovim
 brew install mongodb
@@ -25,7 +25,7 @@ pip install pip --upgrade
 pip install powerline-status --upgrade
 pip install virtualfish --upgrade
 pip install neovim --upgrade
-pip install ansible-role-manager
+pip install ansible-role-manager --upgrade
 
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
 ~/dotfiles/powerline/install.sh
