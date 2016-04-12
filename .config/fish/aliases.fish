@@ -166,6 +166,9 @@ alias vimdiff="nvim -d"
 
 alias sqlplus="rlwrap sqlplus"
 
+alias weather="curl -4 wttr.in/Grimbergen"
+alias moon="curl -4 wttr.in/Moon"
+
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"
