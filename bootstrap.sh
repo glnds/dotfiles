@@ -9,16 +9,18 @@ sudo mkdir -p /data/db
 sudo chown -R glnds:staff /data/db
 
 brew update
-brew install cmake fish git python vim tmux the_silver_searcher archey tig htop 
+brew install cmake fish git python tmux the_silver_searcher archey tig htop 
 brew install httpie rmtrash nmap ipcalc rmtrash rlwrap ctags gradle
 brew tap neovim/neovim
 brew install --HEAD neovim
 brew install mongodb
 brew tap caskroom/versions
+brew tap wercker/wercker
 brew cask install iterm2-nightly
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
+brew install wercker-cli
 brew upgrade
 
 pip install pip --upgrade
