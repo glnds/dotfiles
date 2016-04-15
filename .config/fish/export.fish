@@ -9,6 +9,7 @@ set -x GROOVY_HOME /usr/local/opt/groovy/libexec
 
 # Gradle home
 set -x GRADLE_HOME /usr/local/opt/gradle/libexec
+set -x GRADLE_OPTS "-Dorg.gradle.daemon=true"
 
 # Java home
 set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
