@@ -23,6 +23,7 @@ brew cask install vagrant-manager
 brew install wercker-cli
 brew upgrade
 
+pip install ansible --upgrade
 pip install pip --upgrade
 pip install powerline-status --upgrade
 pip install virtualfish --upgrade

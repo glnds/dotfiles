@@ -99,7 +99,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'scrooloose/syntastic'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-" Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -215,6 +214,7 @@ nmap <S-Enter> Ojj
 nmap <CR> ojj
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " Tagbar config
 "let g:tagbar_ctags_bin = '/usr/bin/ctags'"
 " Ex-mode is shitty

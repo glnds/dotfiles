@@ -42,7 +42,7 @@ set -x  RUBY_GC_HEAP_GROWTH_MAX_SLOTS 300000
 set -x PATH "$HOME/google-cloud-sdk/bin" $PATH
 
 # Add Ansible developer version to the beginning of PATH
-set -x PATH "/Users/glnds/Sources/ansible/bin" $PATH
+#set -x PATH "/Users/glnds/Sources/ansible/bin" $PATH
 
 set -x PATH "$HOME/bin" $PATH
 
