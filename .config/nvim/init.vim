@@ -99,6 +99,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'scrooloose/syntastic'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'jmcantrell/vim-virtualenv'
 
 call plug#end()
 
