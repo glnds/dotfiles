@@ -152,12 +152,12 @@ let NERDTreeShowBookmarks=1 " Show Bookmarks on startup
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_open_new_file = 'v'
 "let g:ctrlp_by_filename = 1
-let g:ctrlp_custom_ignore = {'dir': 'dist'}
+" let g:ctrlp_custom_ignore = {'dir': 'dist'}
 " Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \}
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+"   \ 'file': '\v\.(exe|so|dll)$',
+"   \}
 " Use the nearest .git directory as the cwd
 let g:ctrlp_working_path_mode = 'r'
 " }}}

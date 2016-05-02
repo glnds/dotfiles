@@ -8,6 +8,7 @@ set fish_greeting
  
 . $fish_path/aliases.fish
 . $fish_path/export.fish
+. $fish_path/secret.fish
 . $fish_path/utils.fish
 
 # fish_vi_mode
