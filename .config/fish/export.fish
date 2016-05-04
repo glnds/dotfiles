@@ -43,6 +43,9 @@ set -x PATH "$HOME/google-cloud-sdk/bin" $PATH
 
 # Add Ansible developer version to the beginning of PATH
 #set -x PATH "/Users/glnds/Sources/ansible/bin" $PATH
+#
+# Openshift cli
+set -x PATH "/opt/openshift" $PATH
 
 set -x PATH "$HOME/bin" $PATH
 
