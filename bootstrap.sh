@@ -30,6 +30,7 @@ pip install powerline-status --upgrade
 pip install virtualfish --upgrade
 pip install neovim --upgrade
 pip install ansible-role-manager --upgrade
+pip install pip-tools
 
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
 ~/dotfiles/powerline/install.sh
