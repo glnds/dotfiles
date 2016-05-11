@@ -102,6 +102,7 @@ alias dk="docker"
 alias dkls="docker ps -a"
 alias dkrm='docker rm (docker ps -aq)'
 alias dkrmi='docker rmi (docker images --filter dangling=true --quiet)'
+alias dkrcentos="docker run -it --rm --name centos7 -h centos -v /data centos:7 /bin/bash"
 
 # Ansible
 alias ap='ansible-playbook'
@@ -165,7 +166,8 @@ alias sqlplus="rlwrap sqlplus"
 alias weather="curl -4 wttr.in/Grimbergen"
 alias moon="curl -4 wttr.in/Moon"
 
-alias wnuc="wakeonlan b8:ae:ed:74:00:74"
+alias wnuci3="wakeonlan b8:ae:ed:74:00:74"
+alias wnuci5="wakeonlan b8:ae:ed:79:56:d0"
 alias wlogic="wakeonlan 00:30:18:c5:b1:42"
 
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
