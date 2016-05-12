@@ -11,7 +11,7 @@ sudo chown -R glnds:staff /data/db
 brew update
 brew install cmake fish git python tmux the_silver_searcher archey tig htop 
 brew install httpie rmtrash nmap ipcalc rmtrash rlwrap ctags gradle python3
-brew install mongodb wakeonlan
+brew install mongodb wakeonlan ssh-copy-id
 brew tap neovim/neovim
 brew install --HEAD neovim
 brew tap caskroom/versions
