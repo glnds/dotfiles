@@ -169,6 +169,7 @@ alias moon="curl -4 wttr.in/Moon"
 alias wnuci3="wakeonlan b8:ae:ed:74:00:74"
 alias wnuci5="wakeonlan b8:ae:ed:79:56:d0"
 alias wlogic="wakeonlan 00:30:18:c5:b1:42"
+alias wnas="wakeonlan 00:11:32:45:3b:01"
 
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
