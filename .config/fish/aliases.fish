@@ -153,7 +153,7 @@ alias pts="pip-sync dev-requirements.txt requirements.txt"
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
 
-alias history="history | nl"
+alias history="history | nl | less"
 
 #https://www.shredzone.de/cilla/page/383/setting-up-tp-link-tl-sg108e-with-linux.html
 alias tplink="java -cp /Users/glnds/CloudStation/misc/TP-Link/patch.jar:/Users/glnds/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
