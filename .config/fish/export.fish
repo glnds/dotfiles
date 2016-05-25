@@ -26,6 +26,9 @@ set -x PATH /usr/local/mongodb-2.6.4/bin $PATH
 # go
 set -x PATH "$GOPATH/bin" $PATH
 
+
+set -x PATH "$GOPATH/src/github.com/openshift/source-to-image/_output/local/bin/darwin/amd64/" $PATH
+
 # ruby
 # setup rbenv (from https://gist.github.com/2937920)
 set -x PATH "$HOME/.rbenv/bin" $PATH
