@@ -2,10 +2,10 @@ set fish_path $HOME/.config/fish
 set fish_greeting
 
  # Set favourite editor and pager
- set --universal --export VISUAL "vim -f"
- set --universal --export EDITOR $VISUAL
- set --universal PAGER 'less'
- 
+set -g -x VISUAL vim
+set -g -x EDITOR vim
+set -g -x PAGER less
+
 . $fish_path/aliases.fish
 . $fish_path/export.fish
 . $fish_path/secret.fish
