@@ -17,14 +17,15 @@ set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
 # Maven home
 set -x M2_HOME /usr/local/opt/maven/libexec
 
-# Go Home
+# Go
 set -x GOPATH "$HOME/go"
-
-# go
 set -x PATH "$GOPATH/bin" $PATH
 
 # Source to image
 set -x PATH "$GOPATH/src/github.com/openshift/source-to-image/_output/local/bin/darwin/amd64/" $PATH
+
+# JMeter
+set -x PATH "/opt/apache-jmeter-3.0/bin" $PATH
 
 # ruby
 # setup rbenv (from https://gist.github.com/2937920)
