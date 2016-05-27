@@ -153,7 +153,7 @@ alias pts="pip-sync dev-requirements.txt requirements.txt"
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
 
-alias history="history | nl | less"
+alias history="history | nl | tail -r | less +G"
 
 #https://www.shredzone.de/cilla/page/383/setting-up-tp-link-tl-sg108e-with-linux.html
 alias tplink="java -cp /Users/glnds/CloudStation/misc/TP-Link/patch.jar:/Users/glnds/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
@@ -174,6 +174,10 @@ alias wnas="wakeonlan 00:11:32:45:3b:01"
 # DPP
 alias ocblue="oc login https://dppurhos01.server.lan:8443"
 alias ocgreen="oc login https://os-cluster.server.lan:8443"
+
+function akamaih
+  http -h $argv[1] Pragma:'akamai-x-cache-on,akamai-x-cache-remote-on,akamai-x-check-cacheable,akamai-x-get-cache-key,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key,akamai-x-get-request-id,akamai-x-get-extracted-values,akamai-x-get-nonces,akamai-x-serial-no'
+end
 
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
