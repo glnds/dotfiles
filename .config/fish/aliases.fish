@@ -49,7 +49,7 @@ alias gm="git merge --no-ff"
 alias gpl="git pull"
 alias gplr="git pull --rebase"
 alias gp="git push"
-alias gpt="git push --tags"
+alias gptg="git push --tags"
 alias gcob="git checkout -b"
 alias gco="git checkout"
 alias gba="git branch -a"
@@ -101,7 +101,7 @@ alias dmse="eval (docker-machine env default)"
 alias dk="docker"
 alias dkls="docker ps -a"
 alias dkrm='docker rm (docker ps -aq)'
-alias dkrmi='docker rmi (docker images --filter dangling=true --quiet)'
+alias dkrmi="docker rmi (docker images --filter dangling=true --quiet)"
 alias dkrcentos="docker run -it --rm --name centos7 -h centos -v /data centos:7 /bin/bash"
 
 # Ansible
