@@ -69,6 +69,13 @@ set writebackup
 " Plugins {{{
 call plug#begin('~/.config/nvim/plugged')
 
+
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
 Plug 'bling/vim-airline'
 
 Plug 'morhetz/gruvbox'
@@ -97,9 +104,10 @@ Plug 'krisajenkins/vim-pipe'
 Plug 'vim-scripts/SQLComplete.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'jmcantrell/vim-virtualenv'
+Plug 'rodjek/vim-puppet'
 
 call plug#end()
 
@@ -121,6 +129,27 @@ highlight LineNr guifg=#b3b3b3
 
 " Python ignore long lines
 let g:pep8_ignore="E501,W601"
+" }}}
+" deoplete {{{
+
+" neocomplete like
+set completeopt+=noinsert
+" deoplete.nvim recommend
+set completeopt+=noselect
+
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/local/bin/python3'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+
+" Run deoplete.nvim automatically
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#use_cache = 1
+let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/$GOOS_$GOARCH'
 " }}}
 " Syntastic {{{
 set statusline+=%#warningmsg#
@@ -251,6 +280,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" <C-h>, <BS>: close popup and delete backword char.
+" inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
+" <CR>: close popup and save indent.
+" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+" function! s:my_cr_function() abort
+"   return deoplete#close_popup() . "\<CR>"
+" endfunction
 " }}}
 " Silver Searcher {{{
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher

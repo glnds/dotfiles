@@ -166,6 +166,8 @@ alias sqlplus="rlwrap sqlplus"
 alias weather="curl -4 wttr.in/Grimbergen"
 alias moon="curl -4 wttr.in/Moon"
 
+alias https='http --default-scheme=https'
+
 alias wnuci3="wakeonlan b8:ae:ed:74:00:74"
 alias wnuci5="wakeonlan b8:ae:ed:79:56:d0"
 alias wlogic="wakeonlan 00:30:18:c5:b1:42"
