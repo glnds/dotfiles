@@ -29,7 +29,8 @@ pip install powerline-status --upgrade
 pip install virtualfish --upgrade
 pip install neovim --upgrade
 pip install ansible-role-manager --upgrade
-pip install pip-tools
+pip install pip-tools --upgrade
+pip install httpie-edgegrid --upgrade
 
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
 ~/dotfiles/powerline/install.sh
