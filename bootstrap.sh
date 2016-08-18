@@ -18,8 +18,9 @@ brew tap caskroom/versions
 brew tap wercker/wercker
 brew cask install iterm2-nightly
 brew cask install --force virtualbox
-brew cask install --forcce vagrant
+brew cask install --force vagrant
 brew cask install --force vagrant-manager
+brew cask install --force qutebrowser
 brew install wercker-cli
 brew upgrade
 

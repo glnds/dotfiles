@@ -21,9 +21,6 @@ set -x M2_HOME /usr/local/opt/maven/libexec
 set -x GOPATH "$HOME/go"
 set -x PATH "$GOPATH/bin" $PATH
 
-# Source to image
-set -x PATH "$GOPATH/src/github.com/openshift/source-to-image/_output/local/bin/darwin/amd64/" $PATH
-
 # JMeter
 set -x PATH "/opt/apache-jmeter-3.0/bin" $PATH
 
