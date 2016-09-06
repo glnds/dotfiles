@@ -22,7 +22,9 @@ set -x GOPATH "$HOME/go"
 set -x PATH "$GOPATH/bin" $PATH
 
 # JMeter
-set -x PATH "/opt/apache-jmeter-3.0/bin" $PATH
+if test -e /opt/apache-jmeter-3.0/bin
+  set -x PATH "/opt/apache-jmeter-3.0/bin" $PATH
+end
 
 # ruby
 # setup rbenv (from https://gist.github.com/2937920)
@@ -35,13 +37,12 @@ set -x  RUBY_GC_HEAP_GROWTH_FACTOR 1.25
 set -x  RUBY_GC_HEAP_GROWTH_MAX_SLOTS 300000
 
 # Google Cloud
-set -x PATH "$HOME/google-cloud-sdk/bin" $PATH
+if test -e "$HOME/google-cloud-sdk/bin"
+  set -x PATH "$HOME/google-cloud-sdk/bin" $PATH
+end
 
 # Add Ansible developer version to the beginning of PATH
 #set -x PATH "/Users/glnds/Sources/ansible/bin" $PATH
-#
-# Openshift cli
-set -x PATH "/opt/openshift" $PATH
 
 # Add homebrew to the beginning of PATH
 set -x PATH "/usr/local/bin" $PATH
@@ -56,6 +57,8 @@ set -x EDITOR "vim"
 setenv -x GREP_OPTIONS "--color=auto"
 
 # Oracle
-set -x ORACLE_HOME "/opt/oracle/product/instantclient_64/11.2.0.4.0"
-set -x PATH "$ORACLE_HOME/bin" $PATH
-set -x DYLD_LIBRARY_PATH "$ORACLE_HOME/lib"
+if test -e /opt/oracle/product/instantclient_64/11.2.0.4.0
+  set -x ORACLE_HOME "/opt/oracle/product/instantclient_64/11.2.0.4.0"
+  set -x PATH "$ORACLE_HOME/bin" $PATH
+  set -x DYLD_LIBRARY_PATH "$ORACLE_HOME/lib"
+end

@@ -181,6 +181,7 @@ function akamaih
   http -h $argv[1] Pragma:'akamai-x-cache-on,akamai-x-cache-remote-on,akamai-x-check-cacheable,akamai-x-get-cache-key,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key,akamai-x-get-request-id,akamai-x-get-extracted-values,akamai-x-get-nonces,akamai-x-serial-no'
 end
 
+alias socks="~/Scripts/start_socks_tunnel.sh"
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"
