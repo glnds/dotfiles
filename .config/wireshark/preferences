@@ -259,7 +259,7 @@ gui.qt.font_name: Menlo,13,-1,5,50,0,0,0,0,0
 
 # Interface link-layer header types (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_linktypes: en0(1),bridge0(1),awdl0(1),en1(1),en2(1),p2p0(12),en5(1),lo0(0)
+capture.devices_linktypes: en0(1),bridge0(1),utun0(0),en1(1),en2(1),en5(1),lo0(0)
 
 # Interface descriptions (Ex: eth0(eth0 descr),eth1(eth1 descr),...)
 # A string
@@ -275,15 +275,15 @@ capture.devices_linktypes: en0(1),bridge0(1),awdl0(1),en1(1),en2(1),p2p0(12),en5
 
 # Interface buffer size (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_buffersize: en0(2),bridge0(2),awdl0(2),en1(2),en2(2),p2p0(2),en5(2),lo0(2)
+capture.devices_buffersize: en0(2),bridge0(2),utun0(2),en1(2),en2(2),en5(2),lo0(2)
 
 # Interface snap length (Ex: en0(65535),en1(1430),...)
 # A string
-capture.devices_snaplen: en0:0(262144),bridge0:0(262144),awdl0:0(262144),en1:0(262144),en2:0(262144),p2p0:0(262144),en5:0(262144),lo0:0(262144)
+capture.devices_snaplen: en0:0(262144),bridge0:0(262144),utun0:0(262144),en1:0(262144),en2:0(262144),en5:0(262144),lo0:0(262144)
 
 # Interface promiscuous mode (Ex: en0(0),en1(1),...)
 # A string
-capture.devices_pmode: en0(1),bridge0(1),awdl0(1),en1(1),en2(1),p2p0(1),en5(1),lo0(1)
+capture.devices_pmode: en0(1),bridge0(1),utun0(1),en1(1),en2(1),en5(1),lo0(1)
 
 # Capture in promiscuous mode?
 # TRUE or FALSE (case-insensitive)

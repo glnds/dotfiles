@@ -15,9 +15,11 @@ recent.capture_filter.en5: net 172.30.2.26
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
+recent.display_filter: ip.dst == 172.30.2.26
 recent.display_filter: http.authbasic
 recent.display_filter: 172.30.2.26
 recent.display_filter: net 172.30.2.26/32
+recent.display_filter: net
 
 # Main window geometry.
 # Decimal numbers.

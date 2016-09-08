@@ -143,6 +143,7 @@ end
 
 function update
   brew update; brew upgrade; brew cleanup
+  pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 end
 
 # Python pip update all packages
