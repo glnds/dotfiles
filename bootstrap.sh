@@ -33,6 +33,7 @@ pip install ansible-role-manager --upgrade
 pip install pip-tools --upgrade
 pip install httpie-edgegrid --upgrade
 pip install psutil --upgrade
+pip install glances --upgrade
 
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
 ~/dotfiles/powerline/install.sh
