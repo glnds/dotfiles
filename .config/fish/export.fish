@@ -4,6 +4,9 @@ set -x LC_CTYPE en_US.UTF-8
 
 # set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
 
+# Autossh
+set -x AUTOSSH_PORT 0
+
 # Groovy home
 set -x GROOVY_HOME /usr/local/opt/groovy/libexec
 
