@@ -4,6 +4,9 @@ set -x LC_CTYPE en_US.UTF-8
 
 # set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
 
+# tmux fix
+set -x export EVENT_NOKQUEUE=1
+
 # Autossh
 set -x AUTOSSH_PORT 0
 
