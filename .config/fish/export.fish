@@ -25,8 +25,8 @@ set -x M2_HOME /usr/local/opt/maven/libexec
 set -x  MAVEN_OPTS "-Xmx1024M -XX:MaxPermSize=256m"
 
 # Go
-set -x GOPATH "$HOME/go"
-set -x PATH "$GOPATH/bin" $PATH
+# set -x GOPATH "$HOME/go"
+# set -x PATH "$GOPATH/bin" $PATH
 
 # JMeter
 if test -e /opt/apache-jmeter-3.0/bin
