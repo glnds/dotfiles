@@ -22,6 +22,7 @@ set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
 
 # Maven home
 set -x M2_HOME /usr/local/opt/maven/libexec
+set -x  MAVEN_OPTS "-Xmx1024M -XX:MaxPermSize=256m"
 
 # Go
 set -x GOPATH "$HOME/go"
