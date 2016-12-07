@@ -19,6 +19,8 @@ set -x GRADLE_OPTS "-Dorg.gradle.daemon=true"
 
 # Java home
 set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
+# jenv
+set -x PATH $HOME/.jenv/bin $PATH
 
 # Maven home
 set -x M2_HOME /usr/local/opt/maven/libexec
