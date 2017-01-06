@@ -114,8 +114,10 @@ alias tfgi='terraform graph | dot -Tpng > graph.png'
 
 # Tmux
 alias tml="tmux list-sessions"
-alias tma="tmux -2 attach -t $1"
-alias tmk="tmux kill-session -t $1"
+# alias tma="tmux -2 attach -t $1"
+alias tma="tmux -2 attach -t 0"
+# alias tmk="tmux kill-session -t $1"
+alias tmk="tmux kill-session -t 0"
 
 # ACSL
 alias iacsl="~/Scripts/start_acsl_dev_env.sh"
@@ -184,3 +186,10 @@ end
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"
+
+# DPP AWS
+alias ec2ls="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,SubnetId,Placement.AvailabilityZone,ImageId]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table"
+
+alias amils="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table"
+
+alias s3ls="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table"

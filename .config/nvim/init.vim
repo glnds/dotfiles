@@ -73,8 +73,8 @@ call plug#begin('~/.config/nvim/plugged')
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 Plug 'bling/vim-airline'
 
@@ -86,11 +86,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
-Plug 'Valloric/YouCompleteMe'
-Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'Valloric/YouCompleteMe'
+ Plug 'benmills/vimux'
+" Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
@@ -100,18 +100,17 @@ Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
-Plug 'krisajenkins/vim-pipe'
-Plug 'vim-scripts/SQLComplete.vim'
+" Plug 'krisajenkins/vim-pipe'
+" Plug 'vim-scripts/SQLComplete.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
-" Plug 'scrooloose/syntastic'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-Plug 'jmcantrell/vim-virtualenv'
-Plug 'rodjek/vim-puppet'
+"Plug 'scrooloose/syntastic'
+" " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 
 " Interesting plugins:
+  "- Plug 'jmcantrell/vim-virtualenv'
   "- Plug 'klen/python-mode'
   "- Plug 'noahfrederick/vim-hemisu'
   "- Plug 'editorconfig/editorconfig-vim'
