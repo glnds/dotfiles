@@ -11,6 +11,7 @@ alias ev 'vim ~/.vimrc'
 alias et 'vim ~/.tmux.conf'
 
 alias la="ls -Gla"
+alias loa="ls -ld .?*"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
@@ -188,8 +189,12 @@ end
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"
 
 # DPP AWS
-alias ec2ls="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,SubnetId,Placement.AvailabilityZone,ImageId]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table"
+alias lsec2="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],Tags[?Key==`Squad`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,Placement.AvailabilityZone,ImageId,LaunchTime]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table"
 
-alias amils="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table"
+alias lsec2s="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,SubnetId,Placement.AvailabilityZone,ImageId,LaunchTime]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table"
 
-alias s3ls="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table"
+alias lsami="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table"
+
+alias lss3="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table"
+
+alias lsefs="aws efs describe-file-systems --query 'FileSystems[*].[Name,FileSystemId]' --output table"

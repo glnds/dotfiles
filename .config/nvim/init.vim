@@ -304,4 +304,7 @@ if executable('ag')
 endif
 " }}}
 
+au BufReadPost Jenkinsfile set syntax=groovy
+au BufReadPost Jenkinsfile set filetype=groovy
+
 " vim:foldmethod=marker:foldlevel=0
