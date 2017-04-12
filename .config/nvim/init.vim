@@ -75,12 +75,10 @@ function! DoRemote(arg)
 endfunction
 " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 " Plug 'zchee/deoplete-go', { 'do': 'make'}
-
+Plug 'sjl/badwolf'
 Plug 'bling/vim-airline'
-
 Plug 'morhetz/gruvbox'
 Plug 'fatih/molokai'
-
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -90,7 +88,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 " Plug 'Valloric/YouCompleteMe'
  Plug 'benmills/vimux'
-" Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
@@ -100,8 +98,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
-" Plug 'krisajenkins/vim-pipe'
-" Plug 'vim-scripts/SQLComplete.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
 "Plug 'scrooloose/syntastic'
