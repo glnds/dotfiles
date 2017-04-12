@@ -1,5 +1,4 @@
 alias ..="cd .."
-alias -="cd -"
 
 alias trash="rmtrash"
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
