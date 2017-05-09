@@ -1,37 +1,34 @@
 alias ..="cd .."
 
+# Use the trash can
 alias trash="rmtrash"
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
 
+# Quick config
 alias ea='vim ~/.config/fish/aliases.fish'
 alias ef='vim ~/.config/fish/config.fish'
 alias eg 'vim ~/.gitconfig'
 alias ev 'vim ~/.vimrc'
 alias et 'vim ~/.tmux.conf'
 
+# List directories
 alias la="ls -Gla"
 alias loa="ls -ld .?*"
-
-# List only directories
-alias lsd='ls -l | grep "^d"'
-
-# List only symbolic links
-alias lss='ls -al | grep "\->"'
-
 alias ll='ls -hlF'
 alias l='ls -CF'
-alias c=clear
+# list only directories
+alias lsd='ls -l | grep "^d"'
+# list only symbolic links
+alias lss='ls -al | grep "\->"'
 
-################################
-###  File ShortCut
-################################
-alias D="cd ~/Downloads"
-alias g="git"
-alias v="vim"
+# Clear screen
+alias c='clear'
 
-################################
-###  Program ShortCut
-################################
+# Go to...
+alias D='cd ~/Downloads'
+alias aura='cd ~/Sources/dp/aura'
+alias g='git'
+alias v='vim'
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
@@ -122,6 +119,9 @@ alias tmk="tmux kill-session -t 0"
 # ACSL
 alias iacsl="~/Scripts/start_acsl_dev_env.sh"
 alias lssh="lsof -i 4tcp -P | ag '^ssh'"
+function sshp
+  ssh -i ~/.ssh/temp/persgroep_key_id_rsa ec2-user@$argv[1]
+end
 alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --output table --profile acsl"
 alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"
 alias elbp="aws elb describe-instance-health --load-balancer-name prod-ga-elb --output table --profile acsl"
@@ -191,9 +191,7 @@ end
 alias lsec2="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],Tags[?Key==`Squad`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,Placement.AvailabilityZone,ImageId,LaunchTime]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table"
 
 alias lsec2s="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,SubnetId,Placement.AvailabilityZone,ImageId,LaunchTime]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table"
-
 alias lsami="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table"
-
 alias lss3="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table"
-
 alias lsefs="aws efs describe-file-systems --query 'FileSystems[*].[Name,FileSystemId]' --output table"
+alias lsvpc='aws ec2 describe-vpcs --query "Vpcs[*].{Name:Tags[?Key==`Name`].Value|[0],Squad:Tags[?Key==`Squad`].Value|[0],ID:VpcId,CIDR:CidrBlock,DHCP:DhcpOptionsId,State:State}" --filter "Name=isDefault,Values=false" --output table'
