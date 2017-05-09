@@ -11,7 +11,9 @@ set -x export EVENT_NOKQUEUE=1
 set -x AUTOSSH_PORT 0
 
 # Packer config, use dpp-build as default boto profile
-set -x AWS_PROFILE "dpp-build"
+set -x AWS_PROFILE "central"
+set -x PACKER_LOG 1
+set -x PACKER_LOG_PATH "packer.log"
 
 # Groovy home
 set -x GROOVY_HOME /usr/local/opt/groovy/libexec
