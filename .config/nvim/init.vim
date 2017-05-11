@@ -13,7 +13,7 @@ highlight ColorColumn ctermbg=237
 filetype plugin indent on
 
 set timeout timeoutlen=500 ttimeoutlen=100
-
+set termguicolors
 set hidden                " hide buffers instead of closing them
 set mouse=                " Disabling mouse support
 set undolevels=1000       " Do ALL THE undo's!
@@ -85,7 +85,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'chase/vim-ansible-yaml'
 Plug 'avakhov/vim-yaml'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeTabsToggle' }
 Plug 'majutsushi/tagbar'
 " Plug 'Valloric/YouCompleteMe'
  Plug 'benmills/vimux'
@@ -101,7 +101,8 @@ Plug 'elzr/vim-json'
 Plug 'fatih/vim-go'
 Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
-"Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 " " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
@@ -303,5 +304,10 @@ endif
 
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
+
+autocmd! BufWritePost * Neomake
+let g:neomake_open_list = 2
+
+
 
 " vim:foldmethod=marker:foldlevel=0
