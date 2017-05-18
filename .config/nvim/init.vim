@@ -47,6 +47,7 @@ set autochdir             " Change the current dir if you open a file
 set modelines=1           " Disable modeline support
 set guioptions=TlrLR      " Options when running vim in GUI mode
 set cpoptions+=$          " Show a $ sign in the change buffer
+set updatetime=250        " Update time for diff markers
 "set t_Co=256              " Number of colors
 
 set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
@@ -103,6 +104,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'ekalinin/Dockerfile.vim'
 " Plug 'scrooloose/syntastic'
 Plug 'neomake/neomake'
+Plug 'airblade/vim-gitgutter'
 " " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
@@ -219,7 +221,7 @@ nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
 nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
-" nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
+nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
 nnoremap <Leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
 nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
@@ -228,9 +230,9 @@ nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
 nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
 nnoremap <Leader>w :w<CR>|                        " Save buffer
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
+nnoremap <leader>r :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
 
-au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>gr <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
@@ -300,6 +302,9 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+" }}}
+" Gitgutter {{{
+let g:gitgutter_sign_column_always = 1
 " }}}
 
 au BufReadPost Jenkinsfile set syntax=groovy

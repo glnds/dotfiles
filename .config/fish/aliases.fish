@@ -119,8 +119,8 @@ alias tmk="tmux kill-session -t 0"
 # ACSL
 alias iacsl="~/Scripts/start_acsl_dev_env.sh"
 alias lssh="lsof -i 4tcp -P | ag '^ssh'"
-function sshp
-  ssh -i ~/.ssh/temp/persgroep_key_id_rsa ec2-user@$argv[1]
+function sshs
+  ssh -A -i ~/.ssh/saw_key ec2-user@$argv[1]
 end
 alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --output table --profile acsl"
 alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"

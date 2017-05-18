@@ -4,6 +4,7 @@ function test_identities
   if [ $status -eq 0 ]
     #ssh-add ~/.ssh/(hostname)
     ssh-add ~/.ssh/mackey
+    ssh-add ~/.ssh/saw_key
     if [ $status -eq 2 ]
       start_agent
     end
