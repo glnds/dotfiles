@@ -9,7 +9,7 @@ sudo mkdir -p /data/db
 sudo chown -R glnds:staff /data/db
 
 brew update
-brew install cmake fish git python tmux the_silver_searcher tig htop 
+brew install cmake fish git python tmux the_silver_searcher tig htop
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3
 brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace
 brew tap neovim/neovim
@@ -19,19 +19,15 @@ brew cask install java iterm2
 brew cask install --force virtualbox
 brew upgrade
 
-pip install ansible --upgrade
 pip install pip --upgrade
 pip install powerline-status --upgrade
 pip install virtualfish --upgrade
 pip install neovim --upgrade
-pip install ansible-role-manager --upgrade
 pip install pip-tools --upgrade
-pip install httpie-edgegrid --upgrade
-pip install psutil --upgrade
-pip install glances --upgrade
 pip install yamllint --upgrade
+pip install pip-autoremove --upgrade
 
-git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline 
+git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline
 ~/dotfiles/powerline/install.sh
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
