@@ -6,8 +6,8 @@
 " Colors {{{
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark    " Setting dark mode
-syntax on
 highlight ColorColumn ctermbg=237
+syntax on
 "}}}
 " Options {{{
 filetype plugin indent on
@@ -51,6 +51,7 @@ set updatetime=250        " Update time for diff markers
 "set t_Co=256              " Number of colors
 
 set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
+match ErrorMsg '\s\+$'
 
 if &term =~ '256color'
   " Disable Background Color Erase (BCE) so that color schemes
@@ -313,6 +314,6 @@ au BufReadPost Jenkinsfile set filetype=groovy
 autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
 
-
+highlight ErrorMsg guibg=White guifg=Red
 
 " vim:foldmethod=marker:foldlevel=0
