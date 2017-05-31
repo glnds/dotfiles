@@ -1,5 +1,8 @@
 alias ..="cd .."
 
+# set AWS profile environment variable
+alias setaws='set -x -g AWS_PROFILE'
+
 # Use the trash can
 alias trash="rmtrash"
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
