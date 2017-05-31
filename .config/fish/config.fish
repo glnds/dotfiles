@@ -23,6 +23,10 @@ set fish_key_bindings fish_user_key_bindings
 
 eval (python -m virtualfish)
 
+# Enable powerline
+set fish_function_path $fish_function_path "/usr/local/lib/python2.7/site-packages/powerline/bindings/fish"
+powerline-setup
+
 # git prompt
 # https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish
 set -g __fish_git_prompt_showupstream verbose
