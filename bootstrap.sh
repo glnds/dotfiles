@@ -26,6 +26,7 @@ pip install neovim --upgrade
 pip install pip-tools --upgrade
 pip install yamllint --upgrade
 pip install pip-autoremove --upgrade
+pip install powerline-gitstatus --upgrade
 
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline
 ~/dotfiles/powerline/install.sh

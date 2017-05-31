@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/glnds/Dropbox/aws-ansible/roles'
 let g:netrw_dirhist_2='/Users/glnds/Dropbox/aws-ansible/roles/common/tasks'
 let g:netrw_dirhist_3='/Users/glnds/Sources/dp/aura/ansible/files/public_keys'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/glnds/Sources/dp/aura/ansible/policies'
 let g:netrw_dirhist_5='/Users/glnds/Sources/dp/aura/ansible/roles/common'
 let g:netrw_dirhist_6='/Users/glnds/Sources/dp/aura/ansible/policies'
 let g:netrw_dirhist_7='/Users/glnds/Sources/dp/print-page-service/gradle'
+let g:netrw_dirhist_8='/Users/glnds/Sources/dp/aura/ansible/roles/ami.common'
