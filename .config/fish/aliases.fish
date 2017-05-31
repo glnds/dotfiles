@@ -11,6 +11,9 @@ alias eg 'vim ~/.gitconfig'
 alias ev 'vim ~/.vimrc'
 alias et 'vim ~/.tmux.conf'
 
+# Search hidden files by default
+alias ag='ag --hidden'
+
 # List directories
 alias la="ls -Gla"
 alias loa="ls -ld .?*"
