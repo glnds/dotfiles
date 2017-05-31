@@ -13,6 +13,7 @@
 .config/nvim/autoload
 .config/nvim/plugged
 .config/nvim/ftplugin/sql.vim
+.config/nvim/.netrwhist
 .config/Fritzing
 .config/SoundTouch
 .config/SoundTouchPersist
