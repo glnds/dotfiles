@@ -17,10 +17,6 @@
         "priority": 40
       },
       {
-        "function": "powerline.segments.common.vcs.branch",
-        "priority": 40
-      },
-      {
         "function": "powerline.segments.common.vcs.stash",
         "priority": 50
       }
