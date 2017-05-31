@@ -25,6 +25,7 @@ eval (python -m virtualfish)
 
 # Enable powerline
 set fish_function_path $fish_function_path "/usr/local/lib/python2.7/site-packages/powerline/bindings/fish"
+powerline-daemon -q
 powerline-setup
 
 # git prompt
