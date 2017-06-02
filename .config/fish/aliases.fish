@@ -167,7 +167,7 @@ alias history="history | nl | tail -r | less +G"
 #https://www.shredzone.de/cilla/page/383/setting-up-tp-link-tl-sg108e-with-linux.html
 alias tplink="java -cp /Users/glnds/CloudStation/misc/TP-Link/patch.jar:/Users/glnds/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
 
-alias vim="nvim"
+# alias vim="nvim"
 alias vimdiff="nvim -d"
 
 alias sqlplus="rlwrap sqlplus"

@@ -1,61 +1,37 @@
-"        _              
+"        _
 "  _  __(_)_ _  ________
 " | |/ / /  ' \/ __/ __/
-" |___/_/_/_/_/_/  \__/ 
-"                       
+" |___/_/_/_/_/_/  \__/
+"
 " Colors {{{
-" Must be on top
-set nocompatible          " Don't care about Vi-compatibility
-
-syntax on
-set background=dark
-colorscheme badwolf
-"colorscheme solarized
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_degrade=1
-let g:solarized_bold=0
-let g:solarized_underline=0
-let g:solarized_italic=0
-let g:solarized_contrast='high'
-let g:solarized_visibility='high'
-let g:badwolf_darkgutter = 1 " Make the gutters darker than the background.
-let g:badwolf_tabline = 0    " Make the tab line darker than the background
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=dark    " Setting dark mode
 highlight ColorColumn ctermbg=237
+syntax on
 "}}}
 " Options {{{
 filetype plugin indent on
 
-" autocmd BufNewFile,BufReadPost *.json setlocal filetype=json
-
 set timeout timeoutlen=500 ttimeoutlen=100
-
+set termguicolors
 set hidden                " hide buffers instead of closing them
-set laststatus=2          " Always display the statusline in all windows 
-set backspace=2           " Backspace deletes like most programs in insert mode 
-set encoding=utf8         " Sets charachter encoding
 set mouse=                " Disabling mouse support
-set history=1000          " Remember ALL THE commands!
 set undolevels=1000       " Do ALL THE undo's!
 set undoreload=10000      " Maximum number lines to save for undo on a buffer reload
 set virtualedit=onemore   " Allow for cursor beyond last character
+set t_BE=                 " fixes bracketed paste mode
 set tabstop=2             " Number of spaces for a tab
 set softtabstop=2         " Number of spaces for a tab while editing
 set shiftwidth=2          " Shift width value
-set smarttab              " Insers blanks according to shiftwidth
 set shiftround            " Round the shift indent
 set expandtab             " Conver tabs to spaces
-set autoread              " Autoread a file when it's changed from outside
 set lazyredraw            " Terminal performance optimisation
 set magic                 " Better searching
 set noswapfile            " Don't pollute my hard drive, even temporary
-set autoindent            " Copy indent form current line when starting a new line
 set wrap                  " Wrap long lines
 set smartindent           " Auto indent when starting a new line
 set relativenumber        " Use relative line numbers
 set showmatch             " Show matching brackets (Damn this is so cool!)
-set incsearch             " Pattern highlighting while searching
-set hlsearch              " Hightlight search matchese
 set ignorecase            " Case insensitive search
 set smartcase             " Case sensitive when uc present
 set cursorline            " Highlight cursorline!
@@ -65,31 +41,26 @@ set splitbelow            " Split current window below
 set splitright            " Split current window right
 set showcmd               " Display incomplete commands
 set autowrite             " Automatically :write before running commands
-set colorcolumn=81        " Make it obvious where 80 characters is
+set colorcolumn=101        " Make it obvious where 80 characters is
 set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
 set autochdir             " Change the current dir if you open a file
 set modelines=1           " Disable modeline support
 set guioptions=TlrLR      " Options when running vim in GUI mode
 set cpoptions+=$          " Show a $ sign in the change buffer
-set t_Co=256              " Number of colors
-set complete+=kspell      " Autocomplete with dictionary words when spell check is on
+set updatetime=250        " Update time for diff markers
+"set t_Co=256              " Number of colors
 
 set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
-set listchars=tab:»·,trail:·,nbsp:· "Display extra whitespace
+match ErrorMsg '\s\+$'
 
 if &term =~ '256color'
   " Disable Background Color Erase (BCE) so that color schemes
   " work properly when Vim is used inside tmux and GNU screen.
   " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
+"  set t_ut=
 endif
 
-" https://neovim.io/doc/user/nvim_from_vim.html
-if !has('nvim')
-  set cryptmethod=blowfish2 " Use strong blowfish algorithm when encrypting files
-  set ttyfast               " Terminal performance optimisation
-endif
 " }}}
 " Backup {{{
 set backup
@@ -98,54 +69,50 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 " }}}
-" Wildmenu {{{
-set wildmenu                                     " Enable command-line completion
-set wildmode=list:longest,full                   " Wildmenu completion mode
-set wildignore+=.git,.svn                        " Version control
-set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
-set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
-set wildignore+=*.sw?                            " Vim swap files
-set wildignore+=*.DS_Store                       " OSX bullshit
-set wildignore+=*.zip                            " zip
-" }}}
 " Plugins {{{
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
-Plug 'bling/vim-airline'
 
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'sjl/badwolf'
-Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'fatih/molokai'
-Plug 'jonathanfilip/vim-lucius'
-
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'vim-ruby/vim-ruby'
 Plug 'chase/vim-ansible-yaml'
+Plug 'avakhov/vim-yaml'
 Plug 'scrooloose/nerdtree'
-Plug 'majutsushi/tagbar'
-Plug 'Valloric/YouCompleteMe'
-Plug 'scrooloose/syntastic'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'godlygeek/tabular'
 Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
+" Plug 'Valloric/YouCompleteMe'
+" Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'junegunn/goyo.vim'
-Plug 'markcornick/vim-terraform'
-Plug 'krisajenkins/vim-pipe'
+" Plug 'junegunn/goyo.vim'
 Plug 'elzr/vim-json'
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
+" Plug 'hashivim/vim-terraform'
+" Plug 'ekalinin/Dockerfile.vim'
+" Plug 'scrooloose/syntastic'
+" Plug 'neomake/neomake'
+Plug 'airblade/vim-gitgutter'
+" " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 
-" Interesting plugins: 
+" Interesting plugins:
+  "- Plug 'jmcantrell/vim-virtualenv'
+  "- Plug 'klen/python-mode'
   "- Plug 'noahfrederick/vim-hemisu'
   "- Plug 'editorconfig/editorconfig-vim'
   "- Plug 'tpope/vim-unimpaired'
@@ -155,6 +122,34 @@ call plug#end()
   "- Plug 'davidhalter/jedi-vim'
   "- Plug 'Yggdroot/indentLine'
   "- Plug 'rizzatti/dash.vim'
+  "
+" colorscheme has to be set after plugins are loaded!
+colorscheme molokai
+highlight LineNr guifg=#b3b3b3
+
+" Python ignore long lines
+let g:pep8_ignore="E501,W601"
+" }}}
+" deoplete {{{
+
+" neocomplete like
+set completeopt+=noinsert
+" deoplete.nvim recommend
+set completeopt+=noselect
+
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/local/bin/python3'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+
+" Run deoplete.nvim automatically
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#use_cache = 1
+let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/$GOOS_$GOARCH'
 " }}}
 " Syntastic {{{
 set statusline+=%#warningmsg#
@@ -166,6 +161,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " }}}"
+" Ansible {{{
+let g:ansible_options = {'ignore_blank_lines': 0}"
+" }}}
 " Airline {{{
 let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
 let g:netrw_liststyle=3
@@ -183,12 +181,12 @@ let NERDTreeShowBookmarks=1 " Show Bookmarks on startup
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_open_new_file = 'v'
 "let g:ctrlp_by_filename = 1
-let g:ctrlp_custom_ignore = {'dir': 'dist'}
+" let g:ctrlp_custom_ignore = {'dir': 'dist'}
 " Setup some default ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \}
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+"   \ 'file': '\v\.(exe|so|dll)$',
+"   \}
 " Use the nearest .git directory as the cwd
 let g:ctrlp_working_path_mode = 'r'
 " }}}
@@ -209,40 +207,44 @@ let mapleader = ","
 let maplocalleader = ","
 
 nnoremap <Leader><Leader> V|                      " Select viual line
-nnoremap <Leader>a :Ag|                           " Silver Searcher
-nnoremap <Leader>b :CtrlPBuffer<cr>|              " CTRLP find buffer mode
-nnoremap <Leader>bm :CtrlPMixed<cr>|              " CTRLP find files, buffers and MRU files
-nnoremap <Leader>bs :CtrlPMRU<cr>|                " CTRLP find MRU files
-nnoremap <Leader>c :.w !pbcopy<CR><CR>|           " Copy to clipboard
+nnoremap <Leader>a :bprev<CR>|                    " Open the previous buffer
+nnoremap <Leader>b :CtrlPBuffer<CR>|              " CTRLP find buffer mode
+nnoremap <Leader>bm :CtrlPMixed<CR>|              " CTRLP find files, buffers and MRU files
+nnoremap <Leader>bs :CtrlPMRU<CR>|                " CTRLP find MRU files
 vnoremap <Leader>c :w !pbcopy<CR><CR>|            " Copy to clipboard
 nnoremap <Leader>cs :colorscheme solarized<CR>|   " Switch color scheme
 nnoremap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
+nnoremap <Leader>d :bd<CR>|                       " delete the current buffer
 nnoremap <Leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
 nnoremap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
 nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
-nnoremap <Leader>u :TagbarToggle<CR>|        " Close vim tmux runner opened by VimuxRunCommand
+nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
+nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
+nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
+nnoremap <Leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
 nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
 nnoremap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
 nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened by VimuxRunCommand
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
 nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
-nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explitly
-nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
-
-nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-
 nnoremap <Leader>w :w<CR>|                        " Save buffer
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>| " Remove trailing whitespaces
+nnoremap <leader>r :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
+
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
 " }}}
 " Shortcuts {{{
-" Insert new line on enter
 nmap <S-Enter> Ojj
 nmap <CR> ojj
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " Tagbar config
 "let g:tagbar_ctags_bin = '/usr/bin/ctags'"
 " Ex-mode is shitty
@@ -278,19 +280,40 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" <C-h>, <BS>: close popup and delete backword char.
+" inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
+" <CR>: close popup and save indent.
+" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+" function! s:my_cr_function() abort
+"   return deoplete#close_popup() . "\<CR>"
+" endfunction
 " }}}
-" Silerver Searcher {{{
+" Silver Searcher {{{
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
   "
-  " Use ag in CtrlP for listing files. Lightning fast and respects      .gitignore
+  " Use ag in CtrlP for listing files. Lightning fast and respects gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 " }}}
+" Gitgutter {{{
+let g:gitgutter_sign_column_always = 1
+" }}}
+
+au BufReadPost Jenkinsfile set syntax=groovy
+au BufReadPost Jenkinsfile set filetype=groovy
+
+autocmd! BufWritePost * Neomake
+let g:neomake_open_list = 2
+
+highlight ErrorMsg guibg=White guifg=Red
 
 " vim:foldmethod=marker:foldlevel=0
