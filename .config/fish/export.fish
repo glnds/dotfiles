@@ -69,7 +69,7 @@ set -x PATH "./bin" $PATH
 set -x EDITOR "vim"
 
 # grep colors
-setenv -x GREP_OPTIONS "--color=auto"
+setenv GREP_OPTIONS "--color=auto"
 
 # Oracle
 if test -e /opt/oracle/product/instantclient_64/11.2.0.4.0
