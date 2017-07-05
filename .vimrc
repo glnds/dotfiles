@@ -14,15 +14,20 @@ filetype plugin indent on
 
 set timeout timeoutlen=500 ttimeoutlen=100
 set termguicolors
+
 set hidden                " hide buffers instead of closing them
+set laststatus=2          " Always display the statusline in all windows 
+set backspace=2           " Backspace deletes like most programs in insert mode 
+set encoding=utf8         " Sets charachter encoding
 set mouse=                " Disabling mouse support
+set history=1000          " Remember ALL THE commands!
 set undolevels=1000       " Do ALL THE undo's!
 set undoreload=10000      " Maximum number lines to save for undo on a buffer reload
 set virtualedit=onemore   " Allow for cursor beyond last character
-set t_BE=                 " fixes bracketed paste mode
 set tabstop=2             " Number of spaces for a tab
 set softtabstop=2         " Number of spaces for a tab while editing
 set shiftwidth=2          " Shift width value
+set t_BE=                 " fixes bracketed paste mode
 set shiftround            " Round the shift indent
 set expandtab             " Conver tabs to spaces
 set lazyredraw            " Terminal performance optimisation
@@ -49,6 +54,8 @@ set modelines=1           " Disable modeline support
 set guioptions=TlrLR      " Options when running vim in GUI mode
 set cpoptions+=$          " Show a $ sign in the change buffer
 set updatetime=250        " Update time for diff markers
+set hlsearch
+set incsearch
 "set t_Co=256              " Number of colors
 
 set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
@@ -76,8 +83,6 @@ call plug#begin('~/.config/nvim/plugged')
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-" Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'sjl/badwolf'
 Plug 'bling/vim-airline'
 Plug 'morhetz/gruvbox'
@@ -95,34 +100,36 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
-" Plug 'Valloric/YouCompleteMe'
-" Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-" Plug 'junegunn/goyo.vim'
 Plug 'elzr/vim-json'
-" Plug 'fatih/vim-go'
-" Plug 'hashivim/vim-terraform'
-" Plug 'ekalinin/Dockerfile.vim'
-" Plug 'scrooloose/syntastic'
-" Plug 'neomake/neomake'
 Plug 'airblade/vim-gitgutter'
-" " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 
 " Interesting plugins:
-  "- Plug 'jmcantrell/vim-virtualenv'
-  "- Plug 'klen/python-mode'
-  "- Plug 'noahfrederick/vim-hemisu'
-  "- Plug 'editorconfig/editorconfig-vim'
-  "- Plug 'tpope/vim-unimpaired'
-  "- Plug 'rizzatti/dash.vim'
-  "- Plug 'easymotion/vim-easymotion'
-  "- Plug 'klen/python-mode'
-  "- Plug 'davidhalter/jedi-vim'
-  "- Plug 'Yggdroot/indentLine'
-  "- Plug 'rizzatti/dash.vim'
-  "
+  " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+  " Plug 'zchee/deoplete-go', { 'do': 'make'}
+  " Plug 'Valloric/YouCompleteMe'
+  " Plug 'godlygeek/tabular'
+  " Plug 'junegunn/goyo.vim'
+  " Plug 'fatih/vim-go'
+  " Plug 'hashivim/vim-terraform'
+  " Plug 'ekalinin/Dockerfile.vim'
+  " Plug 'scrooloose/syntastic'
+  " Plug 'neomake/neomake'
+  " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+  " Plug 'jmcantrell/vim-virtualenv'
+  " Plug 'klen/python-mode'
+  " Plug 'noahfrederick/vim-hemisu'
+  " Plug 'editorconfig/editorconfig-vim'
+  " Plug 'tpope/vim-unimpaired'
+  " Plug 'rizzatti/dash.vim'
+  " Plug 'easymotion/vim-easymotion'
+  " Plug 'klen/python-mode'
+  " Plug 'davidhalter/jedi-vim'
+  " Plug 'Yggdroot/indentLine'
+  " Plug 'rizzatti/dash.vim'
+
 " colorscheme has to be set after plugins are loaded!
 colorscheme molokai
 highlight LineNr guifg=#b3b3b3
@@ -310,9 +317,6 @@ let g:gitgutter_sign_column_always = 1
 
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
-
-autocmd! BufWritePost * Neomake
-let g:neomake_open_list = 2
 
 highlight ErrorMsg guibg=White guifg=Red
 
