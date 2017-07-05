@@ -44,7 +44,6 @@ set __fish_git_prompt_color_upstream_behind red
 
 # SSH Agent
 # http://www.maxbucknell.com/blog/2015/5/5/ssh-identities
-#
 # Start SSH Agent if it's not already running, and add the
 # id_(hostname) identity.
 setenv SSH_ENV "$HOME/.ssh/environment"
@@ -68,4 +67,9 @@ end
 # Activate AWS cli auto completion
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
-#archey -c
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
