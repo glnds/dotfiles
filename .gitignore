@@ -19,3 +19,4 @@
 .config/SoundTouch
 .config/SoundTouchPersist
 .config/gcloud
+.config/configstore
