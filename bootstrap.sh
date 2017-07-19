@@ -12,8 +12,6 @@ brew update
 brew install cmake fish git python tmux the_silver_searcher tig htop jq
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3
 brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace
-brew tap neovim/neovim
-brew install --HEAD neovim
 brew tap caskroom/versions
 brew cask install java iterm2
 brew cask install --force virtualbox
@@ -22,7 +20,6 @@ brew upgrade
 pip install pip --upgrade
 pip install powerline-status --upgrade
 pip install virtualfish --upgrade
-pip install neovim --upgrade
 pip install pip-tools --upgrade
 pip install yamllint --upgrade
 pip install pip-autoremove --upgrade
@@ -40,6 +37,7 @@ ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/dotfiles/.vim ~/
+ln -s ~/dotfiles/.pip ~/
 ln -s ~/dotfiles/.virtualenvs ~/
 ln -s ~/dotfiles/.config ~/
 ln -s ~/dotfiles/gradle.properties ~/.gradle/gradle.properties

@@ -103,6 +103,8 @@ Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
+Plug 'python-mode/python-mode'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -115,11 +117,9 @@ call plug#end()
   " Plug 'fatih/vim-go'
   " Plug 'hashivim/vim-terraform'
   " Plug 'ekalinin/Dockerfile.vim'
-  " Plug 'scrooloose/syntastic'
   " Plug 'neomake/neomake'
   " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
   " Plug 'jmcantrell/vim-virtualenv'
-  " Plug 'klen/python-mode'
   " Plug 'noahfrederick/vim-hemisu'
   " Plug 'editorconfig/editorconfig-vim'
   " Plug 'tpope/vim-unimpaired'
@@ -206,6 +206,13 @@ let g:go_highlight_build_constraints = 1
 
 let g:go_fmt_command = "goimports"
 " }}}
+" python-mode {{{
+let g:pymode = 1
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_cwindow = 0
+let g:pymode_lint_jump = 1
+" }}}
 " Leader shortcuts {{{
 
 " Check a key binding, ex: verbose nmap <Leader>r
@@ -287,6 +294,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
 " <C-h>, <BS>: close popup and delete backword char.
 " inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
