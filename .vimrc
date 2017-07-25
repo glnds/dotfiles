@@ -78,7 +78,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 " }}}
 " Plugins {{{
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin()
 
 
 function! DoRemote(arg)
@@ -104,8 +104,8 @@ Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
-Plug 'python-mode/python-mode'
-Plug 'scrooloose/syntastic'
+" Plug 'python-mode/python-mode'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -138,36 +138,8 @@ highlight LineNr guifg=#b3b3b3
 " Python ignore long lines
 let g:pep8_ignore="E501,W601"
 " }}}
-" deoplete {{{
-
-" neocomplete like
-set completeopt+=noinsert
-" deoplete.nvim recommend
-set completeopt+=noselect
-
-" Path to python interpreter for neovim
-let g:python3_host_prog  = '/usr/local/bin/python3'
-" Skip the check of neovim module
-let g:python3_host_skip_check = 1
-
-" Run deoplete.nvim automatically
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-" deoplete-go settings
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#use_cache = 1
-let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/$GOOS_$GOARCH'
-" }}}
-" Syntastic {{{
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" YCM {{{
+let g:ycm_autoclose_preview_window_after_completion = 1
 " }}}"
 " Ansible {{{
 let g:ansible_options = {'ignore_blank_lines': 0}"
@@ -209,10 +181,27 @@ let g:go_fmt_command = "goimports"
 " }}}
 " python-mode {{{
 let g:pymode = 1
+" let g:pymode_run=1
+" let g:pymode_folding=1
+" let g:pymode_options=1
+" let g:pymode_syntax=1
+" let g:pymode_syntax_all=1
+" let g:pymode_syntax_slow_sync=1
+" let g:pymode_trim_whitespaces=1
+" let g:pymode_doc = 0
+" let g:pymode_rope = 0
 let g:pymode_lint = 1
+let g:pymode_indent = 1
+" let g:pymode_lint_checkers = ['pep8']
+let g:pymode_lint_message = 1
 let g:pymode_lint_on_write = 1
-let g:pymode_lint_cwindow = 0
+let g:pymode_lint_on_fly = 1
+let g:pymode_lint_signs = 1
+ let g:pymode_lint_unmodified = 1
+let g:pymode_lint_message = 1
+let g:pymode_lint_cwindow = 1
 let g:pymode_lint_jump = 1
+ let g:pymode_debug=1
 " }}}
 " Leader shortcuts {{{
 
