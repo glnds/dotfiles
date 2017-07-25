@@ -104,7 +104,7 @@ Plug 'rking/ag.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
-" Plug 'python-mode/python-mode'
+Plug 'python-mode/python-mode'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
@@ -181,27 +181,28 @@ let g:go_fmt_command = "goimports"
 " }}}
 " python-mode {{{
 let g:pymode = 1
-" let g:pymode_run=1
-" let g:pymode_folding=1
-" let g:pymode_options=1
-" let g:pymode_syntax=1
-" let g:pymode_syntax_all=1
-" let g:pymode_syntax_slow_sync=1
-" let g:pymode_trim_whitespaces=1
-" let g:pymode_doc = 0
-" let g:pymode_rope = 0
+let g:pymode_run=1
+let g:pymode_folding=1
+let g:pymode_options=1
+let g:pymode_syntax=1
+let g:pymode_syntax_all=1
+let g:pymode_syntax_slow_sync=1
+let g:pymode_trim_whitespaces=1
+let g:pymode_doc = 0
+let g:pymode_rope = 0
 let g:pymode_lint = 1
 let g:pymode_indent = 1
-" let g:pymode_lint_checkers = ['pep8']
 let g:pymode_lint_message = 1
 let g:pymode_lint_on_write = 1
 let g:pymode_lint_on_fly = 1
 let g:pymode_lint_signs = 1
- let g:pymode_lint_unmodified = 1
+let g:pymode_lint_unmodified = 1
 let g:pymode_lint_message = 1
 let g:pymode_lint_cwindow = 1
 let g:pymode_lint_jump = 1
- let g:pymode_debug=1
+let g:pymode_options_max_line_length = 100
+let g:pymode_lint_options_pylint = {'max-line-length': g:pymode_options_max_line_length}
+" let g:pymode_debug=1
 " }}}
 " Leader shortcuts {{{
 
@@ -287,6 +288,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
+noremap pp :PymodeLintAuto<CR>
 " <C-h>, <BS>: close popup and delete backword char.
 " inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 " inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
