@@ -1,0 +1,8 @@
+[FORMAT]
+
+# Maximum number of characters on a single line.
+max-line-length=100
+
+[pycodestyle]
+ignore = E402
+max-line-length = 100

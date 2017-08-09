@@ -101,7 +101,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dag/vim-fish'
 Plug 'rking/ag.vim'
-Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
 Plug 'python-mode/python-mode'
@@ -110,6 +109,7 @@ Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " Interesting plugins:
+  " Plug 'tpope/vim-markdown'
   " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
   " Plug 'zchee/deoplete-go', { 'do': 'make'}
   " Plug 'Valloric/YouCompleteMe'
@@ -201,7 +201,10 @@ let g:pymode_lint_message = 1
 let g:pymode_lint_cwindow = 1
 let g:pymode_lint_jump = 1
 let g:pymode_options_max_line_length = 100
-let g:pymode_lint_options_pylint = {'max-line-length': g:pymode_options_max_line_length}
+" let g:pymode_lint_options_pylint = {'max-line-length': g:pymode_options_max_line_length}
+let g:pep8_ignore="E402"
+" Pylint configuration file
+let g:pymode_lint_config = '$HOME/pylint.rc'
 " let g:pymode_debug=1
 " }}}
 " Leader shortcuts {{{
@@ -313,11 +316,12 @@ if executable('ag')
 endif
 " }}}
 " Gitgutter {{{
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 " }}}
 
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 highlight ErrorMsg guibg=White guifg=Red
 

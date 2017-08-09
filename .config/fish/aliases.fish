@@ -37,6 +37,7 @@ alias grizzly='cd ~/Sources/dp/grizzly'
 alias bami='cd ~/Sources/dp/bami'
 alias aura='cd ~/Sources/dp/aura'
 alias macho='cd ~/Sources/dp/macho'
+alias boulet='cd ~/Sources/dp/boulet'
 alias g='git'
 alias v='vim'
 

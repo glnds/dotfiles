@@ -8,5 +8,5 @@ function start_agent
   . $SSH_ENV > /dev/null
   #ssh-add ~/.ssh/(hostname)
   ssh-add ~/.ssh/mackey
-  ssh-add  ~/.ssh/saw_key
+  ssh-add ~/.ssh/saw_key
 end
