@@ -39,7 +39,6 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/dotfiles/.vim ~/
 ln -s ~/dotfiles/.pip ~/
-ln -s ~/dotfiles/.virtualenvs ~/
 ln -s ~/dotfiles/.config ~/
 ln -s ~/dotfiles/gradle.properties ~/.gradle/gradle.properties
 
