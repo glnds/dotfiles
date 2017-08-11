@@ -201,10 +201,8 @@ let g:pymode_lint_message = 1
 let g:pymode_lint_cwindow = 1
 let g:pymode_lint_jump = 1
 let g:pymode_options_max_line_length = 100
-" let g:pymode_lint_options_pylint = {'max-line-length': g:pymode_options_max_line_length}
-let g:pep8_ignore="E402"
-" Pylint configuration file
-let g:pymode_lint_config = '$HOME/pylint.rc'
+let g:pymode_lint_options_pylint = {'max-line-length': g:pymode_options_max_line_length}
+let g:pymode_lint_ignore="E402"
 " let g:pymode_debug=1
 " }}}
 " Leader shortcuts {{{
