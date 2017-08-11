@@ -8,6 +8,7 @@
 .vim/credentials.vim
 .vim/shada
 .vim/.netrwhist
+.virtualenvs
 .config/fish/fishd.*
 .config/fish/secret.fish
 .config/fish/fish_history
