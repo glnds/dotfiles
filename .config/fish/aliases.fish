@@ -38,6 +38,7 @@ alias bami='cd ~/Sources/dp/bami'
 alias aura='cd ~/Sources/dp/aura'
 alias macho='cd ~/Sources/dp/macho'
 alias boulet='cd ~/Sources/dp/boulet'
+alias lucifer='cd ~/Sources/dp/lucifer'
 alias g='git'
 alias v='vim'
 
