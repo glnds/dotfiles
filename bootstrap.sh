@@ -9,6 +9,7 @@ sudo mkdir -p /data/db
 sudo chown -R glnds:staff /data/db
 
 brew update
+brew install vim --with-lua
 brew install cmake fish git python tmux the_silver_searcher tig htop jq
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3
 brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace
@@ -22,10 +23,13 @@ pip install powerline-status --upgrade
 pip install virtualfish --upgrade
 pip install pip-tools --upgrade
 pip install yamllint --upgrade
+pip install pylint --upgrade
+pip install flake8 --upgrade
 pip install pip-autoremove --upgrade
 pip install powerline-gitstatus --upgrade
 pip install boto3 --upgrade
 pip install boto --upgrade
+pip install jedi --upgrade
 
 git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline
 ~/dotfiles/powerline/install.sh

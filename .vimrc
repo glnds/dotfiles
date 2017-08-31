@@ -4,12 +4,6 @@
 " |___/_/_/_/_/_/  \__/
 
 
-" Colors {{{
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark    " Setting dark mode
-highlight ColorColumn ctermbg=237
-syntax on
-"}}}
 " Options {{{
 filetype plugin indent on
 
@@ -79,78 +73,27 @@ set writebackup
 " }}}
 " Plugins {{{
 call plug#begin()
-
-
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-Plug 'sjl/badwolf'
-Plug 'bling/vim-airline'
-Plug 'morhetz/gruvbox'
-Plug 'fatih/molokai'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
+Plug 'davidhalter/jedi-vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'chase/vim-ansible-yaml'
-Plug 'avakhov/vim-yaml'
+Plug 'tpope/vim-surround'
+Plug 'chriskempson/base16-vim'
+Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dag/vim-fish'
-Plug 'rking/ag.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
-Plug 'python-mode/python-mode'
-Plug 'Valloric/YouCompleteMe'
-
 call plug#end()
-
-" Interesting plugins:
-  " Plug 'tpope/vim-markdown'
-  " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-  " Plug 'zchee/deoplete-go', { 'do': 'make'}
-  " Plug 'Valloric/YouCompleteMe'
-  " Plug 'godlygeek/tabular'
-  " Plug 'junegunn/goyo.vim'
-  " Plug 'fatih/vim-go'
-  " Plug 'hashivim/vim-terraform'
-  " Plug 'ekalinin/Dockerfile.vim'
-  " Plug 'neomake/neomake'
-  " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-  " Plug 'jmcantrell/vim-virtualenv'
-  " Plug 'noahfrederick/vim-hemisu'
-  " Plug 'editorconfig/editorconfig-vim'
-  " Plug 'tpope/vim-unimpaired'
-  " Plug 'rizzatti/dash.vim'
-  " Plug 'easymotion/vim-easymotion'
-  " Plug 'klen/python-mode'
-  " Plug 'davidhalter/jedi-vim'
-  " Plug 'Yggdroot/indentLine'
-  " Plug 'rizzatti/dash.vim'
-
-" colorscheme has to be set after plugins are loaded!
-colorscheme molokai
-highlight LineNr guifg=#b3b3b3
-
+" }}}
+" Python {{{
 " Python ignore long lines
 let g:pep8_ignore="E501,W601"
 " }}}
-" YCM {{{
-let g:ycm_autoclose_preview_window_after_completion = 1
-" }}}"
 " Ansible {{{
 let g:ansible_options = {'ignore_blank_lines': 0}"
-" }}}
-" Airline {{{
-let g:airline_powerline_fonts = 1    "Enable powerline font for vim-airline
-let g:netrw_liststyle=3
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
 " NERDTree {{{
 let NERDTreeChDirMode=2     " Display the current working directory
@@ -170,40 +113,48 @@ let g:ctrlp_open_new_file = 'v'
 " Use the nearest .git directory as the cwd
 let g:ctrlp_working_path_mode = 'r'
 " }}}
-" vim-go {{{
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
+" Neocomplete {{{
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-let g:go_fmt_command = "goimports"
-" }}}
-" python-mode {{{
-let g:pymode = 1
-let g:pymode_run=1
-let g:pymode_folding=1
-let g:pymode_options=1
-let g:pymode_syntax=1
-let g:pymode_syntax_all=1
-let g:pymode_syntax_slow_sync=1
-let g:pymode_trim_whitespaces=1
-let g:pymode_doc = 0
-let g:pymode_rope = 0
-let g:pymode_lint = 1
-let g:pymode_indent = 1
-let g:pymode_lint_message = 1
-let g:pymode_lint_on_write = 1
-let g:pymode_lint_on_fly = 0
-let g:pymode_lint_signs = 1
-let g:pymode_lint_unmodified = 1
-let g:pymode_lint_message = 1
-let g:pymode_lint_cwindow = 1
-let g:pymode_lint_jump = 1
-let g:pymode_options_max_line_length = 100
-let g:pymode_lint_options_pylint = {'max-line-length': g:pymode_options_max_line_length}
-let g:pymode_lint_ignore="E402"
-" let g:pymode_debug=1
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+" AutoComplPop like behavior.
+" let g:neocomplete#enable_auto_select = 1
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 " Leader shortcuts {{{
 
@@ -316,11 +267,29 @@ endif
 " Gitgutter {{{
 set signcolumn=yes
 " }}}
+" Syntastic {{{
+let g:syntastic_error_symbol = 'EE'
+let g:syntastic_warning_symbol = 'WW'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+" }}}
+" vim-jedi {{{
+ autocmd FileType python setlocal omnifunc=jedi#completions
+ " let g:jedi#completions_enabled = 0
+ let g:jedi#auto_vim_configuration = 0
+" }}}
+" Colors {{{
+syntax on
+let base16colorspace=256
+
+colorscheme base16-tomorrow-night
+
+highlight ErrorMsg guibg=White guifg=Red
+highlight LineNr guifg=#b3b3b3
+"}}}
 
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
-highlight ErrorMsg guibg=White guifg=Red
 
 " vim:foldmethod=marker:foldlevel=0
