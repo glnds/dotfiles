@@ -8,7 +8,7 @@
 filetype plugin indent on
 
 set timeout timeoutlen=500 ttimeoutlen=100
-set termguicolors
+" set termguicolors
 
 set hidden                " hide buffers instead of closing them
 set laststatus=2          " Always display the statusline in all windows 
@@ -39,8 +39,7 @@ set ruler                 " Always show current position
 set list                  " Show specials charcters like tabs (^I), end of line ($), ...
 set splitbelow            " Split current window below
 set splitright            " Split current window right
-set showcmd               " Display incomplete commands
-set autowrite             " Automatically :write before running commands
+set showcmd               " Display incomplete commands set autowrite             " Automatically :write before running commands
 set colorcolumn=101        " Make it obvious where 80 characters is
 set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
@@ -56,12 +55,13 @@ set incsearch
 set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
 match ErrorMsg '\s\+$'
 
-if &term =~ '256color'
-  " Disable Background Color Erase (BCE) so that color schemes
-  " work properly when Vim is used inside tmux and GNU screen.
-  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-"  set t_ut=
-endif
+" if &term =~ '256color'
+"   " Disable Background Color Erase (BCE) so that color schemes
+"   " work properly when Vim is used inside tmux and GNU screen.
+"   " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+" "  set t_ut=
+" endif
+
 
 " }}}
 " Backup {{{
@@ -78,7 +78,6 @@ Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'benmills/vimux'
@@ -86,6 +85,14 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
+" Color shemes
+Plug 'chriskempson/base16-vim'
+Plug 'tomasr/molokai'
+Plug 'sjl/badwolf'
+Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
+Plug 'dracula/vim'
+Plug 'vim-scripts/wombat256.vim'
 call plug#end()
 " }}}
 " Python {{{
@@ -279,13 +286,22 @@ let g:syntastic_auto_loc_list = 1
  let g:jedi#auto_vim_configuration = 0
 " }}}
 " Colors {{{
+if has("termguicolors")     " set true colors
+  set t_8f=[38;2;%lu;%lu;%lum  " Needed in tmux
+  set t_8b=[48;2;%lu;%lu;%lum  " Ditto
+  set termguicolors
+endif
 syntax on
 let base16colorspace=256
-
-colorscheme base16-tomorrow-night
+let g:rehash256 = 1
+let g:solarized_termcolors=256
+colorscheme molokai
 
 highlight ErrorMsg guibg=White guifg=Red
 highlight LineNr guifg=#b3b3b3
+
+" autocmd BufEnter * colorscheme base16-tomorrow-night
+" autocmd BufEnter *.py colorscheme badwolf
 "}}}
 
 au BufReadPost Jenkinsfile set syntax=groovy
