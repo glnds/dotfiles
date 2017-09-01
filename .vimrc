@@ -85,6 +85,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
+Plug 'tell-k/vim-autopep8'
 " Color shemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -247,7 +248,8 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
-noremap pp :PymodeLintAuto<CR>
+" noremap pp :PymodeLintAuto<CR>
+autocmd FileType python noremap <buffer> pp :call Autopep8()<CR>
 " <C-h>, <BS>: close popup and delete backword char.
 " inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 " inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"

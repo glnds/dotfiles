@@ -25,6 +25,7 @@ pip install pip-tools --upgrade
 pip install yamllint --upgrade
 pip install pylint --upgrade
 pip install flake8 --upgrade
+pip install autopep8 --upgrade
 pip install pip-autoremove --upgrade
 pip install powerline-gitstatus --upgrade
 pip install boto3 --upgrade
