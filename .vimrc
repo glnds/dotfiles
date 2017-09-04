@@ -74,7 +74,7 @@ set writebackup
 " Plugins {{{
 call plug#begin()
 Plug 'davidhalter/jedi-vim'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -85,7 +85,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
-Plug 'tell-k/vim-autopep8'
+Plug 'python-mode/python-mode'
 " Color shemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -98,7 +98,7 @@ call plug#end()
 " }}}
 " Python {{{
 " Python ignore long lines
-let g:pep8_ignore="E501,W601"
+" let g:pep8_ignore="E501,W601"
 " }}}
 " Ansible {{{
 let g:ansible_options = {'ignore_blank_lines': 0}"
@@ -248,8 +248,8 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
-" noremap pp :PymodeLintAuto<CR>
-autocmd FileType python noremap <buffer> pp :call Autopep8()<CR>
+noremap pp :PymodeLintAuto<CR>
+" autocmd FileType python noremap <buffer> pp :call Autopep8()<CR>
 " <C-h>, <BS>: close popup and delete backword char.
 " inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
 " inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
@@ -277,15 +277,39 @@ endif
 set signcolumn=yes
 " }}}
 " Syntastic {{{
-let g:syntastic_error_symbol = 'EE'
-let g:syntastic_warning_symbol = 'WW'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_error_symbol = 'EE'
+" let g:syntastic_warning_symbol = 'WW'
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
 " }}}
 " vim-jedi {{{
  autocmd FileType python setlocal omnifunc=jedi#completions
  " let g:jedi#completions_enabled = 0
  let g:jedi#auto_vim_configuration = 0
+" }}}
+" python-mode {{{
+let g:pymode=1
+let g:pymode_options=1
+let g:pymode_trim_whitespaces=1
+let g:pymode_rope_completion=0
+let g:pymode_run=0
+let g:pymode_indent=1
+let g:pymode_folding=1
+let g:pymode_doc=0
+let g:pymode_virtualenv=1
+let g:pymode_lint=1
+let g:pymode_lint_on_write=1
+let g:pymode_lint_unmodified=0
+let g:pymode_lint_on_fly=0
+let g:pymode_lint_message=1
+let g:pymode_lint_checkers=['pylint', 'pep8']
+let g:pymode_options_max_line_length=100
+let g:pymode_lint_options_pylint={'max-line-length': g:pymode_options_max_line_length}
+let g:pymode_lint_ignore="E402"
+let g:pymode_lint_cwindow=1
+let g:pymode_lint_signs=1
+let g:pymode_syntax=0
+" let g:pymode_debug=1
 " }}}
 " Colors {{{
 if has("termguicolors")     " set true colors
