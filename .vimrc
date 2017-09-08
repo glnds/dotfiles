@@ -11,6 +11,7 @@ set timeout timeoutlen=500 ttimeoutlen=100
 " set termguicolors
 
 set hidden                " hide buffers instead of closing them
+" set showtabline=2
 set laststatus=2          " Always display the statusline in all windows 
 set backspace=2           " Backspace deletes like most programs in insert mode 
 set encoding=utf8         " Sets charachter encoding
@@ -86,6 +87,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
 Plug 'python-mode/python-mode'
+Plug 'bling/vim-bufferline'
+" Plug 'ap/vim-buftabline'
 " Color shemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -305,7 +308,7 @@ let g:pymode_lint_message=1
 let g:pymode_lint_checkers=['pylint', 'pep8']
 let g:pymode_options_max_line_length=100
 let g:pymode_lint_options_pylint={'max-line-length': g:pymode_options_max_line_length}
-let g:pymode_lint_ignore="E402"
+let g:pymode_lint_ignore="E402,C0111"
 let g:pymode_lint_cwindow=1
 let g:pymode_lint_signs=1
 let g:pymode_syntax=0
