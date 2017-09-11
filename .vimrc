@@ -75,8 +75,10 @@ set writebackup
 " Plugins {{{
 call plug#begin()
 Plug 'davidhalter/jedi-vim'
+" Plug 'ervandew/supertab'
 " Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/neocomplete.vim'
+Plug 'python-mode/python-mode'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
@@ -86,10 +88,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
-Plug 'python-mode/python-mode'
 Plug 'bling/vim-bufferline'
 " Plug 'ap/vim-buftabline'
-" Color shemes
+" Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
@@ -102,9 +103,6 @@ call plug#end()
 " Python {{{
 " Python ignore long lines
 " let g:pep8_ignore="E501,W601"
-" }}}
-" Ansible {{{
-let g:ansible_options = {'ignore_blank_lines': 0}"
 " }}}
 " NERDTree {{{
 let NERDTreeChDirMode=2     " Display the current working directory
@@ -127,11 +125,11 @@ let g:ctrlp_working_path_mode = 'r'
 " Neocomplete {{{
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-" Use neocomplete.
+" " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
+" " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
+" " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
@@ -160,12 +158,12 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " AutoComplPop like behavior.
 " let g:neocomplete#enable_auto_select = 1
 
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" " Enable omni completion.
+" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 " Leader shortcuts {{{
 
@@ -286,9 +284,11 @@ set signcolumn=yes
 " let g:syntastic_auto_loc_list = 1
 " }}}
 " vim-jedi {{{
- autocmd FileType python setlocal omnifunc=jedi#completions
- " let g:jedi#completions_enabled = 0
- let g:jedi#auto_vim_configuration = 0
+let g:jedi#auto_initialization = 1
+let g:jedi#completions_enabled = 1
+let g:jedi#auto_vim_configuration = 1
+" Fix for Neocomplete
+let g:jedi#popup_select_first = 0
 " }}}
 " python-mode {{{
 let g:pymode=1
