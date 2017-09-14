@@ -8,8 +8,8 @@
 filetype plugin indent on
 
 set timeout timeoutlen=500 ttimeoutlen=100
-" set termguicolors
-
+" Vim autocomplete options
+set completeopt=menuone
 set hidden                " hide buffers instead of closing them
 " set showtabline=2
 set laststatus=2          " Always display the statusline in all windows 
@@ -74,11 +74,10 @@ set writebackup
 " }}}
 " Plugins {{{
 call plug#begin()
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
+Plug 'Chiel92/vim-autoformat'
 " Plug 'ervandew/supertab'
-" Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/neocomplete.vim'
-Plug 'python-mode/python-mode'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
@@ -158,12 +157,12 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " AutoComplPop like behavior.
 " let g:neocomplete#enable_auto_select = 1
 
-" " Enable omni completion.
-" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 " Leader shortcuts {{{
 
@@ -249,7 +248,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
-noremap pp :PymodeLintAuto<CR>
+noremap pp :Autoformat<CR>
 " autocmd FileType python noremap <buffer> pp :call Autopep8()<CR>
 " <C-h>, <BS>: close popup and delete backword char.
 " inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
@@ -284,35 +283,11 @@ set signcolumn=yes
 " let g:syntastic_auto_loc_list = 1
 " }}}
 " vim-jedi {{{
-let g:jedi#auto_initialization = 1
-let g:jedi#completions_enabled = 1
-let g:jedi#auto_vim_configuration = 1
+" let g:jedi#auto_initialization = 1
+" let g:jedi#completions_enabled = 1
+" let g:jedi#auto_vim_configuration = 1
 " Fix for Neocomplete
-let g:jedi#popup_select_first = 0
-" }}}
-" python-mode {{{
-let g:pymode=1
-let g:pymode_options=1
-let g:pymode_trim_whitespaces=1
-let g:pymode_rope_completion=0
-let g:pymode_run=0
-let g:pymode_indent=1
-let g:pymode_folding=1
-let g:pymode_doc=0
-let g:pymode_virtualenv=1
-let g:pymode_lint=1
-let g:pymode_lint_on_write=1
-let g:pymode_lint_unmodified=0
-let g:pymode_lint_on_fly=0
-let g:pymode_lint_message=1
-let g:pymode_lint_checkers=['pylint', 'pep8']
-let g:pymode_options_max_line_length=100
-let g:pymode_lint_options_pylint={'max-line-length': g:pymode_options_max_line_length}
-let g:pymode_lint_ignore="E402,C0111"
-let g:pymode_lint_cwindow=1
-let g:pymode_lint_signs=1
-let g:pymode_syntax=0
-" let g:pymode_debug=1
+" let g:jedi#popup_select_first = 0
 " }}}
 " Colors {{{
 if has("termguicolors")     " set true colors
