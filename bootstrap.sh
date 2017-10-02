@@ -15,11 +15,9 @@ brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3
 brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace
 brew tap caskroom/versions
 brew cask install java iterm2
-brew cask install --force virtualbox
 brew upgrade
 
 pip install pip --upgrade
-pip install powerline-status --upgrade
 pip install virtualfish --upgrade
 pip install pip-tools --upgrade
 pip install yamllint --upgrade
@@ -27,13 +25,9 @@ pip install pylint --upgrade
 pip install flake8 --upgrade
 pip install autopep8 --upgrade
 pip install pip-autoremove --upgrade
-pip install powerline-gitstatus --upgrade
 pip install boto3 --upgrade
 pip install boto --upgrade
 pip install jedi --upgrade
-
-git clone https://github.com/powerline/fonts.git ~/dotfiles/powerline
-~/dotfiles/powerline/install.sh
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -50,7 +44,6 @@ ln -s ~/dotfiles/gradle.properties ~/.gradle/gradle.properties
 if [ ! -e $HOME/.vim/autoload/plug.vim ]; then
   echo "Installing Plug"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 echo "Successfully updated dotfiles!"
