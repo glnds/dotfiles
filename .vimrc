@@ -303,6 +303,7 @@ colorscheme molokai
 
 highlight ErrorMsg guibg=White guifg=Red
 highlight LineNr guifg=#b3b3b3
+highlight TabLineFill term=bold cterm=bold ctermbg=0
 
 " autocmd BufEnter * colorscheme base16-tomorrow-night
 " autocmd BufEnter *.py colorscheme badwolf
@@ -311,5 +312,4 @@ highlight LineNr guifg=#b3b3b3
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
 " vim:foldmethod=marker:foldlevel=0

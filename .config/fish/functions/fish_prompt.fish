@@ -1,4 +1,8 @@
 function fish_prompt --description 'Write out the prompt'
+  if set -q VIRTUAL_ENV
+    echo -n -s (set_color -o black -b brcyan) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
+  end
+
 	set -l last_status $status
 
 	if not set -q __fish_prompt_normal
@@ -19,8 +23,4 @@ function fish_prompt --description 'Write out the prompt'
 	echo -n '$ '
 
 	set_color normal
-
-  if set -q VIRTUAL_ENV
-    echo -n -s (set_color white -b blue) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
-  end
 end
