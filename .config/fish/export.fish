@@ -6,6 +6,9 @@ set -x PATH /usr/local/opt/python/libexec/bin $PATH
 
 # set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
 
+# Rust config
+set -x PATH "$HOME/.cargo/bin" $PATH
+
 # tmux fix
 set -x export EVENT_NOKQUEUE=1
 # set -x TERM xterm-256color
