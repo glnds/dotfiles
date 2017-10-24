@@ -303,6 +303,7 @@ colorscheme molokai
 
 highlight ErrorMsg guibg=White guifg=Red
 highlight LineNr guifg=#b3b3b3
+" Assure the tabline color is black
 highlight TabLineFill term=bold cterm=bold ctermbg=0
 
 " autocmd BufEnter * colorscheme base16-tomorrow-night
