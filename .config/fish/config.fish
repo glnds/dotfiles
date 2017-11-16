@@ -43,11 +43,13 @@ set __fish_git_prompt_color_upstream_behind red
 # id_(hostname) identity.
 setenv SSH_ENV "$HOME/.ssh/environment"
 if [ -n "$SSH_AGENT_PID" ]
+    echo "SSH agent running..."
     ps -ef | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
     if [ $status -eq 0 ]
         test_identities
     end
 else
+    echo "Start SSH agent"
     if [ -f $SSH_ENV ]
         . $SSH_ENV > /dev/null
     end
