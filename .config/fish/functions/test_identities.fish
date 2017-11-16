@@ -1,6 +1,6 @@
 # Add my SSH identity
 function test_identities
-  echo "Check SSH identites..."
+  #echo "Check SSH identites..."
   ssh-add -l | grep "The agent has no identities." > /dev/null
   if [ $status -eq 0 ]
     echo "Adding SSH identites.."
@@ -11,6 +11,6 @@ function test_identities
     end
     echo "SSH identities added."
   else
-    echo "SSH identities already initialized."
+    #echo "SSH identities already initialized."
   end
 end
