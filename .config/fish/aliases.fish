@@ -6,6 +6,7 @@ alias setaws='set -x -g AWS_PROFILE'
 # Use the trash can
 alias trash="rmtrash"
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
+alias pip="echo Use 'pip2' or 'pip3' instead of pip"
 
 # Quick config
 alias ea='vim ~/.config/fish/aliases.fish'
@@ -157,11 +158,11 @@ end
 
 function update
   brew update; brew upgrade; brew cleanup
-  pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+  pip2 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2 install -U
 end
 
 # Python pip update all packages
-alias pupdate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+alias pupdate="pip2 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2 install -U"
 alias ptc="pip-compile"
 alias pts="pip-sync dev-requirements.txt requirements.txt"
 

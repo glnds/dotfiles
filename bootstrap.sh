@@ -17,17 +17,17 @@ brew tap caskroom/versions
 brew cask install java iterm2
 brew upgrade
 
-pip install pip --upgrade
-pip install virtualfish --upgrade
-pip install pip-tools --upgrade
-pip install yamllint --upgrade
-pip install pylint --upgrade
-pip install flake8 --upgrade
-pip install autopep8 --upgrade
-pip install pip-autoremove --upgrade
-pip install boto3 --upgrade
-pip install boto --upgrade
-pip install jedi --upgrade
+pip2 install pip --upgrade
+pip2 install virtualfish --upgrade
+pip2 install pip-tools --upgrade
+pip2 install yamllint --upgrade
+pip2 install pylint --upgrade
+pip2 install flake8 --upgrade
+pip2 install autopep8 --upgrade
+pip2 install pip-autoremove --upgrade
+pip2 install boto3 --upgrade
+pip2 install boto --upgrade
+pip2 install jedi --upgrade
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
