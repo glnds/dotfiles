@@ -21,7 +21,7 @@ set fish_key_bindings fish_user_key_bindings
 # rbenv rehash >/dev/null ^&1
 #. (rbenv init -)
 
-eval (python -m virtualfish)
+eval (python3 -m virtualfish)
 
 # git prompt
 # https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish
