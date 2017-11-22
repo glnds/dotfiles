@@ -23,11 +23,7 @@ pip3 install pip-tools --upgrade
 pip3 install yamllint --upgrade
 pip3 install boto3 --upgrade
 pip3 install yapf --upgrade
-# pip4 install pylint --upgrade
-# pip3 install flake8 --upgrade
-# pip3 install pip-autoremove --upgrade
-# pip3 install boto --upgrade
-# pip3 install jedi --upgrade
+pip3 install poerline-status --upgrade
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
