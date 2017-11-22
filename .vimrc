@@ -89,6 +89,7 @@ Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
 " Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
+Plug 'nvie/vim-flake8'
 " Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -99,9 +100,11 @@ Plug 'dracula/vim'
 Plug 'vim-scripts/wombat256.vim'
 call plug#end()
 " }}}
-" Python {{{
+" Python / flake8 {{{
 " Python ignore long lines
 " let g:pep8_ignore="E501,W601"
+let g:flake8_show_in_file=0
+let g:flake8_show_in_gutter=1
 " }}}
 " NERDTree {{{
 let NERDTreeChDirMode=2     " Display the current working directory
@@ -313,4 +316,15 @@ highlight TabLineFill term=bold cterm=bold ctermbg=0
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufWritePost *.py call Flake8()
+au BufEnter * call MyLastWindow()
+function! MyLastWindow()
+  " if the window is quickfix go on
+  if &buftype=="quickfix"
+    " if this window is last on screen quit without warning
+    if winbufnr(2) == -1
+      quit!
+    endif
+  endif
+endfunction
 " vim:foldmethod=marker:foldlevel=0
