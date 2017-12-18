@@ -40,7 +40,8 @@ set ruler                 " Always show current position
 set list                  " Show specials charcters like tabs (^I), end of line ($), ...
 set splitbelow            " Split current window below
 set splitright            " Split current window right
-set showcmd               " Display incomplete commands set autowrite             " Automatically :write before running commands
+set showcmd               " Display incomplete commands
+set autowrite             " Automatically :write before running commands
 set colorcolumn=101        " Make it obvious where 80 characters is
 set number                " Show line numbers
 set numberwidth=5         " Line number reserved space
@@ -90,6 +91,7 @@ Plug 'airblade/vim-gitgutter'
 " Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
 Plug 'nvie/vim-flake8'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -101,6 +103,8 @@ Plug 'vim-scripts/wombat256.vim'
 call plug#end()
 " }}}
 " Python / flake8 {{{
+" Flake8 is a wrapper around PyFlakes (static syntax checker), PEP8 (style
+" checker)
 " Python ignore long lines
 " let g:pep8_ignore="E501,W601"
 let g:flake8_show_in_file=0
@@ -316,6 +320,7 @@ highlight TabLineFill term=bold cterm=bold ctermbg=0
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 autocmd BufWritePost *.py call Flake8()
 au BufEnter * call MyLastWindow()
 function! MyLastWindow()
