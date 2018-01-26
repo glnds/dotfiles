@@ -81,6 +81,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'benmills/vimux'
@@ -88,6 +89,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 " Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
 Plug 'nvie/vim-flake8'
@@ -191,8 +193,8 @@ nnoremap <Leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a 
 nnoremap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
 nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
 nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
-nnoremap <Leader>pp :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-inoremap <Leader>pp <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nnoremap <Leader>v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+inoremap <Leader>v <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
 nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
 nnoremap <Leader>tt :TagbarToggle<CR>|            " Toggle Tagbar

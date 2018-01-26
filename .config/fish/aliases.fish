@@ -174,8 +174,10 @@ alias history="history | nl | tail -r | less +G"
 #https://www.shredzone.de/cilla/page/383/setting-up-tp-link-tl-sg108e-with-linux.html
 alias tplink="java -cp /Users/glnds/CloudStation/misc/TP-Link/patch.jar:/Users/glnds/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
 
+alias make="mmake"
+
 # alias vim="nvim"
-alias vimdiff="nvim -d"
+alias vimdiff="vim -d"
 
 alias sqlplus="rlwrap sqlplus"
 
@@ -206,3 +208,4 @@ alias lsami="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Valu
 alias lss3="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table"
 alias lsefs="aws efs describe-file-systems --query 'FileSystems[*].[Name,FileSystemId]' --output table"
 alias lsvpc='aws ec2 describe-vpcs --query "Vpcs[*].{Name:Tags[?Key==`Name`].Value|[0],Squad:Tags[?Key==`Squad`].Value|[0],ID:VpcId,CIDR:CidrBlock,DHCP:DhcpOptionsId,State:State}" --filter "Name=isDefault,Values=false" --output table'
+alias onelogin='onelogin-aws-login --profile onelogin -u gert.leenders@persgroep.net'
