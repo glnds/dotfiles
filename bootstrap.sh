@@ -10,7 +10,7 @@ sudo chown -R glnds:staff /data/db
 
 brew update
 brew install vim --with-lua
-brew install cmake fish git python tmux the_silver_searcher tig htop jq
+brew install cmake fish git python tmux the_silver_searcher tig htop jq ripgrep
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3
 brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace
 brew tap caskroom/versions
@@ -23,7 +23,7 @@ pip3 install pip-tools --upgrade
 pip3 install yamllint --upgrade
 pip3 install boto3 --upgrade
 pip3 install yapf --upgrade
-pip3 install poerline-status --upgrade
+pip3 install powerline-status --upgrade
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
