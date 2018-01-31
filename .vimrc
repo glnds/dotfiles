@@ -52,6 +52,7 @@ set cpoptions+=$          " Show a $ sign in the change buffer
 set updatetime=250        " Update time for diff markers
 set hlsearch
 set incsearch
+set wildignore+=*/.git/*,*/tmp/*,*.swp
 "set t_Co=256              " Number of colors
 
 set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
@@ -269,16 +270,11 @@ noremap pp :Autoformat<CR>
 "   return deoplete#close_popup() . "\<CR>"
 " endfunction
 " }}}
-" Silver Searcher {{{
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  "
-  " Use ag in CtrlP for listing files. Lightning fast and respects gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
+" ripgrep {{{
+if executable('rg')
+" Use ripgrep: https://github.com/BurntSushi/ripgrep
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
 " }}}
