@@ -6,6 +6,8 @@ set -x PATH /usr/local/opt/python/libexec/bin $PATH
 
 # set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
 
+# set -x PATH ~/Library/Python/3.6/bin $PATH
+
 # Rust config
 set -x PATH "$HOME/.cargo/bin" $PATH
 
@@ -22,7 +24,7 @@ set -x PACKER_LOG 1
 set -x PACKER_LOG_PATH "packer.log"
 
 # Groovy home
-set -x GROOVY_HOME /usr/local/opt/groovy/libexec
+set -x GROOVY_HOME /usr/local/opt/groovysdk/libexec
 
 # Gradle home
 set -x GRADLE_HOME /usr/local/opt/gradle/libexec

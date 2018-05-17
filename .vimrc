@@ -3,7 +3,6 @@
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/
 
-
 " Options {{{
 filetype plugin indent on
 
@@ -12,17 +11,17 @@ set timeout timeoutlen=500 ttimeoutlen=100
 set completeopt=menuone
 set hidden                " hide buffers instead of closing them
 " set showtabline=2
-set laststatus=2          " Always display the statusline in all windows 
-set backspace=2           " Backspace deletes like most programs in insert mode 
+set laststatus=2          " Always display the statusline in all windows
+set backspace=2           " Backspace deletes like most programs in insert mode
 set encoding=utf8         " Sets charachter encoding
 set mouse=                " Disabling mouse support
 set history=1000          " Remember ALL THE commands!
 set undolevels=1000       " Do ALL THE undo's!
 set undoreload=10000      " Maximum number lines to save for undo on a buffer reload
 set virtualedit=onemore   " Allow for cursor beyond last character
-set tabstop=2             " Number of spaces for a tab
-set softtabstop=2         " Number of spaces for a tab while editing
-set shiftwidth=2          " Shift width value
+set tabstop=4             " Number of spaces for a tab
+set softtabstop=4         " Number of spaces for a tab while editing
+set shiftwidth=4          " Shift width value
 set t_BE=                 " fixes bracketed paste mode
 set shiftround            " Round the shift indent
 set expandtab             " Conver tabs to spaces
@@ -38,6 +37,7 @@ set smartcase             " Case sensitive when uc present
 set cursorline            " Highlight cursorline!
 set ruler                 " Always show current position
 set list                  " Show specials charcters like tabs (^I), end of line ($), ...
+set listchars=tab:\│\ ,trail:-,extends:>,precedes:<,nbsp:+
 set splitbelow            " Split current window below
 set splitright            " Split current window right
 set showcmd               " Display incomplete commands
@@ -91,6 +91,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elzr/vim-json'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'hashivim/vim-terraform'
 " Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
 Plug 'nvie/vim-flake8'
@@ -206,15 +207,20 @@ nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
 nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
 nnoremap <Leader>w :w<CR>|                        " Save buffer
-nnoremap <leader>r :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
+" nnoremap <leader>r :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
 
-au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
 " }}}
 " Shortcuts {{{
+
+"Disable the mouse wheel
+inoremap <ScrollWheelUp> <Nop> 
+inoremap <ScrollWheelDown> <Nop>
+
 nmap <S-Enter> Ojj
 nmap <CR> ojj
 " NERDTree
@@ -278,6 +284,12 @@ if executable('rg')
   let g:ctrlp_use_caching = 0
 endif
 " }}}
+" vim-go {{{
+if executable('rg')
+  let g:go_metalinter_autosave = 1
+  let g:go_fmt_command = "goimports"
+endif
+" }}}
 " Gitgutter {{{
 set signcolumn=yes
 " }}}
@@ -320,6 +332,7 @@ au BufReadPost Jenkinsfile set filetype=groovy
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 autocmd BufWritePost *.py call Flake8()
+
 au BufEnter * call MyLastWindow()
 function! MyLastWindow()
   " if the window is quickfix go on

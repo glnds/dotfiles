@@ -1,9 +1,7 @@
 set fish_path $HOME/.config/fish
 set fish_greeting
 
-set -g fish_prompt_pwd_dir_length 1
-
-# Set favourite editor and pager
+ # Set favourite editor and pager
 set -g -x VISUAL vim
 set -g -x EDITOR vim
 set -g -x PAGER less
@@ -74,4 +72,4 @@ complete --command aws --no-files --arguments '(begin; set --local --export COMP
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/glnds/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/glnds/google-cloud-sdk/path.fish.inc'; else; . '/Users/glnds/google-cloud-sdk/path.fish.inc'; end; end
+if [ -f '/opt/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/opt/google-cloud-sdk/path.fish.inc'; else; . '/opt/google-cloud-sdk/path.fish.inc'; end; end

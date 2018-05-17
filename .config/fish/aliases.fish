@@ -110,8 +110,8 @@ alias dm='docker-machine'
 alias dmse="eval (docker-machine env default)"
 alias dk="docker"
 alias dkls="docker ps -a"
-alias dkrm='docker rm (docker ps -aq)'
-alias dkrmi="docker rmi (docker images --filter dangling=true --quiet)"
+alias dkrm='docker rm (docker ps -a -q)'
+alias dkrmi="docker rmi (docker images -q)"
 alias dkrcentos="docker run -it --rm --name centos7 -h centos -v /data centos:7 /bin/bash"
 
 # Ansible
@@ -132,9 +132,9 @@ alias tmk="tmux kill-session -t 0"
 # ACSL
 alias iacsl="~/Scripts/start_acsl_dev_env.sh"
 alias lssh="lsof -i 4tcp -P | ag '^ssh'"
-function sshs
-  ssh -A -i ~/.ssh/saw_key ec2-user@$argv[1]
-end
+# function sshs
+#   ssh -A -i ~/.ssh/saw_key ec2-user@$argv[1]
+# end
 alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --output table --profile acsl"
 alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"
 alias elbp="aws elb describe-instance-health --load-balancer-name prod-ga-elb --output table --profile acsl"
@@ -203,9 +203,9 @@ end
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"
 
 # DPP AWS
-alias lsec2="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],Tags[?Key==`Squad`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,Placement.AvailabilityZone,ImageId,LaunchTime]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table"
-alias lsami="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table"
-alias lss3="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table"
-alias lsefs="aws efs describe-file-systems --query 'FileSystems[*].[Name,FileSystemId]' --output table"
-alias lsvpc='aws ec2 describe-vpcs --query "Vpcs[*].{Name:Tags[?Key==`Name`].Value|[0],Squad:Tags[?Key==`Squad`].Value|[0],ID:VpcId,CIDR:CidrBlock,DHCP:DhcpOptionsId,State:State}" --filter "Name=isDefault,Values=false" --output table'
-alias onelogin='onelogin-aws-login --profile onelogin -u gert.leenders@persgroep.net'
+alias lsec2="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],Tags[?Key==`Squad`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,Placement.AvailabilityZone,ImageId,LaunchTime]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table --region eu-west-1"
+alias lsami="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table --region eu-west-1"
+alias lss3="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table --region eu-west-1"
+alias lsefs="aws efs describe-file-systems --query 'FileSystems[*].[Name,FileSystemId]' --output table --region eu-west-1"
+alias lsvpc='aws ec2 describe-vpcs --query "Vpcs[*].{Name:Tags[?Key==`Name`].Value|[0],Squad:Tags[?Key==`Squad`].Value|[0],ID:VpcId,CIDR:CidrBlock,DHCP:DhcpOptionsId,State:State}" --filter "Name=isDefault,Values=false" --output table --region eu-west-1'
+alias onelogin='onelogin-aws-login --profile onelogin -u gert.leenders@persgroep.net -d 43200'
