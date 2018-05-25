@@ -99,11 +99,11 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
-Plug 'sjl/badwolf'
-Plug 'morhetz/gruvbox'
-Plug 'altercation/vim-colors-solarized'
-Plug 'dracula/vim'
-Plug 'vim-scripts/wombat256.vim'
+"Plug 'sjl/badwolf'
+"Plug 'morhetz/gruvbox'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'dracula/vim'
+"Plug 'vim-scripts/wombat256.vim'
 call plug#end()
 " }}}
 " Python / flake8 {{{
