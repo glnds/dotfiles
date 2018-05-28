@@ -96,6 +96,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'ap/vim-buftabline'
 Plug 'nvie/vim-flake8'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'alecthomas/gometalinter'
 " Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -287,7 +288,8 @@ endif
 " vim-go {{{
 if executable('rg')
   let g:go_metalinter_autosave = 1
-  let g:go_fmt_command = "goimports"
+  let g:go_fmt_command = "gofmt"
+  let g:go_fmt_options = "-s"
 endif
 " }}}
 " Gitgutter {{{

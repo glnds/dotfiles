@@ -17,13 +17,7 @@ brew tap caskroom/versions
 brew cask install java iterm2
 brew upgrade
 
-pip3 install pip --upgrade
-pip3 install virtualfish --upgrade
-pip3 install pip-tools --upgrade
-pip3 install yamllint --upgrade
-pip3 install boto3 --upgrade
-pip3 install yapf --upgrade
-pip3 install powerline-status --upgrade
+pip3 install virtualfish awsebcli powerline-status pipenv --upgrade
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
