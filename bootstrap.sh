@@ -17,7 +17,7 @@ brew tap caskroom/versions
 brew cask install java iterm2
 brew upgrade
 
-pip3 install virtualfish awsebcli powerline-status pipenv --upgrade
+pip3 install virtualfish powerline-status pipenv --user --upgrade
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
