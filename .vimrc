@@ -77,9 +77,9 @@ set writebackup
 " Plugins {{{
 call plug#begin()
 " Plug 'davidhalter/jedi-vim'
-Plug 'Chiel92/vim-autoformat'
 " Plug 'ervandew/supertab'
 Plug 'Shougo/neocomplete.vim'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -95,7 +95,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'pearofducks/ansible-vim'
 " Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
-Plug 'nvie/vim-flake8'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'alecthomas/gometalinter'
 " Color schemes
@@ -108,13 +107,12 @@ Plug 'tomasr/molokai'
 "Plug 'vim-scripts/wombat256.vim'
 call plug#end()
 " }}}
-" Python / flake8 {{{
-" Flake8 is a wrapper around PyFlakes (static syntax checker), PEP8 (style
-" checker)
-" Python ignore long lines
-" let g:pep8_ignore="E501,W601"
-let g:flake8_show_in_file=0
-let g:flake8_show_in_gutter=1
+" ALE {{{
+" Check Python files with flake8 and pylint.
+let g:ale_linters = { 'python': ['flake8', 'black', 'isort', 'mypy', 'prospector', 'pyls', 'pycodestyle'], }
+" Fix Python files with autopep8 and yapf.
+let g:ale_fixers = ['autopep8', 'yapf']
+let g:ale_open_list = 'on_save'
 " }}}
 " NERDTree {{{
 let NERDTreeChDirMode=2     " Display the current working directory
@@ -266,17 +264,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
-noremap pp :Autoformat<CR>
-" autocmd FileType python noremap <buffer> pp :call Autopep8()<CR>
-" <C-h>, <BS>: close popup and delete backword char.
-" inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
-" inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
-
-" <CR>: close popup and save indent.
-" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-" function! s:my_cr_function() abort
-"   return deoplete#close_popup() . "\<CR>"
-" endfunction
+noremap pp :ALEFix<CR>
 " }}}
 " ripgrep {{{
 if executable('rg')
@@ -333,8 +321,9 @@ highlight TabLineFill term=bold cterm=bold ctermbg=0
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+" autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr><C-o>
 
-autocmd BufWritePost *.py call Flake8()
+" autocmd BufWritePost *.py call Flake8()
 
 au BufEnter * call MyLastWindow()
 function! MyLastWindow()
