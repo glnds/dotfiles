@@ -277,8 +277,9 @@ endif
 " vim-go {{{
 if executable('rg')
   let g:go_metalinter_autosave = 1
-  let g:go_fmt_command = "gofmt"
-  let g:go_fmt_options = "-s"
+  let g:go_fmt_command = "goimports"
+  " let g:go_fmt_command = "gofmt"
+  " let g:go_fmt_options = "-s"
 endif
 " }}}
 " Gitgutter {{{
@@ -335,4 +336,8 @@ function! MyLastWindow()
     endif
   endif
 endfunction
+
+
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+
 " vim:foldmethod=marker:foldlevel=0
