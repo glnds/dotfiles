@@ -18,7 +18,7 @@ set -x export EVENT_NOKQUEUE=1
 set -x AUTOSSH_PORT 0
 
 # Packer config, use dpp-build as default boto profile
-set -x AWS_PROFILE "onelogin"
+set -x AWS_PROFILE "masl"
 set -x PACKER_LOG 1
 set -x PACKER_LOG_PATH "packer.log"
 
@@ -40,6 +40,7 @@ set -x  MAVEN_OPTS "-Xmx1024M -XX:MaxPermSize=256m"
 
 # Go
 set -x GOPATH "$HOME/go"
+set -x GOBIN "$GOPATH/bin"
 set -x PATH "$GOPATH/bin" $PATH
 
 # JMeter
