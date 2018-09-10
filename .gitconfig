@@ -23,6 +23,7 @@
   tool = vimdiff
   log = true
   conflictstyle = diff3
+  ff = false
 [push]
   default = simple
 [difftool "sourcetree"]
