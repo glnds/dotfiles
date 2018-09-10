@@ -3,8 +3,9 @@ set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
 
 # set -x PATH /usr/local/opt/python/libexec/bin $PATH
-# set -x PYTHONPATH "/usr/local/lib/python2.7/site-packages"
+# set -x PYTHONPATH "/usr/local/lib/python3.6/site-packages"
 set -x PATH ~/Library/Python/3.6/bin $PATH
+# set -x PATH /Library/Frameworks/Python.framework/Versions/3.6/bin $PATH
 # set -x PATH ~/Library/Python/3.7/bin $PATH
 
 # Rust config
@@ -84,3 +85,5 @@ if test -e /opt/oracle/product/instantclient_64/11.2.0.4.0
   set -x PATH "$ORACLE_HOME/bin" $PATH
   set -x DYLD_LIBRARY_PATH "$ORACLE_HOME/lib"
 end
+
+set -g fish_user_paths "/usr/local/opt/mongodb@3.4/bin" $fish_user_paths
