@@ -41,6 +41,40 @@ For iTerm2, open the Preferences dialog, select Profiles, select Text, and selec
 #### Colors
 For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set Report Terminal Type to **xterm-256color**
 
+## Tools
+
+- [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
+ 
+	```
+	alias cat="bat"
+	```
+- [prettyping](http://denilson.sa.nom.br/prettyping/): prettyping is a wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.
+	```
+	alias ping="prettyping --nolegend"
+	```
+- [fd](https://github.com/sharkdp/fd/): A simple, fast and user-friendly alternative to 'find'.
+	```
+	alias find="fd"
+	```
+- [ncdu](https://dev.yorhel.nl/ncdu): NCurses Disk Usage.
+	```
+	alias du="ncdu --color dark -rr -x --exclude .git"
+	```
+- [tldr](https://tldr.sh/): Simplified and community-driven man pages.
+	```
+	alias help="tldr"
+	```
+- [exa](https://the.exa.website/introduction): A modern replacement for ls.
+	```
+	alias ls="exa"
+	alias ll="exa -lh"
+	alias la="exa -lhaa"
+	```
+	
+
+## References
+- [CLI: improved](https://remysharp.com/2018/08/23/cli-improved)
+
 
 			
 

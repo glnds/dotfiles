@@ -16,17 +16,7 @@ alias ev 'vim ~/.vimrc'
 alias et 'vim ~/.tmux.conf'
 
 # Search hidden files by default
-alias ag='ag --hidden'
-
-# List directories
-alias la="ls -Gla"
-alias loa="ls -ld .?*"
-alias ll='ls -hlF'
-alias l='ls -CF'
-# list only directories
-alias lsd='ls -l | grep "^d"'
-# list only symbolic links
-alias lss='ls -al | grep "\->"'
+alias rg='rg --hidden'
 
 # Clear screen
 alias c='clear'
@@ -99,12 +89,6 @@ alias ps="command ps -SAcr -o 'uid,pid,ppid,time,rss,command'"
 # Google Closure compiler shortcuts
 alias jcc='java -jar ~/tools/closure_compiler/compiler.jar'
 
-# Shortcut to Google Chrome
-#alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
-# start local markdown
-alias md='gollum --host localhost --port 4566 ~/Dropbox/md_wiki'
-
 # Docker
 alias dm='docker-machine'
 alias dmse="eval (docker-machine env default)"
@@ -129,24 +113,6 @@ alias tma="tmux -2 attach -t 0"
 # alias tmk="tmux kill-session -t $1"
 alias tmk="tmux kill-session -t 0"
 
-# ACSL
-alias iacsl="~/Scripts/start_acsl_dev_env.sh"
-alias lssh="lsof -i 4tcp -P | ag '^ssh'"
-# function sshs
-#   ssh -A -i ~/.ssh/saw_key ec2-user@$argv[1]
-# end
-alias elbd="aws elb describe-instance-health --load-balancer-name dev-ga-elb --output table --profile acsl"
-alias elbt="aws elb describe-instance-health --load-balancer-name test-ga-elb --output table --profile acsl"
-alias elbp="aws elb describe-instance-health --load-balancer-name prod-ga-elb --output table --profile acsl"
-alias dmongo="mongo --port 27018"
-alias tmongo="mongo --port 27019"
-alias pmongo="mongo --port 27020"
-alias jpa="cd ~/Sources/acsl/aws-ansible"
-alias jptf="cd ~/Sources/acsl/aws-terraform"
-alias jpgo="cd ~/Sources/acsl/ga1"
-alias jpgt="cd ~/Sources/acsl/ga2"
-alias godoc="cd ~/Sources/acsl/documentation"
-
 # Kubernetes
 alias kn="kubectl"
 # Google Cloud
@@ -163,8 +129,6 @@ end
 
 # Python pip update all packages
 alias pupdate="pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U"
-alias ptc="pip-compile"
-alias pts="pip-sync dev-requirements.txt requirements.txt"
 
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
@@ -179,21 +143,35 @@ alias make="mmake"
 # alias vim="nvim"
 alias vimdiff="vim -d"
 
-alias sqlplus="rlwrap sqlplus"
-
 alias weather="curl -4 wttr.in/Grimbergen"
 alias moon="curl -4 wttr.in/Moon"
 
 alias https='http --default-scheme=https'
 
-alias wnuci3="wakeonlan b8:ae:ed:74:00:74"
-alias wnuci5="wakeonlan b8:ae:ed:79:56:d0"
-alias wlogic="wakeonlan 00:30:18:c5:b1:42"
 alias wnas="wakeonlan 00:11:32:45:3b:01"
 
-# DPP
-alias ocblue="oc login https://dppurhos01.server.lan:8443"
-alias ocgreen="oc login https://os-cluster.server.lan:8443"
+# CLI Tools
+alias cat="bat"
+alias ping="prettyping --nolegend"
+alias find="fd"
+alias du="ncdu --color dark -rr -x --exclude .git"
+alias help="tldr"
+alias ls="exa"
+alias ll="exa -lh"
+alias la="exa -lhaa"
+# alias la="ls -Gla"
+# alias ll='ls -hlF'
+# alias loa="ls -ld .?*"
+# alias l='ls -CF'
+# list only directories
+# alias lsd='ls -l | grep "^d"'
+# list only symbolic links
+# alias lss='ls -al | grep "\->"'
+
+# httpie > curl
+# fasd
+
+
 
 function akamaih
   http -h $argv[1] Pragma:'akamai-x-cache-on,akamai-x-cache-remote-on,akamai-x-check-cacheable,akamai-x-get-cache-key,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key,akamai-x-get-request-id,akamai-x-get-extracted-values,akamai-x-get-nonces,akamai-x-serial-no'
