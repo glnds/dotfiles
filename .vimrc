@@ -197,6 +197,7 @@ nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
 nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
 nnoremap <Leader>v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 inoremap <Leader>v <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+nnoremap <leader>rs :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
 nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
 nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
 nnoremap <Leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
@@ -207,7 +208,6 @@ nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
 nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
 nnoremap <Leader>w :w<CR>|                        " Save buffer
-" nnoremap <leader>r :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)

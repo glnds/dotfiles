@@ -70,7 +70,12 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 	alias ll="exa -lh"
 	alias la="exa -lhaa"
 	```
-	
+
+## TODO List
+- https://github.com/junegunn/fzf#vim-plugin
+- https://github.com/clvv/fasd
+- https://github.com/jethrokuan/fzf
+- https://fonts.google.com/specimen/Fira+Mono
 
 ## References
 - [CLI: improved](https://remysharp.com/2018/08/23/cli-improved)

@@ -171,6 +171,8 @@ alias la="exa -lhaa"
 # httpie > curl
 # fasd
 
+alias awless="awless --no-sync"
+
 
 
 function akamaih
