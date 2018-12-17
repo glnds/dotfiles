@@ -5,7 +5,7 @@ set -x LC_CTYPE en_US.UTF-8
 # set -x PATH /usr/local/opt/python/libexec/bin $PATH
 # set -x PYTHONPATH "/usr/local/lib/python3.6/site-packages"
 set -x PATH ~/Library/Python/3.6/bin $PATH
-# set -x PATH /Library/Frameworks/Python.framework/Versions/3.6/bin $PATH
+set -x PATH /Library/Frameworks/Python.framework/Versions/3.6/bin $PATH
 # set -x PATH ~/Library/Python/3.7/bin $PATH
 
 # Rust config
@@ -63,6 +63,8 @@ set -x  RUBY_GC_HEAP_GROWTH_MAX_SLOTS 300000
 if test -e "$HOME/google-cloud-sdk/bin"
   set -x PATH "$HOME/google-cloud-sdk/bin" $PATH
 end
+
+set -x PATH "/Applications/Alacritty.app/Contents/MacOS" $PATH
 
 # Add Ansible developer version to the beginning of PATH
 #set -x PATH "/Users/glnds/Sources/ansible/bin" $PATH
