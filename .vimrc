@@ -100,6 +100,7 @@ Plug 'alecthomas/gometalinter'
 " Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
+Plug 'rust-lang/rust.vim'
 "Plug 'sjl/badwolf'
 "Plug 'morhetz/gruvbox'
 "Plug 'altercation/vim-colors-solarized'
