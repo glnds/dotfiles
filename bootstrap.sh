@@ -16,7 +16,6 @@ brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace exa
 brew tap caskroom/versions
 brew cask install java iterm2
 brew tap caskroom/fonts
-# brew cask install font-fira-code font-fira-mono font-fira-mono-for-powerline font-fira-sans
 brew upgrade
 
 pip3 install virtualfish powerline-status pipenv --user --upgrade

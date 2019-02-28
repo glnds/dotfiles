@@ -299,6 +299,9 @@ set signcolumn=yes
 " Fix for Neocomplete
 " let g:jedi#popup_select_first = 0
 " }}}
+" rust {{{
+let g:rustfmt_autosave = 1
+" }}}
 " Colors {{{
 if has("termguicolors")     " set true colors
   set t_8f=[38;2;%lu;%lu;%lum  " Needed in tmux

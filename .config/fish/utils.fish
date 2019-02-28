@@ -16,5 +16,3 @@ alias spoton="sudo mdutil -a -i on"
 function ideaDiff
   /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea diff $argv[1] $argv[2]
 end
-
-thefuck --alias | source
