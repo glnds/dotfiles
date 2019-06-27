@@ -327,6 +327,7 @@ highlight TabLineFill term=bold cterm=bold ctermbg=0
 au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd FileType html,css,scss setlocal ts=2 sts=2 sw=2
 " autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr><C-o>
 
 " autocmd BufWritePost *.py call Flake8()

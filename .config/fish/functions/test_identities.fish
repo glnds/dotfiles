@@ -5,6 +5,7 @@ function test_identities
   if [ $status -eq 0 ]
     echo "Adding SSH identites.."
     ssh-add ~/.ssh/mackey
+    ssh-add ~/.ssh/mac13_dpp
     ssh-add ~/.ssh/saw_key
     if [ $status -eq 2 ]
       start_agent
