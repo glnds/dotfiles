@@ -23,15 +23,15 @@ alias c='clear'
 
 # Go to...
 alias D='cd ~/Downloads'
-alias taco='cd ~/Sources/dp/taco'
-alias grizzly='cd ~/Sources/dp/grizzly'
-alias bami='cd ~/Sources/dp/bami'
+alias taco='cd ~//Sources/dp/saw/taco'
+alias grizzly='cd ~/Sources/dp/saw/grizzly'
+alias bami='cd ~/Sources/dp/saw/bami'
 alias aura='cd ~/Sources/dp/aura'
 alias macho='cd ~/Sources/dp/saw/macho/'
-alias boulet='cd ~/Sources/dp/boulet'
-alias lucifer='cd ~/Sources/dp/lucifer'
+alias boulet='cd ~/Sources/dp/saw/boulet'
+alias lucifer='cd ~/Sources/dp/saw/lucifer'
 alias g='git'
-alias v='vim'
+alias fvim='vim (fzf)'
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"

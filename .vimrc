@@ -76,8 +76,6 @@ set writebackup
 " }}}
 " Plugins {{{
 call plug#begin()
-" Plug 'davidhalter/jedi-vim'
-" Plug 'ervandew/supertab'
 Plug 'Shougo/neocomplete.vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
@@ -93,10 +91,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'hashivim/vim-terraform'
 Plug 'pearofducks/ansible-vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 " Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'alecthomas/gometalinter'
 " Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -120,19 +119,6 @@ let g:ale_open_list = 'on_save'
 let NERDTreeChDirMode=2     " Display the current working directory
 let NERDTreeShowBookmarks=1 " Show Bookmarks on startup
 "let NERDTreeShowHidden=1   " Show hidden files on startup
-" }}}
-" CtrlP {{{
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_open_new_file = 'v'
-"let g:ctrlp_by_filename = 1
-" let g:ctrlp_custom_ignore = {'dir': 'dist'}
-" Setup some default ignores
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
-"   \ 'file': '\v\.(exe|so|dll)$',
-"   \}
-" Use the nearest .git directory as the cwd
-let g:ctrlp_working_path_mode = 'r'
 " }}}
 " Neocomplete {{{
 " Disable AutoComplPop.
@@ -186,30 +172,18 @@ let maplocalleader = ","
 
 nnoremap <Leader><Leader> V|                      " Select viual line
 nnoremap <Leader>a :bprev<CR>|                    " Open the previous buffer
-nnoremap <Leader>b :CtrlPBuffer<CR>|              " CTRLP find buffer mode
-nnoremap <Leader>bm :CtrlPMixed<CR>|              " CTRLP find files, buffers and MRU files
-nnoremap <Leader>bs :CtrlPMRU<CR>|                " CTRLP find MRU files
 vnoremap <Leader>c :w !pbcopy<CR><CR>|            " Copy to clipboard
-nnoremap <Leader>cs :colorscheme solarized<CR>|   " Switch color scheme
-nnoremap <Leader>cb :colorscheme badwolf<CR>|     " Switch color scheme
 nnoremap <Leader>d :bd<CR>|                       " delete the current buffer
-nnoremap <Leader>ev :vsp $MYVIMRC<cr>|            " Open up .vimrc quickly in a new buffer
-nnoremap <Leader>gg :Goyo<CR>|                    " Switch to Goyo
+nnoremap <Leader>f :Files<CR>                     " fzf search all files
+nnoremap <Leader>g :GFiles<CR>                    " fzf search for git tracked files
 nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
-nnoremap <Leader>p :CtrlP<CR>|                    " CTRLP find files
-nnoremap <Leader>v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 inoremap <Leader>v <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nnoremap <leader>rs :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
 nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
 nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
-nnoremap <Leader>tt :TagbarToggle<CR>|            " Toggle Tagbar
-nnoremap <Leader>vp :VimuxPromptCommand<CR>|      " Prompt for a command to run
-nnoremap <Leader>vl :VimuxRunLastCommand<CR>      " Run last command executed by VimuxRunCommand
-nnoremap <Leader>vi :VimuxInspectRunner<CR>|      " Inspect runner pane
-nnoremap <Leader>vq :VimuxCloseRunner<CR>|        " Close vim tmux runner opened by VimuxRunCommand
-nnoremap <Leader>vx :VimuxInterruptRunner<CR>|    " Interrupt any command running in the runner pane
-nnoremap <Leader>vz :call VimuxZoomRunner()<CR>|  " Zoom the runner pane (use <bind-key> z to restore runner pane)
 nnoremap <Leader>w :w<CR>|                        " Save buffer
+
+
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -257,7 +231,6 @@ cnoremap <Down> <nop>
 inoremap  <esc> <nop>
 " `jj` is much better :)
 inoremap  jj <esc>
-inoremap  jk <esc>
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -279,9 +252,10 @@ endif
 " vim-go {{{
 if executable('rg')
   let g:go_metalinter_autosave = 1
-  let g:go_fmt_command = "goimports"
-  " let g:go_fmt_command = "gofmt"
-  " let g:go_fmt_options = "-s"
+  let g:go_metalinter_command = "golangci-lint"
+  let g:go_fmt_autosave = 1
+  let g:go_fmt_command = "gofmt"
+  let g:go_fmt_options = "-s"
 endif
 " }}}
 " Gitgutter {{{
@@ -343,7 +317,12 @@ function! MyLastWindow()
   endif
 endfunction
 
-
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 " vim:foldmethod=marker:foldlevel=0
