@@ -60,7 +60,7 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 	```
 - [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder
 	
-	Key bindings didn't work out of the box. This was fixed by manually creating a symlink to the fzf key binding file for fish. 
+	Key bindings [didn't work out of the box](https://github.com/junegunn/fzf/issues/851). This was fixed by manually creating a symlink to the fzf key binding file for fish.
 	```
 	ln -s /usr/local/Cellar/fzf/0.18.0/shell/key-bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
 ```
@@ -86,14 +86,3 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 
 ## References
 - [CLI: improved](https://remysharp.com/2018/08/23/cli-improved)
-
-
-			
-
-
-
-
-
-
-
-
