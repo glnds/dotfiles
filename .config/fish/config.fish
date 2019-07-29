@@ -16,7 +16,7 @@ set -g -x PAGER less
 # fish_vi_mode
 set fish_key_bindings fish_user_key_bindings
 
-# set -gx RBENV_ROOT /usr/local/var/rbenv  
+# set -gx RBENV_ROOT /usr/local/var/rbenv 
 # . (rbenv init -|psub)
 # set PATH $HOME/.rbenv/bin $PATH
 # set PATH $HOME/.rbenv/shims $PATH

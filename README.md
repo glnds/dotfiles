@@ -48,33 +48,40 @@ For iTerm2, open the Preferences dialog, select Profiles, select Terminal, set R
 	```
 	alias cat="bat"
 	```
-- [prettyping](http://denilson.sa.nom.br/prettyping/): prettyping is a wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.
-	```
-	alias ping="prettyping --nolegend"
-	```
-- [fd](https://github.com/sharkdp/fd/): A simple, fast and user-friendly alternative to 'find'.
-	```
-	alias find="fd"
-	```
-- [ncdu](https://dev.yorhel.nl/ncdu): NCurses Disk Usage.
-	```
-	alias du="ncdu --color dark -rr -x --exclude .git"
-	```
-- [tldr](https://tldr.sh/): Simplified and community-driven man pages.
-	```
-	alias help="tldr"
-	```
 - [exa](https://the.exa.website/introduction): A modern replacement for ls.
 	```
 	alias ls="exa"
 	alias ll="exa -lh"
 	alias la="exa -lhaa"
 	```
+- [fd](https://github.com/sharkdp/fd/): A simple, fast and user-friendly alternative to 'find'.
+	```
+	alias find="fd"
+	```
+- [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder
+	
+	Key bindings didn't work out of the box. This was fixed by manually creating a symlink to the fzf key binding file for fish. 
+	```
+	ln -s /usr/local/Cellar/fzf/0.18.0/shell/key-bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
+```
+	```
+	 alias fvim='vim (fzf)'
+	 ```
+- [ncdu](https://dev.yorhel.nl/ncdu): NCurses Disk Usage.
+	```
+	alias du="ncdu --color dark -rr -x --exclude .git"
+	```
+- [prettyping](http://denilson.sa.nom.br/prettyping/): prettyping is a wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.
+	```
+	alias ping="prettyping --nolegend"
+	```
+- [tldr](https://tldr.sh/): Simplified and community-driven man pages.
+	```
+	alias help="tldr"
+	```
 
 ## TODO List
-- https://github.com/junegunn/fzf#vim-plugin
 - https://github.com/clvv/fasd
-- https://github.com/jethrokuan/fzf
 - https://fonts.google.com/specimen/Fira+Mono
 
 ## References
