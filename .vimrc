@@ -179,13 +179,12 @@ nnoremap <Leader>f :Files<CR>                     " fzf search all files
 nnoremap <Leader>g :GFiles<CR>                    " fzf search for git tracked files
 nnoremap <Leader>h :History<CR>
 nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
+nnoremap <Leader>v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 inoremap <Leader>v <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nnoremap <leader>rs :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
 nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
 nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
 nnoremap <Leader>w :w<CR>|                        " Save buffer
-
-
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
