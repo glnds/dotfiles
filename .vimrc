@@ -172,10 +172,12 @@ let maplocalleader = ","
 
 nnoremap <Leader><Leader> V|                      " Select viual line
 nnoremap <Leader>a :bprev<CR>|                    " Open the previous buffer
+nnoremap <Leader>b :Buffers<CR>
 vnoremap <Leader>c :w !pbcopy<CR><CR>|            " Copy to clipboard
 nnoremap <Leader>d :bd<CR>|                       " delete the current buffer
 nnoremap <Leader>f :Files<CR>                     " fzf search all files
 nnoremap <Leader>g :GFiles<CR>                    " fzf search for git tracked files
+nnoremap <Leader>h :History<CR>
 nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
 inoremap <Leader>v <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 nnoremap <leader>rs :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
