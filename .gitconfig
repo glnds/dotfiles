@@ -26,6 +26,7 @@
   ff = false
 [push]
   default = simple
+  followTags = true
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path = 
