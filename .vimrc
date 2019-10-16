@@ -96,6 +96,7 @@ Plug 'junegunn/fzf.vim'
 " Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'aws-cloudformation/cfn-python-lint'
 " Color schemes
 Plug 'chriskempson/base16-vim'
 Plug 'tomasr/molokai'
@@ -110,7 +111,10 @@ call plug#end()
 " }}}
 " ALE {{{
 " Check Python files with flake8 and pylint.
-let g:ale_linters = { 'python': ['flake8', 'black', 'isort', 'mypy', 'prospector', 'pyls', 'pycodestyle'], }
+let g:ale_linters = {
+\  'python': ['flake8', 'black', 'isort', 'mypy', 'prospector', 'pyls', 'pycodestyle'],
+\  'cfn_yaml': ['cfn-python-lint'],
+\}
 " Fix Python files with autopep8 and yapf.
 let g:ale_fixers = ['autopep8', 'yapf']
 let g:ale_open_list = 'on_save'
@@ -299,13 +303,8 @@ highlight TabLineFill term=bold cterm=bold ctermbg=0
 " autocmd BufEnter *.py colorscheme badwolf
 "}}}
 
-au BufReadPost Jenkinsfile set syntax=groovy
-au BufReadPost Jenkinsfile set filetype=groovy
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd FileType html,css,scss setlocal ts=2 sts=2 sw=2
-" autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr><C-o>
-
-" autocmd BufWritePost *.py call Flake8()
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+" autocmd FileType html,css,scss setlocal ts=2 sts=2 sw=2
 
 au BufEnter * call MyLastWindow()
 function! MyLastWindow()

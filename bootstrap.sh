@@ -12,7 +12,7 @@ brew update
 brew install vim --with-lua
 brew install cmake fish git python tmux the_silver_searcher tig htop jq ripgrep
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
-brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace exa
+brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace exa cfn-lint
 brew tap caskroom/versions
 brew cask install java iterm2
 brew tap caskroom/fonts

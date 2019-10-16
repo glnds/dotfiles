@@ -21,3 +21,4 @@
 .config/SoundTouchPersist
 .config/gcloud
 .config/configstore
+.config/.mono
