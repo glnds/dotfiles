@@ -118,6 +118,8 @@ let g:ale_linters = {
 " Fix Python files with autopep8 and yapf.
 let g:ale_fixers = ['autopep8', 'yapf']
 let g:ale_open_list = 'on_save'
+" Cloudformation probably could also fix by this snippet
+" b:ale_linter_aliases = {'yaml': ['cloudformation', 'yaml']}
 " }}}
 " NERDTree {{{
 let NERDTreeChDirMode=2     " Display the current working directory
