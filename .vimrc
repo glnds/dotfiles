@@ -118,6 +118,9 @@ let g:ale_linters = {
 " Fix Python files with autopep8 and yapf.
 let g:ale_fixers = ['autopep8', 'yapf']
 let g:ale_open_list = 'on_save'
+" For CloudFormation linting see:
+" - https://gist.github.com/lwoodson/67fab974c41230d5514efb0cfba77568
+" - https://github.com/aws-cloudformation/cfn-python-lint
 " Cloudformation probably could also fix by this snippet
 " b:ale_linter_aliases = {'yaml': ['cloudformation', 'yaml']}
 " }}}
