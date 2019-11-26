@@ -31,6 +31,7 @@ alias macho='cd ~/Sources/dp/saw/macho/'
 alias boulet='cd ~/Sources/dp/saw/boulet'
 alias lucifer='cd ~/Sources/dp/saw/lucifer'
 alias g='git'
+alias vim='nvim'
 alias fvim='vim (fzf)'
 
 # git related shortcut
