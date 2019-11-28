@@ -20,6 +20,7 @@ brew tap caskroom/fonts
 brew upgrade
 
 pip3 install virtualfish powerline-status pipenv --user --upgrade
+pip3 install python-language-server
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
