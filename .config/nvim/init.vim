@@ -1,7 +1,7 @@
-"        _
-"  _  __(_)_ _  ________
-" | |/ / /  ' \/ __/ __/
-" |___/_/_/_/_/_/  \__/
+"    _      _ __        _
+"   (_)__  (_) /_ _  __(_)_ _
+"  / / _ \/ / __/| |/ / /  ' \
+" /_/_//_/_/\__(_)___/_/_/_/_/
 
 " Options {{{
 filetype plugin indent on
@@ -27,7 +27,7 @@ set expandtab             " Conver tabs to spaces
 set lazyredraw            " Terminal performance optimisation
 set magic                 " Better searching
 set noswapfile            " Don't pollute my hard drive, even temporary
-set nowrap                  " Wrap long lines
+set wrap                  " Wrap long lines
 set smartindent           " Auto indent when starting a new line
 set relativenumber        " Use relative line numbers
 set showmatch             " Show matching brackets (Damn this is so cool!)
@@ -81,13 +81,13 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 " Plug 'Shougo/neocomplete.vim'
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-vinegar'
 Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug '/usr/local/opt/fzf'
@@ -130,17 +130,19 @@ let g:ale_open_list = 'on_save'
 " Cloudformation probably could also fix by this snippet
 " b:ale_linter_aliases = {'yaml': ['cloudformation', 'yaml']}
 " }}}
-" NERDTree {{{
-let NERDTreeChDirMode=2     " Display the current working directory
-let NERDTreeShowBookmarks=1 " Show Bookmarks on startup
-"let NERDTreeShowHidden=1   " Show hidden files on startup
+" netrw {{{
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 " }}}
 " Deoplete & LanguageClient {{{
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-
+let g:LanguageClient_useVirtualText = 0
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'python': ['/usr/local/bin/pyls'],
@@ -178,13 +180,11 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 " Shortcuts {{{
 
 "Disable the mouse wheel
-inoremap <ScrollWheelUp> <Nop> 
+inoremap <ScrollWheelUp> <Nop>
 inoremap <ScrollWheelDown> <Nop>
 
 nmap <S-Enter> Ojj
 nmap <CR> ojj
-" NERDTree
-map <F2> :NERDTreeToggle<CR>
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " Tagbar config
 "let g:tagbar_ctags_bin = '/usr/bin/ctags'"
@@ -244,9 +244,6 @@ if executable('rg')
   let g:go_fmt_options = "-s"
 endif
 " }}}
-" Gitgutter {{{
-set signcolumn=yes
-" }}}
 " rust {{{
 let g:rustfmt_autosave = 1
 " }}}
@@ -261,26 +258,36 @@ colorscheme molokai
 
 highlight ErrorMsg guibg=White guifg=Red
 highlight LineNr guifg=#b3b3b3
-" Assure the tabline color is black
-highlight TabLineFill term=bold cterm=bold ctermbg=0
-
-" autocmd BufEnter * colorscheme base16-tomorrow-night
-" autocmd BufEnter *.py colorscheme badwolf
 "}}}
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-" autocmd FileType html,css,scss setlocal ts=2 sts=2 sw=2
 
-au BufEnter * call MyLastWindow()
-function! MyLastWindow()
-  " if the window is quickfix go on
-  if &buftype=="quickfix"
-    " if this window is last on screen quit without warning
-    if winbufnr(2) == -1
-      quit!
-    endif
-  endif
+" CloudFormation filetype config
+autocmd BufRead,BufNewFile cfn-*.yaml,cfn-*.yml call SetCloudFormationOptions()
+function SetCloudFormationOptions()
+    setl nowrap
+    set ft=cloudformation
+    set syntax=yaml
+    set tabstop=2
+    set expandtab
+    set shiftwidth=2
+    set softtabstop=2
+    set foldmethod=indent
+    set foldlevel=99
+    set commentstring=#\ %s
 endfunction
+
+
+" au BufEnter * call MyLastWindow()
+" function! MyLastWindow()
+"   " if the window is quickfix go on
+"   if &buftype=="quickfix"
+"     " if this window is last on screen quit without warning
+"     if winbufnr(2) == -1
+"       quit!
+"     endif
+"   endif
+" endfunction
 
 " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
 command! -bang -nargs=* Rg
