@@ -40,7 +40,7 @@ set -x PATH $HOME/.jenv/bin $PATH
 
 # Maven home
 set -x M2_HOME /usr/local/opt/maven/libexec
-set -x  MAVEN_OPTS "-Xmx1024M -XX:MaxPermSize=256m"
+set -x  MAVEN_OPTS "-Xmx1024M"
 
 # Go
 set -x GOPATH "$HOME/go"
