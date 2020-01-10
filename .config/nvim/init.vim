@@ -263,7 +263,7 @@ highlight LineNr guifg=#b3b3b3
 augroup filetypes
   autocmd!
   " YAML
-  autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent
+  autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent foldlevel=20
   " Markdown
   autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
   autocmd FileType markdown setlocal wrap textwidth=100
@@ -287,7 +287,7 @@ augroup filetypes
     set shiftwidth=2
     set softtabstop=2
     set foldmethod=indent
-    set foldlevel=99
+    set foldlevel=20
     set commentstring=#\ %s
   endfunction
 augroup end
