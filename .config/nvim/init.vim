@@ -259,35 +259,50 @@ colorscheme molokai
 highlight ErrorMsg guibg=White guifg=Red
 highlight LineNr guifg=#b3b3b3
 "}}}
-
-autocmd BufNewFile,BufRead *.md set filetype=markdown
-
-" CloudFormation filetype config
-autocmd BufRead,BufNewFile cfn-*.yaml,cfn-*.yml call SetCloudFormationOptions()
-function SetCloudFormationOptions()
+" FileType setup {{{
+augroup filetypes
+  autocmd!
+  " YAML
+  autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent
+  " Markdown
+  autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
+  autocmd FileType markdown setlocal wrap textwidth=100
+  " Javascript
+  autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+  " Julia
+  autocmd BufRead,BufNewFile *.jl setlocal filetype=julia
+  " C/C++
+  autocmd FileType c setlocal shiftwidth=2 tabstop=2
+  autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+  autocmd FileType cc setlocal shiftwidth=2 tabstop=2
+  autocmd FileType hpp setlocal shiftwidth=2 tabstop=2
+  autocmd FileType h setlocal shiftwidth=2 tabstop=2
+  " CloudFormation filetype config
+  autocmd BufRead,BufNewFile cfn-*.yaml,cfn-*.yml call SetCloudFormationOptions()
+  function SetCloudFormationOptions()
     setl nowrap
     set ft=cloudformation
     set syntax=yaml
     set tabstop=2
-    set expandtab
     set shiftwidth=2
     set softtabstop=2
     set foldmethod=indent
     set foldlevel=99
     set commentstring=#\ %s
+  endfunction
+augroup end
+" }}}
+
+au BufEnter * call MyLastWindow()
+function! MyLastWindow()
+  " if the window is quickfix go on
+  if &buftype=="quickfix"
+    " if this window is last on screen quit without warning
+    if winbufnr(2) == -1
+      quit!
+    endif
+  endif
 endfunction
-
-
-" au BufEnter * call MyLastWindow()
-" function! MyLastWindow()
-"   " if the window is quickfix go on
-"   if &buftype=="quickfix"
-"     " if this window is last on screen quit without warning
-"     if winbufnr(2) == -1
-"       quit!
-"     endif
-"   endif
-" endfunction
 
 " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
 command! -bang -nargs=* Rg
