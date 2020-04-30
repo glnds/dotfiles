@@ -44,3 +44,5 @@
   required = true
 [pull]
   ff = only
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/

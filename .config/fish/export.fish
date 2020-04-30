@@ -6,9 +6,9 @@ set -x LC_CTYPE en_US.UTF-8
 
 # set -x PATH /usr/local/opt/python/libexec/bin $PATH
 # set -x PYTHONPATH "/usr/local/lib/python3.6/site-packages"
-set -x PATH ~/Library/Python/3.8/bin $PATH
+# set -x PATH ~/Library/Python/3.8/bin $PATH
 # set -x PATH /Library/Frameworks/Python.framework/Versions/3.7/bin $PATH
-# set -x PATH ~/Library/Python/3.7/bin $PATH
+set -x PATH ~/Library/Python/3.7/bin $PATH
 #
 # Cookiecutter config
 # set -x COOKIECUTTER_CONFIG "~/.cookiecutterrc"
