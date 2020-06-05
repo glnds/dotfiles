@@ -121,6 +121,8 @@ let g:netrw_winsize = 25
 
 " Docs for Python & Rust config: https://github.com/neoclide/coc.nvim/wiki/Language-servers
 " Yaml: https://github.com/neoclide/coc-yaml
+" CloudFormation: https://github.com/joenye/coc-cfn-lint
+" JSON: https://github.com/neoclide/coc-json
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -150,8 +152,8 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+nmap <silent> [c <Plug>(coc-diagnostic-next)
+nmap <silent> ]c <Plug>(coc-diagnostic-prev)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -274,7 +276,7 @@ if executable('rg')
 endif
 " }}}
 " vim-go {{{
-" if executable('rg')
+if executable('rg')
   " let g:go_def_mode='gopls'
   " let g:go_info_mode='gopls'
   let g:go_metalinter_autosave = 1
@@ -282,7 +284,7 @@ endif
   let g:go_fmt_autosave = 1
   let g:go_fmt_command = "gofmt"
   let g:go_fmt_options = "-s"
-" endif
+endif
 " }}}
 " rust {{{
 let g:rustfmt_autosave = 1
@@ -317,21 +319,33 @@ augroup filetypes
   autocmd FileType cc setlocal shiftwidth=2 tabstop=2
   autocmd FileType hpp setlocal shiftwidth=2 tabstop=2
   autocmd FileType h setlocal shiftwidth=2 tabstop=2
+  autocmd FileType go setlocal foldmethod=syntax foldlevel=0 foldnestmax=1
   " CloudFormation filetype config
-  autocmd BufRead,BufNewFile cfn-*.yaml,cfn-*.yml call SetCloudFormationOptions()
-  function SetCloudFormationOptions()
-    setl nowrap
-    set ft=cloudformation
-    set syntax=yaml
-    set tabstop=2
-    set shiftwidth=2
-    set softtabstop=2
-    set foldmethod=indent
-    set foldlevel=20
-    set commentstring=#\ %s
-  endfunction
+  " autocmd BufRead,BufNewFile cfn-*.yaml,cfn-*.yml call SetCloudFormationOptions()
+  " function SetCloudFormationOptions()
+  "   setl nowrap
+  "   set ft=cloudformation
+  "   set syntax=yaml
+  "   set tabstop=2
+  "   set shiftwidth=2
+  "   set softtabstop=2
+  "   set foldmethod=indent
+  "   set foldlevel=20
+  "   set commentstring=#\ %s
+  " endfunction
 augroup end
 " }}}
+
+" augroup remember_folds
+"   autocmd!
+"   autocmd BufWinLeave * mkview
+"   autocmd BufWinEnter * silent! loadview
+" augroup END
+" augroup remember_folds
+"   autocmd!
+"   au BufWinLeave ?* mkview 1
+"   au BufWinEnter ?* silent! loadview 1
+" augroup END
 
 au BufEnter * call MyLastWindow()
 function! MyLastWindow()

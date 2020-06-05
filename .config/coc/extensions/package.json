@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "coc-cfn-lint": ">=0.1.1",
+    "coc-json": ">=1.2.6",
     "coc-yaml": ">=1.0.4"
   }
 }
