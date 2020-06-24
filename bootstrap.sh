@@ -5,19 +5,15 @@ cd "$(dirname "$0")"
 
 DOTFILES_PATH=$HOME/dotfiles
 
-sudo mkdir -p /data/db
-sudo chown -R glnds:staff /data/db
-
 brew update
-brew install vim --with-lua
 brew install neovim
-brew install cmake fish git python tmux the_silver_searcher tig htop jq ripgrep
+brew install cmake fish git python tmux tig htop jq ripgrep
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
-brew install wakeonlan ssh-copy-id pidof tree reattach-to-user-namespace exa cfn-lint
-brew tap caskroom/versions
-brew cask install java iterm2
-brew tap caskroom/fonts
-brew upgrade
+brew install ssh-copy-id pidof tree reattach-to-user-namespace exa
+# brew tap caskroom/versions
+brew cask install java alacritty
+# brew tap caskroom/fonts
+# brew upgrade
 
 pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
 pip3 install python-language-server
