@@ -7,7 +7,7 @@ DOTFILES_PATH=$HOME/dotfiles
 
 brew update
 brew install neovim
-brew install cmake fish git python tmux tig htop jq ripgrep
+brew install cmake fish git python tmux tig htop jq ripgrep fzf yarn
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
 brew install ssh-copy-id pidof tree reattach-to-user-namespace exa
 # brew tap caskroom/versions
