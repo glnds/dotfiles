@@ -34,7 +34,7 @@ set -x GRADLE_HOME /usr/local/opt/gradle/libexec
 set -x GRADLE_OPTS "-Dorg.gradle.daemon=true"
 
 # Java home
-set -x JAVA_HOME (/usr/libexec/java_home -v 13)
+set -x JAVA_HOME (/usr/libexec/java_home -v 14)
 # jenv
 set -x PATH $HOME/.jenv/bin $PATH
 

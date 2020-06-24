@@ -12,7 +12,7 @@ brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prett
 brew install ssh-copy-id pidof tree reattach-to-user-namespace exa
 # brew tap caskroom/versions
 brew cask install java alacritty
-# brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 # brew upgrade
 
 pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
