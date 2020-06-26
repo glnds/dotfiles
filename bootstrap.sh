@@ -6,14 +6,14 @@ cd "$(dirname "$0")"
 DOTFILES_PATH=$HOME/dotfiles
 
 brew update
-brew install neovim
-brew install cmake fish git python tmux tig htop jq ripgrep fzf yarn
+brew install neovim packer ansible
+brew install cmake fish git python tmux tig htop jq ripgrep fzf yarn go
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
 brew install ssh-copy-id pidof tree reattach-to-user-namespace exa
-# brew tap caskroom/versions
 brew cask install java alacritty
-brew tap homebrew/cask-fonts
-# brew upgrade
+
+brew tap tj/mmake https://github.com/tj/mmake.git
+brew install tj/mmake/mmake
 
 pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
 pip3 install python-language-server
