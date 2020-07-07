@@ -74,6 +74,7 @@ Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'elzr/vim-json'
 " Plug 'airblade/vim-gitgutter'
