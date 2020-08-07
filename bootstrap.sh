@@ -15,6 +15,9 @@ brew cask install java alacritty aerial
 brew tap tj/mmake https://github.com/tj/mmake.git
 brew install tj/mmake/mmake
 
+brew tap mitchellh/gon
+brew install mitchellh/gon/gon
+
 pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
 pip3 install python-language-server
 
