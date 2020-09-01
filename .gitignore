@@ -22,3 +22,4 @@
 .config/gcloud
 .config/configstore
 .config/.mono
+.config/coc/extensions
