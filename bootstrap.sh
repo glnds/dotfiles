@@ -10,7 +10,7 @@ brew install neovim packer ansible
 brew install cmake fish git python tmux tig htop jq ripgrep fzf yarn go
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
 brew install ssh-copy-id pidof tree reattach-to-user-namespace exa goreleaser gnu-sed
-brew cask install java alacritty aerial
+brew cask install java alacritty aerial visual-studio-code
 
 brew tap tj/mmake https://github.com/tj/mmake.git
 brew install tj/mmake/mmake
