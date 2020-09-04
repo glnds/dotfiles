@@ -26,7 +26,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "ba9a347f30d58f143e5177dd25ed2cf6fa097894e79826060620d33f5492b0b3937e92540c2adf49ae0e543b289d25375489fb0f63bd6540eb4fe2b7ac30dcbf"
       },
-      "expiry": 1599048797928
+      "expiry": 1599212240419
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -51,7 +51,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe"
       },
-      "expiry": 1599048797929
+      "expiry": 1599212240421
     },
     "/usr/bin/python2.7.v3": {
       "data": {
@@ -76,7 +76,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "c08e68b32a609a8ecf81f4ddbc11c3636c64c089aaa09959017e704a8e420bad018e1dd2cd6051ae8c17e7be066994b3d53a9f8edc9468d1c0cfeca9f558d385"
       },
-      "expiry": 1599048797923
+      "expiry": 1599212240439
     },
     "/Applications/Xcode.app/Contents/Developer/usr/bin/python3.v3": {
       "data": {
@@ -101,7 +101,7 @@
         "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
         "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba"
       },
-      "expiry": 1599048797965
+      "expiry": 1599212240512
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -126,78 +126,9 @@
         "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
         "fileHash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa"
       },
-      "expiry": 1599048797931
+      "expiry": 1599212240448
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
-      {
-        "architecture": 3,
-        "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 3,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.3-final"
-        },
-        "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 3,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.3-final"
-        },
-        "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "358d68d2b296cad8e5d44b205552fd5beeb822ceb2aa64ad2ec0bd532ffc27341de84c16faa04e1e52587f2e2503b61e6fd9d46884facc4b5b56b7dbe0e6fdfc",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python3.7",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 3,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.3-final"
-        },
-        "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "d0d5cc7a4fd54f5684c5f5deedf93646c41869400cb566fd45c7df0e6f686e83c61f942081c590b3bd7a302f33a504933d1ce7f7621a425c913d9439b623c0d6",
-        "type": "Unknown"
-      },
       {
         "architecture": 3,
         "path": "/usr/bin/python",
@@ -406,12 +337,12 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9"
       },
-      "expiry": 1599048797960
+      "expiry": 1599212240459
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
         "architecture": 3,
-        "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python3.7",
+        "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
         "version": {
           "options": {
             "loose": false,
@@ -428,31 +359,8 @@
           "build": [],
           "version": "3.7.3-final"
         },
-        "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "d0d5cc7a4fd54f5684c5f5deedf93646c41869400cb566fd45c7df0e6f686e83c61f942081c590b3bd7a302f33a504933d1ce7f7621a425c913d9439b623c0d6",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 3,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.3-final"
-        },
-        "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "358d68d2b296cad8e5d44b205552fd5beeb822ceb2aa64ad2ec0bd532ffc27341de84c16faa04e1e52587f2e2503b61e6fd9d46884facc4b5b56b7dbe0e6fdfc",
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
+        "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
         "type": "Unknown"
       },
       {
@@ -480,54 +388,54 @@
       },
       {
         "architecture": 3,
-        "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python",
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
+          "raw": "2.7.16-final",
+          "major": 2,
           "minor": 7,
-          "patch": 3,
+          "patch": 16,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "2.7.16-final"
         },
-        "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python",
+        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
+          "raw": "2.7.16-final",
+          "major": 2,
           "minor": 7,
-          "patch": 3,
+          "patch": 16,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "2.7.16-final"
         },
-        "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
+        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
+        "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9",
         "type": "Unknown"
       }
     ],
     "InterpreterAutoSeletionRule-currentPath": {
       "architecture": 3,
-      "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python",
+      "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
       "version": {
         "options": {
           "loose": false,
@@ -544,8 +452,8 @@
         "build": [],
         "version": "3.7.3-final"
       },
-      "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-      "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
+      "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
+      "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
       "type": "Unknown"
     },
     "PipEnvInformation": [
@@ -583,32 +491,32 @@
         "displayName": "Python 2.7.16 64-bit",
         "hash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe-7c745dc246ed72fbad33f78b1b36bddc"
       },
-      "expiry": 1599048798033
+      "expiry": 1599212240527
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.3 64-bit",
         "hash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa-8863caa56147ca606a52b24c1d89d9a6"
       },
-      "expiry": 1599048798034
+      "expiry": 1599212240530
     },
     "/Applications/Xcode.app/Contents/Developer/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.3 64-bit",
         "hash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba-3e792f56f9b398c7bf0267241d962f22"
       },
-      "expiry": 1599048798035
+      "expiry": 1599212240573
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9-616bc36af2ef3f626d20a6a68133c557"
       },
-      "expiry": 1599048798036
+      "expiry": 1599212240534
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
-      "path": "/usr/bin/python3",
+      "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
       "version": {
         "options": {
           "loose": false,
@@ -626,7 +534,7 @@
         "version": "3.7.3-final"
       },
       "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-      "fileHash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa",
+      "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
       "type": "Unknown",
       "displayName": "Python 3.7.3 64-bit"
     },
@@ -658,7 +566,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1599048798062
+      "expiry": 1599212240550
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -688,7 +596,7 @@
           "displayName": "Python 3.7.3 64-bit"
         }
       },
-      "expiry": 1599048798064
+      "expiry": 1599212240552
     },
     "/Applications/Xcode.app/Contents/Developer/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -718,7 +626,7 @@
           "displayName": "Python 3.7.3 64-bit"
         }
       },
-      "expiry": 1599048798067
+      "expiry": 1599221676689
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -748,7 +656,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1599048798069
+      "expiry": 1599212240556
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
@@ -772,7 +680,6 @@
       "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
       "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
       "type": "Unknown",
-      "cachedEntry": true,
       "displayName": "Python 3.7.3 64-bit"
     },
     "ProposeLSBanner": false,
@@ -1323,5 +1230,34 @@
     },
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
     "INTERPRETERS_CACHE_v3_PipEnvService": []
+  },
+  "coc-python|/Users/glnds/source/dpg/cloudcity/lucifer": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:8bea480405b9e7b3624a690db8650e98": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:8bea480405b9e7b3624a690db8650e98": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/glnds/source/dpg/cloudcity/lucifer": {
+      "architecture": 3,
+      "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.7.3-final",
+        "major": 3,
+        "minor": 7,
+        "patch": 3,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.7.3-final"
+      },
+      "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
+      "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
   }
 }
