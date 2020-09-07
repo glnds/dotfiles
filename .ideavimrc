@@ -3,6 +3,9 @@
 " | |/ / /  ' \/ __/ __/
 " |___/_/_/_/_/_/  \__/
 
+
+" IntelliJ action list: https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+
 " Options {{{
 filetype plugin indent on
 
