@@ -24,9 +24,9 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "ba9a347f30d58f143e5177dd25ed2cf6fa097894e79826060620d33f5492b0b3937e92540c2adf49ae0e543b289d25375489fb0f63bd6540eb4fe2b7ac30dcbf"
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1599212240419
+      "expiry": 1608899070362
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -49,9 +49,9 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe"
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1599212240421
+      "expiry": 1608899070264
     },
     "/usr/bin/python2.7.v3": {
       "data": {
@@ -74,9 +74,9 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "c08e68b32a609a8ecf81f4ddbc11c3636c64c089aaa09959017e704a8e420bad018e1dd2cd6051ae8c17e7be066994b3d53a9f8edc9468d1c0cfeca9f558d385"
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1599212240439
+      "expiry": 1608899070360
     },
     "/Applications/Xcode.app/Contents/Developer/usr/bin/python3.v3": {
       "data": {
@@ -88,20 +88,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-        "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba"
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "0ba9c8224bf35e24b3fcb3fdbd41a45f745a6455d6550c8911dd60d44298a32a7d7f0f54db576b0fa7f680bf1dd6c14989b10b9bc9a7bf632b79f8889cafbd7e"
       },
-      "expiry": 1599212240512
+      "expiry": 1608283926508
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -113,24 +113,231 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-        "fileHash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa"
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1599212240448
+      "expiry": 1608899070359
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
       {
         "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "8fc1830e91da8ca5d33d966dc884091f5f175fc6c750d21109efa7fcb1602252ddd504ec78eb1a3530daf47a11e2961b32a893ddb7df8411dfb4b985aca4d4bf",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "64397757c328f955ff4a3dac7e61b3ca104b0f4e4c3b8d86251e77e9114b9a8b304a3fc4299b1cf3d299b0e7dd4651b877b8c8dba4499dd22781f46d5e58b8f3",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "64397757c328f955ff4a3dac7e61b3ca104b0f4e4c3b8d86251e77e9114b9a8b304a3fc4299b1cf3d299b0e7dd4651b877b8c8dba4499dd22781f46d5e58b8f3",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "64397757c328f955ff4a3dac7e61b3ca104b0f4e4c3b8d86251e77e9114b9a8b304a3fc4299b1cf3d299b0e7dd4651b877b8c8dba4499dd22781f46d5e58b8f3",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
         "path": "/usr/bin/python",
         "version": {
           "options": {
@@ -149,7 +356,7 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
@@ -172,7 +379,7 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "ba9a347f30d58f143e5177dd25ed2cf6fa097894e79826060620d33f5492b0b3937e92540c2adf49ae0e543b289d25375489fb0f63bd6540eb4fe2b7ac30dcbf",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
@@ -195,7 +402,7 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "c08e68b32a609a8ecf81f4ddbc11c3636c64c089aaa09959017e704a8e420bad018e1dd2cd6051ae8c17e7be066994b3d53a9f8edc9468d1c0cfeca9f558d385",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
@@ -207,18 +414,64 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-        "fileHash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa",
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "64397757c328f955ff4a3dac7e61b3ca104b0f4e4c3b8d86251e77e9114b9a8b304a3fc4299b1cf3d299b0e7dd4651b877b8c8dba4499dd22781f46d5e58b8f3",
         "type": "Unknown"
       },
       {
@@ -241,7 +494,7 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
@@ -264,7 +517,7 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "ba9a347f30d58f143e5177dd25ed2cf6fa097894e79826060620d33f5492b0b3937e92540c2adf49ae0e543b289d25375489fb0f63bd6540eb4fe2b7ac30dcbf",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
@@ -287,7 +540,7 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "c08e68b32a609a8ecf81f4ddbc11c3636c64c089aaa09959017e704a8e420bad018e1dd2cd6051ae8c17e7be066994b3d53a9f8edc9468d1c0cfeca9f558d385",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
@@ -299,18 +552,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
-        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-        "fileHash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa",
+        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       }
     ],
@@ -335,32 +588,32 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9"
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1599212240459
+      "expiry": 1608899070427
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
         "architecture": 3,
-        "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.9.0-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 9,
+          "patch": 0,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.9.0-final"
         },
-        "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-        "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
         "type": "Unknown"
       },
       {
@@ -383,77 +636,77 @@
           "version": "2.7.16-final"
         },
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "2.7.16-final",
-          "major": 2,
-          "minor": 7,
-          "patch": 16,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "2.7.16-final"
+          "version": "3.9.0-final"
         },
-        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9",
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "2.7.16-final",
-          "major": 2,
-          "minor": 7,
-          "patch": 16,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "2.7.16-final"
+          "version": "3.9.0-final"
         },
-        "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-        "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9",
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
         "type": "Unknown"
       }
     ],
     "InterpreterAutoSeletionRule-currentPath": {
       "architecture": 3,
-      "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
       "version": {
         "options": {
           "loose": false,
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.7.3-final",
+        "raw": "3.9.0-final",
         "major": 3,
-        "minor": 7,
-        "patch": 3,
+        "minor": 9,
+        "patch": 0,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.7.3-final"
+        "version": "3.9.0-final"
       },
-      "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-      "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
+      "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+      "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
       "type": "Unknown"
     },
     "PipEnvInformation": [
@@ -461,86 +714,93 @@
         "pythonPath": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python",
         "workspaceFolder": "/Users/glnds/source/dpg/iocrowd/print-services",
         "envName": "print-services"
+      },
+      {
+        "pythonPath": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+        "workspaceFolder": "/Users/glnds/source/element7/ecs-cluster",
+        "envName": "ecs-cluster"
       }
     ],
     "preferredGlobalPyInterpreter": {
       "architecture": 3,
-      "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "path": "/usr/local/opt/python@3.9/bin/python3.9",
       "version": {
         "options": {
           "loose": false,
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.7.3-final",
+        "raw": "3.9.0-final",
         "major": 3,
-        "minor": 7,
-        "patch": 3,
+        "minor": 9,
+        "patch": 0,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.7.3-final"
+        "version": "3.9.0-final"
       },
-      "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-      "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
-      "type": "Unknown"
+      "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+      "fileHash": "3e26cc2ab7d593209fb48108baadc4ec568bd748cbbd68e096b7a18e77a20607f348466c150826692976ae04600655ac980184fcf19f63a01bd71a778b63d5c8",
+      "type": "Unknown",
+      "cachedEntry": true,
+      "displayName": "Python 3.9.0 64-bit"
     },
     "/usr/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
-        "hash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe-7c745dc246ed72fbad33f78b1b36bddc"
+        "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-f5b651b9c4b75532b11ae83303c43d14"
       },
-      "expiry": 1599212240527
+      "expiry": 1608899070393
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.7.3 64-bit",
-        "hash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa-8863caa56147ca606a52b24c1d89d9a6"
+        "displayName": "Python 3.8.2 64-bit",
+        "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-b94ba3f7e631b2cac10e62bf95a60276"
       },
-      "expiry": 1599212240530
+      "expiry": 1608899070399
     },
     "/Applications/Xcode.app/Contents/Developer/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.7.3 64-bit",
-        "hash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba-3e792f56f9b398c7bf0267241d962f22"
+        "displayName": "Python 3.8.2 64-bit",
+        "hash": "0ba9c8224bf35e24b3fcb3fdbd41a45f745a6455d6550c8911dd60d44298a32a7d7f0f54db576b0fa7f680bf1dd6c14989b10b9bc9a7bf632b79f8889cafbd7e-78bd03306a1c568b1b2d112bb0bccf5a"
       },
-      "expiry": 1599212240573
+      "expiry": 1608283926509
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
-        "hash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9-616bc36af2ef3f626d20a6a68133c557"
+        "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-a9fb100b1ab04c53a774363838d4885e"
       },
-      "expiry": 1599212240534
+      "expiry": 1608899070589
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
-      "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "path": "/usr/local/bin/python3",
       "version": {
         "options": {
           "loose": false,
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.7.3-final",
+        "raw": "3.9.0-final",
         "major": 3,
-        "minor": 7,
-        "patch": 3,
+        "minor": 9,
+        "patch": 0,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.7.3-final"
+        "version": "3.9.0-final"
       },
-      "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-      "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
+      "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+      "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
       "type": "Unknown",
-      "displayName": "Python 3.7.3 64-bit"
+      "displayName": "Python 3.9.0 64-bit"
     },
     "/usr/bin/python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "info": {
           "architecture": 3,
           "path": "/usr/bin/python",
@@ -561,16 +821,16 @@
             "version": "2.7.16-final"
           },
           "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-          "fileHash": "bb498bbf7a85f496c6a60e6214f4eb8604de1e266f694a5207be88fc976afb0a041aa4060551d73d55c63295e1d6e96e190fa7870edc5718ab8f9ffec91b4bfe",
+          "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
           "type": "Unknown",
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1599212240550
+      "expiry": 1608899070433
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
-        "fileHash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "info": {
           "architecture": 3,
           "path": "/usr/bin/python3",
@@ -580,57 +840,33 @@
               "includePrerelease": false
             },
             "loose": false,
-            "raw": "3.7.3-final",
+            "raw": "3.8.2-final",
             "major": 3,
-            "minor": 7,
-            "patch": 3,
+            "minor": 8,
+            "patch": 2,
             "prerelease": [
               "final"
             ],
             "build": [],
-            "version": "3.7.3-final"
+            "version": "3.8.2-final"
           },
-          "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-          "fileHash": "cc23c64dd897a16f5f1d0b6bfb7af2e1e95e902267820260446b71b7d7405bcf2c3dbb670dd8898b92b9de894c437ef22c7f843b77c0e8946dc354900304f2aa",
+          "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8",
+          "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
           "type": "Unknown",
-          "displayName": "Python 3.7.3 64-bit"
+          "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1599212240552
+      "expiry": 1608899070445
     },
     "/Applications/Xcode.app/Contents/Developer/usr/bin/python3.interpreter.Details.v7": {
       "data": {
-        "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
-        "info": {
-          "architecture": 3,
-          "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
-          "version": {
-            "options": {
-              "loose": false,
-              "includePrerelease": false
-            },
-            "loose": false,
-            "raw": "3.7.3-final",
-            "major": 3,
-            "minor": 7,
-            "patch": 3,
-            "prerelease": [
-              "final"
-            ],
-            "build": [],
-            "version": "3.7.3-final"
-          },
-          "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-          "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
-          "type": "Unknown",
-          "displayName": "Python 3.7.3 64-bit"
-        }
+        "fileHash": "0ba9c8224bf35e24b3fcb3fdbd41a45f745a6455d6550c8911dd60d44298a32a7d7f0f54db576b0fa7f680bf1dd6c14989b10b9bc9a7bf632b79f8889cafbd7e"
       },
-      "expiry": 1599221676689
+      "expiry": 1608283926398
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "info": {
           "architecture": 3,
           "path": "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python",
@@ -651,36 +887,36 @@
             "version": "2.7.16-final"
           },
           "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
-          "fileHash": "4ee30d33687eecf870933122ac533a1736550f8e318a24db5b7e4a0f5873b85c443bb5a39cf5de81f6ab85382a04adbed90beb682eabc25b40f83c26087d1be9",
+          "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
           "type": "Unknown",
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1599212240556
+      "expiry": 1608899070637
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
-      "path": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+      "path": "/usr/local/bin/python3",
       "version": {
         "options": {
           "loose": false,
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.7.3-final",
+        "raw": "3.9.0-final",
         "major": 3,
-        "minor": 7,
-        "patch": 3,
+        "minor": 9,
+        "patch": 0,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.7.3-final"
+        "version": "3.9.0-final"
       },
-      "sysPrefix": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.7",
-      "fileHash": "49f9f0971b21c97440281f457bb09ac0394bf0740d01d439c6def563bc66f6749f65cbf5fe5ad4029114425245d1ad1a83d57e37a61ba4272ddc98a1c02fe3ba",
+      "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+      "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
       "type": "Unknown",
-      "displayName": "Python 3.7.3 64-bit"
+      "displayName": "Python 3.9.0 64-bit"
     },
     "ProposeLSBanner": false,
     "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python.v3": {
@@ -693,55 +929,31 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.5-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 5,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c"
+        "fileHash": "6a74e27399ed49a953a0efc1b53bbe68a84c51351a7de9ea0a643613acdcd3654276c042bea7d0946aaecd1f651fc478966fff650108b8bfa87b42247c3eb403"
       },
-      "expiry": 1599048798016
-    },
-    "InterpreterAutoSeletionRule-workspaceEnvs": {
-      "architecture": 3,
-      "path": "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python3.7",
-      "version": {
-        "options": {
-          "loose": false,
-          "includePrerelease": false
-        },
-        "loose": false,
-        "raw": "3.7.3-final",
-        "major": 3,
-        "minor": 7,
-        "patch": 3,
-        "prerelease": [
-          "final"
-        ],
-        "build": [],
-        "version": "3.7.3-final"
-      },
-      "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
-      "fileHash": "a968ce2849f4d21b495df0fa3241dcf033aa4b3eb85fff07cb2c422be8df6370f24567e9362e6c899ac68afee7e5c4654f7bc3843bf2b8965a9335d31215314c",
-      "envName": "venv",
-      "type": "Venv"
+      "expiry": 1603180787954
     },
     "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.7.3 64-bit ('print-services': venv)",
-        "hash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c-e9eff7f1a84205384658f31907c50fa9"
+        "displayName": "Python 3.8.5 64-bit ('print-services': venv)",
+        "hash": "6a74e27399ed49a953a0efc1b53bbe68a84c51351a7de9ea0a643613acdcd3654276c042bea7d0946aaecd1f651fc478966fff650108b8bfa87b42247c3eb403-16153ad7f54dbd06e78ce5cb0f45a0f1"
       },
-      "expiry": 1599048799734
+      "expiry": 1603180789348
     },
     "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
+        "fileHash": "6a74e27399ed49a953a0efc1b53bbe68a84c51351a7de9ea0a643613acdcd3654276c042bea7d0946aaecd1f651fc478966fff650108b8bfa87b42247c3eb403",
         "info": {
           "architecture": 3,
           "path": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python",
@@ -751,27 +963,27 @@
               "includePrerelease": false
             },
             "loose": false,
-            "raw": "3.7.3-final",
+            "raw": "3.8.5-final",
             "major": 3,
-            "minor": 7,
-            "patch": 3,
+            "minor": 8,
+            "patch": 5,
             "prerelease": [
               "final"
             ],
             "build": [],
-            "version": "3.7.3-final"
+            "version": "3.8.5-final"
           },
           "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-          "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
+          "fileHash": "6a74e27399ed49a953a0efc1b53bbe68a84c51351a7de9ea0a643613acdcd3654276c042bea7d0946aaecd1f651fc478966fff650108b8bfa87b42247c3eb403",
           "type": "PipEnv",
           "pipEnvWorkspaceFolder": "/Users/glnds/source/dpg/iocrowd/print-services",
           "cachedEntry": true,
           "envName": "print-services",
-          "displayName": "Python 3.7.3 64-bit ('print-services': pipenv)",
+          "displayName": "Python 3.8.5 64-bit ('print-services': pipenv)",
           "__store": true
         }
       },
-      "expiry": 1599048798104
+      "expiry": 1603180788111
     },
     "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python3.7.v3": {
       "data": {
@@ -834,20 +1046,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
         "fileHash": "05d3a163cfe363ca6ab91b12ddad5489c5f784240ad60012c1af70aa981251b9923ba039783247ab438d0adde6cb23c0dcc6c620e0c1033315536149c32d3f04"
       },
-      "expiry": 1599048797919
+      "expiry": 1603180787905
     },
     "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python3.v3": {
       "data": {
@@ -859,20 +1071,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
         "fileHash": "5fb09fb0f68fcc49e8c40c29f6ce53911a3953b4f7eace73313e35714e66069819c33382501c3229d743ba54c1d3df7b82ba322611452ed2a5c78ca63a7395a6"
       },
-      "expiry": 1599048797947
+      "expiry": 1603180787903
     },
     "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python3.7.v3": {
       "data": {
@@ -897,14 +1109,14 @@
         "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
         "fileHash": "a968ce2849f4d21b495df0fa3241dcf033aa4b3eb85fff07cb2c422be8df6370f24567e9362e6c899ac68afee7e5c4654f7bc3843bf2b8965a9335d31215314c"
       },
-      "expiry": 1599048797950
+      "expiry": 1600322298189
     },
     "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.7.3 64-bit ('venv': venv)",
-        "hash": "05d3a163cfe363ca6ab91b12ddad5489c5f784240ad60012c1af70aa981251b9923ba039783247ab438d0adde6cb23c0dcc6c620e0c1033315536149c32d3f04-2c6587ef5364d5882fbd06ef13da401a"
+        "displayName": "Python 3.8.2 64-bit ('venv': venv)",
+        "hash": "05d3a163cfe363ca6ab91b12ddad5489c5f784240ad60012c1af70aa981251b9923ba039783247ab438d0adde6cb23c0dcc6c620e0c1033315536149c32d3f04-bc58bd4ef18b10f2769b9660bf39c86f"
       },
-      "expiry": 1599048798030
+      "expiry": 1603180788019
     },
     "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python.interpreter.Details.v7": {
       "data": {
@@ -918,24 +1130,536 @@
               "includePrerelease": false
             },
             "loose": false,
-            "raw": "3.7.3-final",
+            "raw": "3.8.2-final",
             "major": 3,
-            "minor": 7,
-            "patch": 3,
+            "minor": 8,
+            "patch": 2,
             "prerelease": [
               "final"
             ],
             "build": [],
-            "version": "3.7.3-final"
+            "version": "3.8.2-final"
           },
           "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
           "fileHash": "05d3a163cfe363ca6ab91b12ddad5489c5f784240ad60012c1af70aa981251b9923ba039783247ab438d0adde6cb23c0dcc6c620e0c1033315536149c32d3f04",
           "envName": "venv",
           "type": "Venv",
-          "displayName": "Python 3.7.3 64-bit ('venv': venv)"
+          "displayName": "Python 3.8.2 64-bit ('venv': venv)"
         }
       },
-      "expiry": 1599048798059
+      "expiry": 1603180788055
+    },
+    "/usr/local/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "a594b46d31b4f717bb41894f39f20d7b5cefea64dbc2bc2a40773585dbb26a48104267e738df8a112619fa01e3655fbc24fc92ee81e75c38bdc41f9d95e9da43"
+      },
+      "expiry": 1603180787867
+    },
+    "/usr/local/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4"
+      },
+      "expiry": 1608899070357
+    },
+    "/usr/local/opt/python@3.8/bin/python3.8.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/opt/python@3.8/bin/python3.8",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.5-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 5,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.5-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "3e8c67b1dd0d7ad6de31fde5d081fbea59abce2dfa1622760383ea45618c5da943a5bf520fab27ca6597fa20136d2b8a4c4b267efa0c932bcc6d347d75cacc24"
+      },
+      "expiry": 1603180787921
+    },
+    "/usr/local/opt/python@3.8/bin/python3.8.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.8.5 64-bit",
+        "hash": "3e8c67b1dd0d7ad6de31fde5d081fbea59abce2dfa1622760383ea45618c5da943a5bf520fab27ca6597fa20136d2b8a4c4b267efa0c932bcc6d347d75cacc24-84e9540974dd806cb8115ea703e59c2f"
+      },
+      "expiry": 1603180788026
+    },
+    "/usr/local/opt/python@3.8/bin/python3.8.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "3e8c67b1dd0d7ad6de31fde5d081fbea59abce2dfa1622760383ea45618c5da943a5bf520fab27ca6597fa20136d2b8a4c4b267efa0c932bcc6d347d75cacc24",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/local/opt/python@3.8/bin/python3.8",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.8.5-final",
+            "major": 3,
+            "minor": 8,
+            "patch": 5,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.8.5-final"
+          },
+          "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
+          "fileHash": "3e8c67b1dd0d7ad6de31fde5d081fbea59abce2dfa1622760383ea45618c5da943a5bf520fab27ca6597fa20136d2b8a4c4b267efa0c932bcc6d347d75cacc24",
+          "type": "Unknown",
+          "displayName": "Python 3.8.5 64-bit"
+        }
+      },
+      "expiry": 1603180788072
+    },
+    "/usr/local/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.0 64-bit",
+        "hash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4-1d2297b7afbb3b7e2d2a7dd1bdf11840"
+      },
+      "expiry": 1608899070396
+    },
+    "/usr/local/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/local/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.9.0-final",
+            "major": 3,
+            "minor": 9,
+            "patch": 0,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.9.0-final"
+          },
+          "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+          "fileHash": "6d908d1bf836c3487c44077e11b1bb7583f7ceddd5e2b28620ffd5e2855b36218becb5f5bd72596a6a8c3f217dd7d5a3d97b096145890f1b10ce573436cfe9d4",
+          "type": "Unknown",
+          "displayName": "Python 3.9.0 64-bit"
+        }
+      },
+      "expiry": 1608899070440
+    },
+    "/usr/local/bin/python3.9.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "64397757c328f955ff4a3dac7e61b3ca104b0f4e4c3b8d86251e77e9114b9a8b304a3fc4299b1cf3d299b0e7dd4651b877b8c8dba4499dd22781f46d5e58b8f3"
+      },
+      "expiry": 1608899070353
+    },
+    "/usr/local/opt/python@3.9/bin/python3.9.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/opt/python@3.9/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "3e26cc2ab7d593209fb48108baadc4ec568bd748cbbd68e096b7a18e77a20607f348466c150826692976ae04600655ac980184fcf19f63a01bd71a778b63d5c8"
+      },
+      "expiry": 1608729718276
+    },
+    "/usr/local/opt/python@3.9/bin/python3.9.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.0 64-bit",
+        "hash": "3e26cc2ab7d593209fb48108baadc4ec568bd748cbbd68e096b7a18e77a20607f348466c150826692976ae04600655ac980184fcf19f63a01bd71a778b63d5c8-daf09086b766a684511a43f80980c2e0"
+      },
+      "expiry": 1608729718364
+    },
+    "/usr/local/opt/python@3.9/bin/python3.9.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "3e26cc2ab7d593209fb48108baadc4ec568bd748cbbd68e096b7a18e77a20607f348466c150826692976ae04600655ac980184fcf19f63a01bd71a778b63d5c8",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/local/opt/python@3.9/bin/python3.9",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.9.0-final",
+            "major": 3,
+            "minor": 9,
+            "patch": 0,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.9.0-final"
+          },
+          "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_3/Frameworks/Python.framework/Versions/3.9",
+          "fileHash": "3e26cc2ab7d593209fb48108baadc4ec568bd748cbbd68e096b7a18e77a20607f348466c150826692976ae04600655ac980184fcf19f63a01bd71a778b63d5c8",
+          "type": "Unknown",
+          "displayName": "Python 3.9.0 64-bit"
+        }
+      },
+      "expiry": 1608729718394
+    },
+    "/Users/glnds/source/element7/test/.venv/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "ea69c950d28e7229a6e566e00fa50c3a2d28eca1f3b2ec73133e9f1f572c0386aa98138fb7e4129f391eced0f7a27ec93b7c50f6d718718184036b9c9b49f928"
+      },
+      "expiry": 1608729718230
+    },
+    "/Users/glnds/source/element7/test/.venv/bin/python3.9.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "9188daea84cf29c01d06277f152d1ecb2b0f6c2509fe48bd6565fb17bfd4f073f064a0c6e6f88356945262cd937d4676bc62a4cf05859885db0a8e884a4d4d63"
+      },
+      "expiry": 1608729718232
+    },
+    "/Users/glnds/source/element7/test/.venv/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "dde75234358192685d30a1140a2815c6ee737849a104f267af2bf0467bc675cb77afff97106c324093bb4640499664d9e16362f654b460295addf7ad284241ee"
+      },
+      "expiry": 1608729718235
+    },
+    "/Users/glnds/source/element7/test/.venv/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.0 64-bit ('.venv': venv)",
+        "hash": "ea69c950d28e7229a6e566e00fa50c3a2d28eca1f3b2ec73133e9f1f572c0386aa98138fb7e4129f391eced0f7a27ec93b7c50f6d718718184036b9c9b49f928-9dbfc6e626754c9aca2294520a44ad6a"
+      },
+      "expiry": 1608729718260
+    },
+    "/Users/glnds/source/element7/test/.venv/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "ea69c950d28e7229a6e566e00fa50c3a2d28eca1f3b2ec73133e9f1f572c0386aa98138fb7e4129f391eced0f7a27ec93b7c50f6d718718184036b9c9b49f928",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/glnds/source/element7/test/.venv/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.9.0-final",
+            "major": 3,
+            "minor": 9,
+            "patch": 0,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.9.0-final"
+          },
+          "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+          "fileHash": "ea69c950d28e7229a6e566e00fa50c3a2d28eca1f3b2ec73133e9f1f572c0386aa98138fb7e4129f391eced0f7a27ec93b7c50f6d718718184036b9c9b49f928",
+          "envName": ".venv",
+          "type": "Venv",
+          "displayName": "Python 3.9.0 64-bit ('.venv': venv)"
+        }
+      },
+      "expiry": 1608729718272
+    },
+    "/Users/glnds/source/element7/test/.venv/bin/python3.9.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "9188daea84cf29c01d06277f152d1ecb2b0f6c2509fe48bd6565fb17bfd4f073f064a0c6e6f88356945262cd937d4676bc62a4cf05859885db0a8e884a4d4d63"
+      },
+      "expiry": 1608729718369
+    },
+    "/Users/glnds/source/element7/test/.venv/bin/python3.9.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.0 64-bit ('.venv': venv)",
+        "hash": "9188daea84cf29c01d06277f152d1ecb2b0f6c2509fe48bd6565fb17bfd4f073f064a0c6e6f88356945262cd937d4676bc62a4cf05859885db0a8e884a4d4d63-7efc531f9977dfddf738da8e41f98735"
+      },
+      "expiry": 1608729718406
+    },
+    "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.9.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "8fc1830e91da8ca5d33d966dc884091f5f175fc6c750d21109efa7fcb1602252ddd504ec78eb1a3530daf47a11e2961b32a893ddb7df8411dfb4b985aca4d4bf"
+      },
+      "expiry": 1608899070346
+    },
+    "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57"
+      },
+      "expiry": 1608899070349
+    },
+    "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db"
+      },
+      "expiry": 1608899070348
+    },
+    "InterpreterAutoSeletionRule-environment": {
+      "architecture": 3,
+      "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.9.0-final",
+        "major": 3,
+        "minor": 9,
+        "patch": 0,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.9.0-final"
+      },
+      "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+      "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
+      "type": "VirtualEnv"
+    },
+    "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57"
+      },
+      "expiry": 1608899070405
+    },
+    "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.0 64-bit ('.venv': venv)",
+        "hash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57-090da4da023f91336a3a92682730f405"
+      },
+      "expiry": 1608899070472
+    },
+    "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.9.0 64-bit ('ecs-cluster': pipenv)",
+        "hash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db-f8479489d7224e3d08408285f81ca0a2"
+      },
+      "expiry": 1608899152410
+    },
+    "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
+        "info": {
+          "architecture": 3,
+          "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.9.0-final",
+            "major": 3,
+            "minor": 9,
+            "patch": 0,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.9.0-final"
+          },
+          "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+          "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
+          "type": "PipEnv",
+          "pipEnvWorkspaceFolder": "/Users/glnds/source/element7/ecs-cluster",
+          "envName": "ecs-cluster",
+          "displayName": "Python 3.9.0 64-bit ('ecs-cluster': pipenv)"
+        }
+      },
+      "expiry": 1608899152458
     }
   },
   "coc-python|/Users/glnds/dotfiles": {
@@ -957,18 +1681,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.5-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 5,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
+        "fileHash": "6a74e27399ed49a953a0efc1b53bbe68a84c51351a7de9ea0a643613acdcd3654276c042bea7d0946aaecd1f651fc478966fff650108b8bfa87b42247c3eb403",
         "type": "PipEnv",
         "pipEnvWorkspaceFolder": "/Users/glnds/source/dpg/iocrowd/print-services"
       }
@@ -983,15 +1707,15 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
         "fileHash": "05d3a163cfe363ca6ab91b12ddad5489c5f784240ad60012c1af70aa981251b9923ba039783247ab438d0adde6cb23c0dcc6c620e0c1033315536149c32d3f04",
@@ -1007,70 +1731,22 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
         "fileHash": "5fb09fb0f68fcc49e8c40c29f6ce53911a3953b4f7eace73313e35714e66069819c33382501c3229d743ba54c1d3df7b82ba322611452ed2a5c78ca63a7395a6",
         "envName": "venv",
         "type": "Venv"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python3.7",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 3,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.3-final"
-        },
-        "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
-        "fileHash": "a968ce2849f4d21b495df0fa3241dcf033aa4b3eb85fff07cb2c422be8df6370f24567e9362e6c899ac68afee7e5c4654f7bc3843bf2b8965a9335d31215314c",
-        "envName": "venv",
-        "type": "Venv"
       }
     ],
-    "autoSelectedWorkspacePythonInterpreter-/Users/glnds/source/dpg/iocrowd/print-services": {
-      "architecture": 3,
-      "path": "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python3.7",
-      "version": {
-        "options": {
-          "loose": false,
-          "includePrerelease": false
-        },
-        "loose": false,
-        "raw": "3.7.3-final",
-        "major": 3,
-        "minor": 7,
-        "patch": 3,
-        "prerelease": [
-          "final"
-        ],
-        "build": [],
-        "version": "3.7.3-final"
-      },
-      "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
-      "fileHash": "a968ce2849f4d21b495df0fa3241dcf033aa4b3eb85fff07cb2c422be8df6370f24567e9362e6c899ac68afee7e5c4654f7bc3843bf2b8965a9335d31215314c",
-      "envName": "venv",
-      "type": "Venv"
-    },
     "INTERPRETERS_CACHE_v3_PipEnvService": [
       {
         "architecture": 3,
@@ -1081,18 +1757,18 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.5-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 5,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4",
-        "fileHash": "f9e3cb207a557917a616bdf94bd800c895a4e606781dbbbb8b63cbdeff1323bf8f5a20392decbfd3fc728231f563a2b04e81a2207300a7c40892c557536d9d1c",
+        "fileHash": "6a74e27399ed49a953a0efc1b53bbe68a84c51351a7de9ea0a643613acdcd3654276c042bea7d0946aaecd1f651fc478966fff650108b8bfa87b42247c3eb403",
         "type": "PipEnv",
         "pipEnvWorkspaceFolder": "/Users/glnds/source/dpg/iocrowd/print-services"
       }
@@ -1107,15 +1783,15 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
         "fileHash": "05d3a163cfe363ca6ab91b12ddad5489c5f784240ad60012c1af70aa981251b9923ba039783247ab438d0adde6cb23c0dcc6c620e0c1033315536149c32d3f04",
@@ -1131,47 +1807,47 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.7.3-final",
+          "raw": "3.8.2-final",
           "major": 3,
-          "minor": 7,
-          "patch": 3,
+          "minor": 8,
+          "patch": 2,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.7.3-final"
+          "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
         "fileHash": "5fb09fb0f68fcc49e8c40c29f6ce53911a3953b4f7eace73313e35714e66069819c33382501c3229d743ba54c1d3df7b82ba322611452ed2a5c78ca63a7395a6",
         "envName": "venv",
         "type": "Venv"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python3.7",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.7.3-final",
-          "major": 3,
-          "minor": 7,
-          "patch": 3,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.7.3-final"
-        },
-        "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
-        "fileHash": "a968ce2849f4d21b495df0fa3241dcf033aa4b3eb85fff07cb2c422be8df6370f24567e9362e6c899ac68afee7e5c4654f7bc3843bf2b8965a9335d31215314c",
-        "envName": "venv",
-        "type": "Venv"
       }
     ],
-    "SelectedPythonPath": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python"
+    "SelectedPythonPath": "/Users/glnds/.local/share/virtualenvs/print-services-Dj7rlQc4/bin/python",
+    "autoSelectedWorkspacePythonInterpreter-/Users/glnds/source/dpg/iocrowd/print-services": {
+      "architecture": 3,
+      "path": "/Users/glnds/source/dpg/iocrowd/print-services/venv/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Users/glnds/source/dpg/iocrowd/print-services/venv",
+      "fileHash": "5fb09fb0f68fcc49e8c40c29f6ce53911a3953b4f7eace73313e35714e66069819c33382501c3229d743ba54c1d3df7b82ba322611452ed2a5c78ca63a7395a6",
+      "envName": "venv",
+      "type": "Venv"
+    }
   },
   "coc-python|/Users/glnds/source/dpg/iocrowd/woodwing-monitoring": {
     "INTERPRETERS_CACHE_v3_PipEnvService:6f101f30b603197a271031b84cb55375": [],
@@ -1259,5 +1935,438 @@
     },
     "INTERPRETERS_CACHE_v3_PipEnvService": [],
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/glnds/source/dpg/iocrowd/woodwing-aws-stack": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:2c7cac2fd1403bfb39646dfb0a6b3295": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:2c7cac2fd1403bfb39646dfb0a6b3295": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/glnds/source/dpg/iocrowd/woodwing-aws-stack": {
+      "architecture": 3,
+      "path": "/usr/local/opt/python@3.9/bin/python3.9",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.9.0-final",
+        "major": 3,
+        "minor": 9,
+        "patch": 0,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.9.0-final"
+      },
+      "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.0_2/Frameworks/Python.framework/Versions/3.9",
+      "fileHash": "829fa464594afe37eb1de6f100b04081a9a9b596f18c666fcfc3c8d312fd445f61cdbf5898a85e6976004b69a201a73fc4f38c5e83500a253c54290a753e11f8",
+      "type": "Unknown",
+      "displayName": "Python 3.9.0 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/glnds/source/element7/test": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:0616c2eb0fb40788ad08a8e2c2fc5294": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:0616c2eb0fb40788ad08a8e2c2fc5294": [
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "ea69c950d28e7229a6e566e00fa50c3a2d28eca1f3b2ec73133e9f1f572c0386aa98138fb7e4129f391eced0f7a27ec93b7c50f6d718718184036b9c9b49f928",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "dde75234358192685d30a1140a2815c6ee737849a104f267af2bf0467bc675cb77afff97106c324093bb4640499664d9e16362f654b460295addf7ad284241ee",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "9188daea84cf29c01d06277f152d1ecb2b0f6c2509fe48bd6565fb17bfd4f073f064a0c6e6f88356945262cd937d4676bc62a4cf05859885db0a8e884a4d4d63",
+        "envName": ".venv",
+        "type": "Venv"
+      }
+    ],
+    "SelectedPythonPath": "/Users/glnds/source/element7/test/.venv/bin/python3.9",
+    "autoSelectedWorkspacePythonInterpreter-/Users/glnds/source/element7/test": {
+      "architecture": 3,
+      "path": "/Users/glnds/source/element7/test/.venv/bin/python3.9",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.9.0-final",
+        "major": 3,
+        "minor": 9,
+        "patch": 0,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.9.0-final"
+      },
+      "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+      "fileHash": "9188daea84cf29c01d06277f152d1ecb2b0f6c2509fe48bd6565fb17bfd4f073f064a0c6e6f88356945262cd937d4676bc62a4cf05859885db0a8e884a4d4d63",
+      "envName": ".venv",
+      "type": "Venv"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "ea69c950d28e7229a6e566e00fa50c3a2d28eca1f3b2ec73133e9f1f572c0386aa98138fb7e4129f391eced0f7a27ec93b7c50f6d718718184036b9c9b49f928",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "dde75234358192685d30a1140a2815c6ee737849a104f267af2bf0467bc675cb77afff97106c324093bb4640499664d9e16362f654b460295addf7ad284241ee",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/test/.venv/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/test/.venv",
+        "fileHash": "9188daea84cf29c01d06277f152d1ecb2b0f6c2509fe48bd6565fb17bfd4f073f064a0c6e6f88356945262cd937d4676bc62a4cf05859885db0a8e884a4d4d63",
+        "envName": ".venv",
+        "type": "Venv"
+      }
+    ]
+  },
+  "coc-python|/Users/glnds/source/element7/ecs-cluster": {
+    "SelectedPythonPath": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:24a74935ed711fbe68905908688138d7": [
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "8fc1830e91da8ca5d33d966dc884091f5f175fc6c750d21109efa7fcb1602252ddd504ec78eb1a3530daf47a11e2961b32a893ddb7df8411dfb4b985aca4d4bf",
+        "envName": ".venv",
+        "type": "Venv"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_PipEnvService:24a74935ed711fbe68905908688138d7": [
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/glnds/source/element7/ecs-cluster"
+      }
+    ],
+    "autoSelectedWorkspacePythonInterpreter-/Users/glnds/source/element7/ecs-cluster": {
+      "architecture": 3,
+      "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.9.0-final",
+        "major": 3,
+        "minor": 9,
+        "patch": 0,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.9.0-final"
+      },
+      "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+      "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
+      "type": "VirtualEnv"
+    },
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "646bdf02a145e30a1534b955633f78f82b62f25dd10cf1ec0862db988e343f124691d6eafc4e3741247bdab995362772a58798eda87d92bb9d62efcf3681eb57",
+        "envName": ".venv",
+        "type": "Venv"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "8fc1830e91da8ca5d33d966dc884091f5f175fc6c750d21109efa7fcb1602252ddd504ec78eb1a3530daf47a11e2961b32a893ddb7df8411dfb4b985aca4d4bf",
+        "envName": ".venv",
+        "type": "Venv"
+      }
+    ],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/Users/glnds/source/element7/ecs-cluster/.venv/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.0-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 0,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.0-final"
+        },
+        "sysPrefix": "/Users/glnds/source/element7/ecs-cluster/.venv",
+        "fileHash": "7dbce7b9c864a6f494d12d573490f037f9bc90cd3a1f29ba48bcb95584067ec63f883d5251680646a435add94133fedf02b549e5fc729635edf65bc3b4cac5db",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/Users/glnds/source/element7/ecs-cluster"
+      }
+    ]
   }
 }

@@ -156,9 +156,10 @@ var JSONDocumentSymbols = /** @class */ (function () {
                             limit--;
                             var range = getRange(document, property);
                             var selectionRange = getRange(document, property.keyNode);
-                            var symbol = { name: _this.getKeyLabel(property), kind: _this.getSymbolKind(valueNode.type), range: range, selectionRange: selectionRange, children: [] };
+                            var children = [];
+                            var symbol = { name: _this.getKeyLabel(property), kind: _this.getSymbolKind(valueNode.type), range: range, selectionRange: selectionRange, children: children, detail: _this.getDetail(valueNode) };
                             result.push(symbol);
-                            toVisit.push({ result: symbol.children, node: valueNode });
+                            toVisit.push({ result: children, node: valueNode });
                         }
                         else {
                             limitExceeded = true;
@@ -202,6 +203,23 @@ var JSONDocumentSymbols = /** @class */ (function () {
             return name;
         }
         return "\"" + name + "\"";
+    };
+    JSONDocumentSymbols.prototype.getDetail = function (node) {
+        if (!node) {
+            return undefined;
+        }
+        if (node.type === 'boolean' || node.type === 'number' || node.type === 'null' || node.type === 'string') {
+            return String(node.value);
+        }
+        else {
+            if (node.type === 'array') {
+                return node.children.length ? undefined : '[]';
+            }
+            else if (node.type === 'object') {
+                return node.children.length ? undefined : '{}';
+            }
+        }
+        return undefined;
     };
     JSONDocumentSymbols.prototype.findDocumentColors = function (document, doc, context) {
         return this.schemaService.getSchemaForResource(document.uri, doc).then(function (schema) {

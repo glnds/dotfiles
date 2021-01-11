@@ -16,6 +16,8 @@
             ]
         }
     },
+    "cfnlint.includeRules": ["I"],
+    "cfnlint.includeExperimentalRules": true,
     "yaml.customTags": [
         "!And scalar",
         "!And mapping",

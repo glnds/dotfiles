@@ -86,7 +86,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'ap/vim-buftabline'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'aws-cloudformation/cfn-python-lint'
+" Plug 'aws-cloudformation/cfn-python-lint'
 " Plug 'NLKNguyen/papercolor-theme'
 Plug 'sjl/badwolf'
 " Plug 'tpope/vim-dispatch'
@@ -105,7 +105,7 @@ let g:netrw_winsize = 25
 " " Yaml: https://github.com/neoclide/coc-yaml
 " " CloudFormation: https://github.com/joenye/coc-cfn-lint
 " " JSON: https://github.com/neoclide/coc-json
-" " Python: https://github.com/neoclide/coc-python + install pipenv and jedi
+" " Python: https://github.com/fannheyward/coc-pyright
 " in your virtualenv
 
 
@@ -348,6 +348,9 @@ if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
+" https://stackoverflow.com/questions/55303484/pipe-ripgrep-search-results-to-vim-and-open-files-at-exact-search-location
+set grepprg=rg\ --vimgrep
+set grepformat^=%f:%l:%c:%m
 " }}}
 " vim-go {{{
 if executable('rg')
