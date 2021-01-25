@@ -24,6 +24,7 @@ pip3 install python-language-server pylint
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.cfnlintrc ~/.cfnlintrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/pylint.rc ~/pylint.rc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
