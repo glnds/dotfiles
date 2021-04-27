@@ -9,11 +9,9 @@ set -x PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
 
 set -x PATH ~/Library/Python/3.8/bin $PATH
 
-# Cookiecutter config
-# set -x COOKIECUTTER_CONFIG "~/.cookiecutterrc"
-
 # Rust config
 set -x PATH "$HOME/.cargo/bin" $PATH
+set -x RUST_SRC_PATH /Users/glnds/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/library
 
 # tmux fix
 set -x export EVENT_NOKQUEUE=1

@@ -1,8 +1,9 @@
 {
   "dependencies": {
     "coc-cfn-lint": ">=0.1.1",
-    "coc-json": ">=1.3.2",
+    "coc-json": ">=1.3.4",
     "coc-pyright": ">=1.1.96",
+    "coc-rls": ">=1.1.6",
     "coc-yaml": ">=1.2.0"
   }
 }

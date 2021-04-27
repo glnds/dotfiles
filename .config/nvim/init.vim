@@ -63,6 +63,7 @@ set writebackup
 " }}}
 " Plugins {{{
 call plug#begin()
+" call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -75,21 +76,16 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-" Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'elzr/vim-json'
-" Plug 'airblade/vim-gitgutter'
-" Plug 'hashivim/vim-terraform'
-" Plug 'pearofducks/ansible-vim'
-" Plug 'rust-lang/rust.vim'
-
-" Plug 'bling/vim-bufferline'
 Plug 'ap/vim-buftabline'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'aws-cloudformation/cfn-python-lint'
-" Plug 'NLKNguyen/papercolor-theme'
 Plug 'sjl/badwolf'
-" Plug 'tpope/vim-dispatch'
+" Rust Plugins
+" Plug 'rust-lang/rust.vim'
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 " }}}
 " netrw {{{
@@ -106,8 +102,7 @@ let g:netrw_winsize = 25
 " " CloudFormation: https://github.com/joenye/coc-cfn-lint
 " " JSON: https://github.com/neoclide/coc-json
 " " Python: https://github.com/fannheyward/coc-pyright
-" in your virtualenv
-
+" " Rust: https://github.com/neoclide/coc-rls
 
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -364,7 +359,7 @@ if executable('rg')
 endif
 " }}}
 " rust {{{
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
 " }}}
 " Colors {{{
 set termguicolors
@@ -379,11 +374,13 @@ highlight LineNr guifg=#b3b3b3
 " FileType setup {{{
 augroup filetypes
   autocmd!
-  " YAML
+  " yaml
   autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent foldlevel=20
   " Markdown
   autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
   autocmd FileType markdown setlocal wrap textwidth=100
+  " Rust
+  autocmd BufRead,BufNewFile *.rs setlocal filetype=rust
   " Javascript
   autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
   " Julia
