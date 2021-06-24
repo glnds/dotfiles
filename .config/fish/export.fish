@@ -1,5 +1,9 @@
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
+# zScaler Certifacte fixes
+set -x AWS_CA_BUNDLE /usr/local/etc/openssl@1.1/cert.pem
+set -x REQUESTS_CA_BUNDLE /usr/local/etc/openssl@1.1/cert.pem
+
 # Language Default
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
@@ -7,7 +11,7 @@ set -x LC_CTYPE en_US.UTF-8
 #use gnu-sed
 set -x PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
 
-set -x PATH ~/Library/Python/3.8/bin $PATH
+set -x PATH /Users/glnds/Library/Python/3.9/bin $PATH
 
 # Rust config
 set -x PATH "$HOME/.cargo/bin" $PATH

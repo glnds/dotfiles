@@ -13,6 +13,10 @@ set -g -x PAGER less
 . $fish_path/secret.fish
 . $fish_path/utils.fish
 
+# pyenv
+status is-login; and pyenv init --path | source
+pyenv init - | source
+
 # fish_vi_mode
 set fish_key_bindings fish_user_key_bindings
 
