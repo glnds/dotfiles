@@ -44,5 +44,6 @@
   required = true
 [pull]
   ff = only
+  rebase = true
 [url "git@bitbucket.org:"]
-	insteadOf = https://bitbucket.org/
+  insteadOf = https://bitbucket.org/

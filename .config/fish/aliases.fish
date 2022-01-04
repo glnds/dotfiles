@@ -184,7 +184,7 @@ end
 #alias elbst="aws elb describe-instance-health --load-balancer-name vpc-frontend --output table --profile parleys"
 
 # DPP AWS
-alias ec2ls="aws ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],InstanceId,State.Name,InstanceType,PrivateIpAddress,PublicIpAddress,ImageId,LaunchTime]' --filters Name=instance-state-name,Values=pending,running,shutting-down,stopping,stopped --output table --region eu-west-1"
+alias ec2ls="steampipe query \"select tags -> 'Name' as name, instance_id, instance_state, instance_type, private_ip_address, image_id, launch_time from aws_ec2_instance where instance_state='running' order by name, launch_time\""
 alias lsami="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table --region eu-west-1"
 alias s3ls="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table --region eu-west-1"
 alias efsls="aws efs describe-file-systems --query 'FileSystems[*].[Name,FileSystemId]' --output table --region eu-west-1"

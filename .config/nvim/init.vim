@@ -8,8 +8,8 @@ filetype plugin indent on
 set timeout timeoutlen=500 ttimeoutlen=100
 " Vim autocomplete options
 set completeopt=longest,menuone
-set hidden                " hide buffers instead of closing them
 " set showtabline=2
+set inccommand=nosplit
 set laststatus=2          " Always display the statusline in all windows
 set backspace=2           " Backspace deletes like most programs in insert mode
 set encoding=utf8         " Sets charachter encoding
@@ -24,10 +24,10 @@ set shiftwidth=4          " Shift width value
 set t_BE=                 " fixes bracketed paste mode
 set shiftround            " Round the shift indent
 set expandtab             " Conver tabs to spaces
-set lazyredraw            " Terminal performance optimisation
-set magic                 " Better searching
-set noswapfile            " Don't pollute my hard drive, even temporary
-set nowrap                  " Wrap long lines
+" set lazyredraw            " Terminal performance optimisation
+" set magic                 " Better searching
+" set noswapfile            " Don't pollute my hard drive, even temporary
+" set nowrap                " Wrap long lines
 set smartindent           " Auto indent when starting a new line
 set relativenumber        " Use relative line numbers
 set showmatch             " Show matching brackets (Damn this is so cool!)
@@ -62,6 +62,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 " }}}
 " Plugins {{{
+"
 call plug#begin()
 " call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-commentary'
@@ -73,13 +74,19 @@ Plug 'tpope/vim-vinegar'
 Plug 'itchyny/lightline.vim'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+" Plug '/usr/local/opt/fzf'
+" Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'ap/vim-buftabline'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'sjl/badwolf'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'p00f/nvim-ts-rainbow'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'kyazdani42/nvim-web-devicons'
 " Rust Plugins
 " Plug 'rust-lang/rust.vim'
 " Plug 'prabirshrestha/async.vim'
@@ -259,12 +266,45 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " }}}
+" treesitter {{{
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ignore_install = { "javascript" }, -- List of parsers to ignore installing
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+  rainbow = {
+    enable = true,
+    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+    max_file_lines = nil, -- Do not enable for files with more than n lines, int
+    -- colors = {}, -- table of hex strings
+    -- termcolors = {} -- table of colour name strings
+  },
+}
+EOF
+" }}}
 " Leader shortcuts {{{
 
 " Check a key binding, ex: verbose nmap <Leader>r
 
 let mapleader = ","
 let maplocalleader = ","
+
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files()<cr>
+nnoremap <leader>fr <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>fd <cmd>lua require('telescope.builtin').file_browser()<cr>
 
 nnoremap <Leader><Leader> V|                      " Select viual line
 nnoremap <Leader>a :bprev<CR>|                    " Open the previous buffer
@@ -426,5 +466,7 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+source $HOME/.config/nvim/lua/init.lua
 
 " vim:foldmethod=marker:foldlevel=0
