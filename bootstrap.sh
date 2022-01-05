@@ -19,7 +19,7 @@ brew tap mitchellh/gon
 brew install mitchellh/gon/gon
 
 pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
-pip3 install python-language-server pylint
+pip3 install pyright-language-server pylint
 sudo pip3 install --upgrade neovim
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
