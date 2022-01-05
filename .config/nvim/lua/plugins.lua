@@ -1,23 +1,16 @@
 -- https://github.com/wbthomason/packer.nvim
 
--- local fn = vim.fn
--- local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
--- if fn.empty(fn.glob(install_path)) > 0 then
---   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
--- end
-
--- vim.cmd [[packadd packer.nvim]]
-
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+end
 
 packer = require 'packer'
--- packer.init {}
--- packer.reset()
 local use = packer.use
 packer.reset()
 
 packer.startup(function()
-
--- return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     -- Legacy
@@ -34,7 +27,7 @@ packer.startup(function()
     use 'ap/vim-buftabline'
     use {'fatih/vim-go', run = ':GoInstallBinaries' }
     use 'sjl/badwolf'
-    -- use 'p00f/nvim-ts-rainbow'
+    use 'p00f/nvim-ts-rainbow'
     -- Lua
     use 'nvim-lua/plenary.nvim'
     use 'nvim-telescope/telescope.nvim'
@@ -54,7 +47,7 @@ packer.startup(function()
 
     -- use 'jose-elias-alvarez/null-ls.nvim'
 
-    -- if packer_bootstrap then
-    --     require('packer').sync()
-    -- end
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
