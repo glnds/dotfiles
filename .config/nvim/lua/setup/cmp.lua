@@ -39,7 +39,30 @@ cmp.setup {
         end,
     },
     sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
+        { name = "nvim_lsp" },
+        { name = "vsnip" },
+        { name = "buffer" },
+        { name = "look", keyword_length = 3, option = { convert_case = true, loud = true } },
+        { name = "nvim_lua" },
+        { name = "calc" },
+        { name = "emoji" },
+        { name = "path" },
+    },
+    formatting = {
+        format = lspkind.cmp_format({
+        with_text = true,
+        maxwidth = 50,
+        -- preset = 'codicons',
+        -- menu = {
+        --     buffer = "",
+        --     nvim_lsp = "",
+        --     spell = "",
+        --     look = "",
+        -- },
+        }),
+    },
+    experimental = {
+        ghost_text = true,
+        native_menu = false,
     },
 }

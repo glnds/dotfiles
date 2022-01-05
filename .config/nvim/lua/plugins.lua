@@ -27,7 +27,7 @@ return require("packer").startup({
         use 'tpope/vim-fugitive'
         use 'airblade/vim-gitgutter'
         use 'tpope/vim-vinegar'
-        use 'itchyny/lightline.vim'
+        -- use 'itchyny/lightline.vim'
         use 'benmills/vimux'
         use 'christoomey/vim-tmux-navigator'
         use {'iamcco/markdown-preview.nvim', run = 'cd app & yarn install' }
@@ -37,7 +37,7 @@ return require("packer").startup({
 
         -- Lua
         use({ "tpope/vim-repeat" })
-        use({ "tpope/vim-commentatry" })
+        use({ "tpope/vim-commentary" })
         use({ "tpope/vim-surround" })
         use({
             "nvim-lualine/lualine.nvim",
@@ -45,6 +45,15 @@ return require("packer").startup({
             event = "VimEnter",
             requires = { "kyazdani42/nvim-web-devicons", opt = true },
         })
+        use({
+            "nvim-treesitter/nvim-treesitter",
+            config = get_setup("treesitter"),
+            run = ":TSUpdate",
+            requires = {
+                { "p00f/nvim-ts-rainbow" },
+            },
+        })
+        use("nvim-treesitter/nvim-treesitter-textobjects")
         use({
             "norcalli/nvim-colorizer.lua",
             event = "BufReadPre",
@@ -63,15 +72,6 @@ return require("packer").startup({
             config = get_setup("telescope"),
         })
         use({ "nvim-telescope/telescope-file-browser.nvim" })
-        use({
-            "nvim-treesitter/nvim-treesitter",
-            config = get_setup("treesitter"),
-            run = ":TSUpdate",
-            requires = {
-                { "p00f/nvim-ts-rainbow" },
-            },
-        })
-        use("nvim-treesitter/nvim-treesitter-textobjects")
         -- LSP
         use({ "neovim/nvim-lspconfig", config = get_setup("lsp") })
         -- use 'jose-elias-alvarez/null-ls.nvim'
@@ -91,6 +91,7 @@ return require("packer").startup({
             },
             config = get_setup("cmp"),
         })
+        use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
 
         if packer_bootstrap then
             require("packer").sync()
