@@ -124,6 +124,12 @@ _G.packer_plugins = {
     path = "/Users/glnds/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["filetype.nvim"] = {
+    config = { 'require("setup/filetype")' },
+    loaded = true,
+    path = "/Users/glnds/.local/share/nvim/site/pack/packer/start/filetype.nvim",
+    url = "https://github.com/nathom/filetype.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/glnds/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -314,10 +320,6 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require("setup/null-ls")
-time([[Config for null-ls.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("setup/cmp")
@@ -326,6 +328,14 @@ time([[Config for nvim-cmp]], false)
 time([[Config for nvim-treesitter]], true)
 require("setup/treesitter")
 time([[Config for nvim-treesitter]], false)
+-- Config for: filetype.nvim
+time([[Config for filetype.nvim]], true)
+require("setup/filetype")
+time([[Config for filetype.nvim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require("setup/null-ls")
+time([[Config for null-ls.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 require("setup/lsp")

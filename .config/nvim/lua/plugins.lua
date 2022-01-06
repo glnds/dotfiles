@@ -35,10 +35,13 @@ return require("packer").startup({
         use {'fatih/vim-go', run = ':GoInstallBinaries' }
         use 'sjl/badwolf'
 
+
         -- Lua
         use({ "tpope/vim-repeat" })
         use({ "tpope/vim-commentary" })
         use({ "tpope/vim-surround" })
+        use({ "nathom/filetype.nvim", config = get_setup("filetype") })
+        -- Styling and Colors
         use({
             "nvim-lualine/lualine.nvim",
             config = get_setup("lualine"),
