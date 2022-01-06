@@ -96,8 +96,7 @@ nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 noremap pp :ALEFix<CR>
 " }}}
 " Colors {{{
-set termguicolors
-syntax on
+" syntax on
 set background=dark
 colorscheme badwolf
 let g:badwolf_darkgutter = 1

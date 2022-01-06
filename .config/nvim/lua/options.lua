@@ -24,6 +24,7 @@ opt.incsearch = true       -- Shows the match while typing
 opt.joinspaces = false     -- No double spaces with join
 opt.cursorcolumn = true
 opt.termguicolors = true   -- You will have bad experience for diagnostic messages when it's default 4000.
+opt.foldenable = false
 opt.signcolumn = "yes:1"   -- always show signcolumns
 opt.colorcolumn= "100"     -- Make it obvious where 100 characters is
 opt.foldmethod = "indent"
