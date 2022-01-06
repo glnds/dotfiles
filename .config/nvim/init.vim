@@ -5,59 +5,8 @@
 
 lua require('init')
 
-" Options {{{
 filetype plugin indent on
-set timeout timeoutlen=500 ttimeoutlen=100
-" Vim autocomplete options
-" set completeopt=longest,menuone
-set completeopt=menu,menuone,noselect
-" set showtabline=2
-set inccommand=nosplit
-set laststatus=2          " Always display the statusline in all windows
-set backspace=2           " Backspace deletes like most programs in insert mode
-set encoding=utf8         " Sets charachter encoding
-set mouse=                " Disabling mouse support
-set history=1000          " Remember ALL THE commands!
-set undolevels=1000       " Do ALL THE undo's!
-set undoreload=10000      " Maximum number lines to save for undo on a buffer reload
-set virtualedit=onemore   " Allow for cursor beyond last character
-set tabstop=4             " Number of spaces for a tab
-set softtabstop=4         " Number of spaces for a tab while editing
-set shiftwidth=4          " Shift width value
-set t_BE=                 " fixes bracketed paste mode
-set shiftround            " Round the shift indent
-set expandtab             " Conver tabs to spaces
-set signcolumn=yes
-" set lazyredraw            " Terminal performance optimisation
-" set magic                 " Better searching
-" set noswapfile            " Don't pollute my hard drive, even temporary
-" set nowrap                " Wrap long lines
-set smartindent           " Auto indent when starting a new line
-set relativenumber        " Use relative line numbers
-set showmatch             " Show matching brackets (Damn this is so cool!)
-set ignorecase            " Case insensitive search
-set smartcase             " Case sensitive when uc present
-set cursorline            " Highlight cursorline!
-set ruler                 " Always show current position
-set list                  " Show specials charcters like tabs (^I), end of line ($), ...
-set listchars=tab:\│\ ,trail:-,extends:>,precedes:<,nbsp:+
-set splitbelow            " Split current window below
-set splitright            " Split current window right
-set showcmd               " Display incomplete commands
-set autowrite             " Automatically :write before running commands
-set colorcolumn=101        " Make it obvious where 80 characters is
-set number                " Show line numbers
-set numberwidth=5         " Line number reserved space
-set autochdir             " Change the current dir if you open a file
-set modelines=1           " Disable modeline support
-set guioptions=TlrLR      " Options when running vim in GUI mode
-set cpoptions+=$          " Show a $ sign in the change buffer
-set updatetime=300        " Update time for diff markers
-set hlsearch
-set incsearch
-set wildignore+=*/.git/*,*/tmp/*,*.swp
-set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
-" }}}
+
 " Leader shortcuts {{{
 
 " Check a key binding, ex: verbose nmap <Leader>r
@@ -73,6 +22,8 @@ nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>fd <cmd>lua require('telescope.builtin').file_browser()<cr>
+nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
+nnoremap <leader>gd <cmd>lua require('telescope.builtin').git_commits()<cr>
 
 nnoremap <Leader><Leader> V|                      " Select viual line
 nnoremap <Leader>a :bprev<CR>|                    " Open the previous buffer
@@ -150,6 +101,7 @@ syntax on
 set background=dark
 colorscheme badwolf
 let g:badwolf_darkgutter = 1
+let g:vimsyn_embed = 'l'
 match ErrorMsg '\s\+$'
 highlight ErrorMsg guibg=White guifg=Red
 highlight LineNr guifg=#b3b3b3

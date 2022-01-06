@@ -19,13 +19,15 @@ function get_setup(name)
   return string.format('require("setup/%s")', name)
 end
 
+-- Plugins to track
+-- https://github.com/mfussenegger/nvim-dap --DAP (Debug Adapter Protocol)
+
 return require("packer").startup({
     function(use)
         -- Packer can manage itself
         use 'wbthomason/packer.nvim'
         -- Legacy
         use 'tpope/vim-fugitive'
-        use 'airblade/vim-gitgutter'
         use 'tpope/vim-vinegar'
         -- use 'itchyny/lightline.vim'
         use 'benmills/vimux'
@@ -42,6 +44,12 @@ return require("packer").startup({
         use({ "tpope/vim-surround" })
         use({ "nathom/filetype.nvim", config = get_setup("filetype") })
         -- Styling and Colors
+        use({ "lukas-reineke/indent-blankline.nvim", config = get_setup("indent-blankline") })
+        use({
+            'lewis6991/gitsigns.nvim',
+            config = get_setup("gitsigns"),
+            requires = { 'nvim-lua/plenary.nvim' },
+        })
         use({
             "nvim-lualine/lualine.nvim",
             config = get_setup("lualine"),
@@ -59,11 +67,12 @@ return require("packer").startup({
         use("nvim-treesitter/nvim-treesitter-textobjects")
         use({
             "norcalli/nvim-colorizer.lua",
-            event = "BufReadPre",
             config = get_setup("colorizer"),
+            event = "BufReadPre",
         })
         use({
             "nvim-telescope/telescope.nvim",
+            config = get_setup("telescope"),
             module = "telescope",
             cmd = "Telescope",
             requires = {
@@ -72,7 +81,6 @@ return require("packer").startup({
                 { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
                 { "kyazdani42/nvim-web-devicons" },
             },
-            config = get_setup("telescope"),
         })
         use({ "nvim-telescope/telescope-file-browser.nvim" })
         -- LSP
@@ -81,6 +89,7 @@ return require("packer").startup({
         -- Autocomplete
         use({
             "hrsh7th/nvim-cmp",
+            config = get_setup("cmp"),
             requires = {
                 { "hrsh7th/cmp-nvim-lsp" },
                 { "hrsh7th/cmp-nvim-lua" },
@@ -92,13 +101,12 @@ return require("packer").startup({
                 { "hrsh7th/vim-vsnip-integ" },
                 { "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "hrsh7th/cmp-emoji" } },
             },
-            config = get_setup("cmp"),
         })
         use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
         use({
             "folke/trouble.nvim",
-            requires = { "kyazdani42/nvim-web-devicons", opt = true },
             config = get_setup("trouble"),
+            requires = { "kyazdani42/nvim-web-devicons", opt = true },
         })
 
         if packer_bootstrap then
