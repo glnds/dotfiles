@@ -95,6 +95,11 @@ return require("packer").startup({
             config = get_setup("cmp"),
         })
         use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
+        use({
+            "folke/trouble.nvim",
+            requires = { "kyazdani42/nvim-web-devicons", opt = true },
+            config = get_setup("trouble"),
+        })
 
         if packer_bootstrap then
             require("packer").sync()

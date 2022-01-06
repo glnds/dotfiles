@@ -82,29 +82,29 @@ local cfn_lint = {
 
 --Built in formatters
 local sources = {
-  null_ls.builtins.diagnostics.hadolint,
-  null_ls.builtins.formatting.terraform_fmt,
-  null_ls.builtins.formatting.shfmt,
-  null_ls.builtins.formatting.gofmt,
-  null_ls.builtins.formatting.black.with({
-      extra_args = { "--experimental-string-processing" }
-  }),
-  null_ls.builtins.formatting.isort.with({
-      extra_args = { "--profile", "black" }
-  }),
-  null_ls.builtins.diagnostics.flake8,
-  null_ls.builtins.diagnostics.write_good,
-  null_ls.builtins.diagnostics.markdownlint,
-  cfn_lint,
+    null_ls.builtins.diagnostics.hadolint,
+    null_ls.builtins.formatting.terraform_fmt,
+    null_ls.builtins.formatting.shfmt,
+    null_ls.builtins.formatting.gofmt,
+    null_ls.builtins.formatting.black.with({
+        extra_args = { "--experimental-string-processing" }
+    }),
+    null_ls.builtins.formatting.isort.with({
+        extra_args = { "--profile", "black" }
+    }),
+    null_ls.builtins.diagnostics.flake8,
+    null_ls.builtins.diagnostics.write_good,
+    null_ls.builtins.diagnostics.markdownlint,
+    cfn_lint,
 }
 
-null_ls.config({
-  debug=false,
-  sources=sources,
-  diagnostics_format = '[#{c}] #{m}',
+null_ls.setup({
+    debug=false,
+    sources=sources,
+    diagnostics_format = '[#{c}] #{m}',
 })
 
-require("lspconfig")["null-ls"].setup({
+require("null-ls").setup({
     -- on_attach = attach
     on_attach = function(client)
      if client.resolved_capabilities.document_formatting then

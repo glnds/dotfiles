@@ -93,25 +93,29 @@
 font:
   # Normal (roman) font face
   normal:
-    family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    # family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    family:  MesloLGM Nerd Font
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
   #bold:
-    family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    # family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    family:  MesloLGM Nerd Font
     # The `style` can be specified to pick a specific face.
     #style: Bold
 
   # Italic font face
   italic:
-    family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    # family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    family:  MesloLGM Nerd Font
     # The `style` can be specified to pick a specific face.
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    # family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
+    family:  MesloLGM Nerd Font
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
 

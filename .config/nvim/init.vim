@@ -156,25 +156,28 @@ highlight LineNr guifg=#b3b3b3
 "}}}
 " FileType setup {{{
 augroup filetypes
-  autocmd!
-  " yaml
-  autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent foldlevel=20
-  " Markdown
-  autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
-  autocmd FileType markdown setlocal wrap textwidth=100
-  " Rust
-  autocmd BufRead,BufNewFile *.rs setlocal filetype=rust
-  " Javascript
-  autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
-  " Julia
-  autocmd BufRead,BufNewFile *.jl setlocal filetype=julia
-  " C/C++
-  autocmd FileType c setlocal shiftwidth=2 tabstop=2
-  autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
-  autocmd FileType cc setlocal shiftwidth=2 tabstop=2
-  autocmd FileType hpp setlocal shiftwidth=2 tabstop=2
-  autocmd FileType h setlocal shiftwidth=2 tabstop=2
-  autocmd FileType go setlocal foldmethod=indent foldlevel=20 foldnestmax=1
+  " autocmd!
+  " " yaml
+  " autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent foldlevel=20
+  " " Markdown
+  " autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
+  " autocmd FileType markdown setlocal wrap textwidth=100
+  " " Rust
+  " autocmd BufRead,BufNewFile *.rs setlocal filetype=rust
+  " " Javascript
+  " autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+  " " Julia
+  " autocmd BufRead,BufNewFile *.jl setlocal filetype=julia
+  " " C/C++
+  " autocmd FileType c setlocal shiftwidth=2 tabstop=2
+  " autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+  " autocmd FileType cc setlocal shiftwidth=2 tabstop=2
+  " autocmd FileType hpp setlocal shiftwidth=2 tabstop=2
+  " autocmd FileType h setlocal shiftwidth=2 tabstop=2
+  " autocmd FileType go setlocal foldmethod=indent foldlevel=20 foldnestmax=1
+
+
+
   " CloudFormation filetype config
   " autocmd BufRead,BufNewFile cfn-*.yaml,cfn-*.yml call SetCloudFormationOptions()
   " function SetCloudFormationOptions()

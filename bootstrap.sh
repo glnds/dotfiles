@@ -10,13 +10,14 @@ brew install neovim packer ansible
 brew install cmake fish git python tmux tig htop jq ripgrep fzf yarn go
 brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
 brew install ssh-copy-id pidof tree reattach-to-user-namespace exa goreleaser gnu-sed
-brew cask install java alacritty aerial visual-studio-code
+brew cask install java alacritty
 
-brew tap tj/mmake https://github.com/tj/mmake.git
-brew install tj/mmake/mmake
+brew tap tj/mmake https://github.com/tj/mmake.git && brew install tj/mmake/mmake
 
-brew tap mitchellh/gon
-brew install mitchellh/gon/gon
+brew tap mitchellh/gon && brew install mitchellh/gon/gon
+
+# https://www.nerdfonts.com/font-downloads
+brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font
 
 pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
 pip3 install pyright-language-server pylint
