@@ -3,7 +3,7 @@
 "  / / _ \/ / __/| |/ / /  ' \
 " /_/_//_/_/\__(_)___/_/_/_/_/
 
-lua require('plugins')
+lua require('init')
 
 " Options {{{
 filetype plugin indent on
@@ -58,26 +58,12 @@ set incsearch
 set wildignore+=*/.git/*,*/tmp/*,*.swp
 set spellfile=$HOME/.vim-spell-en.utf-8.add "Word list file
 " }}}
-" Backup {{{
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set writebackup
-" }}}
-" netrw {{{
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-" }}}
 " Leader shortcuts {{{
 
 " Check a key binding, ex: verbose nmap <Leader>r
 
-let mapleader = ","
-let maplocalleader = ","
+" let mapleader = ","
+" let maplocalleader = ","
 
 " Using Lua functions
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -158,31 +144,6 @@ nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
 noremap pp :ALEFix<CR>
 " }}}
-" ripgrep {{{
-if executable('rg')
-" Use ripgrep: https://github.com/BurntSushi/ripgrep
-  set grepprg=rg\ --color=never
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
-endif
-" https://stackoverflow.com/questions/55303484/pipe-ripgrep-search-results-to-vim-and-open-files-at-exact-search-location
-set grepprg=rg\ --vimgrep
-set grepformat^=%f:%l:%c:%m
-" }}}
-" vim-go {{{
-if executable('rg')
-  " let g:go_def_mode='gopls'
-  " let g:go_info_mode='gopls'
-  " let g:go_metalinter_autosave = 1
-  " let g:go_metalinter_command = "golangci-lint"
-  " let g:go_fmt_autosave = 1
-  " let g:go_fmt_command = "gofmt"
-  " let g:go_fmt_options = "-s"
-endif
-" }}}
-" rust {{{
-" let g:rustfmt_autosave = 1
-" }}}
 " Colors {{{
 set termguicolors
 syntax on
@@ -230,25 +191,5 @@ augroup filetypes
 augroup end
 " }}}
 
-au BufEnter * call MyLastWindow()
-function! MyLastWindow()
-  " if the window is quickfix go on
-  if &buftype=="quickfix"
-    " if this window is last on screen quit without warning
-    if winbufnr(2) == -1
-      quit!
-    endif
-  endif
-endfunction
-
-" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-
-" source $HOME/.config/nvim/lua/init.lua
 
 " vim:foldmethod=marker:foldlevel=0

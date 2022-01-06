@@ -142,6 +142,12 @@ _G.packer_plugins = {
     path = "/Users/glnds/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["null-ls.nvim"] = {
+    config = { 'require("setup/null-ls")' },
+    loaded = true,
+    path = "/Users/glnds/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     config = { 'require("setup/cmp")' },
     loaded = true,
@@ -308,10 +314,10 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("setup/lsp")
-time([[Config for nvim-lspconfig]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require("setup/null-ls")
+time([[Config for null-ls.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("setup/cmp")
@@ -320,6 +326,10 @@ time([[Config for nvim-cmp]], false)
 time([[Config for nvim-treesitter]], true)
 require("setup/treesitter")
 time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("setup/lsp")
+time([[Config for nvim-lspconfig]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

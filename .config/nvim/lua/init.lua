@@ -1,3 +1,8 @@
+vim.g.mapleader = ','
+
+require('plugins')
+
+
 -- Autocompletion
 --
 -- local use = require('packer').use
