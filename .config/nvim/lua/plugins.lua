@@ -84,7 +84,12 @@ return require("packer").startup({
         })
         use({ "nvim-telescope/telescope-file-browser.nvim" })
         -- LSP
-        use({ "neovim/nvim-lspconfig", config = get_setup("lsp") })
+        use({ "neovim/nvim-lspconfig",
+            config = get_setup("lsp"),
+            requires = {
+                { "williamboman/nvim-lsp-installer" },
+            },
+        })
         use({ "jose-elias-alvarez/null-ls.nvim", config = get_setup("null-ls") })
         -- Autocomplete
         use({

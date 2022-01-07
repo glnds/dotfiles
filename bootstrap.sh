@@ -36,6 +36,9 @@ ln -s ~/dotfiles/.pip ~/
 ln -s ~/dotfiles/.config ~/
 ln -s ~/dotfiles/gradle.properties ~/.gradle/gradle.properties
 
+# LSP's
+npm install -g typescript-language-server
+
 if [ ! -e $HOME/.vim/autoload/plug.vim ]; then
   echo "Installing Plug"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

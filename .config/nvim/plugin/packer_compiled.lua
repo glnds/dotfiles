@@ -180,6 +180,11 @@ _G.packer_plugins = {
     path = "/Users/glnds/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/glnds/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
   ["nvim-lspconfig"] = {
     config = { 'require("setup/lsp")' },
     loaded = true,
@@ -333,18 +338,6 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require("setup/cmp")
-time([[Config for nvim-cmp]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require("setup/indent-blankline")
-time([[Config for indent-blankline.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("setup/lsp")
-time([[Config for nvim-lspconfig]], false)
 -- Config for: filetype.nvim
 time([[Config for filetype.nvim]], true)
 require("setup/filetype")
@@ -361,6 +354,18 @@ time([[Config for null-ls.nvim]], false)
 time([[Config for gitsigns.nvim]], true)
 require("setup/gitsigns")
 time([[Config for gitsigns.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require("setup/indent-blankline")
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require("setup/cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("setup/lsp")
+time([[Config for nvim-lspconfig]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 require("setup/trouble")

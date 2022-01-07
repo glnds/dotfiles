@@ -36,14 +36,14 @@ require("filetype").setup({
         --     end,
         -- },
 
-        function_complex = {
-            ["cfn-.*%.ya?ml"] = function()
-                vim.cmd([[
-                    set filetype=cloudformation
-                    set syntax=yaml
-                ]])
-            end,
-        },
+        -- function_complex = {
+        --     ["cfn-.*%.ya?ml"] = function()
+        --         vim.cmd([[
+        --             set filetype=cloudformation
+        --             set syntax=yaml
+        --         ]])
+        --     end,
+        -- },
 
         shebang = {
             -- Set the filetype of files with a dash shebang to sh

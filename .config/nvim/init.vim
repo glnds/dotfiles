@@ -5,19 +5,6 @@
 
 lua require('init')
 
-
-
-
-" filetype plugin indent on
-
-" Leader shortcuts {{{
-
-" Check a key binding, ex: verbose nmap <Leader>r
-
-" let mapleader = ","
-" let maplocalleader = ","
-
-" Using Lua functions
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files()<cr>
 nnoremap <leader>fr <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -49,18 +36,8 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 
-" }}}
-" Shortcuts {{{
-
-"Disable the mouse wheel
-inoremap <ScrollWheelUp> <Nop>
-inoremap <ScrollWheelDown> <Nop>
-
 nmap <S-Enter> Ojj
 nmap <CR> ojj
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
-" Tagbar config
-"let g:tagbar_ctags_bin = '/usr/bin/ctags'"
 " Ex-mode is shitty
 nnoremap  Q <nop>
 " Move single row on wrapped lines
@@ -96,10 +73,6 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <buffer> rp :exec '!python' shellescape(@%, 1)<cr>
 
-noremap pp :ALEFix<CR>
-" }}}
-" Colors {{{
-" syntax on
 set background=dark
 colorscheme badwolf
 let g:badwolf_darkgutter = 1
@@ -107,46 +80,3 @@ let g:vimsyn_embed = 'l'
 match ErrorMsg '\s\+$'
 highlight ErrorMsg guibg=White guifg=Red
 highlight LineNr guifg=#b3b3b3
-"}}}
-" FileType setup {{{
-augroup filetypes
-  " autocmd!
-  " " yaml
-  " autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 foldmethod=indent foldlevel=20
-  " " Markdown
-  " autocmd BufRead,BufNewFile *.md setlocal filetype=markdown
-  " autocmd FileType markdown setlocal wrap textwidth=100
-  " " Rust
-  " autocmd BufRead,BufNewFile *.rs setlocal filetype=rust
-  " " Javascript
-  " autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
-  " " Julia
-  " autocmd BufRead,BufNewFile *.jl setlocal filetype=julia
-  " " C/C++
-  " autocmd FileType c setlocal shiftwidth=2 tabstop=2
-  " autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
-  " autocmd FileType cc setlocal shiftwidth=2 tabstop=2
-  " autocmd FileType hpp setlocal shiftwidth=2 tabstop=2
-  " autocmd FileType h setlocal shiftwidth=2 tabstop=2
-  " autocmd FileType go setlocal foldmethod=indent foldlevel=20 foldnestmax=1
-
-
-
-  " CloudFormation filetype config
-  " autocmd BufRead,BufNewFile cfn-*.yaml,cfn-*.yml call SetCloudFormationOptions()
-  " function SetCloudFormationOptions()
-  "   setl nowrap
-  "   set ft=cloudformation
-  "   set syntax=yaml
-  "   set tabstop=2
-  "   set shiftwidth=2
-  "   set softtabstop=2
-  "   set foldmethod=indent
-  "   set foldlevel=20
-  "   set commentstring=#\ %s
-  " endfunction
-augroup end
-" }}}
-
-
-" vim:foldmethod=marker:foldlevel=0
