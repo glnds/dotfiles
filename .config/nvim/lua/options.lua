@@ -40,7 +40,7 @@ opt.listchars = { tab = " ", trail = "-", extends = ">", precedes = "<", nbsp
 opt.clipboard = "unnamedplus"
 -- opt.spelllang = { "en_gb" }
 vim.o.whichwrap = vim.o.whichwrap .. "<,>" -- Wrap movement between lines in edit mode with arrows
-opt.undodir = vim.fn.stdpath("config") .. "/undo"
-opt.undofile = true
+-- opt.undodir = vim.fn.stdpath("config") .. "/undo"
+-- opt.undofile = true
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = { "html", "javascript", "typescript", "css", "scss", "lua", "vim" }

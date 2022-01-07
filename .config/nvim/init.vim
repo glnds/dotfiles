@@ -5,7 +5,10 @@
 
 lua require('init')
 
-filetype plugin indent on
+
+
+
+" filetype plugin indent on
 
 " Leader shortcuts {{{
 
