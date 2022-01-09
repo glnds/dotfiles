@@ -1,10 +1,11 @@
+-- https://github.com/hrsh7th/nvim-cmp/
+
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 
 cmp.setup {
     snippet = {
         expand = function(args)
-            -- For `vsnip` user.
             vim.fn["vsnip#anonymous"](args.body)
         end,
     },
@@ -52,13 +53,6 @@ cmp.setup {
         format = lspkind.cmp_format({
         with_text = true,
         maxwidth = 50,
-        -- preset = 'codicons',
-        -- menu = {
-        --     buffer = "",
-        --     nvim_lsp = "",
-        --     spell = "",
-        --     look = "",
-        -- },
         }),
     },
     experimental = {
