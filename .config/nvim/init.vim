@@ -5,36 +5,25 @@
 
 lua require('init')
 
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files()<cr>
-nnoremap <leader>fr <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-nnoremap <leader>fd <cmd>lua require('telescope.builtin').file_browser()<cr>
-nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
-nnoremap <leader>gd <cmd>lua require('telescope.builtin').git_commits()<cr>
+" nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+" nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files()<cr>
+" nnoremap <leader>fr <cmd>lua require('telescope.builtin').live_grep()<cr>
+" nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
+" nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+" nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+" nnoremap <leader>fd <cmd>lua require('telescope.builtin').file_browser()<cr>
+" nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
+" nnoremap <leader>gd <cmd>lua require('telescope.builtin').git_commits()<cr>
 
 nnoremap <Leader><Leader> V|                      " Select viual line
 nnoremap <Leader>a :bprev<CR>|                    " Open the previous buffer
-nnoremap <Leader>b :Buffers<CR>
-vnoremap <Leader>c :w !pbcopy<CR><CR>|            " Copy to clipboard
-nnoremap <Leader>d :bd<CR>|                       " delete the current buffer
-nnoremap <Leader>f :Files<CR>|                    " fzf search all files
-nnoremap <Leader>g :GFiles<CR>|                   " fzf search for git tracked files
-nnoremap <Leader>h :History<CR>|
-nnoremap <Leader>m :VimuxRunCommand<CR>|          " Start vimux
-nnoremap <Leader>v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-inoremap <Leader>v <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-nnoremap <leader>rs :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>| " Remove trailing whitespaces
 nnoremap <Leader>s :bnext<CR>|                    " Open the next buffer
-nnoremap <Leader>sv :source $MYVIMRC<cr>|         " Source .vimrc explicitly
 nnoremap <Leader>w :w<CR>|                        " Save buffer
 
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
+vnoremap <Leader>c :w !pbcopy<CR><CR>|            " Copy to clipboard
+inoremap <Leader>v <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+
+
 
 nmap <S-Enter> Ojj
 nmap <CR> ojj

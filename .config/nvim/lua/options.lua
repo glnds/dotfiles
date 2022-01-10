@@ -37,7 +37,7 @@ opt.listchars = { tab = " ", trail = "-", extends = ">", precedes = "<", nbsp
 -- opt.wrap = true
 
 
-opt.clipboard = "unnamedplus"
+-- opt.clipboard = "unnamedplus"
 -- opt.spelllang = { "en_gb" }
 vim.o.whichwrap = vim.o.whichwrap .. "<,>" -- Wrap movement between lines in edit mode with arrows
 -- opt.undodir = vim.fn.stdpath("config") .. "/undo"

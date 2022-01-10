@@ -2,11 +2,12 @@
 
 local cmp = require("cmp")
 local lspkind = require("lspkind")
+local luasnip = require("luasnip")
 
 cmp.setup {
     snippet = {
         expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body)
+            require('luasnip').lsp_expand(args.body)
         end,
     },
     mapping = {
@@ -39,16 +40,12 @@ cmp.setup {
         end
         end,
     },
-    sources = {
-        { name = "nvim_lsp" },
-        { name = "vsnip" },
-        { name = "buffer" },
-        { name = "look", keyword_length = 3, option = { convert_case = true, loud = true } },
-        { name = "nvim_lua" },
-        { name = "calc" },
-        { name = "emoji" },
-        { name = "path" },
-    },
+    sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+    }, {
+        { name = 'buffer' },
+    }),
     formatting = {
         format = lspkind.cmp_format({
         with_text = true,

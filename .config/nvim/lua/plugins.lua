@@ -96,14 +96,14 @@ return require("packer").startup({
             "hrsh7th/nvim-cmp",
             config = get_setup("cmp"),
             requires = {
+                { "neovim/nvim-lspconfig" },
                 { "hrsh7th/cmp-nvim-lsp" },
                 { "hrsh7th/cmp-nvim-lua" },
                 { "hrsh7th/cmp-buffer" },
                 { "hrsh7th/cmp-path" },
                 { "hrsh7th/cmp-cmdline" },
-                { "hrsh7th/vim-vsnip" },
-                { "hrsh7th/cmp-vsnip" },
-                { "hrsh7th/vim-vsnip-integ" },
+                { "L3MON4D3/LuaSnip" },
+                { "saadparwaiz1/cmp_luasnip" },
                 { "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "hrsh7th/cmp-emoji" } },
             },
         })
@@ -113,6 +113,11 @@ return require("packer").startup({
             config = get_setup("trouble"),
             requires = { "kyazdani42/nvim-web-devicons", opt = true },
         })
+        use {
+            'kyazdani42/nvim-tree.lua',
+            config = get_setup("nvim-tree"),
+            requires = { 'kyazdani42/nvim-web-devicons' },
+        }
 
         if packer_bootstrap then
             require("packer").sync()
