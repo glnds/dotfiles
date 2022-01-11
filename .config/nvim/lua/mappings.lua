@@ -86,10 +86,10 @@ map("i", "<right>", "<nop>")
 map("i", "<down>", "<nop>")
 
 -- Quicker window movement
--- nnoremap <C-j> <C-w>j
--- nnoremap <C-k> <C-w>k
--- nnoremap <C-h> <C-w>h
--- nnoremap <C-l> <C-w>l
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-l>", "<C-w>l")
 
 -- Telescope
 -- nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files()<cr>
@@ -116,34 +116,14 @@ map("v", ";", "<cmd>lua require'hop'.hint_lines()<cr>")
 -- Symbols outline
 map("n", "<leader>o", ":SymbolsOutline<cr>")
 
-
-
-
-
 -- Trouble keymaps
-vim.api.nvim_set_keymap("n", "<leader>xx", "<cmd>Trouble<cr>",
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap("n", "<leader>xw", "<cmd>Trouble lsp_workspace_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap("n", "<leader>xd", "<cmd>Trouble lsp_document_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap("n", "<leader>xl", "<cmd>Trouble loclist<cr>",
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap("n", "<leader>xq", "<cmd>Trouble quickfix<cr>",
-  {silent = true, noremap = true}
-)
-vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>",
-  {silent = true, noremap = true}
-)
+map("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true })
+map("n", "<leader>xw", "<cmd>Trouble lsp_workspace_diagnostics<cr>", { silent = true })
+map("n", "<leader>xd", "<cmd>Trouble lsp_document_diagnostics<cr>", { silent = true })
+map("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true })
+map("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true })
+map("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true })
 
-vim.api.nvim_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>",
-  {silent = true, noremap = true}
-)
-
-vim.api.nvim_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>",
-  {silent = true, noremap = true}
-)
+-- Diagnostics
+map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { silent = true })
+map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { silent = true })
