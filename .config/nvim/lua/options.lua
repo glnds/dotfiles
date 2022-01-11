@@ -44,3 +44,6 @@ vim.o.whichwrap = vim.o.whichwrap .. "<,>" -- Wrap movement between lines in edi
 -- opt.undofile = true
 -- Give me some fenced codeblock goodness
 vim.g.markdown_fenced_languages = { "html", "javascript", "typescript", "css", "scss", "lua", "vim" }
+
+vim.cmd('set background=dark')
+vim.cmd('colorscheme badwolf')

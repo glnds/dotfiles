@@ -113,11 +113,20 @@ return require("packer").startup({
             config = get_setup("trouble"),
             requires = { "kyazdani42/nvim-web-devicons", opt = true },
         })
-        use {
+        use({
             'kyazdani42/nvim-tree.lua',
             config = get_setup("nvim-tree"),
             requires = { 'kyazdani42/nvim-web-devicons' },
-        }
+        })
+        use({
+            'phaazon/hop.nvim',
+            config = get_setup("hop"),
+            branch = 'v1', -- optional but strongly recommended
+        })
+        use({
+            "simrat39/symbols-outline.nvim",
+            config = get_setup("outline"),
+        })
 
         if packer_bootstrap then
             require("packer").sync()
