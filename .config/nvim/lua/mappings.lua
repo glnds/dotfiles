@@ -15,6 +15,13 @@ map("i", "<esc>", "<nop>")
 -- `jj` is much better :)
 map("i", "jj", "<esc>")
 
+-- Visual mode
+map("n", "<Leader><Leader>", "V|")
+
+-- Copy/Paste
+map("v", "<Leader>c", "\"+y")
+map("n", "<Leader>v", "\"+p")
+
 -- Nvim Tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
 
@@ -77,6 +84,12 @@ map("i", "<left>", "<nop>")
 map("i", "<up>", "<nop>")
 map("i", "<right>", "<nop>")
 map("i", "<down>", "<nop>")
+
+-- Quicker window movement
+-- nnoremap <C-j> <C-w>j
+-- nnoremap <C-k> <C-w>k
+-- nnoremap <C-h> <C-w>h
+-- nnoremap <C-l> <C-w>l
 
 -- Telescope
 -- nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files()<cr>
