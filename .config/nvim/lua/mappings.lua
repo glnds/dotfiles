@@ -92,9 +92,9 @@ map("n", "<C-h>", "<C-w>h")
 map("n", "<C-l>", "<C-w>l")
 
 -- Telescope
--- nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_files()<cr>
 map("n", "<leader>f", '<cmd>lua require("telescope.builtin").find_files()<cr>')
-map("n", "<leader>g", '<cmd>lua require("telescope.builtin").live_grep()<cr>')
+map("n", "<leader>g", '<cmd>lua require("telescope.builtin").git_files()<cr>')
+map("n", "<leader>r", '<cmd>lua require("telescope.builtin").live_grep()<cr>')
 map("n", "<leader>r", '<cmd>lua require("telescope.builtin").registers()<cr>')
 map("n", "<leader>b", '<cmd>lua require("telescope.builtin").buffers()<cr>')
 map("n", "<leader>j", '<cmd>lua require("telescope.builtin").help_tags()<cr>')

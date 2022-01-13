@@ -47,3 +47,8 @@ vim.g.markdown_fenced_languages = { "html", "javascript", "typescript", "css", "
 
 vim.cmd('set background=dark')
 vim.cmd('colorscheme badwolf')
+vim.cmd('highlight ColorColumn ctermbg=0 guibg=#303030')
+vim.cmd('highlight cursorline ctermbg=0 guibg=#303030')
+-- -highlight ErrorMsg guibg=White guifg=Red
+--highlight LineNr guifg=#b3b3b3
+
