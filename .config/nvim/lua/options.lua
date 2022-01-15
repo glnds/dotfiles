@@ -27,10 +27,12 @@ opt.termguicolors = true   -- You will have bad experience for diagnostic messag
 opt.foldenable = false
 opt.signcolumn = "yes:1"   -- always show signcolumns
 opt.colorcolumn= "100"     -- Make it obvious where 100 characters is
+opt.textwidth = 100
 opt.foldmethod = "indent"
 opt.cpoptions = opt.cpoptions + "$"          -- Show a $ sign in the change buffer
 opt.wildignore = {"*/.git/*", "*/tmp/*", "*.swp"}
 opt.listchars = { tab = " ", trail = "-", extends = ">", precedes = "<", nbsp = "+" }
+opt.spelllang = { "en_us" }
 -- opt.virtualedit=onemore -- Allow for cursor beyond last character
 -- opt.softtabstop=4       -- Number of spaces for a tab while editing
 -- opt.modelines=1         -- Disable modeline support
@@ -38,7 +40,6 @@ opt.listchars = { tab = " ", trail = "-", extends = ">", precedes = "<", nbsp
 
 
 -- opt.clipboard = "unnamedplus"
--- opt.spelllang = { "en_gb" }
 vim.o.whichwrap = vim.o.whichwrap .. "<,>" -- Wrap movement between lines in edit mode with arrows
 -- opt.undodir = vim.fn.stdpath("config") .. "/undo"
 -- opt.undofile = true

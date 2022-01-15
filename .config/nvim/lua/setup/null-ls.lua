@@ -57,7 +57,9 @@ local sources = {
         extra_args = { "--profile", "black" }
     }),
     null_ls.builtins.diagnostics.flake8,
-    null_ls.builtins.diagnostics.write_good,
+    null_ls.builtins.diagnostics.write_good.with({
+        args = { "--text=$TEXT", "--parse --no-passive" }
+    }),
     null_ls.builtins.diagnostics.markdownlint,
     cfn_lint,
 }
