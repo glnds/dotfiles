@@ -52,6 +52,15 @@ git clone https://github.com/powerline/fonts
 ./install.sh
 ```
 
+#### Step 5: Prepare nvim to install plugins
+
+[Packer.vim](https://github.com/wbthomason/packer.nvim)
+
+```Shell
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+./install.sh
+```
+
 ## Tools
 
 - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
