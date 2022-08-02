@@ -15,7 +15,7 @@ brew install ssh-copy-id pidof tree reattach-to-user-namespace exa gnu-sed java 
 brew tap homebrew/cask-fonts && brew install --cask font-meslo-lg-nerd-font
 
 pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
-pip3 install pyright-language-server pylint
+#pip3 install pyright-language-server pylint
 sudo pip3 install --upgrade neovim
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
