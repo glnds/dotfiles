@@ -8,7 +8,7 @@ DOTFILES_PATH=$HOME/dotfiles
 brew update
 brew install neovim packer ansible write-good markdownlint-cli
 brew install cmake fish tmux tig htop jq ripgrep fzf yarn go
-brew install httpie nmap ipcalc rmtrash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
+brew install httpie nmap ipcalc trash rlwrap ctags gradle python3 bat fd prettyping tldr ncdu
 brew install ssh-copy-id pidof tree reattach-to-user-namespace exa gnu-sed java alacritty
 
 # https://www.nerdfonts.com/font-downloads
