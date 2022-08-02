@@ -56,15 +56,15 @@ return require("packer").startup({
             event = "VimEnter",
             requires = { "kyazdani42/nvim-web-devicons", opt = true },
         })
-        use({
-            "nvim-treesitter/nvim-treesitter",
-            config = get_setup("treesitter"),
-            run = ":TSUpdate",
-            requires = {
-                { "p00f/nvim-ts-rainbow" },
-            },
-        })
-        use("nvim-treesitter/nvim-treesitter-textobjects")
+        -- use({
+        --     "nvim-treesitter/nvim-treesitter",
+        --     config = get_setup("treesitter"),
+        --     run = ":TSUpdate",
+        --     requires = {
+        --         { "p00f/nvim-ts-rainbow" },
+        --     },
+        -- })
+        -- use("nvim-treesitter/nvim-treesitter-textobjects")
         use({
             "norcalli/nvim-colorizer.lua",
             config = get_setup("colorizer"),
