@@ -1,43 +1,53 @@
 # Dotfiles
-These are my personal dotfiles to setup my machine and developing environment. 
+
+These are my personal dotfiles to setup my machine and developing environment.
 
 ## Installation
 
 ### Prerequisites
+
 - `brew` installed
 - `git` installed
+- `java` install through [java.com](https://www.java.com/en/)
 
 ### Step 1: git clone
 
 cd to your home directory and clone this repository.
-```
+
+```Shell
 cd ~
 git clone https://github.com/glnds/dotfiles.git
 ```
 
 ### Step 2: bootstrapping
 
-You should now have a dotfiles folder in your home directory. To setup these dotfiles, execute boostrap.sh.
-```
+You should now have a dotfiles folder in your home directory. To setup these dotfiles,
+execute boostrap.sh.
+
+```Shell
 bash ~/dotfiles/bootstrap.sh
 ```
 
 ### Step 3: change shell
 
 Make [fish](https://github.com/fish-shell/fish-shell/) your default shell:
-```
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
+
+```Shell
+sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+chsh -s /opt/homebrew/bin/fish
 ```
 
-*Note: Fish can parse your installed man pages and automatically generate completion files for your command-line tools. You should periodically run the following command to update those completions, which are stored in ~/.config/fish/completions by default:*
-```
+*Note: Fish can parse your installed man pages and automatically generate completion
+files for your command-line tools. You should periodically run the following command
+to update those completions, which are stored in ~/.config/fish/completions by default:*
+
+```Shell
 fish_update_completions
 ```
 
 #### Step 4: Install Powerline fonts
 
-```
+```Shell
 git clone https://github.com/powerline/fonts
 ./install.sh
 ```
@@ -45,8 +55,8 @@ git clone https://github.com/powerline/fonts
 ## Tools
 
 - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
- 
-	```
+
+	```Shell
 	alias cat="bat"
 	```
 - [exa](https://the.exa.website/introduction): A modern replacement for ls.

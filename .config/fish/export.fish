@@ -1,5 +1,7 @@
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
+set -x PATH /opt/homebrew/bin $PATH
+
 # zScaler Certifacte fixes
 set -x AWS_CA_BUNDLE /usr/local/etc/openssl@1.1/cert.pem
 set -x REQUESTS_CA_BUNDLE /usr/local/etc/openssl@1.1/cert.pem
