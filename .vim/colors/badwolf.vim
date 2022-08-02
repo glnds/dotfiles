@@ -1,1 +1,0 @@
-../plugged/badwolf/colors/badwolf.vim

@@ -4,7 +4,6 @@ alias ..="cd .."
 alias setaws='set -x -g AWS_PROFILE'
 
 # Use the trash can
-alias trash="rmtrash"
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
 alias pip="echo Use 'pip2' or 'pip3' instead of pip"
 
