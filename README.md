@@ -14,7 +14,7 @@ These are my personal dotfiles to setup my machine and developing environment.
 
 cd to your home directory and clone this repository.
 
-```Shell
+```console
 cd ~
 git clone https://github.com/glnds/dotfiles.git
 ```
@@ -24,7 +24,7 @@ git clone https://github.com/glnds/dotfiles.git
 You should now have a dotfiles folder in your home directory. To setup these dotfiles,
 execute boostrap.sh.
 
-```Shell
+```console
 bash ~/dotfiles/bootstrap.sh
 ```
 
@@ -32,7 +32,7 @@ bash ~/dotfiles/bootstrap.sh
 
 Make [fish](https://github.com/fish-shell/fish-shell/) your default shell:
 
-```Shell
+```console
 sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 chsh -s /opt/homebrew/bin/fish
 ```
@@ -41,13 +41,13 @@ chsh -s /opt/homebrew/bin/fish
 files for your command-line tools. You should periodically run the following command
 to update those completions, which are stored in ~/.config/fish/completions by default:*
 
-```Shell
+```console
 fish_update_completions
 ```
 
 #### Step 4: Install Powerline fonts
 
-```Shell
+```console
 git clone https://github.com/powerline/fonts
 ./install.sh
 ```
@@ -56,7 +56,7 @@ git clone https://github.com/powerline/fonts
 
 [Packer.vim](https://github.com/wbthomason/packer.nvim)
 
-```Shell
+```console
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ./install.sh
 ```
