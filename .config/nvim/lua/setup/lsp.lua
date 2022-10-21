@@ -1,84 +1,140 @@
 -- LSP setup
 
--- https://github.com/williamboman/nvim-lsp-installer
+local lspconfig = require("lspconfig")
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local null_ls = require("null-ls")
+local null_helpers = require("null-ls.helpers")
 
-local lsp_installer = require("nvim-lsp-installer")
+--Built in formatters
+local sources = {
+	--Formatting
+	null_ls.builtins.formatting.stylua,
+	null_ls.builtins.formatting.yamlfmt,
+	null_ls.builtins.formatting.shfmt.with({ filetypes = { "sh" } }),
+	null_ls.builtins.formatting.terraform_fmt,
+	null_ls.builtins.formatting.gofumpt,
+	null_ls.builtins.formatting.prettierd,
+	null_ls.builtins.formatting.black.with({
+		extra_args = { "--experimental-string-processing" },
+	}),
+	null_ls.builtins.formatting.isort.with({
+		extra_args = { "--profile", "black" },
+	}),
+	--Diagnostics
+	null_ls.builtins.diagnostics.flake8,
+	null_ls.builtins.diagnostics.hadolint,
+	null_ls.builtins.diagnostics.write_good,
+	null_ls.builtins.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
+	null_ls.builtins.diagnostics.markdownlint,
+	--Code Actions
+	null_ls.builtins.code_actions.gitsigns,
+	null_ls.builtins.diagnostics.cfn_lint,
+}
 
--- Register a handler that will be called for all installed servers.
--- Alternatively, you may also register handlers on specific server instances instead (see example below).
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    -- end
-
-    if server.name == "sumneko_lua" then
-        opts.settings = {
-            Lua = {
-                diagnostics = {
-                    -- Get the language server to recognize the `vim` global
-                    globals = {'vim'},
-                },
-            },
-        }
-	end
-
-    -- This setup() function is exactly the same as lspconfig's setup function.
-    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-    server:setup(opts)
-end)
-
-vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = false,
+null_ls.setup({
+	debug = false,
+	sources = sources,
+	diagnostics_format = "[#{c}] #{m}",
+	on_attach = function(client, bufnr)
+		if client.supports_method("textDocument/formatting") then
+			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				group = augroup,
+				buffer = bufnr,
+				callback = function()
+					vim.lsp.buf.format({
+						bufnr = bufnr,
+						filter = function(client)
+							return client.name == "null-ls"
+						end,
+					})
+				end,
+			})
+		end
+	end,
 })
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
-vim.diagnostic.config({
-  virtual_text = {
-    source = "always",  -- Or "if_many"
-  },
-  float = {
-    source = "always",  -- Or "if_many"
-  },
+require("mason").setup({
+	ui = {
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
+		},
+	},
 })
 
-vim.diagnostic.config({
-  virtual_text = {
-    prefix = '●'
-  }
+require("mason-tool-installer").setup({
+	ensure_installed = {
+		-- lsp
+		"lua-language-server",
+		"vim-language-server",
+		"yaml-language-server",
+		"json-lsp",
+		"bash-language-server",
+		"typescript-language-server",
+
+		-- formatting
+		"prettierd",
+		"shfmt",
+		"stylua",
+		"black",
+		"eslint_d",
+		"gofumpt",
+		"isort",
+		"flake8",
+		"yamlfmt",
+
+		-- diagnostics
+		"markdownlint",
+		"shellcheck",
+		"write-good",
+		"yamllint",
+		"hadolint",
+		"cfn-lint",
+	},
+	auto_update = true,
+	run_on_start = true,
 })
 
--- function PrintDiagnostics(opts, bufnr, line_nr, client_id)
---   bufnr = bufnr or 0
---   line_nr = line_nr or (vim.api.nvim_win_get_cursor(0)[1] - 1)
---   opts = opts or {['lnum'] = line_nr}
+-- require("mason-lspconfig").setup_handlers({
+-- 	function(server)
+-- 		local opts = {
+-- 			on_attach = require("plugins.lsp.handlers").on_attach,
+-- 			capabilities = require("plugins.lsp.handlers").capabilities,
+-- 		}
+-- 		require("lspconfig")[server].setup(opts)
 
---   local line_diagnostics = vim.diagnostic.get(bufnr, opts)
---   if vim.tbl_isempty(line_diagnostics) then return end
+-- 		require("typescript").setup({
+-- 			server = {
+-- 				on_attach = opts.on_attach,
+-- 				capabilities = opts.capabilities,
+-- 			},
+-- 		})
 
---   local diagnostic_message = ""
---   for i, diagnostic in ipairs(line_diagnostics) do
---     diagnostic_message = diagnostic_message .. string.format("%d: %s", i, diagnostic.message or "")
---     print(diagnostic_message)
---     if i ~= #line_diagnostics then
---       diagnostic_message = diagnostic_message .. "\n"
---     end
---   end
---   vim.api.nvim_echo({{diagnostic_message, "Normal"}}, false, {})
--- end
+-- 		if server == "sumneko_lua" then
+-- 			local sumneko_opts = require("plugins.lsp.settings.sumneko")
+-- 			sumneko_opts["on_attach"] = opts.on_attach
+-- 			sumneko_opts["capabilities"] = opts.capabilities
+-- 			require("lspconfig")[server].setup(sumneko_opts)
+-- 		end
 
--- vim.cmd [[ autocmd CursorHold * lua PrintDiagnostics() ]]
+-- 		if server == "yamlls" then
+-- 			local yamlls_opts = require("plugins.lsp.settings.yamlls")
+-- 			yamlls_opts["on_attach"] = opts.on_attach
+-- 			yamlls_opts["capabilities"] = opts.capabilities
+-- 			require("lspconfig")[server].setup(yamlls_opts)
+-- 		end
 
--- vim.o.updatetime = 250
--- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+-- 		if server == "jsonls" then
+-- 			local jsonls_opts = require("plugins.lsp.settings.jsonls")
+-- 			jsonls_opts["on_attach"] = opts.on_attach
+-- 			jsonls_opts["capabilities"] = opts.capabilities
+-- 			require("lspconfig")[server].setup(jsonls_opts)
+-- 		end
+-- 	end,
+-- })
+
+-- require("mason-lspconfig").setup({
+-- 	automatic_installation = false,
+-- })
