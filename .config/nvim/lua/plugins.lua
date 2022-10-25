@@ -37,6 +37,7 @@ return require("packer").startup({
 		use("ap/vim-buftabline")
 		use({ "fatih/vim-go", run = ":GoInstallBinaries" })
 		use("sjl/badwolf")
+		use({ "kyazdani42/nvim-web-devicons", config = get_setup("web-devicons") })
 
 		-- Lua
 		use({ "tpope/vim-repeat" })

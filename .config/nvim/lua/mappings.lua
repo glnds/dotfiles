@@ -1,9 +1,9 @@
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	local options = { noremap = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Map leader to space
@@ -19,8 +19,8 @@ map("i", "jj", "<esc>")
 map("n", "<Leader><Leader>", "V|")
 
 -- Copy/Paste
-map("v", "<Leader>c", "\"+y")
-map("n", "<Leader>v", "\"+p")
+map("v", "<Leader>c", '"+y')
+map("n", "<Leader>v", '"+p')
 
 -- Nvim Tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
@@ -118,8 +118,8 @@ map("n", "<leader>o", ":SymbolsOutline<cr>")
 
 -- Trouble keymaps
 map("n", "<leader>xx", "<cmd>Trouble<cr>", { silent = true })
-map("n", "<leader>xw", "<cmd>Trouble lsp_workspace_diagnostics<cr>", { silent = true })
-map("n", "<leader>xd", "<cmd>Trouble lsp_document_diagnostics<cr>", { silent = true })
+map("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", { silent = true })
+map("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", { silent = true })
 map("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { silent = true })
 map("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { silent = true })
 map("n", "gR", "<cmd>Trouble lsp_references<cr>", { silent = true })
