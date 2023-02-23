@@ -3,8 +3,8 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -x PATH /opt/homebrew/bin $PATH
 
 # zScaler Certifacte fixes
-# set -x AWS_CA_BUNDLE /usr/local/etc/openssl@1.1/cert.pem
-# set -x REQUESTS_CA_BUNDLE /usr/local/etc/openssl@1.1/cert.pem
+set -x AWS_CA_BUNDLE /etc/ssl/cert.pem
+set -x REQUESTS_CA_BUNDLE /etc/ssl/cert.pem
 
 # Language Default
 set -x LC_ALL en_US.UTF-8
@@ -26,7 +26,7 @@ set -x export EVENT_NOKQUEUE=1
 # Autossh
 set -x AUTOSSH_PORT 0
 
-set -x AWS_PROFILE "masl"
+set -x AWS_PROFILE "sdo"
 
 # Packer config, use dpp-build as default boto profile
 set -x PACKER_LOG 1

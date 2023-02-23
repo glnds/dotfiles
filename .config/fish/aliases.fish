@@ -84,6 +84,7 @@ alias ps="command ps -SAcr -o 'uid,pid,ppid,time,rss,command'"
 alias jcc='java -jar ~/tools/closure_compiler/compiler.jar'
 
 # Docker
+alias docker="podman"
 alias dm='docker-machine'
 alias dmse="eval (docker-machine env default)"
 alias dk="docker"
@@ -132,8 +133,6 @@ alias history="history | nl | tail -r | less +G"
 
 #https://www.shredzone.de/cilla/page/383/setting-up-tp-link-tl-sg108e-with-linux.html
 alias tplink="java -cp /Users/glnds/CloudStation/misc/TP-Link/patch.jar:/Users/glnds/CloudStation/misc/TP-Link/Easy_Smart.jar com.tplink.smb.easySmartUtility.EasySmartUtility"
-
-alias make="mmake"
 
 # alias vim="nvim"
 alias vimdiff="vim -d"

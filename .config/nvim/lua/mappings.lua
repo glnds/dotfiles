@@ -32,7 +32,7 @@ map("n", "<Leader>u", ":PackerSync<CR>")
 map("n", "<Leader>n", "<cmd>enew<CR>")
 
 -- Easy select all of file
-map("n", "<Leader>sa", "ggVG<c-$>")
+-- map("n", "<Leader>sa", "ggVG<c-$>")
 
 -- Make visual yanks place the cursor back where started
 map("v", "y", "ygv<Esc>")

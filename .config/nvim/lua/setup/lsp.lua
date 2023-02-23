@@ -79,7 +79,6 @@ require("mason-tool-installer").setup({
 		"shfmt",
 		"stylua",
 		"black",
-		"eslint_d",
 		"gofumpt",
 		"isort",
 		"flake8",
@@ -94,7 +93,7 @@ require("mason-tool-installer").setup({
 		"cfn-lint",
 	},
 	auto_update = true,
-	run_on_start = true,
+	run_on_start = false,
 })
 
 -- require("mason-lspconfig").setup_handlers({
