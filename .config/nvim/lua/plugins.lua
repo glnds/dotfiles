@@ -147,5 +147,50 @@ return require("packer").startup({
 			enable = true,
 			threshold = 1, -- the amount in ms that a plugins load time must be over for it to be included in the profile
 		},
-	},
-})
+	})
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
+	-- LSP
+	use({ "neovim/nvim-lspconfig", config = get_setup("lsp") }) -- Configurations for Nvim LSP
+	use("williamboman/mason.nvim")                              --  Manage external editor tooling
+	use("williamboman/mason-lspconfig.nvim")                    -- Bridges mason with the lspconfig plugin
+	use("mfussenegger/nvim-dap")                                --  Debug Adapter Protocol client
+	use("jose-elias-alvarez/null-ls.nvim")                      -- Inject LSP diagnostics, code actions, and more
+	-- Autocomplete
+	-- use({
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	config = get_setup("cmp"),
+	-- 	requires = {
+	-- 		{ "hrsh7th/cmp-nvim-lsp" },
+	-- 		{ "hrsh7th/cmp-buffer" }, -- Buffer completions
+	-- 		{ "hrsh7th/cmp-path" }, -- Path completions
+	-- 		{ "hrsh7th/cmp-nvim-lua" },
+	-- 		{ "hrsh7th/cmp-cmdline" }, -- Cmdline completions
+	-- 		{ "saadparwaiz1/cmp_luasnip" }, -- Snippet completions
+	-- 		{ "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "hrsh7th/cmp-emoji" } },
+	-- 	},
+	-- })
+	-- Snippets
+	use("L3MON4D3/LuaSnip") -- Snippet engine
+	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
+
+	use({ "onsails/lspkind-nvim", requires = { { "famiu/bufdelete.nvim" } } })
+	use({
+		"folke/trouble.nvim",
+		config = get_setup("trouble"),
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
+	use({
+		"kyazdani42/nvim-tree.lua",
+		config = get_setup("nvim-tree"),
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
+	use({
+		"phaazon/hop.nvim",
+		config = get_setup("hop"),
+		branch = "v1", -- optional but strongly recommended
+	})
+	use({
+		"simrat39/symbols-outline.nvim",
+		config = get_setup("outline"),
+	})
+end)
