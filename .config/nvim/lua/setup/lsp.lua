@@ -12,38 +12,6 @@ require("mason").setup({
     }
 })
 
-require("mason-lspconfig").setup({
-	ensure_installed = {
-		-- lsp
-		"lua-language-server",
-		"vim-language-server",
-		"yaml-language-server",
-		"json-lsp",
-		"bash-language-server",
-		"typescript-language-server",
-
-		-- formatting
-		"prettierd",
-		"shfmt",
-		"stylua",
-		"black",
-		"gofumpt",
-		"isort",
-		"flake8",
-		"yamlfmt",
-
-		-- diagnostics
-		"markdownlint",
-		"shellcheck",
-		"write-good",
-		"yamllint",
-		"hadolint",
-		"cfn-lint",
-	},
-	auto_update = true,
-	run_on_start = false,
-})
-
 local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
