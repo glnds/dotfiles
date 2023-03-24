@@ -80,10 +80,10 @@ return require('packer').startup(function(use)
 		})
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	-- LSP
-	use({ "neovim/nvim-lspconfig", config = get_setup("lsp") }) -- Configurations for Nvim LSP
-	use("williamboman/mason.nvim")                              --  Manage external editor tooling
-	use("williamboman/mason-lspconfig.nvim")                    -- Bridges mason with the lspconfig plugin
-	use("mfussenegger/nvim-dap")                                --  Debug Adapter Protocol client
+	use("williamboman/mason.nvim")                              -- Manage external editor tooling
+	use("williamboman/mason-lspconfig.nvim")                    -- Bridges mason and the lspconfig plugin
+	use({ "neovim/nvim-lspconfig", config = get_setup("lsp") }) -- Configurations for nvim LSP
+	use("mfussenegger/nvim-dap")                                -- Debug Adapter Protocol client
 	use("jose-elias-alvarez/null-ls.nvim")                      -- Inject LSP diagnostics, code actions, and more
 	-- Autocomplete
 	-- use({
