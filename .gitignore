@@ -8,6 +8,7 @@
 .vim/credentials.vim
 .vim/shada
 .vim/.netrwhist
+.config/nvim/plugin/packer_compiled.lua
 .virtualenvs
 .config/fish/fishd.*
 .config/fish/secret.fish
@@ -22,4 +23,3 @@
 .config/gcloud
 .config/configstore
 .config/.mono
-.config/coc/extensions
