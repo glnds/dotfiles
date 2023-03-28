@@ -21,63 +21,62 @@ function get_setup(name)
 end
 
 return require('packer').startup(function(use)
-		-- Packer can manage itself
-		use("wbthomason/packer.nvim")
-    use("github/copilot.vim")
-		-- Legacy
-		use("tpope/vim-fugitive")
-		use("tpope/vim-vinegar")
-		-- use 'itchyny/lightline.vim'
-		use("benmills/vimux")
-		use("christoomey/vim-tmux-navigator")
-		use({ "iamcco/markdown-preview.nvim", run = "cd app & yarn install" })
-		use("ap/vim-buftabline")
-		use({ "fatih/vim-go", run = ":GoInstallBinaries" })
-		use("sjl/badwolf")
-		use({ "kyazdani42/nvim-web-devicons", config = get_setup("web-devicons") })
-
-		-- Lua
-		use({ "tpope/vim-repeat" })
-		use({ "tpope/vim-commentary" })
-		use({ "tpope/vim-surround" })
-		use({ "nathom/filetype.nvim", config = get_setup("filetype") })
-		-- Styling and Colors
-		use({ "lukas-reineke/indent-blankline.nvim", config = get_setup("indent-blankline") })
-		use({
-			"lewis6991/gitsigns.nvim",
-			config = get_setup("gitsigns"),
-			requires = { "nvim-lua/plenary.nvim" },
-		})
-		use({
-			"nvim-lualine/lualine.nvim",
-			config = get_setup("lualine"),
-			event = "VimEnter",
-			requires = { "kyazdani42/nvim-web-devicons", opt = true },
-		})
-		use("p00f/nvim-ts-rainbow")
-		use({
-			"nvim-treesitter/nvim-treesitter",
-			config = get_setup("treesitter"),
-			run = ":TSUpdate",
-		})
-		use("nvim-treesitter/nvim-treesitter-textobjects")
-		use({
-			"norcalli/nvim-colorizer.lua",
-			config = get_setup("colorizer"),
-			event = "BufReadPre",
-		})
-		use({
-			"nvim-telescope/telescope.nvim",
-			config = get_setup("telescope"),
-			module = "telescope",
-			cmd = "Telescope",
-			requires = {
-				{ "nvim-lua/popup.nvim" },
-				{ "nvim-lua/plenary.nvim" },
-				{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
-				{ "kyazdani42/nvim-web-devicons" },
-			},
-		})
+  -- Packer can manage itself
+  use("wbthomason/packer.nvim")
+  use("github/copilot.vim")
+  -- Legacy
+  use("tpope/vim-fugitive")
+  use("tpope/vim-vinegar")
+  -- use 'itchyny/lightline.vim'
+  use("benmills/vimux")
+  use("christoomey/vim-tmux-navigator")
+  use({ "iamcco/markdown-preview.nvim", run = "cd app & yarn install" })
+  use("ap/vim-buftabline")
+  use({ "fatih/vim-go", run = ":GoInstallBinaries" })
+  use("sjl/badwolf")
+  use({ "kyazdani42/nvim-web-devicons", config = get_setup("web-devicons") })
+  -- Lua
+  use({ "tpope/vim-repeat" })
+  use({ "tpope/vim-commentary" })
+  use({ "tpope/vim-surround" })
+  use({ "nathom/filetype.nvim", config = get_setup("filetype") })
+  -- Styling and Colors
+  use({ "lukas-reineke/indent-blankline.nvim", config = get_setup("indent-blankline") })
+  use({
+    "lewis6991/gitsigns.nvim",
+    config = get_setup("gitsigns"),
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+  use({
+    "nvim-lualine/lualine.nvim",
+    config = get_setup("lualine"),
+    event = "VimEnter",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+  })
+  use("p00f/nvim-ts-rainbow")
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    config = get_setup("treesitter"),
+    run = ":TSUpdate",
+  })
+  use("nvim-treesitter/nvim-treesitter-textobjects")
+  use({
+    "norcalli/nvim-colorizer.lua",
+    config = get_setup("colorizer"),
+    event = "BufReadPre",
+  })
+  use({
+    "nvim-telescope/telescope.nvim",
+    config = get_setup("telescope"),
+    module = "telescope",
+    cmd = "Telescope",
+    requires = {
+      { "nvim-lua/popup.nvim" },
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
+      { "kyazdani42/nvim-web-devicons" },
+    },
+  })
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	-- LSP
 	use("williamboman/mason.nvim")                              -- Manage external editor tooling
@@ -86,19 +85,19 @@ return require('packer').startup(function(use)
 	use("mfussenegger/nvim-dap")                                -- Debug Adapter Protocol client
 	use("jose-elias-alvarez/null-ls.nvim")                      -- Inject LSP diagnostics, code actions, and more
 	-- Autocomplete
-	-- use({
-	-- 	"hrsh7th/nvim-cmp",
-	-- 	config = get_setup("cmp"),
-	-- 	requires = {
-	-- 		{ "hrsh7th/cmp-nvim-lsp" },
-	-- 		{ "hrsh7th/cmp-buffer" }, -- Buffer completions
-	-- 		{ "hrsh7th/cmp-path" }, -- Path completions
-	-- 		{ "hrsh7th/cmp-nvim-lua" },
-	-- 		{ "hrsh7th/cmp-cmdline" }, -- Cmdline completions
-	-- 		{ "saadparwaiz1/cmp_luasnip" }, -- Snippet completions
-	-- 		{ "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "hrsh7th/cmp-emoji" } },
-	-- 	},
-	-- })
+	use({
+		"hrsh7th/nvim-cmp",
+		-- config = get_setup("cmp"),
+		requires = {
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-buffer" }, -- Buffer completions
+			{ "hrsh7th/cmp-path" }, -- Path completions
+			{ "hrsh7th/cmp-nvim-lua" },
+			{ "hrsh7th/cmp-cmdline" }, -- Cmdline completions
+			{ "saadparwaiz1/cmp_luasnip" }, -- Snippet completions
+			{ "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "hrsh7th/cmp-emoji" } },
+		},
+	})
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- Snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use

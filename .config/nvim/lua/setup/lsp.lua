@@ -12,7 +12,8 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup {
-    ensure_installed = { "bashls", "clangd", "cmake", "dockerls", "gopls", "grammarly", "jsonls", "lua_ls", "marksman", "rust_analyzer", "sqlls", "yamlls" },
+    ensure_installed = { "bashls", 
+    "clangd", "cmake", "dockerls", "gopls", "grammarly", "jsonls", "lua_ls", "marksman", "rust_analyzer", "sqlls", "yamlls" },
 }
 
 local null_ls = require("null-ls")
