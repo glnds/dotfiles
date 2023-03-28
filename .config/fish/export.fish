@@ -13,7 +13,7 @@ set -x LC_CTYPE en_US.UTF-8
 #use gnu-sed
 set -x PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
 
-set -x PATH /Users/glnds/Library/Python/3.9/bin $PATH
+set -x PATH /Users/glnds/Library/Python/3.11/bin $PATH
 
 # Rust config
 set -x PATH "$HOME/.cargo/bin" $PATH
