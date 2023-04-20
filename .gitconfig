@@ -27,12 +27,11 @@
 [push]
   default = simple
   followTags = true
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[difftool "vimdiff"]
+  cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
   path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+[mergetool "vimdiff"]
+  cmd = vimdiff \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [gc "refs/remotes/*"]
   reflogExpire = 6 months
   reflogExpireUnreachable = 3 months
