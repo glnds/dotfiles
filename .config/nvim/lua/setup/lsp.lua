@@ -38,8 +38,8 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.write_good,
 		null_ls.builtins.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
 		null_ls.builtins.diagnostics.markdownlint,
+		null_ls.builtins.diagnostics.cfn_lint,
 		--Code Actions
 		null_ls.builtins.code_actions.gitsigns,
-		null_ls.builtins.diagnostics.cfn_lint,
 	},
 })

@@ -84,10 +84,13 @@ return require('packer').startup(function(use)
 	use({ "neovim/nvim-lspconfig", config = get_setup("lsp") }) -- Configurations for nvim LSP
 	use("mfussenegger/nvim-dap")                                -- Debug Adapter Protocol client
 	use("jose-elias-alvarez/null-ls.nvim")                      -- Inject LSP diagnostics, code actions, and more
+  -- Rust
+  use 'simrat39/rust-tools.nvim'
+  use 'nvim-lua/plenary.nvim'
 	-- Autocomplete
 	use({
 		"hrsh7th/nvim-cmp",
-		-- config = get_setup("cmp"),
+		config = get_setup("cmp"),
 		requires = {
 			{ "hrsh7th/cmp-nvim-lsp" },
 			{ "hrsh7th/cmp-buffer" }, -- Buffer completions
