@@ -2,7 +2,7 @@
   name = Gert Leenders
   email = leenders.gert@gmail.com
 [core]
-  editor = vim
+  editor = nvim
   autoctrl = input
   whitespace = space-before-tab, trailing-space
   excludesfile = /Users/glnds/.gitignore_global
