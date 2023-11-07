@@ -17,6 +17,7 @@
 .config/nvim/plugged
 .config/nvim/ftplugin/sql.vim
 .config/nvim/.netrwhist
+.config/nvim/lazy-lock.json
 .config/Fritzing
 .config/SoundTouch
 .config/SoundTouchPersist
