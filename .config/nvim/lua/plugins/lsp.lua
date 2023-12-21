@@ -3,6 +3,7 @@ return {
 
   dependencies = {
     "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   },
 
   config = function()
@@ -14,6 +15,8 @@ return {
     lspconfig.pyright.setup {}
     lspconfig.tsserver.setup {}
     lspconfig.rust_analyzer.setup({})
+    lspconfig.lua_ls.setup {}
+    lspconfig.gopls.setup {}
 
     -- ...
   end,
