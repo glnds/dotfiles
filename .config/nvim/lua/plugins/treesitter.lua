@@ -60,15 +60,15 @@ return {
           rainbow = {
             enable = true,
             -- Enable only for lisp like languages
-            disable = vim.tbl_filter(function(p)
-              local disable = true
-              for _, lang in pairs(enabled_list) do
-                if p == lang then
-                  disable = false
-                end
-              end
-              return disable
-            end, parsers.available_parsers()),
+            -- disable = vim.tbl_filter(function(p)
+            --   local disable = true
+            --   for _, lang in pairs(enabled_list) do
+            --     if p == lang then
+            --       disable = false
+            --     end
+            --   end
+            --   return disable
+            -- end, parsers.available_parsers()),
           },
           matchup = {
             enable = true,

@@ -30,7 +30,6 @@ require("lazy").setup("plugins", {
 })
 
 --require("options")
-require("setup.spelling")
 
 -- Mappings
 require("mappings")
