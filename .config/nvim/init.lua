@@ -2,9 +2,9 @@
 require("settings")
 
 -- Helper functions and autocommands
---require("functions")
---require("autocommands")
---require("commands")
+require("functions")
+require("autocommands")
+require("commands")
 
 -- Plugins
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

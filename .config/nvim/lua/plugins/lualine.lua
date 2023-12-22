@@ -49,21 +49,11 @@ return {
       sections = {
         lualine_a = { 'mode' },
         -- lualine_b = { get_git_head },
-        lualine_c = {
-          filename[1],
-          require("recorder").recordingStatus
-        },
+        lualine_c = {},
         lualine_d = diagnostics,
         lualine_x = { 'branch', 'diff' },
         lualine_y = { 'encoding', 'fileformat', 'filetype', },
         lualine_z = {},
-
-
-        -- lualine_c = { 'filename' },
-
-
-
-
       },
       inactive_winbar = {
         lualine_a = {},
@@ -72,7 +62,7 @@ return {
       winbar = {
         lualine_a = { 'buffers' },
         lualine_b = {},
-        lualine_c = diagnostics,
+        lualine_c = {},
         lualine_x = { 'diff' },
         lualine_y = { 'progress', 'location' },
       },
