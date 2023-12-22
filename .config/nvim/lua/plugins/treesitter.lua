@@ -1,13 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  dependencies = {
-    "HiPhish/nvim-ts-rainbow2",
-    -- "nvim-treesitter/nvim-treesitter-context",
-    "nvim-treesitter/playground",
-    "windwp/nvim-ts-autotag",
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    "andymass/vim-matchup",
-  },
+  dependencies = { "HiPhish/nvim-ts-rainbow2", "nvim-treesitter/playground", "windwp/nvim-ts-autotag", "nvim-treesitter/nvim-treesitter-textobjects", "andymass/vim-matchup" },
   config = function()
     -- For rainbow brackets
     local enabled_list = { "clojure" }
