@@ -99,7 +99,7 @@ font:
     #style: Regular
 
   # Bold font face
-  #bold:
+  bold:
     # family: Meslo LG M for Powerline # should be "Menlo" or something on macOS.
     family:  MesloLGM Nerd Font
     # The `style` can be specified to pick a specific face.

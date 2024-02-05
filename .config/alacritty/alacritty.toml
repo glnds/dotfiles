@@ -1,0 +1,18 @@
+[colors.primary]
+background = "0x000000"
+foreground = "0xeaeaea"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "MesloLGM Nerd Font"
+
+[font.bold_italic]
+family = "MesloLGM Nerd Font"
+
+[font.italic]
+family = "MesloLGM Nerd Font"
+
+[font.normal]
+family = "MesloLGM Nerd Font"
