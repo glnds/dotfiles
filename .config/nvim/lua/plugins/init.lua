@@ -24,7 +24,7 @@ return {
   { "tpope/vim-eunuch" },
   { "tpope/vim-abolish" },
   { "romainl/vim-cool" },
-  { "kyazdani42/nvim-web-devicons" },
+  { "nvim-tree/nvim-web-devicons" },
   { "lambdalisue/glyph-palette.vim" },
   { 'djoshea/vim-autoread' },
 }
