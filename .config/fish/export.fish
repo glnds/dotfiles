@@ -5,6 +5,7 @@ set -x PATH /opt/homebrew/bin $PATH
 # zScaler Certifacte fixes
 set -x AWS_CA_BUNDLE /etc/ssl/cert.pem
 set -x REQUESTS_CA_BUNDLE /etc/ssl/cert.pem
+set -x JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION true
 
 # Language Default
 set -x LC_ALL en_US.UTF-8
