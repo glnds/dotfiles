@@ -16,3 +16,6 @@ family = "MesloLGM Nerd Font"
 
 [font.normal]
 family = "MesloLGM Nerd Font"
+
+[window]
+startup_mode = "Maximized"
