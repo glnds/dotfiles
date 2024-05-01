@@ -35,4 +35,16 @@ return {
   	},
   },
 
+  {
+    "NvChad/nvterm",
+    config = function()
+      require("nvchad.term").runner {
+          pos = "vsp",
+          cmd = "python test.py",
+          id = "ekk",
+          clear_cmd = false
+        }
+    end,
+  },
+
 }

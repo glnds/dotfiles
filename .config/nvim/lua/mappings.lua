@@ -10,4 +10,6 @@ map("i", "jj", "<ESC>")
 -- Visual mode
 map("n", "<Leader><Leader>", "V|")
 
+map("n", '<Leader>t','<cmd>lua require("nvterm.terminal").toggle("horizontal")<cr>')
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
