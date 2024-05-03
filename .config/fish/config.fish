@@ -43,17 +43,9 @@ set __fish_git_prompt_color_upstream_behind red
 
 # Add SSH keys
 # https://github.com/danhper/fish-ssh-agent
-test_identities 
+test_identities
 
 # Activate AWS cli auto completion
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/glnds/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/glnds/google-cloud-sdk/path.fish.inc'; else; . '/Users/glnds/google-cloud-sdk/path.fish.inc'; end; end
+zoxide init --cmd cd fish | source
