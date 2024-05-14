@@ -10,22 +10,11 @@ set -g -x PAGER less
 
 . $fish_path/aliases.fish
 . $fish_path/export.fish
-#. $fish_path/secret.fish
-#. $fish_path/utils.fish
-
-# pyenv
-#status is-login; and pyenv init --path | source
-#pyenv init - | source
+. $fish_path/utils.fish
 
 # fish_vi_mode
 set fish_key_bindings fish_user_key_bindings
 
-# set -gx RBENV_ROOT /usr/local/var/rbenv 
-# . (rbenv init -|psub)
-# set PATH $HOME/.rbenv/bin $PATH
-# set PATH $HOME/.rbenv/shims $PATH
-# rbenv rehash >/dev/null ^&1
-#. (rbenv init -)
 
 # git prompt
 # https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish
