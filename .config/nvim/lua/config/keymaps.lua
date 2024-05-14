@@ -22,6 +22,14 @@ set({ "n" }, "<Leader>v", '"+p', { desc = "Pase" })
 
 set({ "n" }, "<Leader>w", "<cmd>:w<CR>", { desc = "Easier File save" })
 
--- Insert newline on Enter in normal mode
 set({ "n" }, "<S-Enter", "O<esc>", { desc = "Insert newline on Enter in normal mode" })
 set({ "n" }, "<CR>", "o<esc>", { desc = "Insert newline on Enter in normal mode" })
+
+set({ "n" }, "<left>", "<nop>", { desc = "Disabling arrow keys in normal mode" })
+set({ "n" }, "<up>", "<nop>", { desc = "Disabling arrow keys in normal mode" })
+set({ "n" }, "<right>", "<nop>", { desc = "Disabling arrow keys in normal mode" })
+set({ "n" }, "<down>", "<nop>", { desc = "Disabling arrow keys in normal mode" })
+set({ "i" }, "<left>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
+set({ "i" }, "<up>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
+set({ "i" }, "<right>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
+set({ "i" }, "<down>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
