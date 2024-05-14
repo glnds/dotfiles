@@ -6,8 +6,6 @@
 local set = vim.keymap.set
 local del = vim.keymap.del
 
--- TODO: Clean up this file
-
 -- Disables
 del("n", "<leader>,")
 del("n", "<Leader><Space>")
@@ -21,3 +19,9 @@ set({ "n" }, "<Leader><Space>", "<cmd>lua require('telescope.builtin').buffers()
 
 set({ "v" }, "<Leader>c", '"+y', { desc = "Copy" })
 set({ "n" }, "<Leader>v", '"+p', { desc = "Pase" })
+
+set({ "n" }, "<Leader>w", "<cmd>:w<CR>", { desc = "Easier File save" })
+
+-- Insert newline on Enter in normal mode
+set({ "n" }, "<S-Enter", "O<esc>", { desc = "Insert newline on Enter in normal mode" })
+set({ "n" }, "<CR>", "o<esc>", { desc = "Insert newline on Enter in normal mode" })
