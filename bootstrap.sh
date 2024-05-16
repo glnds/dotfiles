@@ -7,7 +7,7 @@ DOTFILES_PATH=$HOME/dotfiles
 
 brew update
 brew install neovim luarocks packer ansible write-good markdownlint-cli macdown
-brew install cmake fish tmux tig htop jq ripgrep fzf yarn go rustup zoxide
+brew install cmake fish tmux tig htop jq ripgrep fzf yarn go rustup zoxide glow
 brew install httpie nmap ipcalc trash rlwrap ctags python3 bat fd prettyping tldr ncdu
 brew install ssh-copy-id pidof tree reattach-to-user-namespace exa gnu-sed alacritty
 
