@@ -9,6 +9,10 @@ local del = vim.keymap.del
 -- Disables
 del("n", "<leader>,")
 del("n", "<Leader><Space>")
+del("n", "<C-h>")
+del("n", "<C-j>")
+del("n", "<C-k>")
+del("n", "<C-l>")
 
 -- Custom Key Mappings
 set({ "i" }, "jj", "<Esc>", { desc = "Remap Escape to jj in insert mode" })
@@ -33,3 +37,40 @@ set({ "i" }, "<left>", "<nop>", { desc = "Disabling arrow keys in insert mode" }
 set({ "i" }, "<up>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
 set({ "i" }, "<right>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
 set({ "i" }, "<down>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
+
+set(
+  "n",
+  "<C-h>",
+  "<Cmd>NvimTmuxNavigateLeft<CR>",
+  { desc = "Allow seamlessly navigation between vim and tmux", silent = true }
+)
+set(
+  "n",
+  "<C-j>",
+  "<Cmd>NvimTmuxNavigateDown<CR>",
+  { desc = "Allow seamlessly navigation between vim and tmux", silent = true }
+)
+set(
+  "n",
+  "<C-k>",
+  "<Cmd>NvimTmuxNavigateUp<CR>",
+  { desc = "Allow seamlessly navigation between vim and tmux", silent = true }
+)
+set(
+  "n",
+  "<C-l>",
+  "<Cmd>NvimTmuxNavigateRight<CR>",
+  { desc = "Allow seamlessly navigation between vim and tmux", silent = true }
+)
+set(
+  "n",
+  "<C-\\>",
+  "<Cmd>NvimTmuxNavigateLastActive<CR>",
+  { desc = "Allow seamlessly navigation between vim and tmux", silent = true }
+)
+set(
+  "n",
+  "<C-Space>",
+  "<Cmd>NvimTmuxNavigateNavigateNext<CR>",
+  { desc = "Allow seamlessly navigation between vim and tmux", silent = true }
+)
