@@ -16,6 +16,7 @@
 .config/nvim/autoload
 .config/nvim/plugged
 .config/nvim/ftplugin/sql.vim
+.config/nvim/lazyvim.json
 .config/nvim/.netrwhist
 .config/nvim/lazy-lock.json
 .config/Fritzing
