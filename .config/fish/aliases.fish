@@ -69,7 +69,7 @@ function gsd
     git stash drop stash@\{$argv[1]\}
 end
 
-alias tig="tig --all"
+alias tig=gitui
 
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
