@@ -5,7 +5,7 @@ alias setaws='set -x -g AWS_PROFILE'
 
 # Use the trash can
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
-alias pip="echo Use 'pip2' or 'pip3' instead of pip"
+#alias pip="echo Use 'pip2' or 'pip3' instead of pip"
 
 # Quick config
 alias ea='vim ~/.config/fish/aliases.fish'
