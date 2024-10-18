@@ -3,4 +3,5 @@
 -- Add any additional options here
 vim.g.mapleader = ","
 vim.opt.colorcolumn = "100" -- Make it obvious where 100 characters is
+vim.opt.linebreak = true
 -- vim g.textwidth = 100
