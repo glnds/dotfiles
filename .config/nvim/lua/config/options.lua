@@ -4,4 +4,5 @@
 vim.g.mapleader = ","
 vim.opt.colorcolumn = "100" -- Make it obvious where 100 characters is
 vim.opt.linebreak = true
+vim.opt.clipboard = "unnamedplus"
 -- vim g.textwidth = 100
