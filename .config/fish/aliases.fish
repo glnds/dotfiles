@@ -23,6 +23,8 @@ alias c='clear'
 # Go to...
 alias D='cd ~/Downloads'
 alias blog='cd ~/Documents/Projects/Blog/Blog\ WIP/'
+alias sb='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/My\ Second Mind'
+alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias g='git'
 alias vim='nvim'
 alias fvim='vim (fzf)'
