@@ -30,37 +30,12 @@ set -x AUTOSSH_PORT 0
 
 set -x AWS_PROFILE sdo
 
-# Packer config, use dpp-build as default boto profile
-set -x PACKER_LOG 1
-set -x PACKER_LOG_PATH "packer.log"
-
-# Gradle home
-set -x GRADLE_HOME /usr/local/opt/gradle/libexec
-set -x GRADLE_OPTS "-Dorg.gradle.daemon=true"
-
-# Java home
-set -x JAVA_HOME (/usr/libexec/java_home -v 14)
-# jenv
-set -x PATH $HOME/.jenv/bin $PATH
-
-# Maven home
-set -x M2_HOME /usr/local/opt/maven/libexec
-set -x MAVEN_OPTS -Xmx1024M
-
 # Go
 set -x GOPATH "$HOME/go"
 set -x GOBIN "$GOPATH/bin"
 set -x PATH "$GOPATH/bin" $PATH
 
-# Google Cloud
-if test -e "$HOME/google-cloud-sdk/bin"
-    set -x PATH "$HOME/google-cloud-sdk/bin" $PATH
-end
-
 set -x PATH "/Applications/Alacritty.app/Contents/MacOS" $PATH
-
-# Add Ansible developer version to the beginning of PATH
-#set -x PATH "/Users/glnds/Sources/ansible/bin" $PATH
 
 # Add homebrew to the beginning of PATH
 set -x PATH /usr/local/bin $PATH

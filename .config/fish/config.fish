@@ -28,11 +28,6 @@ set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
-
-# Add SSH keys
-# https://github.com/danhper/fish-ssh-agent
-test_identities
-
 # Activate AWS cli auto completion
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
