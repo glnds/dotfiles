@@ -20,3 +20,6 @@ family = "MesloLGM Nerd Font"
 [font.normal]
 family = "MesloLGM Nerd Font"
 
+[terminal.shell]
+program = "/opt/homebrew/bin/fish"
+args = ["--login", "-c", "tmux a -t base || tmux new -s base"]
