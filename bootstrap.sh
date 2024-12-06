@@ -6,23 +6,20 @@ cd "$(dirname "$0")"
 DOTFILES_PATH=$HOME/dotfiles
 
 brew update
-brew install neovim luarocks fish tmux gitui htop jq ripgrep fzf yarn
-brew install zoxide glow trash rlwrap bat fd tldr tree alacritty
+brew install neovim luarocks fish tmux gitui lazygit htop jq ripgrep fzf yarn
+brew install zoxide glow trash rlwrap bat fd tldr tree alacritty python3
 
-# https://www.nerdfonts.com/font-downloads
+# https://www.nerdfonts.com
 brew install --cask font-meslo-lg-nerd-font
 
-#pip3 install virtualfish powerline-status pipenv neovim --user --upgrade
-#sudo pip3 install --upgrade neovim
+# https://powerline.readthedocs.io/en/latest/
+pip3 install --user powerline-status --break-system-packages
 
-#git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# https://github.com/tmux-plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-#ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.tmux ~/.tmux
-#ln -s ~/dotfiles/.vimrc ~/.vimrc
-#ln -s ~/dotfiles/.vim ~/
-#ln -s ~/dotfiles/.pip ~/
 ln -s ~/dotfiles/.config ~/
 
 echo "Successfully updated dotfiles!"
