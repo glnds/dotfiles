@@ -34,3 +34,5 @@ complete --command aws --no-files --arguments '(begin; set --local --export COMP
 zoxide init --cmd cd fish | source
 
 fzf --fish | source
+
+tmux new-session -As ghostty
