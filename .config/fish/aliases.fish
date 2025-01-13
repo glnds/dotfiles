@@ -5,7 +5,7 @@ alias setaws='set -x -g AWS_PROFILE'
 
 # Use the trash can
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
-alias pip="echo Use 'pip2' or 'pip3' instead of pip"
+#alias pip="echo Use 'pip2' or 'pip3' instead of pip"
 
 # Quick config
 alias ea='vim ~/.config/fish/aliases.fish'
@@ -23,6 +23,8 @@ alias c='clear'
 # Go to...
 alias D='cd ~/Downloads'
 alias blog='cd ~/Documents/Projects/Blog/Blog\ WIP/'
+alias sb='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/My\ Second Mind'
+alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias g='git'
 alias vim='nvim'
 alias fvim='vim (fzf)'
@@ -59,17 +61,17 @@ alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias gs="git stash"
 alias gsl="git stash list"
 function gss
-  git stash show -p stash@\{$argv[1]\}
+    git stash show -p stash@\{$argv[1]\}
 end
 alias gsal="git stash apply"
 function gsa
-  git stash apply stash@\{$argv[1]\}
+    git stash apply stash@\{$argv[1]\}
 end
 function gsd
-  git stash drop stash@\{$argv[1]\}
+    git stash drop stash@\{$argv[1]\}
 end
 
-alias tig="tig --all"
+alias tig=gitui
 
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
@@ -84,7 +86,6 @@ alias ps="command ps -SAcr -o 'uid,pid,ppid,time,rss,command'"
 alias jcc='java -jar ~/tools/closure_compiler/compiler.jar'
 
 # Docker
-alias docker="podman"
 alias dm='docker-machine'
 alias dmse="eval (docker-machine env default)"
 alias dk="docker"
@@ -114,12 +115,14 @@ alias kn="kubectl"
 alias gcl="gcloud"
 
 function lockme
-  /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
+    /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
 end
 
 function update
-  brew update; brew upgrade; brew cleanup
-  pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
+    brew update
+    brew upgrade
+    brew cleanup
+    pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
 end
 
 # Python pip update all packages
@@ -170,7 +173,7 @@ alias awless="awless --no-sync"
 
 
 function akamaih
-  http -h $argv[1] Pragma:'akamai-x-cache-on,akamai-x-cache-remote-on,akamai-x-check-cacheable,akamai-x-get-cache-key,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key,akamai-x-get-request-id,akamai-x-get-extracted-values,akamai-x-get-nonces,akamai-x-serial-no'
+    http -h $argv[1] Pragma:'akamai-x-cache-on,akamai-x-cache-remote-on,akamai-x-check-cacheable,akamai-x-get-cache-key,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key,akamai-x-get-request-id,akamai-x-get-extracted-values,akamai-x-get-nonces,akamai-x-serial-no'
 end
 #alias uc='berks upload && knife cookbook upload parleys && knife role from file roles/*.rb && knife environment from file environments/*.rb'
 #alias ucp='knife cookbook upload parleys && knife environment from file environments/*.rb'

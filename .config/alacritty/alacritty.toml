@@ -2,6 +2,9 @@
 background = "0x000000"
 foreground = "0xeaeaea"
 
+[window]
+startup_mode = "Maximized"
+
 [font]
 size = 14.0
 
@@ -17,5 +20,6 @@ family = "MesloLGM Nerd Font"
 [font.normal]
 family = "MesloLGM Nerd Font"
 
-[window]
-startup_mode = "Maximized"
+[terminal.shell]
+program = "/opt/homebrew/bin/fish"
+args = ["--login", "-c", "tmux a -t base || tmux new -s base"]
