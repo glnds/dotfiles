@@ -24,6 +24,9 @@ set({ "n" }, "<Leader><Space>", "<cmd>lua require('telescope.builtin').buffers()
 set({ "v" }, "<Leader>c", '"+y', { desc = "Copy" })
 set({ "n" }, "<Leader>v", '"+p', { desc = "Pase" })
 
+set({ "n" }, "x", '"_x', { desc = "Delete to Black Hole register" })
+set({ "n" }, "X", '"_X', { desc = "Delete to Black Hole register" })
+
 set({ "n" }, "<Leader>w", "<cmd>:w<CR>", { desc = "Easier File save" })
 
 set({ "n" }, "<S-Enter", "O<esc>", { desc = "Insert newline on Enter in normal mode" })
