@@ -2,3 +2,5 @@ theme = Tomorrow Night Bright
 font-size = 14
 font-family = MesloLGM Nerd Font Mono
 #background-opacity = 0.85
+palette = 0=#d78700
+palette = 8=#808080

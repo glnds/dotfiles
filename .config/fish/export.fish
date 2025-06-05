@@ -22,7 +22,7 @@ set -x PATH /Users/glnds/Library/Python/3.13/bin $PATH
 #
 ## tmux fix
 #set -x export EVENT_NOKQUEUE=1
-## set -x TERM xterm-256color
+set -x TERM xterm-256color
 #
 ## Autossh
 #set -x AUTOSSH_PORT 0
