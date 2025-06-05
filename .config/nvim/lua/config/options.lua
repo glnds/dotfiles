@@ -9,4 +9,3 @@ opt.colorcolumn = "100" -- Make it obvious where 100 characters is
 opt.linebreak = true
 opt.clipboard = "unnamedplus"
 opt.termguicolors = true -- True color support
--- vim g.textwidth = 100
