@@ -46,3 +46,5 @@
   rebase = true
 [url "git@bitbucket.org:"]
   insteadOf = https://bitbucket.org/
+[init]
+	defaultBranch = master

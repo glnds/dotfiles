@@ -35,4 +35,5 @@ zoxide init --cmd cd fish | source
 
 fzf --fish | source
 
-tmux new-session -As ghostty
+tmux new-session
+# tmux new-session -As ghostty
