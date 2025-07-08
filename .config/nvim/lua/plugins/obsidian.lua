@@ -20,12 +20,8 @@ return {
   opts = {
     workspaces = {
       {
-        name = "personal",
-        path = "~/vaults/personal",
-      },
-      {
-        name = "work",
-        path = "~/vaults/work",
+        name = "My Second Mind",
+        path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Second Mind",
       },
     },
 
