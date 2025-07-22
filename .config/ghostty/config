@@ -1,6 +1,14 @@
 theme = Tomorrow Night Bright
 font-size = 14
 font-family = MesloLGM Nerd Font Mono
+
 #background-opacity = 0.85
+#
+maximize = true
+window-height=510
+window-width=1640
+
 palette = 0=#d78700
 palette = 8=#808080
+
+# + shell-integration = fish

@@ -8,10 +8,11 @@ DOTFILES_PATH=$HOME/dotfiles
 brew update
 brew install neovim luarocks fish tmux gitui lazygit htop jq ripgrep fzf yarn
 brew install zoxide glow trash rlwrap bat fd tldr tree alacritty python3
-brew install font-hack-nerd-font
+brew install font-hack-nerd-font zellij
 
 # https://www.nerdfonts.com
 brew install --cask font-meslo-lg-nerd-font
+brew install --cask finch
 
 # https://powerline.readthedocs.io/en/latest/
 pip3 install --user powerline-status --break-system-packages

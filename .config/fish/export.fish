@@ -27,7 +27,7 @@ set -x TERM xterm-256color
 ## Autossh
 #set -x AUTOSSH_PORT 0
 #
-#set -x AWS_PROFILE sdo
+set -x AWS_PROFILE sdo
 #
 ## Go
 #set -x GOPATH "$HOME/go"
