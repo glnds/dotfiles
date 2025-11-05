@@ -48,3 +48,5 @@
   insteadOf = https://bitbucket.org/
 [init]
 	defaultBranch = master
+[includeIf "gitdir:~/source/dpg/"]
+  path = ~/.gitconfig-github-dpg
