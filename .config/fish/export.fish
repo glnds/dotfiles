@@ -17,7 +17,7 @@ set -x LC_CTYPE en_US.UTF-8
 set -x PATH /Users/glnds/Library/Python/3.13/bin $PATH
 #
 ## Rust config
-#set -x PATH "$HOME/.cargo/bin" $PATH
+set -x PATH "$HOME/.cargo/bin" $PATH
 #set -x RUST_SRC_PATH /Users/glnds/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/library
 #
 ## tmux fix
