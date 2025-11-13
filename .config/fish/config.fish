@@ -53,4 +53,4 @@ end
 # tmux new-session
 # tmux new-session -As ghostty
 
-string match -q "$TERM_PROGRAM" kiro and . (kiro --locate-shell-integration-path fish)
+# string match -q "$TERM_PROGRAM" kiro and . (kiro --locate-shell-integration-path fish)
