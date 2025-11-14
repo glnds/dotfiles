@@ -148,9 +148,10 @@ keybinds clear-defaults=true {
         bind "Ctrl q" { Quit; }
     }
 
-    shared_except "locked" "session" {
-        bind "Ctrl o" { SwitchToMode "session"; }
-    }
+    // Disabled to avoid conflict with Claude Code Ctrl+O
+    // shared_except "locked" "session" {
+    //     bind "Ctrl o" { SwitchToMode "session"; }
+    // }
     shared_except "locked" "scroll" {
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
