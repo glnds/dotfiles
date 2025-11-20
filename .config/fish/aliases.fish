@@ -2,6 +2,7 @@ alias ..="cd .."
 
 # set AWS profile environment variable
 alias setaws='set -x -g AWS_PROFILE'
+alias awswho='aws sts get-caller-identity'
 
 # Use the trash can
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm'"
