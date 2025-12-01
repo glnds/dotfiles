@@ -23,6 +23,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.tmux ~/.tmux
 ln -s ~/dotfiles/.config ~/
+ln -s ~/dotfiles/.markdownlint.yaml ~/.markdownlint.yaml
 
 echo "Successfully updated dotfiles!"
 echo " "
