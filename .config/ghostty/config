@@ -12,3 +12,4 @@ palette = 0=#d78700
 palette = 8=#808080
 
 # + shell-integration = fish
+keybind = shift+enter=text:\x1b\r

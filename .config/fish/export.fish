@@ -28,7 +28,6 @@ set -x PATH "$HOME/.cargo/bin" $PATH
 #set -x AUTOSSH_PORT 0
 #
 set -x AWS_PROFILE sdo
-set -x AWS_REGION eu-west-1
 #
 ## Go
 #set -x GOPATH "$HOME/go"
