@@ -41,6 +41,10 @@ set({ "i" }, "<up>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
 set({ "i" }, "<right>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
 set({ "i" }, "<down>", "<nop>", { desc = "Disabling arrow keys in insert mode" })
 
+set("n", "c", '"_c', { noremap = true })
+set("n", "C", '"_C', { noremap = true })
+set("v", "c", '"_c', { noremap = true })
+
 set(
   "n",
   "<C-h>",

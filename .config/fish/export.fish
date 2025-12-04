@@ -1,5 +1,5 @@
-#set -x PATH /opt/homebrew/bin $PATH
-#set -x PATH /opt/homebrew/sbin $PATH
+set -x PATH /opt/homebrew/bin $PATH
+set -x PATH /opt/homebrew/sbin $PATH
 
 # zScaler Certifacte fixes
 set -x AWS_CA_BUNDLE /etc/ssl/cert.pem
@@ -11,10 +11,8 @@ set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
 
-#use gnu-sed
-#set -x PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
 #
-set -x PATH /Users/glnds/Library/Python/3.13/bin $PATH
+#set -x PATH /Users/glnds/Library/Python/3.13/bin $PATH
 #
 ## Rust config
 set -x PATH "$HOME/.cargo/bin" $PATH
