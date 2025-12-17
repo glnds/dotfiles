@@ -1,5 +1,9 @@
 set fish_path $HOME/.config/fish
 
+if set -q ZELLIJ
+    set -g fish_handle_reflow 0
+end
+
 # Unset the default fish greeting text which messes up Zellij
 set fish_greeting
 
