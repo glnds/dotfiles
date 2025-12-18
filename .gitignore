@@ -11,7 +11,7 @@
 .config/nvim/plugin/packer_compiled.lua
 .virtualenvs
 .config/fish/fishd.*
-.config/fish/secret.fish
+.config/fish/secrets.fish
 .config/fish/fish_history
 .config/nvim/autoload
 .config/nvim/plugged

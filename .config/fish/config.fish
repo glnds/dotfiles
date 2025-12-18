@@ -17,6 +17,7 @@ set -g -x PAGER less
 . $fish_path/aliases.fish
 . $fish_path/export.fish
 . $fish_path/utils.fish
+test -f $fish_path/secrets.fish && . $fish_path/secrets.fish
 
 # fish_vi_mode
 set fish_key_bindings fish_user_key_bindings
