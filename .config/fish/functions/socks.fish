@@ -10,7 +10,11 @@ function socks
     kill -9 $pid
   end
 
-  autossh -D 2280 -f -C -q -N root@www.pixxis.be
+  # Host "socks-proxy" must be defined in ~/.ssh/config:
+  #   Host socks-proxy
+  #     HostName www.pixxis.be
+  #     User root
+  autossh -D 2280 -f -C -q -N socks-proxy
   sleep 2
   set -l npid (lsof -i 4tcp -P | ag 'localhost:2280' | awk '{print $2}')
 

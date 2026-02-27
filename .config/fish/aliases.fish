@@ -55,7 +55,6 @@ alias gcm="git commit -m"
 alias gcr!='git commit -v --amend --no-edit'
 alias gbd="git branch -D"
 alias gst="git status -sb --ignore-submodules"
-alias gst="git status"
 alias gm="git merge --no-ff"
 alias gpl="git pull"
 alias gplr="git pull --rebase"
