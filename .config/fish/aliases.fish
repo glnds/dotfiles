@@ -1,7 +1,19 @@
 alias ..="cd .."
 
-# set AWS profile environment variable
-alias setaws='set -x -g AWS_PROFILE'
+# set AWS profile environment variable (also syncs to tmux status line)
+function setaws
+    if test (count $argv) -eq 0
+        set -e AWS_PROFILE
+        if set -q TMUX
+            tmux set-option -gu @aws-profile
+        end
+    else
+        set -x -g AWS_PROFILE $argv[1]
+        if set -q TMUX
+            tmux set-option -g @aws-profile "$argv[1]"
+        end
+    end
+end
 alias awswho='aws sts get-caller-identity'
 
 # Use the trash can

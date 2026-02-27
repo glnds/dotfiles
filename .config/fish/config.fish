@@ -43,3 +43,8 @@ if status is-interactive
     and not set -q TMUX
     tmux new-session -As main
 end
+
+# Sync AWS_PROFILE to tmux status bar
+if set -q TMUX; and set -q AWS_PROFILE
+    tmux set-option -g @aws-profile "$AWS_PROFILE"
+end
