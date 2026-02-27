@@ -37,9 +37,9 @@ zoxide init --cmd cd fish | source
 
 fzf --fish | source
 
-# Auto-start tmux in Ghostty
+# Auto-start tmux in Alacritty
 if status is-interactive
-    and test "$TERM" = xterm-ghostty
+    and test "$TERM" = alacritty
     and not set -q TMUX
     tmux new-session -As main
 end

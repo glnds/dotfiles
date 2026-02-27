@@ -7,7 +7,7 @@ Personal dotfiles for a terminal-based dev environment on macOS.
 - **Fish** shell (`.config/fish/`)
 - **Neovim** via LazyVim (`.config/nvim/`)
 - **tmux** terminal multiplexer (`.tmux.conf`)
-- **Ghostty** terminal emulator (`.config/ghostty/`)
+- **Alacritty** terminal emulator (`.config/alacritty/`)
 
 
 ## Directory Structure
@@ -17,7 +17,7 @@ Personal dotfiles for a terminal-based dev environment on macOS.
   fish/        # shell config, aliases, exports, utils
   nvim/        # LazyVim-based neovim config
   tmux.conf    # multiplexer config (in repo root)
-  ghostty/     # terminal emulator config
+  alacritty/   # terminal emulator config
   git/         # git config
   gh/          # GitHub CLI config
 ```
@@ -29,4 +29,4 @@ Personal dotfiles for a terminal-based dev environment on macOS.
 - `aliases.fish` — aliases and shell functions
 - `export.fish` — environment variables and PATH
 - `secrets.fish` — local secrets (not tracked)
-- tmux auto-starts inside Ghostty terminal
+- tmux auto-starts inside Alacritty terminal
