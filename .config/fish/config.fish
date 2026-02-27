@@ -1,10 +1,5 @@
 set fish_path $HOME/.config/fish
 
-if set -q ZELLIJ
-    set -g fish_handle_reflow 0
-end
-
-# Unset the default fish greeting text which messes up Zellij
 set fish_greeting
 
 set -g fish_prompt_pwd_dir_length 1
@@ -42,20 +37,9 @@ zoxide init --cmd cd fish | source
 
 fzf --fish | source
 
-# Check if we're in an interactive shell
+# Auto-start tmux in Ghostty
 if status is-interactive
-
-    # At this point, specify the Zellij config dir, so we can launch it manually if we want to
-    export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
-
-    # Check if our Terminal emulator is Ghostty
-    if [ "$TERM" = xterm-ghostty ]
-        # Launch zellij
-        eval (zellij setup --generate-auto-start fish | string collect)
-    end
+    and test "$TERM" = xterm-ghostty
+    and not set -q TMUX
+    tmux new-session -As main
 end
-
-# tmux new-session
-# tmux new-session -As ghostty
-
-# string match -q "$TERM_PROGRAM" kiro and . (kiro --locate-shell-integration-path fish)

@@ -15,8 +15,6 @@ alias eg 'vim ~/.gitconfig'
 alias ev 'vim ~/.vimrc'
 alias et 'vim ~/.tmux.conf'
 
-alias zj="zellij"
-
 # Search hidden files by default
 alias rg='rg --hidden'
 

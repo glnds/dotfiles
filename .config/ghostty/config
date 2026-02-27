@@ -8,7 +8,6 @@ maximize = true
 window-height=510
 window-width=1640
 
-palette = 0=#d78700
 palette = 8=#808080
 
 # + shell-integration = fish

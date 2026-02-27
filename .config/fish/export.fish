@@ -42,4 +42,6 @@ set -x EDITOR nvim
 # grep colors
 setenv GREP_OPTIONS "--color=auto"
 
+set -x COLORTERM truecolor
+
 set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'

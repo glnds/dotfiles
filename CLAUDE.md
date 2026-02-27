@@ -6,7 +6,7 @@ Personal dotfiles for a terminal-based dev environment on macOS.
 
 - **Fish** shell (`.config/fish/`)
 - **Neovim** via LazyVim (`.config/nvim/`)
-- **Zellij** terminal multiplexer (`.config/zellij/`)
+- **tmux** terminal multiplexer (`.tmux.conf`)
 - **Ghostty** terminal emulator (`.config/ghostty/`)
 
 
@@ -16,7 +16,7 @@ Personal dotfiles for a terminal-based dev environment on macOS.
 .config/
   fish/        # shell config, aliases, exports, utils
   nvim/        # LazyVim-based neovim config
-  zellij/      # multiplexer config (KDL format)
+  tmux.conf    # multiplexer config (in repo root)
   ghostty/     # terminal emulator config
   git/         # git config
   gh/          # GitHub CLI config
@@ -29,4 +29,4 @@ Personal dotfiles for a terminal-based dev environment on macOS.
 - `aliases.fish` — aliases and shell functions
 - `export.fish` — environment variables and PATH
 - `secrets.fish` — local secrets (not tracked)
-- Zellij auto-starts inside Ghostty terminal
+- tmux auto-starts inside Ghostty terminal
