@@ -25,6 +25,7 @@ white = '#2a2a2a'
 
 [window]
 startup_mode = "Maximized"
+decorations = "None"
 
 [font]
 size = 14.0
