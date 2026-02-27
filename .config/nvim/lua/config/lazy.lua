@@ -12,8 +12,6 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.lang.clangd" },
-    { import = "lazyvim.plugins.extras.editor.leap" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -33,9 +31,9 @@ require("lazy").setup({
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
-        -- "matchit",
+        "matchit",
         -- "matchparen",
-        -- "netrwPlugin",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
