@@ -116,6 +116,11 @@ alias aga='ansible-galaxy'
 alias tf='terraform'
 alias tfgi='terraform graph | dot -Tpng > graph.png'
 
+# Claude Code
+alias cc='claude --allow-dangerously-skip-permissions'
+alias ccc='claude --continue --allow-dangerously-skip-permissions'
+alias ccr='claude --resume --allow-dangerously-skip-permissions'
+
 # Tmux
 alias tml="tmux list-sessions"
 # alias tma="tmux -2 attach -t $1"
