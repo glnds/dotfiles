@@ -1,27 +1,31 @@
-# Colors (Tomorrow Night Bright)
+# Colors (Cyberdream)
 [colors.primary]
-background = '#000000'
-foreground = '#eaeaea'
+background = '#16181a'
+foreground = '#ffffff'
 
 [colors.normal]
-black = '#000000'
-red = '#d54e53'
-green = '#b9ca4a'
-yellow = '#e6c547'
-blue = '#7aa6da'
-magenta = '#c397d8'
-cyan = '#70c0ba'
-white = '#424242'
+black =   '#16181a'
+red =     '#ff6e5e'
+green =   '#5eff6c'
+yellow =  '#f1ff5e'
+blue =    '#5ea1ff'
+magenta = '#bd5eff'
+cyan =    '#5ef1ff'
+white =   '#ffffff'
 
 [colors.bright]
-black = '#666666'
-red = '#ff3334'
-green = '#9ec400'
-yellow = '#e7c547'
-blue = '#7aa6da'
-magenta = '#b77ee0'
-cyan = '#54ced6'
-white = '#2a2a2a'
+black =   '#3c4048'
+red =     '#ff6e5e'
+green =   '#5eff6c'
+yellow =  '#f1ff5e'
+blue =    '#5ea1ff'
+magenta = '#bd5eff'
+cyan =    '#5ef1ff'
+white =   '#ffffff'
+
+[colors.selection]
+background = '#3c4048'
+foreground = '#ffffff'
 
 [window]
 startup_mode = "Maximized"
