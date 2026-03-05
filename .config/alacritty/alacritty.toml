@@ -47,3 +47,18 @@ family = "MesloLGM Nerd Font"
 
 [terminal.shell]
 program = "/opt/homebrew/bin/fish"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001b[220~"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Control"
+chars = "\u001b[221~"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Alt"
+chars = "\u001b[222~"
