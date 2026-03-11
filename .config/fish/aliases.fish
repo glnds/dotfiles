@@ -40,6 +40,7 @@ alias sb='cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/My\ Second
 alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias g='git'
 alias vim='nvim'
+alias ob='obsidian'
 alias fvim='vim (fzf)'
 
 alias markdownlint-cli2='markdownlint-cli2 --config ~/.markdownlint.yaml'

@@ -16,6 +16,9 @@ set -x LC_CTYPE en_US.UTF-8
 #
 ## Rust config
 set -x PATH "$HOME/.cargo/bin" $PATH
+
+# Obsidian CLI
+set -x PATH /Applications/Obsidian.app/Contents/MacOS $PATH
 #set -x RUST_SRC_PATH /Users/glnds/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/library
 #
 ## tmux fix
