@@ -5,8 +5,8 @@ set fish_greeting
 set -g fish_prompt_pwd_dir_length 1
 
 # Set favourite editor and pager
-set -g -x VISUAL vim
-set -g -x EDITOR vim
+set -g -x VISUAL nvim
+set -g -x EDITOR nvim
 set -g -x PAGER less
 
 . $fish_path/aliases.fish

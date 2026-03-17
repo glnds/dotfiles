@@ -3,9 +3,9 @@
   email = leenders.gert@gmail.com
 [core]
   editor = nvim
-  autoctrl = input
+  autocrlf = input
   whitespace = space-before-tab, trailing-space
-  excludesfile = /Users/glnds/.gitignore_global
+  excludesfile = ~/.config/git/ignore
 [credential]
   helper = osxkeychain
 [color]
