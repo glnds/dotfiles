@@ -1,3 +1,5 @@
+live_config_reload = false
+
 # Colors (Cyberdream)
 [colors.primary]
 background = '#16181a'
@@ -28,13 +30,17 @@ background = '#3c4048'
 foreground = '#ffffff'
 
 [scrolling]
-history = 5000
+history = 2000
 
 [window]
 startup_mode = "Maximized"
+decorations = "None"
+padding = { x = 4, y = 4 }
+option_as_alt = "Both"
 
 [font]
 size = 14.0
+offset = { x = 0, y = 2 }
 
 [font.bold]
 family = "MesloLGM Nerd Font"
