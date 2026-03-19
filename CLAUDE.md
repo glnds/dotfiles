@@ -2,6 +2,10 @@
 
 Personal dotfiles for a terminal-based dev environment on macOS.
 
+## Workflow
+
+Solo repo — trunk-based development, commit directly to `master`. No branches or PRs.
+
 ## Core Stack
 
 - **Fish** shell (`.config/fish/`)
