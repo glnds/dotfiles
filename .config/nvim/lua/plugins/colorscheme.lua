@@ -11,4 +11,7 @@ return {
       colorscheme = "cyberdream",
     },
   },
+
+  { "catppuccin/nvim", enabled = false },
+  { "folke/tokyonight.nvim", enabled = false },
 }
