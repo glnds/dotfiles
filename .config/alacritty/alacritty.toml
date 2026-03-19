@@ -1,4 +1,3 @@
-live_config_reload = false
 
 # Colors (Cyberdream)
 [colors.primary]
@@ -71,3 +70,6 @@ chars = "\u001b[221~"
 key = "Return"
 mods = "Alt"
 chars = "\u001b[222~"
+
+[general]
+live_config_reload = false
