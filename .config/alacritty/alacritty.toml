@@ -27,6 +27,9 @@ white =   '#ffffff'
 background = '#3c4048'
 foreground = '#ffffff'
 
+[scrolling]
+history = 5000
+
 [window]
 startup_mode = "Maximized"
 
