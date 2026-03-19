@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal dotfiles for a terminal-based dev environment on macOS.
+Personal dotfiles for a terminal-based dev environment on macOS. Speed and staying lightweight is the priority.
 
 ## Workflow
 
