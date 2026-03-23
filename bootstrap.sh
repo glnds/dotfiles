@@ -6,13 +6,16 @@ cd "$(dirname "$0")"
 DOTFILES_PATH=$HOME/dotfiles
 
 brew update
-brew install neovim luarocks fish tmux gitui lazygit htop jq ripgrep fzf yarn
-brew install zoxide glow trash rlwrap bat fd tldr tree alacritty python3
-brew install font-hack-nerd-font zellij
+brew install neovim luarocks fish tmux gitui htop jq ripgrep fzf
+brew install zoxide glow trash bat fd tree eza uv gh markdownlint-cli2
+brew install awscli aws-sam-cli cfn-lint cloudformation-guard
 
-# https://www.nerdfonts.com
+brew install --cask alacritty
+brew install --cask font-hack-nerd-font
 brew install --cask font-meslo-lg-nerd-font
 brew install --cask finch
+brew install --cask markedit
+brew install --cask claude-code
 
 # https://powerline.readthedocs.io/en/latest/
 pip3 install --user powerline-status --break-system-packages
