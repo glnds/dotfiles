@@ -61,6 +61,22 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 ./install.sh
 ```
 
+## Security
+
+Lightweight macOS security tools for network monitoring, persistence detection, and malware scanning.
+
+- **[LuLu](https://objective-see.org/products/lulu.html)** — open-source firewall
+  that blocks unknown outgoing connections. Alerts on new outbound network
+  activity so you can allow/deny per-app.
+- **[BlockBlock](https://objective-see.org/products/blockblock.html)** — monitors
+  persistence locations (launch daemons, login items, etc.) and alerts when
+  something tries to install persistently. Catches malware that survives reboots.
+- **[KnockKnock](https://objective-see.org/products/knockknock.html)** — scans for
+  persistently installed software (launch items, kernel extensions, browser
+  plugins). Useful for auditing what's set to run automatically.
+- **[Malwarebytes](https://www.malwarebytes.com/mac)** — on-demand malware scanner
+  and remover. Catches adware, PUPs, and known malware.
+
 ## Tools
 
 - [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.

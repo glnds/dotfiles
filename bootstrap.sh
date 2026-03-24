@@ -17,6 +17,12 @@ brew install --cask finch
 brew install --cask markedit
 brew install --cask claude-code
 
+# Security
+brew install --cask lulu
+brew install --cask blockblock
+brew install --cask knockknock
+brew install --cask malwarebytes
+
 # https://powerline.readthedocs.io/en/latest/
 pip3 install --user powerline-status --break-system-packages
 
