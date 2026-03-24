@@ -45,21 +45,10 @@ to update those completions, which are stored in ~/.config/fish/completions by d
 fish_update_completions
 ```
 
-#### Step 4: Install Powerline fonts
+#### Step 4: Prepare nvim
 
-```console
-git clone https://github.com/powerline/fonts
-./install.sh
-```
-
-#### Step 5: Prepare nvim to install plugins
-
-[Packer.vim](https://github.com/wbthomason/packer.nvim)
-
-```console
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-./install.sh
-```
+Open nvim — [LazyVim](https://www.lazyvim.org/) will auto-install plugins on
+first launch.
 
 ## Security
 

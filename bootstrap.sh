@@ -1,5 +1,4 @@
 #!/bin/bash
-shopt -s dotglob
 
 cd "$(dirname "$0")"
 
@@ -10,31 +9,17 @@ brew install neovim luarocks fish tmux gitui htop jq ripgrep fzf
 brew install zoxide glow trash bat fd tree eza uv gh markdownlint-cli2
 brew install awscli aws-sam-cli cfn-lint cloudformation-guard
 
-brew install --cask alacritty
-brew install --cask font-hack-nerd-font
-brew install --cask font-meslo-lg-nerd-font
-brew install --cask finch
-brew install --cask markedit
-brew install --cask claude-code
+brew install --cask alacritty font-hack-nerd-font font-meslo-lg-nerd-font \
+  finch markedit claude-code
 
 # Security
-brew install --cask lulu
-brew install --cask blockblock
-brew install --cask knockknock
-brew install --cask malwarebytes
+brew install --cask lulu blockblock knockknock malwarebytes
 brew install git-secrets      # blocks AWS keys and secrets from being committed
 brew install trufflehog
 
-# https://powerline.readthedocs.io/en/latest/
-pip3 install --user powerline-status --break-system-packages
-
-# https://github.com/tmux-plugins/tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.tmux ~/.tmux
-ln -s ~/dotfiles/.config ~/
-ln -s ~/dotfiles/.markdownlint.yaml ~/.markdownlint.yaml
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.tmux ~/.tmux
+ln -sf ~/dotfiles/.config ~/
+ln -sf ~/dotfiles/.markdownlint.yaml ~/.markdownlint.yaml
 
 echo "Successfully updated dotfiles!"
-echo " "
