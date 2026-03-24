@@ -15,10 +15,10 @@ install:
 	brew install --cask lulu blockblock knockknock malwarebytes
 
 link:
-	ln -sf $(DOTFILES)/.gitconfig $(HOME)/.gitconfig
-	ln -sf $(DOTFILES)/.tmux $(HOME)/.tmux
-	ln -sf $(DOTFILES)/.config $(HOME)/
-	ln -sf $(DOTFILES)/.markdownlint.yaml $(HOME)/.markdownlint.yaml
+	ln -sfn $(DOTFILES)/.gitconfig $(HOME)/.gitconfig
+	ln -sfn $(DOTFILES)/.tmux $(HOME)/.tmux
+	ln -sfn $(DOTFILES)/.config $(HOME)/.config
+	ln -sfn $(DOTFILES)/.markdownlint.yaml $(HOME)/.markdownlint.yaml
 
 unlink:
 	rm -f $(HOME)/.gitconfig
