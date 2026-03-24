@@ -75,6 +75,10 @@ Lightweight macOS security tools for network monitoring, persistence detection, 
   set to run automatically.
 - **[Malwarebytes](https://www.malwarebytes.com/mac)** — on-demand malware scanner and remover.
   Catches adware, PUPs, and known malware.
+- **[git-secrets](https://github.com/awslabs/git-secrets)** — blocks AWS keys and secrets from
+  being committed.
+- **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** — scans repos for leaked
+  credentials and secrets.
 
 ## Tools
 
