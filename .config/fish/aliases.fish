@@ -132,11 +132,9 @@ function update
     brew update
     brew upgrade
     brew cleanup
-    pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+    uv tool upgrade --all
 end
 
-# Python pip update all packages
-alias pupdate="pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U"
 alias python=python3
 
 # http://osxnotes.net/spotlight.html
@@ -149,21 +147,14 @@ alias vimdiff="vim -d"
 alias weather="curl -4 wttr.in/Grimbergen"
 alias moon="curl -4 wttr.in/Moon"
 
-alias https='http --default-scheme=https'
-
 alias wnas="wakeonlan 00:11:32:45:3b:01"
 
 # CLI Tools
 alias cat="bat"
-alias ping="prettyping --nolegend"
 alias find="fd"
 alias ls="eza"
 alias ll="eza -lh"
 alias la="eza -lhaa"
-
-function akamaih
-    http -h $argv[1] Pragma:'akamai-x-cache-on,akamai-x-cache-remote-on,akamai-x-check-cacheable,akamai-x-get-cache-key,akamai-x-get-ssl-client-session-id,akamai-x-get-true-cache-key,akamai-x-get-request-id,akamai-x-get-extracted-values,akamai-x-get-nonces,akamai-x-serial-no'
-end
 alias lsami="aws ec2 describe-images --query 'Images[*].[Tags[?Key==`Name`].Value|[0],Name,ImageId,State,CreationDate]' --filters Name=image-type,Values=machine Name=is-public,Values=false --output table --region eu-west-1"
 alias s3ls="aws s3api list-buckets --query 'Buckets[*].[Name]' --output table --region eu-west-1"
 alias efsls="aws efs describe-file-systems --query 'FileSystems[*].[Name,FileSystemId]' --output table --region eu-west-1"

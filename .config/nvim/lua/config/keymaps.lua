@@ -18,11 +18,9 @@ del("n", "<C-l>")
 set({ "i" }, "jj", "<Esc>", { desc = "Remap Escape to jj in insert mode" })
 
 set({ "n" }, "<Leader><Leader>", "V|", { desc = "Enter Visual Mode" })
--- set({ "n" }, "<Leader>f", "<cmd>lua require('telescope.builtin').find_files()<cr>", { desc = "Find Files (Root Dir)" })
--- set({ "n" }, "<Leader><Space>", "<cmd>lua require('telescope.builtin').buffers()<cr>", { desc = "Switch Buffer" })
 
 set({ "v" }, "<Leader>c", '"+y', { desc = "Copy" })
-set({ "n" }, "<Leader>v", '"+p', { desc = "Pase" })
+set({ "n" }, "<Leader>v", '"+p', { desc = "Paste" })
 
 set({ "n" }, "x", '"_x', { desc = "Delete to Black Hole register" })
 set({ "n" }, "X", '"_X', { desc = "Delete to Black Hole register" })
