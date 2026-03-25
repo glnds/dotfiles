@@ -54,14 +54,11 @@ first launch.
 - **[tmux](https://github.com/tmux/tmux)** — terminal multiplexer
 - **[Alacritty](https://alacritty.org/)** — GPU-accelerated terminal
   emulator
-- **[Ghostty](https://ghostty.org/)** — native terminal emulator
-- **[zellij](https://zellij.dev/)** — terminal workspace manager
 
 ### Editor
 
 - **[Neovim](https://neovim.io/)** — modal editor
   ([LazyVim](https://www.lazyvim.org/) config)
-- **[Helix](https://helix-editor.com/)** — post-modern modal editor
 
 ### CLI Replacements
 
