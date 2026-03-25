@@ -1,18 +1,15 @@
 # Dotfiles
 
-These are my personal dotfiles to setup my machine and developing environment.
+Personal dotfiles for a terminal-centric dev environment on macOS.
 
 ## Installation
 
 ### Prerequisites
 
-- `brew` installed
+- [Homebrew](https://brew.sh/) installed
 - `git` installed
-- `java` install through [java.com](https://www.java.com/en/)
 
-### Step 1: git clone
-
-cd to your home directory and clone this repository.
+### Step 1: clone
 
 ```console
 cd ~
@@ -37,37 +34,91 @@ sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 chsh -s /opt/homebrew/bin/fish
 ```
 
-*Note: Fish can parse your installed man pages and automatically generate completion
-files for your command-line tools. You should periodically run the following command
-to update those completions, which are stored in ~/.config/fish/completions by default:*
+Periodically update fish completions:
 
 ```console
 fish_update_completions
 ```
 
-#### Step 4: Prepare nvim
+### Step 4: prepare nvim
 
-Open nvim — [LazyVim](https://www.lazyvim.org/) will auto-install plugins on
+Open nvim — [LazyVim](https://www.lazyvim.org/) auto-installs plugins on
 first launch.
 
-## Security
+## Tools
 
-Lightweight macOS security tools for network monitoring, persistence detection, and malware scanning.
+### Shell and Terminal
 
-- **[LuLu](https://objective-see.org/products/lulu.html)** — open-source firewall that blocks unknown
-  outgoing connections. Alerts on new outbound network activity so you can allow/deny per-app.
-- **[BlockBlock](https://objective-see.org/products/blockblock.html)** — monitors persistence locations
-  (launch daemons, login items, etc.) and alerts when something tries to install persistently.
-  Catches malware that survives reboots.
-- **[KnockKnock](https://objective-see.org/products/knockknock.html)** — scans for persistently
-  installed software (launch items, kernel extensions, browser plugins). Useful for auditing what's
-  set to run automatically.
-- **[Malwarebytes](https://www.malwarebytes.com/mac)** — on-demand malware scanner and remover.
-  Catches adware, PUPs, and known malware.
-- **[git-secrets](https://github.com/awslabs/git-secrets)** — blocks AWS keys and secrets from
-  being committed.
-- **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** — scans repos for leaked
-  credentials and secrets.
+- **[fish](https://fishshell.com/)** — shell with autosuggestions and
+  syntax highlighting
+- **[tmux](https://github.com/tmux/tmux)** — terminal multiplexer
+- **[Alacritty](https://alacritty.org/)** — GPU-accelerated terminal
+  emulator
+- **[Ghostty](https://ghostty.org/)** — native terminal emulator
+- **[zellij](https://zellij.dev/)** — terminal workspace manager
+
+### Editor
+
+- **[Neovim](https://neovim.io/)** — modal editor
+  ([LazyVim](https://www.lazyvim.org/) config)
+- **[Helix](https://helix-editor.com/)** — post-modern modal editor
+
+### CLI Replacements
+
+- **[bat](https://github.com/sharkdp/bat)** — `cat` with syntax
+  highlighting
+- **[eza](https://eza.rocks/)** — modern `ls` replacement
+- **[fd](https://github.com/sharkdp/fd)** — fast `find` alternative
+- **[ripgrep](https://github.com/BurntSushi/ripgrep)** — fast `grep`
+  alternative
+- **[fzf](https://github.com/junegunn/fzf)** — fuzzy finder
+- **[zoxide](https://github.com/ajeetdsouza/zoxide)** — smarter `cd`
+- **[trash](https://hasseg.org/trash/)** — safe `rm` to trash can
+
+### Git
+
+- **[gitui](https://github.com/extrawurst/gitui)** — terminal Git UI
+- **[gh](https://cli.github.com/)** — GitHub CLI
+- **[git-secrets](https://github.com/awslabs/git-secrets)** — blocks AWS
+  keys from being committed
+
+### Containers and Cloud
+
+- **[Finch](https://github.com/runfinch/finch)** — open-source container
+  tool (Docker alternative)
+- **[awscli](https://aws.amazon.com/cli/)** — AWS CLI
+- **[aws-sam-cli](https://github.com/aws/aws-sam-cli)** — serverless
+  application model CLI
+- **[cfn-lint](https://github.com/aws-cloudformation/cfn-lint)** —
+  CloudFormation linter
+- **[cloudformation-guard](https://github.com/aws-cloudformation/cloudformation-guard)**
+  — policy-as-code for CloudFormation
+
+### Utilities
+
+- **[jq](https://jqlang.github.io/jq/)** — JSON processor
+- **[htop](https://htop.dev/)** — interactive process viewer
+- **[glow](https://github.com/charmbracelet/glow)** — terminal Markdown
+  renderer
+- **[tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)**
+  — directory listing
+- **[direnv](https://direnv.net/)** — per-directory environment variables
+- **[markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)**
+  — Markdown linter
+- **[uv](https://github.com/astral-sh/uv)** — fast Python package manager
+
+### Security
+
+- **[LuLu](https://objective-see.org/products/lulu.html)** — open-source
+  firewall, blocks unknown outgoing connections
+- **[BlockBlock](https://objective-see.org/products/blockblock.html)** —
+  monitors persistence locations (launch daemons, login items)
+- **[KnockKnock](https://objective-see.org/products/knockknock.html)** —
+  scans for persistently installed software
+- **[Malwarebytes](https://www.malwarebytes.com/mac)** — on-demand malware
+  scanner
+- **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** — scans
+  repos for leaked credentials
 
 ## GitHub Multi-Account
 
@@ -108,49 +159,3 @@ rather than a hardcoded value.
 
 **Caveat:** if you re-auth an account, the token updates automatically
 since the `.envrc` evaluates `gh auth token` on each shell entry.
-
-## Tools
-
-- [bat](https://github.com/sharkdp/bat): A cat(1) clone with wings.
-
-	```Shell
-	alias cat="bat"
-	```
-- [exa](https://the.exa.website/introduction): A modern replacement for ls.
-	```
-	alias ls="exa"
-	alias ll="exa -lh"
-	alias la="exa -lhaa"
-	```
-- [fd](https://github.com/sharkdp/fd/): A simple, fast and user-friendly alternative to 'find'.
-	```
-	alias find="fd"
-	```
-- [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder
-	
-	Key bindings [didn't work out of the box](https://github.com/junegunn/fzf/issues/851). This was fixed by manually creating a symlink to the fzf key binding file for fish.
-	```
-	ln -s /usr/local/Cellar/fzf/0.18.0/shell/key-bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
-```
-	```
-	 alias fvim='vim (fzf)'
-	 ```
-- [ncdu](https://dev.yorhel.nl/ncdu): NCurses Disk Usage.
-	```
-	alias du="ncdu --color dark -rr -x --exclude .git"
-	```
-- [prettyping](http://denilson.sa.nom.br/prettyping/): prettyping is a wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.
-	```
-	alias ping="prettyping --nolegend"
-	```
-- [tldr](https://tldr.sh/): Simplified and community-driven man pages.
-	```
-	alias help="tldr"
-	```
-
-## TODO List
-- https://github.com/clvv/fasd
-- https://fonts.google.com/specimen/Fira+Mono
-
-## References
-- [CLI: improved](https://remysharp.com/2018/08/23/cli-improved)
