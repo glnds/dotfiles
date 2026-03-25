@@ -36,6 +36,8 @@ zoxide init --cmd cd fish | source
 
 fzf --fish | source
 
+direnv hook fish | source
+
 # Auto-start tmux in Alacritty
 if status is-interactive
     and test "$TERM" = alacritty

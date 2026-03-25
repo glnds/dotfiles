@@ -19,14 +19,14 @@ cd ~
 git clone https://github.com/glnds/dotfiles.git
 ```
 
-### Step 2: bootstrapping
-
-You should now have a dotfiles folder in your home directory. To setup these dotfiles,
-execute boostrap.sh.
+### Step 2: install and link
 
 ```console
-bash ~/dotfiles/bootstrap.sh
+cd ~/dotfiles
+make all
 ```
+
+This runs `make install` (brew packages) followed by `make link` (symlinks).
 
 ### Step 3: change shell
 
@@ -68,6 +68,46 @@ Lightweight macOS security tools for network monitoring, persistence detection, 
   being committed.
 - **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** — scans repos for leaked
   credentials and secrets.
+
+## GitHub Multi-Account
+
+The `gh` CLI supports multiple accounts natively (v2.40+). Combined with
+direnv, account switching is automatic per directory.
+
+### Step 1: authenticate both accounts
+
+```console
+gh auth login  # work account
+gh auth login  # private account (stacks)
+```
+
+Verify with `gh auth status`.
+
+### Step 2: automatic per-directory switching with direnv
+
+Create `.envrc` in each repos root:
+
+Work repos (`~/work/.envrc`):
+
+```bash
+export GH_TOKEN=$(gh auth token --user your-work-username 2>/dev/null)
+```
+
+Private repos (`~/personal/.envrc`):
+
+```bash
+export GH_TOKEN=$(gh auth token --user your-private-username 2>/dev/null)
+```
+
+Then `direnv allow` inside each folder.
+
+`GH_TOKEN` overrides `gh auth switch`, so gh automatically uses the right
+account based on working directory — mirroring how SSH config works.
+The `2>/dev/null` variant dynamically pulls the current stored token
+rather than a hardcoded value.
+
+**Caveat:** if you re-auth an account, the token updates automatically
+since the `.envrc` evaluates `gh auth token` on each shell entry.
 
 ## Tools
 
