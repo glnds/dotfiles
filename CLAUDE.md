@@ -24,6 +24,7 @@ Solo repo — trunk-based development, commit directly to `master`. No branches 
   alacritty/   # terminal emulator config
   git/         # git config
   gh/          # GitHub CLI config
+  yazi/        # file manager config (bookmarks)
 ```
 
 

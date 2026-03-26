@@ -130,6 +130,17 @@ first launch.
 - **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** — scans
   repos for leaked credentials
 
+## Custom Shortcuts
+
+### Yazi folder favorites
+
+| Keys | Directory       |
+|------|-----------------|
+| `gs` | `~/source`      |
+| `gk` | `~/Desktop`     |
+| `gd` | `~/Downloads`   |
+| `go` | `~/Documents`   |
+
 ## GitHub Multi-Account
 
 The `gh` CLI supports multiple accounts natively (v2.40+). Combined with
