@@ -5,15 +5,8 @@ DOTFILES := $(HOME)/dotfiles
 all: install link
 
 install:
-	brew update
-	brew install neovim luarocks fish tmux gitui jq ripgrep fzf
-	brew install zoxide glow trash bat fd tree eza uv gh direnv markdownlint-cli2
-	brew install git-delta atuin starship yazi btop lazygit dust
-	brew install awscli aws-sam-cli cfn-lint cloudformation-guard
-	brew install git-secrets trufflehog
-	brew install --cask alacritty font-hack-nerd-font font-meslo-lg-nerd-font \
-		finch markedit claude-code
-	brew install --cask lulu blockblock knockknock malwarebytes
+	brew update --quiet
+	brew bundle
 
 link:
 	ln -sfn $(DOTFILES)/.gitconfig $(HOME)/.gitconfig
