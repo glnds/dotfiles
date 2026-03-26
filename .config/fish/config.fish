@@ -17,18 +17,6 @@ test -f $fish_path/secrets.fish && . $fish_path/secrets.fish
 # fish_vi_mode
 set fish_key_bindings fish_user_key_bindings
 
-# git prompt
-# https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish
-set -g __fish_git_prompt_showupstream auto
-# set -g __fish_git_prompt_show_informative_status 1
-set -g __fish_git_prompt_showuntrackedfiles 1
-set -g __fish_git_prompt_showdirtystate 1
-set -g __fish_git_prompt_showcolorhints 1
-
-set __fish_git_prompt_color_branch yellow
-set __fish_git_prompt_color_upstream_ahead green
-set __fish_git_prompt_color_upstream_behind red
-
 # Activate AWS cli auto completion
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
@@ -36,7 +24,11 @@ zoxide init --cmd cd fish | source
 
 fzf --fish | source
 
+atuin init fish | source
+
 direnv hook fish | source
+
+starship init fish | source
 
 # Auto-start tmux in Alacritty
 if status is-interactive

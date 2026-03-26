@@ -7,6 +7,15 @@
   whitespace = space-before-tab, trailing-space
   excludesfile = ~/.config/git/ignore
 	hooksPath = /Users/glnds/.config/git/hooks
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  dark = true
+  side-by-side = true
+  line-numbers = true
+  syntax-theme = base16
 [credential]
   helper = osxkeychain
 [color]
@@ -23,7 +32,7 @@
 [merge]
   tool = vimdiff
   log = true
-  conflictstyle = diff3
+  conflictstyle = zdiff3
   ff = false
 [push]
   default = simple

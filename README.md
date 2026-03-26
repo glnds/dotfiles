@@ -51,6 +51,10 @@ first launch.
 
 - **[fish](https://fishshell.com/)** — shell with autosuggestions and
   syntax highlighting
+- **[starship](https://starship.rs/)** — fast, customizable cross-shell
+  prompt
+- **[atuin](https://atuin.sh/)** — SQLite-backed shell history with
+  fuzzy search
 - **[tmux](https://github.com/tmux/tmux)** — terminal multiplexer
 - **[Alacritty](https://alacritty.org/)** — GPU-accelerated terminal
   emulator (`Cmd+Shift+M` to toggle maximize)
@@ -66,6 +70,8 @@ first launch.
   highlighting
 - **[eza](https://eza.rocks/)** — modern `ls` replacement
 - **[fd](https://github.com/sharkdp/fd)** — fast `find` alternative
+- **[dust](https://github.com/bootandy/dust)** — visual `du`
+  replacement
 - **[ripgrep](https://github.com/BurntSushi/ripgrep)** — fast `grep`
   alternative
 - **[fzf](https://github.com/junegunn/fzf)** — fuzzy finder
@@ -74,7 +80,12 @@ first launch.
 
 ### Git
 
-- **[gitui](https://github.com/extrawurst/gitui)** — terminal Git UI
+- **[delta](https://github.com/dandavison/delta)** — syntax-highlighted
+  git diffs with side-by-side view
+- **[lazygit](https://github.com/jesseduffield/lazygit)** — terminal
+  Git UI with interactive rebase
+- **[gitui](https://github.com/extrawurst/gitui)** — lightweight
+  terminal Git UI
 - **[gh](https://cli.github.com/)** — GitHub CLI
 - **[git-secrets](https://github.com/awslabs/git-secrets)** — blocks AWS
   keys from being committed
@@ -94,7 +105,9 @@ first launch.
 ### Utilities
 
 - **[jq](https://jqlang.github.io/jq/)** — JSON processor
-- **[htop](https://htop.dev/)** — interactive process viewer
+- **[btop](https://github.com/aristocratos/btop)** — system monitor
+  with CPU, memory, disk, network, and GPU stats
+- **[yazi](https://yazi-rs.github.io/)** — fast terminal file manager
 - **[glow](https://github.com/charmbracelet/glow)** — terminal Markdown
   renderer
 - **[tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)**

@@ -8,6 +8,7 @@ install:
 	brew update
 	brew install neovim luarocks fish tmux gitui htop jq ripgrep fzf
 	brew install zoxide glow trash bat fd tree eza uv gh direnv markdownlint-cli2
+	brew install git-delta atuin starship yazi btop lazygit dust
 	brew install awscli aws-sam-cli cfn-lint cloudformation-guard
 	brew install git-secrets trufflehog
 	brew install --cask alacritty font-hack-nerd-font font-meslo-lg-nerd-font \

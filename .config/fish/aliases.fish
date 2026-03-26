@@ -40,6 +40,16 @@ alias vim='nvim'
 alias ob='obsidian'
 alias fvim='vim (fzf)'
 
+# Yazi file manager (cd to last dir on exit)
+function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- $tmp); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
+
 alias markdownlint-cli2='markdownlint-cli2 --config ~/.markdownlint.yaml'
 
 # git related shortcut
@@ -84,6 +94,7 @@ function gsd
 end
 
 alias tig=gitui
+alias lg='lazygit'
 
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
@@ -91,7 +102,7 @@ alias egrep='egrep --color=auto'
 
 # Quick check running state of a process
 alias psef="ps -ef | grep "
-alias top="top -o cpu"
+alias top="btop"
 alias ps="command ps -SAcr -o 'uid,pid,ppid,time,rss,command'"
 
 # Docker
@@ -140,7 +151,6 @@ alias python=python3
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
 
-alias history="history | nl | tail -r | less +G"
 
 alias vimdiff="vim -d"
 
@@ -152,6 +162,7 @@ alias wnas="wakeonlan 00:11:32:45:3b:01"
 # CLI Tools
 alias cat="bat"
 alias find="fd"
+alias du="dust"
 alias ls="eza"
 alias ll="eza -lh"
 alias la="eza -lhaa"

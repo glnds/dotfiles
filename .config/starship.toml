@@ -1,0 +1,41 @@
+format = """
+$python\
+$directory\
+$git_branch\
+$git_status\
+$aws\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[\\$](green)"
+error_symbol = "[\\$](red)"
+vimcmd_symbol = "[❮](green)"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "cyan bold"
+
+[git_branch]
+format = "[$branch]($style) "
+style = "yellow"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "red"
+
+[aws]
+format = '[$symbol$profile]($style) '
+style = "yellow bold"
+symbol = "☁️ "
+
+[python]
+format = '[(${virtualenv})]($style) '
+style = "white bold bg:blue"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+style = "bright-black"
