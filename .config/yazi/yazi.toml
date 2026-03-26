@@ -1,3 +1,5 @@
-[preview]
-max_width = 0
-max_height = 0
+[plugin]
+prepend_previewers = [
+    { mime = "image/*", run = "noop" },
+    { mime = "application/pdf", run = "noop" },
+]
