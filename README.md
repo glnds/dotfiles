@@ -53,7 +53,7 @@ first launch.
   syntax highlighting
 - **[tmux](https://github.com/tmux/tmux)** — terminal multiplexer
 - **[Alacritty](https://alacritty.org/)** — GPU-accelerated terminal
-  emulator
+  emulator (`Cmd+Shift+M` to toggle maximize)
 
 ### Editor
 
