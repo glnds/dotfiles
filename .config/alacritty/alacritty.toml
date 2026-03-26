@@ -71,5 +71,10 @@ key = "Return"
 mods = "Alt"
 chars = "\u001b[222~"
 
+[[keyboard.bindings]]
+key = "M"
+mods = "Command|Shift"
+action = "ToggleMaximized"
+
 [general]
 live_config_reload = false
