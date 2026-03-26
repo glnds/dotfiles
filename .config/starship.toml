@@ -8,8 +8,8 @@ $cmd_duration\
 $character"""
 
 [character]
-success_symbol = "[\\$](green)"
-error_symbol = "[\\$](red)"
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [directory]
@@ -24,6 +24,7 @@ style = "yellow"
 [git_status]
 format = '([$all_status$ahead_behind]($style) )'
 style = "red"
+stashed = "≡"
 
 [aws]
 format = '[$symbol$profile]($style) '
