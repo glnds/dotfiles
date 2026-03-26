@@ -47,7 +47,7 @@ function y
     if set cwd (command cat -- $tmp); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
         cd -- "$cwd"
     end
-    rm -f -- "$tmp"
+    trash "$tmp"
 end
 
 alias markdownlint-cli2='markdownlint-cli2 --config ~/.markdownlint.yaml'
