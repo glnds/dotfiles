@@ -1,3 +1,8 @@
+[mgr]
+linemode  = "btime"
+sort_by   = "btime"
+sort_reverse = true
+
 [plugin]
 prepend_previewers = [
     { mime = "image/*", run = "noop" },

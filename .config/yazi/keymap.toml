@@ -10,8 +10,8 @@ desc = "Go to ~/Desktop"
 
 [[mgr.prepend_keymap]]
 on   = [ "g", "d" ]
-run  = "cd ~/Downloads"
-desc = "Go to ~/Downloads"
+run  = "cd '/Users/glnds/Library/Mobile Documents/com~apple~CloudDocs/Downloads'"
+desc = "Go to iCloud Downloads"
 
 [[mgr.prepend_keymap]]
 on   = [ "g", "o" ]

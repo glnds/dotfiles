@@ -29,8 +29,8 @@ stashed = "≡"
 
 [aws]
 format = '[$symbol$profile]($style) '
-style = "yellow bold"
-symbol = "☁️ "
+style = "bold #FF9900"
+symbol = "󰸏 "
 
 [python]
 format = '[(${virtualenv})]($style) '
