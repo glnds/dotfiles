@@ -1,6 +1,21 @@
 [settings]
+# UI
 style = "compact"
 inline_height = 20
 show_preview = true
+max_preview_height = 4
+
+# Search — Ctrl+R defaults to host (current machine), toggleable via Ctrl+R
+# Up arrow scoped to current session (= current tmux pane)
+filter_mode = "host"
 filter_mode_shell_up_key_binding = "session"
 search_mode = "fuzzy"
+
+# History
+store_failed = true
+secrets_filter = true
+enter_accept = true
+
+# Daemon for faster search
+[daemon]
+enabled = true
