@@ -1,0 +1,6 @@
+#!/bin/sh
+# --- cibars: delegate to repo-local hook ---
+_local="$(git rev-parse --git-dir)/hooks/pre-push"
+if [ -x "$_local" ]; then
+    "$_local" "$@" || exit $?
+fi

@@ -17,3 +17,9 @@ if [ -n "$StagedFiles" ]; then
         exit 1
     fi
 fi
+
+# --- delegate to repo-local hook ---
+_local="$(git rev-parse --git-dir)/hooks/pre-commit"
+if [ -x "$_local" ]; then
+    "$_local" "$@" || exit $?
+fi
