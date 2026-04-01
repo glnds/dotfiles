@@ -4,3 +4,7 @@ _local="$(git rev-parse --git-dir)/hooks/pre-push"
 if [ -x "$_local" ]; then
     "$_local" "$@" || exit $?
 fi
+
+# cibars: boost polling on push
+_cibars_pid="$HOME/.cibars/pids/$(git rev-parse --show-toplevel | tr '/' '_').pid"
+kill -USR1 $(cat "$_cibars_pid" 2>/dev/null) 2>/dev/null || true
