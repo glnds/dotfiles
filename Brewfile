@@ -1,4 +1,5 @@
 # CLI tools
+brew "git"
 brew "neovim"
 brew "luarocks"
 brew "fish"
@@ -46,4 +47,3 @@ cask "font-hack-nerd-font"
 cask "font-meslo-lg-nerd-font"
 cask "finch"
 cask "markedit"
-cask "claude-code"

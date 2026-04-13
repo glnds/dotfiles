@@ -80,6 +80,7 @@ first launch.
 
 ### Git
 
+- **[git](https://git-scm.com/)** — latest Homebrew-managed version
 - **[delta](https://github.com/dandavison/delta)** — syntax-highlighted
   git diffs with side-by-side view
 - **[lazygit](https://github.com/jesseduffield/lazygit)** — terminal
