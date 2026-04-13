@@ -142,6 +142,19 @@ first launch.
 | `gd` | `~/Downloads`   |
 | `go` | `~/Documents`   |
 
+## tmux Notifications for Claude Code
+
+tmux `monitor-activity` is too noisy for Claude Code (fires on every
+output line). Instead, bell-based notifications trigger only when
+Claude needs input.
+
+**How it works:** Claude Code hooks send a terminal bell (`\a`) on
+`Stop` and `permission_prompt` events → tmux `monitor-bell`
+highlights the window name in the status bar (bold red).
+
+The hooks are configured in `~/.claude/settings.json` (not tracked
+in this repo).
+
 ## GitHub Multi-Account
 
 The `gh` CLI supports multiple accounts natively (v2.40+). Combined with
