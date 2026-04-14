@@ -18,3 +18,4 @@ enter_accept = true
 # Daemon for faster search
 [daemon]
 enabled = true
+autostart = true
