@@ -33,7 +33,7 @@ history = 2000
 
 [window]
 startup_mode = "Maximized"
-decorations = "None"
+decorations = "Full"
 padding = { x = 4, y = 4 }
 option_as_alt = "Both"
 
