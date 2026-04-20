@@ -1,9 +1,28 @@
 #!/bin/sh
-# --- cibars: delegate to repo-local hook ---
+# --- delegate to repo-local hook ---
 _local="$(git rev-parse --git-dir)/hooks/pre-push"
 if [ -x "$_local" ]; then
     "$_local" "$@" || exit $?
 fi
+
+# trufflehog: scan commits being pushed for secrets
+ZERO="0000000000000000000000000000000000000000"
+repo_root="$(git rev-parse --show-toplevel)"
+while read -r _local_ref local_sha _remote_ref remote_sha; do
+    # skip ref deletions
+    [ "$local_sha" = "$ZERO" ] && continue
+    if [ "$remote_sha" = "$ZERO" ]; then
+        # new remote ref — scan all commits reachable from local_sha
+        args="--no-verification --fail"
+    else
+        # existing ref — scan only new commits
+        args="--since-commit=$remote_sha --no-verification --fail"
+    fi
+    if ! trufflehog git "file://$repo_root" $args 2>&1; then
+        echo "trufflehog: secrets detected — push blocked"
+        exit 1
+    fi
+done
 
 # cibars: boost polling on push
 _cibars_pid="$HOME/.cibars/pids/$(git rev-parse --show-toplevel | tr '/' '_').pid"

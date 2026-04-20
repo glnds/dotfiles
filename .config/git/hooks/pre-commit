@@ -3,20 +3,7 @@
 # git-secrets: scan for AWS keys/secrets
 git secrets --pre_commit_hook -- "$@"
 
-# trufflehog: scan staged files for secrets
-StagedFiles=$(git diff --staged --name-only --diff-filter=ACM)
-if [ -n "$StagedFiles" ]; then
-    TmpDir=$(mktemp -d)
-    trap 'rm -rf "$TmpDir"' EXIT
-    for f in $StagedFiles; do
-        mkdir -p "$TmpDir/$(dirname "$f")"
-        git show ":$f" > "$TmpDir/$f"
-    done
-    if ! trufflehog filesystem "$TmpDir" --no-verification --fail 2>&1; then
-        echo "trufflehog: secrets detected — commit blocked"
-        exit 1
-    fi
-fi
+# trufflehog runs at pre-push (see ~/.config/git/hooks/pre-push)
 
 # --- delegate to repo-local hook ---
 _local="$(git rev-parse --git-dir)/hooks/pre-commit"
