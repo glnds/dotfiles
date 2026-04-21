@@ -10,7 +10,7 @@ function claude-foundry --description 'Launch Claude Code using Azure Foundry'
     set -lx CLAUDE_CODE_USE_FOUNDRY 1
     set -lx ANTHROPIC_FOUNDRY_API_KEY $api_key
     set -lx ANTHROPIC_FOUNDRY_RESOURCE foundry-individual
-    set -lx ANTHROPIC_DEFAULT_SONNET_MODEL claude-sonnet-4-6
+    set -lx ANTHROPIC_DEFAULT_SONNET_MODEL claude-sonnet-4-7
     set -lx ANTHROPIC_DEFAULT_HAIKU_MODEL claude-haiku-4-5
     set -lx ANTHROPIC_DEFAULT_OPUS_MODEL claude-opus-4-6
 
