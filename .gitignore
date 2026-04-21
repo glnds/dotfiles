@@ -26,4 +26,6 @@
 .config/.mono
 docs/
 .config/github-copilot/
+# gh CLI writes oauth_token + switches state on every auth
+.config/gh/hosts.yml
 .tmux/plugins/
