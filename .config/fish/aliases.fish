@@ -124,6 +124,9 @@ alias tfgi='terraform graph | dot -Tpng > graph.png'
 alias cc='claude --allow-dangerously-skip-permissions'
 alias ccc='claude --continue --allow-dangerously-skip-permissions'
 alias ccr='claude --resume --allow-dangerously-skip-permissions'
+alias fcc='claude-foundry --allow-dangerously-skip-permissions'
+alias fccc='claude-foundry --continue --allow-dangerously-skip-permissions'
+alias fccr='claude-foundry --resume --allow-dangerously-skip-permissions'
 
 # Tmux
 alias tml="tmux list-sessions"
@@ -150,7 +153,6 @@ alias python=python3
 
 # http://osxnotes.net/spotlight.html
 alias spotlight="mdfind"
-
 
 alias vimdiff="vim -d"
 
