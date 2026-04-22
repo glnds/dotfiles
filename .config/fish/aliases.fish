@@ -127,6 +127,9 @@ alias ccr='claude --resume --allow-dangerously-skip-permissions'
 alias fcc='claude-foundry --allow-dangerously-skip-permissions'
 alias fccc='claude-foundry --continue --allow-dangerously-skip-permissions'
 alias fccr='claude-foundry --resume --allow-dangerously-skip-permissions'
+alias dcc='claude-dpg-seat --allow-dangerously-skip-permissions'
+alias dccc='claude-dpg-seat --continue --allow-dangerously-skip-permissions'
+alias dccr='claude-dpg-seat --resume --allow-dangerously-skip-permissions'
 
 # Tmux
 alias tml="tmux list-sessions"
