@@ -1,0 +1,3 @@
+use_claude_profile() {
+    export CLAUDE_CONFIG_DIR="$HOME/.claude-$1"
+}
