@@ -37,6 +37,7 @@ brew "cloudformation-guard"
 # Security
 brew "git-secrets"
 brew "trufflehog"
+brew "zizmor"
 cask "lulu"
 cask "blockblock"
 cask "knockknock"
