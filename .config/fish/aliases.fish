@@ -94,7 +94,6 @@ function gsd
 end
 
 alias tig=gitui
-alias lg='lazygit'
 
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
