@@ -1,0 +1,5 @@
+[tools]
+starship = "latest"
+atuin = "latest"
+zoxide = "latest"
+fzf = "latest"

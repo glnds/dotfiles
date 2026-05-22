@@ -1,0 +1,5 @@
+[tools]
+awscli = "latest"
+aws-sam-cli = "latest"
+cfn-lint = "latest"
+"cargo:cfn-guard" = "latest"

@@ -1,47 +1,21 @@
-# CLI tools
+# Bootstrap (must exist before mise can do anything)
 brew "git"
+brew "mise"
+
+# Shell + editor foundations
+brew "fish"
 brew "neovim"
 brew "luarocks"
-brew "fish"
 brew "tmux"
-brew "gitui"
-brew "jq"
-brew "ripgrep"
-brew "fzf"
-brew "zoxide"
-brew "glow"
-brew "trash"
-brew "bat"
-brew "fd"
-brew "tree"
-brew "eza"
-brew "uv"
-brew "pyright"
-brew "gh"
 brew "direnv"
-brew "markdownlint-cli2"
-brew "git-delta"
-brew "atuin"
-brew "starship"
-brew "yazi"
-brew "btop"
-brew "lazygit"
-brew "dust"
 
-# AWS
-brew "awscli"
-brew "aws-sam-cli"
-brew "cfn-lint"
-brew "cloudformation-guard"
+# macOS-only utilities
+brew "trash"
+brew "tree"
+brew "btop" # aqua-registry has no darwin/arm64 build
 
-# Security
+# Git ecosystem (brew integration)
 brew "git-secrets"
-brew "trufflehog"
-brew "zizmor"
-cask "lulu"
-cask "blockblock"
-cask "knockknock"
-cask "malwarebytes"
 
 # Casks
 cask "alacritty"
@@ -49,3 +23,9 @@ cask "font-hack-nerd-font"
 cask "font-meslo-lg-nerd-font"
 cask "finch"
 cask "markedit"
+
+# Security casks
+cask "lulu"
+cask "blockblock"
+cask "knockknock"
+cask "malwarebytes"

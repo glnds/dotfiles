@@ -14,7 +14,7 @@ set -g -x PAGER less
 . $fish_path/utils.fish
 test -f $fish_path/secrets.fish && . $fish_path/secrets.fish
 
-$HOME/.local/bin/mise activate fish | source
+mise activate fish | source
 
 # fish_vi_mode
 set fish_key_bindings fish_user_key_bindings
