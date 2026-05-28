@@ -1,0 +1,45 @@
+amends "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Builtins.pkl"
+
+local pre_commit_steps = new Mapping<String, Step> {
+    ["rumdl"] {
+        glob = Regex(#"\.md$"#)
+        check = "rumdl check {{files}}"
+        fix = "rumdl check --fix {{files}}"
+    }
+    ["trufflehog"] {
+        check = "trufflehog filesystem {{files}} --no-update --fail"
+    }
+}
+
+local pre_push_steps = new Mapping<String, Step> {
+    ["cibars-boost"] {
+        check = #"bash -c '_pidfile="$HOME/.cibars/pids/$(git rev-parse --show-toplevel | tr / _).pid"; kill -USR1 $(cat "$_pidfile" 2>/dev/null) 2>/dev/null || true'"#
+    }
+}
+
+hooks {
+    ["pre-commit"] {
+        fix = true
+        stash = "git"
+        steps {
+            ...pre_commit_steps
+        }
+    }
+    ["pre-push"] {
+        steps {
+            ...pre_push_steps
+        }
+    }
+    ["check"] {
+        steps {
+            ...pre_commit_steps
+        }
+    }
+    ["fix"] {
+        fix = true
+        steps {
+            ...pre_commit_steps
+        }
+    }
+}

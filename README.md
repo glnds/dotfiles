@@ -29,6 +29,14 @@ This runs `make install` (brew packages) followed by `make link` (symlinks).
 (`not_found_auto_install = true` in `.config/mise/config.toml`). Run
 `mise install` to materialise them all up front.
 
+This repo declares its own per-repo tools in `.mise.toml` (`hk`, `pkl`) and
+ships an `hk.pkl` for git hooks. After `make all`, provision the hooks:
+
+```console
+mise install
+hk install
+```
+
 ### Step 3: change shell
 
 Make [fish](https://github.com/fish-shell/fish-shell/) your default shell:
@@ -61,8 +69,7 @@ formulae with no good mise plugin:
 
 - Bootstrap: `git`, `mise`
 - Shell/editor: `fish`, `neovim`, `luarocks`, `tmux`, `direnv`
-- Utilities: `trash`, `tree`, `btop` (no aqua-registry darwin/arm64 build),
-  `git-secrets`
+- Utilities: `trash`, `tree`, `btop` (no aqua-registry darwin/arm64 build)
 - Casks: Alacritty, nerd fonts, Finch, MarkEdit, LuLu, BlockBlock, KnockKnock,
   Malwarebytes
 
@@ -142,8 +149,8 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
 - **[gitui](https://github.com/extrawurst/gitui)** — lightweight
   terminal Git UI
 - **[gh](https://cli.github.com/)** — GitHub CLI
-- **[git-secrets](https://github.com/awslabs/git-secrets)** — blocks AWS
-  keys from being committed
+- **[hk](https://github.com/jdx/hk)** — per-repo git hook runner
+  (config in `hk.pkl`, install with `hk install`)
 
 ### Containers and Cloud
 

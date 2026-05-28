@@ -14,9 +14,6 @@ brew "trash"
 brew "tree"
 brew "btop" # aqua-registry has no darwin/arm64 build
 
-# Git ecosystem (brew integration)
-brew "git-secrets"
-
 # Casks
 cask "alacritty"
 cask "font-hack-nerd-font"
