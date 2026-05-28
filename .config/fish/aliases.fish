@@ -145,10 +145,7 @@ function lockme
 end
 
 function update
-    brew update
-    brew upgrade
-    brew cleanup
-    uv tool upgrade --all
+    mise run update
 end
 
 alias python=python3

@@ -1,0 +1,10 @@
+[tasks.update]
+description = "Update brew + mise + uv tools and clean up"
+run = [
+    "brew update",
+    "brew upgrade",
+    "brew cleanup",
+    "mise upgrade",
+    "mise prune",
+    "uv tool upgrade --all",
+]

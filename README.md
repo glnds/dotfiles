@@ -25,6 +25,10 @@ make all
 
 This runs `make install` (brew packages) followed by `make link` (symlinks).
 
+`brew bundle` installs `mise`; mise-managed tools auto-install on first use
+(`not_found_auto_install = true` in `.config/mise/config.toml`). Run
+`mise install` to materialise them all up front.
+
 ### Step 3: change shell
 
 Make [fish](https://github.com/fish-shell/fish-shell/) your default shell:
@@ -44,6 +48,56 @@ fish_update_completions
 
 Open nvim — [LazyVim](https://www.lazyvim.org/) auto-installs plugins on
 first launch.
+
+## Tool Management
+
+Two layers: brew bootstraps the system, [mise](https://mise.jdx.dev/) handles
+the rest.
+
+### Brew (system foundation)
+
+`Brewfile` covers what must exist before mise runs, plus GUI casks and
+formulae with no good mise plugin:
+
+- Bootstrap: `git`, `mise`
+- Shell/editor: `fish`, `neovim`, `luarocks`, `tmux`, `direnv`
+- Utilities: `trash`, `tree`, `btop` (no aqua-registry darwin/arm64 build),
+  `git-secrets`
+- Casks: Alacritty, nerd fonts, Finch, MarkEdit, LuLu, BlockBlock, KnockKnock,
+  Malwarebytes
+
+### mise (CLI dev tools)
+
+Declared in `.config/mise/conf.d/*.toml`, all pinned to `latest`:
+
+- `20-shell.toml` — starship, atuin, zoxide, fzf
+- `30-cli.toml` — claude, gh, jq, ripgrep, bat, fd, eza, glow, dust, yazi,
+  gitui, delta, rumdl, uv
+- `50-security.toml` — trufflehog
+
+### Why mise
+
+- One declarative tool for languages and CLIs — add a tool by editing one toml
+  line, commit, done
+- Fast installs from precompiled binaries via the aqua registry
+- Auto-install on first use; no `brew install` round trips
+- Versions live in git, so machines stay in sync
+
+## Updating
+
+Single command, runs brew + mise + uv in one go:
+
+```console
+update           # fish wrapper
+mise run update  # equivalent
+```
+
+Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
+
+1. `brew update && brew upgrade && brew cleanup`
+2. `mise upgrade` — re-resolves `latest` pins and installs newer versions
+3. `mise prune` — removes the now-unused old versions
+4. `uv tool upgrade --all` — upgrades Python tools installed via `uv tool`
 
 ## Tools
 
