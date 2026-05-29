@@ -8,6 +8,7 @@ Personal dotfiles for a terminal-centric dev environment on macOS.
 
 - [Homebrew](https://brew.sh/) installed
 - `git` installed
+- [mise](https://mise.jdx.dev/) installed (`brew install mise`)
 
 ### Step 1: clone
 
@@ -16,26 +17,20 @@ cd ~
 git clone https://github.com/glnds/dotfiles.git
 ```
 
-### Step 2: install and link
+### Step 2: bootstrap
 
 ```console
 cd ~/dotfiles
-make all
+mise run bootstrap
 ```
 
-This runs `make install` (brew packages) followed by `make link` (symlinks).
+`bootstrap` chains: `brew bundle` (Brewfile) → symlinks into `$HOME` →
+`mise install` (all mise-managed tools) → `hk install` (per-repo git
+hooks from `hk.pkl`). Idempotent — safe to re-run.
 
-`brew bundle` installs `mise`; mise-managed tools auto-install on first use
-(`not_found_auto_install = true` in `.config/mise/config.toml`). Run
-`mise install` to materialise them all up front.
-
-This repo declares its own per-repo tools in `.mise.toml` (`hk`, `pkl`) and
-ships an `hk.pkl` for git hooks. After `make all`, provision the hooks:
-
-```console
-mise install
-hk install
-```
+Mise-managed tools also auto-install on first use
+(`not_found_auto_install = true` in `.config/mise/config.toml`). Available
+tasks: `mise tasks`.
 
 ### Step 3: change shell
 
