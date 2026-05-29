@@ -1,6 +1,7 @@
 [tools]
 hk = "latest"
 pkl = "latest"
+trufflehog = "latest"
 
 [tasks.install]
 description = "brew update + brew bundle from Brewfile"

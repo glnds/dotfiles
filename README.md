@@ -71,9 +71,10 @@ Two layers: [brew](https://brew.sh/) bootstraps the system,
 │   ──────                          ──────                          │
 │   Always available                Active only when cwd is         │
 │   starship, atuin, rg, bat,       inside that repo                │
-│   fd, eza, jq, uv, rumdl,           dotfiles → hk, pkl            │
-│   trufflehog, ...                   attracr  → python, node,      │
-│                                                uv, ruff, hk, ...  │
+│   fd, eza, jq, uv, rumdl, ...       dotfiles → hk, pkl,           │
+│                                                trufflehog         │
+│                                     attracr  → python, node, uv, │
+│                                                ruff, hk, sam, …   │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
@@ -96,15 +97,16 @@ in every shell, no matter the cwd:
 - `20-shell.toml` — starship, atuin, zoxide, fzf
 - `30-cli.toml` — claude, gh, jq, ripgrep, bat, fd, eza, glow, dust, yazi,
   gitui, delta, rumdl, uv
-- `50-security.toml` — trufflehog
 
 ### Per-repo mise tools
 
-Each repo can ship a `.mise.toml` declaring tools specific to that project.
-This repo's `.mise.toml` for example pins `hk` and `pkl` — tools that only
-make sense inside this repo (git hook runner + its config language). When
-you `cd` into the repo, mise puts them on PATH; when you leave, they're
-gone.
+Each repo ships its own `.mise.toml` declaring tools specific to that
+project. This repo's pins `hk`, `pkl`, and `trufflehog` — useless outside
+the dotfiles repo (git hook runner, its config language, secret scanner
+called from the pre-commit hook). Other repos pin what they need: a
+Python project pins `python` + `uv` + `ruff`; an AWS project pins
+`aws-sam-cli` + `cfn-lint` + `cfn-guard`. When you `cd` into the repo,
+mise puts those tools on PATH; when you leave, they're gone.
 
 ```console
 $ cd ~                  # no .mise.toml in scope
@@ -187,25 +189,19 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
 - **[git](https://git-scm.com/)** — latest Homebrew-managed version
 - **[delta](https://github.com/dandavison/delta)** — syntax-highlighted
   git diffs with side-by-side view
-- **[lazygit](https://github.com/jesseduffield/lazygit)** — terminal
-  Git UI with interactive rebase
-- **[gitui](https://github.com/extrawurst/gitui)** — lightweight
-  terminal Git UI
+- **[gitui](https://github.com/extrawurst/gitui)** — lightweight terminal
+  Git UI (aliased as `tig`)
 - **[gh](https://cli.github.com/)** — GitHub CLI
 - **[hk](https://github.com/jdx/hk)** — per-repo git hook runner
   (config in `hk.pkl`, install with `hk install`)
 
-### Containers and Cloud
+### Containers
 
 - **[Finch](https://github.com/runfinch/finch)** — open-source container
   tool (Docker alternative)
-- **[awscli](https://aws.amazon.com/cli/)** — AWS CLI
-- **[aws-sam-cli](https://github.com/aws/aws-sam-cli)** — serverless
-  application model CLI
-- **[cfn-lint](https://github.com/aws-cloudformation/cfn-lint)** —
-  CloudFormation linter
-- **[cloudformation-guard](https://github.com/aws-cloudformation/cloudformation-guard)**
-  — policy-as-code for CloudFormation
+
+> AWS tooling (`aws-cli`, `aws-sam-cli`, `cfn-lint`, `cfn-guard`) lives in
+> each AWS project's `.mise.toml`, not globally.
 
 ### Utilities
 
@@ -232,8 +228,10 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
   scans for persistently installed software
 - **[Malwarebytes](https://www.malwarebytes.com/mac)** — on-demand malware
   scanner
-- **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** — scans
-  repos for leaked credentials
+
+> [TruffleHog](https://github.com/trufflesecurity/trufflehog) (secret
+> scanner) lives in each hk-enabled repo's `.mise.toml`, called from the
+> pre-commit hook — see this repo's `hk.pkl` for an example.
 
 ## Custom Shortcuts
 
