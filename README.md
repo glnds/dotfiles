@@ -54,8 +54,28 @@ first launch.
 
 ## Tool Management
 
-Two layers: brew bootstraps the system, [mise](https://mise.jdx.dev/) handles
-the rest.
+Two layers: [brew](https://brew.sh/) bootstraps the system,
+[mise](https://mise.jdx.dev/) handles everything else.
+
+```text
+┌─ brew ────────────────────────────────────────────────────────────┐
+│  Bootstrap only: git, mise, fish, neovim, tmux + GUI casks        │
+└───────────────────────────┬───────────────────────────────────────┘
+                            │ brew bundle (one time)
+                            ▼
+┌─ mise ────────────────────────────────────────────────────────────┐
+│  Everything else, two scopes:                                     │
+│                                                                   │
+│   GLOBAL                          PER-REPO                        │
+│   ~/.config/mise/conf.d/*.toml    <repo>/.mise.toml               │
+│   ──────                          ──────                          │
+│   Always available                Active only when cwd is         │
+│   starship, atuin, rg, bat,       inside that repo                │
+│   fd, eza, jq, uv, rumdl,           dotfiles → hk, pkl            │
+│   trufflehog, ...                   attracr  → python, node,      │
+│                                                uv, ruff, hk, ...  │
+└───────────────────────────────────────────────────────────────────┘
+```
 
 ### Brew (system foundation)
 
@@ -68,19 +88,47 @@ formulae with no good mise plugin:
 - Casks: Alacritty, nerd fonts, Finch, MarkEdit, LuLu, BlockBlock, KnockKnock,
   Malwarebytes
 
-### mise (CLI dev tools)
+### Global mise tools
 
-Declared in `.config/mise/conf.d/*.toml`, all pinned to `latest`:
+Declared in `.config/mise/conf.d/*.toml`, all pinned to `latest`. Available
+in every shell, no matter the cwd:
 
 - `20-shell.toml` — starship, atuin, zoxide, fzf
 - `30-cli.toml` — claude, gh, jq, ripgrep, bat, fd, eza, glow, dust, yazi,
   gitui, delta, rumdl, uv
 - `50-security.toml` — trufflehog
 
-### Why mise
+### Per-repo mise tools
 
-- One declarative tool for languages and CLIs — add a tool by editing one toml
-  line, commit, done
+Each repo can ship a `.mise.toml` declaring tools specific to that project.
+This repo's `.mise.toml` for example pins `hk` and `pkl` — tools that only
+make sense inside this repo (git hook runner + its config language). When
+you `cd` into the repo, mise puts them on PATH; when you leave, they're
+gone.
+
+```console
+$ cd ~                  # no .mise.toml in scope
+$ hk --version
+mise ERROR No version is set for shim: hk
+
+$ cd ~/dotfiles         # .mise.toml declares hk
+$ hk --version
+hk 1.46.0
+```
+
+**Why this matters:**
+
+- **No global pollution.** A project pinned to Python 3.11 doesn't fight
+  another pinned to 3.13. Each has its own `.mise.toml`; both Just Work.
+- **Reproducible across machines.** `.mise.toml` is in git, so a fresh
+  clone gets the exact same versions after `mise install`.
+- **Fast onboarding.** Clone, `mise install`, done — no chasing down which
+  tools the project expects.
+
+### Why mise (over plain brew/asdf/pyenv/nvm/...)
+
+- One declarative tool for languages and CLIs — add a tool by editing one
+  toml line, commit, done
 - Fast installs from precompiled binaries via the aqua registry
 - Auto-install on first use; no `brew install` round trips
 - Versions live in git, so machines stay in sync
