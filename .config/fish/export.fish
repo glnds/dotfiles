@@ -17,6 +17,11 @@ set -x PATH "$HOME/.cargo/bin" $PATH
 # Obsidian CLI
 set -x PATH /Applications/Obsidian.app/Contents/MacOS $PATH
 
+# mise shims — make mise-managed tools (hk, etc.) available in
+# non-interactive contexts (IDE/GUI git, cron, scripts).
+# `mise activate` below prepends direct install dirs for interactive use.
+set -x PATH $HOME/.local/share/mise/shims $PATH
+
 set -x COLORTERM truecolor
 
 set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
