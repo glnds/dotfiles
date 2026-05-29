@@ -218,8 +218,8 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
 - **[tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)**
   — directory listing
 - **[direnv](https://direnv.net/)** — per-directory environment variables
-- **[markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)**
-  — Markdown linter
+- **[rumdl](https://rumdl.dev/)** — fast Markdown linter (CLI + LSP for
+  nvim)
 - **[uv](https://github.com/astral-sh/uv)** — fast Python package manager
 
 ### Security

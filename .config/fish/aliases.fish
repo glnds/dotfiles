@@ -50,8 +50,6 @@ function y
     trash "$tmp"
 end
 
-alias markdownlint-cli2='markdownlint-cli2 --config ~/.markdownlint.yaml'
-
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
 alias gd="git diff"

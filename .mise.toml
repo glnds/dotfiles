@@ -12,10 +12,9 @@ run = [
 [tasks.link]
 description = "Symlink dotfiles into $HOME"
 run = [
-    "ln -sfn $HOME/dotfiles/.gitconfig          $HOME/.gitconfig",
-    "ln -sfn $HOME/dotfiles/.tmux               $HOME/.tmux",
-    "ln -sfn $HOME/dotfiles/.config             $HOME/.config",
-    "ln -sfn $HOME/dotfiles/.markdownlint.yaml  $HOME/.markdownlint.yaml",
+    "ln -sfn $HOME/dotfiles/.gitconfig  $HOME/.gitconfig",
+    "ln -sfn $HOME/dotfiles/.tmux       $HOME/.tmux",
+    "ln -sfn $HOME/dotfiles/.config     $HOME/.config",
 ]
 
 [tasks.unlink]
@@ -24,7 +23,6 @@ run = [
     "rm -f $HOME/.gitconfig",
     "rm -f $HOME/.tmux",
     "rm -f $HOME/.config",
-    "rm -f $HOME/.markdownlint.yaml",
 ]
 
 [tasks.bootstrap]
