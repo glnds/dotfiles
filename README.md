@@ -8,7 +8,6 @@ Personal dotfiles for a terminal-centric dev environment on macOS.
 
 - [Homebrew](https://brew.sh/) installed
 - `git` installed
-- [mise](https://mise.jdx.dev/) installed (`brew install mise`)
 
 ### Step 1: clone
 
@@ -21,7 +20,8 @@ git clone https://github.com/glnds/dotfiles.git
 
 ```console
 cd ~/dotfiles
-mise run bootstrap
+brew install mise      # one-time, seeds the task runner
+mise run bootstrap     # everything else
 ```
 
 `bootstrap` chains: `brew bundle` (Brewfile) → symlinks into `$HOME` →
