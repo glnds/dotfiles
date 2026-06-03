@@ -89,6 +89,12 @@ formulae with no good mise plugin:
 - Casks: Alacritty, nerd fonts, Finch, MarkEdit, LuLu, BlockBlock, KnockKnock,
   Malwarebytes
 
+> [!NOTE]
+> Editing the `Brewfile` does nothing on its own. Only `brew bundle` reconciles
+> it — run `mise run install` (or `mise run bootstrap`) to apply new entries.
+> `update` runs `brew upgrade`, which only upgrades already-installed formulae
+> and never installs what you just added.
+
 ### Global mise tools
 
 Declared in `.config/mise/conf.d/*.toml`, all pinned to `latest`. Available
