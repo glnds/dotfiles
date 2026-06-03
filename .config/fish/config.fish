@@ -22,15 +22,15 @@ set fish_key_bindings fish_user_key_bindings
 # Activate AWS cli auto completion
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
-zoxide init --cmd cd fish | source
+command -q zoxide && zoxide init --cmd cd fish | source
 
-fzf --fish | source
+command -q fzf && fzf --fish | source
 
-atuin init fish | source
+command -q atuin && atuin init fish | source
 
-direnv hook fish | source
+command -q direnv && direnv hook fish | source
 
-starship init fish | source
+command -q starship && starship init fish | source
 
 # Auto-start tmux in Alacritty
 if status is-interactive
