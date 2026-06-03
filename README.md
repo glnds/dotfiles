@@ -32,6 +32,11 @@ Mise-managed tools also auto-install on first use
 (`not_found_auto_install = true` in `.config/mise/config.toml`). Available
 tasks: `mise tasks`.
 
+> [!TIP]
+> If the shell ever reports `mise: Unknown command`, mise itself is gone —
+> re-seed it with `brew install mise`. `update` can't recover this: it runs
+> `brew upgrade` (installed formulae only), not `brew bundle`.
+
 ### Step 3: change shell
 
 Make [fish](https://github.com/fish-shell/fish-shell/) your default shell:
@@ -94,6 +99,11 @@ formulae with no good mise plugin:
 > it — run `mise run install` (or `mise run bootstrap`) to apply new entries.
 > `update` runs `brew upgrade`, which only upgrades already-installed formulae
 > and never installs what you just added.
+>
+> Pruning the other direction — after moving a tool from brew to mise — run
+> `brew bundle cleanup --force`. It uninstalls formulae/casks not in the
+> `Brewfile` (plus their orphaned deps), so the brew copy stops shadowing the
+> mise shim. `brew leaves` should then equal the `Brewfile`.
 
 ### Global mise tools
 
@@ -199,7 +209,10 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
   Git UI (aliased as `tig`)
 - **[gh](https://cli.github.com/)** — GitHub CLI
 - **[hk](https://github.com/jdx/hk)** — per-repo git hook runner
-  (config in `hk.pkl`, install with `hk install`)
+  (config in `hk.pkl`, install with `hk install`). On Git 2.54+ hooks are
+  config-based, not scripts in `.git/hooks/` — so an empty `.git/hooks/` is
+  expected. Verify with `git config --get-regexp '^hook\.'`, not `ls
+  .git/hooks/`.
 
 ### Containers
 
