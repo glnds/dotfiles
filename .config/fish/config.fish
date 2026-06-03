@@ -28,8 +28,6 @@ command -q fzf && fzf --fish | source
 
 command -q atuin && atuin init fish | source
 
-command -q direnv && direnv hook fish | source
-
 command -q starship && starship init fish | source
 
 # Auto-start tmux in Alacritty
