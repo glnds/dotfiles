@@ -13,3 +13,4 @@ gitui = "latest"
 delta = "latest"
 rumdl = "latest"
 uv = "latest"
+"npm:pyright" = "latest"  # provides pyright-langserver for the pyright-lsp Claude Code plugin
