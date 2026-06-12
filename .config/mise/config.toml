@@ -4,3 +4,5 @@ not_found_auto_install = true
 
 [tools]
 node = "22"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
