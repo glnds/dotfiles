@@ -23,6 +23,7 @@ cask "font-hack-nerd-font"
 cask "font-meslo-lg-nerd-font"
 cask "finch"
 cask "markedit"
+cask "handy"
 
 # Security casks
 cask "lulu"

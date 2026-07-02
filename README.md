@@ -91,8 +91,8 @@ formulae with no good mise plugin:
 - Bootstrap: `git`, `mise`
 - Shell/editor: `fish`, `neovim`, `luarocks`, `tmux`, `direnv`
 - Utilities: `trash`, `tree`, `btop` (no aqua-registry darwin/arm64 build)
-- Casks: Alacritty, nerd fonts, Finch, MarkEdit, LuLu, BlockBlock, KnockKnock,
-  Malwarebytes
+- Casks: Alacritty, nerd fonts, Finch, MarkEdit, Handy, LuLu, BlockBlock,
+  KnockKnock, Malwarebytes
 
 > [!NOTE]
 > Editing the `Brewfile` does nothing on its own. Only `brew bundle` reconciles
@@ -236,6 +236,8 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
 - **[rumdl](https://rumdl.dev/)** — fast Markdown linter (CLI + LSP for
   nvim)
 - **[uv](https://github.com/astral-sh/uv)** — fast Python package manager
+- **[Handy](https://handy.computer/)** — offline speech-to-text dictation
+  app (Whisper), types transcribed text into any app
 
 ### Security
 
