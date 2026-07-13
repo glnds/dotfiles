@@ -1,6 +1,7 @@
 # Dotfiles
 
-Personal dotfiles for a terminal-based dev environment on macOS. Speed and staying lightweight is the priority.
+Personal dotfiles for a terminal-based dev environment on macOS. Speed and staying lightweight is
+the priority.
 
 ## Workflow
 
@@ -13,6 +14,17 @@ Solo repo — trunk-based development, commit directly to `master`. No branches 
 - **tmux** terminal multiplexer (`.tmux.conf`)
 - **Alacritty** terminal emulator (`.config/alacritty/`)
 
+## Tool Management
+
+CLI tooling is managed by **mise** (`.config/mise/`, split across `conf.d/` by role). Releases are
+gated by `minimum_release_age` so new versions settle before they install.
+
+**Homebrew is the fallback, not the default.** A tool belongs in the `Brewfile` only when mise
+cannot install it — in practice, when upstream ships no prebuilt `aarch64-apple-darwin` binary, so
+no mise binary backend (aqua/ubi/github) can fetch it. For those tools the mise `asdf` plugin falls
+back to third-party rebuilds (cargo-quickinstall) that 404 on fresh releases, and `cargo:` would
+compile from source — both worse than a Homebrew bottle on a speed/lightweight setup. Current
+members: `btop`, `eza`. Give each such Brewfile line a one-line reason.
 
 ## Directory Structure
 
@@ -26,7 +38,6 @@ Solo repo — trunk-based development, commit directly to `master`. No branches 
   gh/          # GitHub CLI config
   yazi/        # file manager config (bookmarks)
 ```
-
 
 ## Fish Config
 
