@@ -13,6 +13,7 @@ brew "direnv"
 brew "trash"
 brew "tree"
 brew "btop" # aqua-registry has no darwin/arm64 build
+brew "eza"  # eza ships no darwin binary; mise asdf plugin relies on flaky cargo-quickinstall
 
 # Casks
 cask "alacritty"
