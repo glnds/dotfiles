@@ -14,3 +14,4 @@ rumdl = "latest"
 uv = "latest"
 "npm:pyright" = "latest"  # provides pyright-langserver for the pyright-lsp Claude Code plugin
 "github:stephenleo/cship" = "latest"  # Claude Code statusline; no registry entry, github backend fetches the release binary
+"npm:ccusage" = "latest"  # Claude Code usage/cost reporting; npm-only, ships no release binaries
