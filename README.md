@@ -112,7 +112,7 @@ in every shell, no matter the cwd:
 
 - `20-shell.toml` — starship, atuin, zoxide, fzf
 - `30-cli.toml` — claude, gh, jq, ripgrep, bat, fd, eza, glow, dust, yazi,
-  gitui, delta, rumdl, uv
+  gitui, delta, rumdl, uv, cship
 
 ### Per-repo mise tools
 
