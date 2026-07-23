@@ -1,0 +1,31 @@
+# cship (Claude Code statusline) config. Starship-format TOML, cship-namespaced tables.
+# Kept separate from starship.toml so starship doesn't warn on these unknown keys.
+[cship]
+lines = ["$cship.model  $cship.cost  $cship.context_bar  $cship.usage_limits"]
+
+[cship.model]
+symbol = "🤖 "
+
+[cship.cost]
+symbol = "💰 "
+
+[cship.context_bar]
+symbol             = "🧠 "
+format             = "[$symbol$value]($style)"
+width              = 10
+style              = "green"
+warn_threshold     = 20.0
+warn_style         = "yellow"
+critical_threshold = 60.0
+critical_style     = "bold red"
+
+# Terse: percentages only. Add "{reset}" back to a format to show time-to-reset.
+[cship.usage_limits]
+five_hour_format   = "🕐 5h {pct}%"
+seven_day_format   = "📅 7d {pct}%"
+extra_usage_format = ""
+separator          = "  "
+warn_threshold     = 60.0
+warn_style         = "yellow"
+critical_threshold = 85.0
+critical_style     = "bold red"

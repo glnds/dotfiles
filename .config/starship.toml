@@ -35,34 +35,3 @@ symbol = "󰸏 "
 [python]
 format = '[(${virtualenv})]($style) '
 style = "white bold bg:blue"
-
-# cship (Claude Code statusline) reads this file too; starship ignores these sections.
-[cship]
-lines = ["$cship.model  $cship.cost  $cship.context_bar  $cship.usage_limits"]
-
-[cship.model]
-symbol = "🤖 "
-
-[cship.cost]
-symbol = "💰 "
-
-[cship.context_bar]
-symbol             = "🧠 "
-format             = "[$symbol$value]($style)"
-width              = 10
-style              = "green"
-warn_threshold     = 20.0
-warn_style         = "yellow"
-critical_threshold = 60.0
-critical_style     = "bold red"
-
-# Terse: percentages only. Add "{reset}" back to a format to show time-to-reset.
-[cship.usage_limits]
-five_hour_format   = "🕐 5h {pct}%"
-seven_day_format   = "📅 7d {pct}%"
-extra_usage_format = ""
-separator          = "  "
-warn_threshold     = 60.0
-warn_style         = "yellow"
-critical_threshold = 85.0
-critical_style     = "bold red"
