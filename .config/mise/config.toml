@@ -6,6 +6,6 @@ minimum_release_age_excludes = ["claude"]
 
 [tools]
 node = "26"
-"npm:@earendil-works/pi-coding-agent" = "0.80.6"
+"npm:@earendil-works/pi-coding-agent" = "0.80.10"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
