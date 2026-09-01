@@ -9,3 +9,6 @@ node = "26"
 "npm:@earendil-works/pi-coding-agent" = "0.84.2"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
+
+[env]
+UV_SYSTEM_CERTS = "1"
