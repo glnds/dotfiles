@@ -118,15 +118,12 @@ alias tf='terraform'
 alias tfgi='terraform graph | dot -Tpng > graph.png'
 
 # Claude Code
-alias cc='claude --allow-dangerously-skip-permissions'
-alias ccc='claude --continue --allow-dangerously-skip-permissions'
-alias ccr='claude --resume --allow-dangerously-skip-permissions'
-alias fcc='claude-foundry --allow-dangerously-skip-permissions'
-alias fccc='claude-foundry --continue --allow-dangerously-skip-permissions'
-alias fccr='claude-foundry --resume --allow-dangerously-skip-permissions'
-alias dcc='claude-dpg-seat --allow-dangerously-skip-permissions'
-alias dccc='claude-dpg-seat --continue --allow-dangerously-skip-permissions'
-alias dccr='claude-dpg-seat --resume --allow-dangerously-skip-permissions'
+alias cc='claude'
+alias ccc='claude --continue'
+alias ccr='claude --resume'
+alias dcc='claude-dpg-seat'
+alias dccc='claude-dpg-seat --continue'
+alias dccr='claude-dpg-seat --resume'
 
 # Tmux
 alias tml="tmux list-sessions"
