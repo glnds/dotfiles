@@ -2,7 +2,9 @@
 idiomatic_version_file_enable_tools = ["node", "python"]
 not_found_auto_install = true
 minimum_release_age = "7d"
-minimum_release_age_excludes = ["claude"]
+# hk: packslip's latest-lookup only checks the newest release vs the age gate, so a <7d hk
+# release makes hk=latest hard-fail install. Exempting keeps latest self-updating.
+minimum_release_age_excludes = ["claude", "hk"]
 
 [tools]
 node = "26"
