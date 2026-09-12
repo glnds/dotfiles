@@ -4,6 +4,7 @@ run = [
     "brew update",
     "brew upgrade",
     "brew cleanup",
+    "mise run alacritty-update",
     "mise upgrade",
     "mise prune",
     "uv tool upgrade --all",

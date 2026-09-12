@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+#MISE description="Install/upgrade Alacritty from upstream dmg (cask is disabled: unsigned)"
+#
+# Homebrew disabled the alacritty cask on 2026-09-01 because upstream ships an
+# unsigned, un-notarized app. Upstream is otherwise actively maintained, so we
+# take the dmg directly and strip the quarantine flag ourselves.
+set -euo pipefail
+
+# ALACRITTY_APP is an override for testing; default is the real install path.
+APP="${ALACRITTY_APP:-/Applications/Alacritty.app}"
+REPO="alacritty/alacritty"
+
+# Resolve the newest tag by following the /releases/latest redirect (no API
+# token, no rate limit, no jq).
+url=$(curl -fsSLI -o /dev/null -w '%{url_effective}' "https://github.com/$REPO/releases/latest")
+tag=${url##*/}
+latest=${tag#v}
+
+[[ -n $latest ]] || { echo "alacritty: could not resolve latest release" >&2; exit 1; }
+
+current=""
+if [[ -d $APP ]]; then
+    current=$(defaults read "$APP/Contents/Info.plist" CFBundleShortVersionString)
+fi
+
+if [[ $current == "$latest" ]]; then
+    echo "alacritty $current is current"
+    exit 0
+fi
+
+# Replacing a live bundle is what brew does for casks too: the running process
+# keeps the old code until it exits. Advisory only -- this is normally run from
+# inside Alacritty, so blocking here would mean it never updates.
+running=false
+if [[ $APP == "/Applications/Alacritty.app" ]] && pgrep -qx alacritty; then
+    running=true
+fi
+
+echo "alacritty: ${current:-none} -> $latest"
+
+tmp=$(mktemp -d)
+mnt=""
+cleanup() {
+    [[ -n $mnt ]] && hdiutil detach "$mnt" -quiet || true
+    rm -rf "$tmp"
+}
+trap cleanup EXIT
+
+curl -fsSL -o "$tmp/alacritty.dmg" \
+    "https://github.com/$REPO/releases/download/$tag/Alacritty-$tag.dmg"
+
+# Explicit mountpoint: -quiet suppresses hdiutil's device table, so there is
+# nothing to parse for it.
+mnt="$tmp/mnt"
+mkdir -p "$mnt"
+hdiutil attach "$tmp/alacritty.dmg" -nobrowse -readonly -quiet -mountpoint "$mnt"
+[[ -d $mnt/Alacritty.app ]] || { echo "alacritty: Alacritty.app not found in dmg" >&2; exit 1; }
+
+rm -rf "$APP"
+ditto "$mnt/Alacritty.app" "$APP"
+xattr -dr com.apple.quarantine "$APP"
+
+echo "alacritty $latest installed (unsigned, quarantine stripped)"
+$running && echo "alacritty: restart the terminal to pick up $latest"
