@@ -31,5 +31,6 @@ docs/
 # cship drops runtime scaffolding (sample-context.json) on first run
 .config/cship/
 .tmux/plugins/
-# pgcli runtime log
+# pgcli runtime log + query history
 .config/pgcli/log
+.config/pgcli/history
