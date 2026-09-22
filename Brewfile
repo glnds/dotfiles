@@ -7,7 +7,6 @@ brew "fish"
 brew "neovim"
 brew "luarocks"
 brew "tmux"
-brew "direnv"
 
 # macOS-only utilities
 brew "trash"

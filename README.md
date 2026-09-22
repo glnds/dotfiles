@@ -124,7 +124,7 @@ Two layers: [brew](https://brew.sh/) bootstraps the system,
 formulae with no good mise plugin:
 
 - Bootstrap: `git`, `mise`
-- Shell/editor: `fish`, `neovim`, `luarocks`, `tmux`, `direnv`
+- Shell/editor: `fish`, `neovim`, `luarocks`, `tmux`
 - Utilities: `trash`, `tree`, `btop` (no aqua-registry darwin/arm64 build)
 - Casks: Alacritty, nerd fonts, Finch, MarkEdit, Handy, LuLu, BlockBlock,
   KnockKnock, Malwarebytes
@@ -267,7 +267,6 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
   renderer
 - **[tree](https://oldmanprogrammer.net/source.php?dir=projects/tree)**
   — directory listing
-- **[direnv](https://direnv.net/)** — per-directory environment variables
 - **[rumdl](https://rumdl.dev/)** — fast Markdown linter (CLI + LSP for
   nvim)
 - **[uv](https://github.com/astral-sh/uv)** — fast Python package manager
