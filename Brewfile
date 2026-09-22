@@ -25,6 +25,7 @@ cask "font-meslo-lg-nerd-font"
 cask "finch"
 cask "markedit"
 cask "handy"
+cask "obsidian"
 
 # Security casks
 cask "lulu"

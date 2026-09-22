@@ -92,6 +92,12 @@ SSH key from step 2).
 LuLu, BlockBlock, and Malwarebytes each need their system extension / Full Disk Access approved
 under System Settings → Privacy & Security on first launch.
 
+### Step 8: Obsidian
+
+Sign in to iCloud and let iCloud Drive finish syncing the vault (the `sb` alias points at it),
+then open it in Obsidian: vault settings and community plugins live inside the vault, so they
+come along. Enable the CLI under Settings → General → Command line interface so `ob` works.
+
 ## Tool Management
 
 Two layers: [brew](https://brew.sh/) bootstraps the system,
@@ -126,7 +132,7 @@ formulae with no good mise plugin:
 - Bootstrap: `git`, `mise`
 - Shell/editor: `fish`, `neovim`, `luarocks`, `tmux`
 - Utilities: `trash`, `tree`, `btop` (no aqua-registry darwin/arm64 build)
-- Casks: Alacritty, nerd fonts, Finch, MarkEdit, Handy, LuLu, BlockBlock,
+- Casks: nerd fonts, Finch, MarkEdit, Handy, Obsidian, LuLu, BlockBlock,
   KnockKnock, Malwarebytes
 
 > [!NOTE]
@@ -272,6 +278,8 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
 - **[uv](https://github.com/astral-sh/uv)** — fast Python package manager
 - **[Handy](https://handy.computer/)** — offline speech-to-text dictation
   app (Whisper), types transcribed text into any app
+- **[Obsidian](https://obsidian.md/)** — Markdown knowledge base; vault syncs via iCloud,
+  CLI linked by the cask as `obsidian` (`ob`, `sb` aliases)
 
 ### Security
 

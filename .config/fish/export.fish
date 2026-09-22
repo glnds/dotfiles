@@ -14,9 +14,6 @@ set -x LC_CTYPE en_US.UTF-8
 # Rust config
 set -x PATH "$HOME/.cargo/bin" $PATH
 
-# Obsidian CLI
-set -x PATH /Applications/Obsidian.app/Contents/MacOS $PATH
-
 # mise shims — make mise-managed tools (hk, etc.) available in
 # non-interactive contexts (IDE/GUI git, cron, scripts).
 # `mise activate` below prepends direct install dirs for interactive use.
