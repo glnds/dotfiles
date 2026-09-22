@@ -11,25 +11,47 @@ run = [
 ]
 
 [tasks.link]
-description = "Symlink dotfiles into $HOME"
-run = [
-    "ln -sfn $HOME/dotfiles/.gitconfig  $HOME/.gitconfig",
-    "ln -sfn $HOME/dotfiles/.tmux       $HOME/.tmux",
-    "ln -sfn $HOME/dotfiles/.config     $HOME/.config",
-]
+description = "Symlink dotfiles into $HOME (fails on a real file/dir in the way)"
+run = '''
+set -eu
+for f in .gitconfig .tmux .tmux.conf .config; do
+    src="{{config_root}}/$f"
+    dst="$HOME/$f"
+    # ln -sfn onto a real dir nests the link inside it silently -> refuse instead
+    if [ -e "$dst" ] && [ ! -L "$dst" ]; then
+        echo "link: $dst exists and is not a symlink; move it aside and re-run" >&2
+        exit 1
+    fi
+    ln -sfn "$src" "$dst"
+done
+'''
 
 [tasks.unlink]
 description = "Remove dotfiles symlinks from $HOME"
-run = [
-    "rm -f $HOME/.gitconfig",
-    "rm -f $HOME/.tmux",
-    "rm -f $HOME/.config",
-]
+run = '''
+for f in .gitconfig .tmux .tmux.conf .config; do
+    [ -L "$HOME/$f" ] && rm "$HOME/$f"
+done
+true
+'''
+
+[tasks.tpm]
+description = "Clone tmux plugin manager + install tmux plugins"
+run = '''
+set -eu
+dir="{{config_root}}/.tmux/plugins/tpm"
+[ -d "$dir/.git" ] || git clone --depth 1 https://github.com/tmux-plugins/tpm "$dir"
+"$dir/bin/install_plugins"
+'''
 
 [tasks.bootstrap]
-description = "Full setup: brew bundle, symlinks, mise tools, hk hooks"
-depends = ["install", "link"]
+description = "Full setup: brew bundle, symlinks, mise tools, alacritty, tmux plugins, hk hooks"
+# Sequential on purpose: `depends` runs in parallel, and link must not race brew bundle.
 run = [
+    "mise run install",
+    "mise run link",
     "mise install",
+    "mise run alacritty-update",
+    "mise run tpm",
     "hk install",
 ]

@@ -10,6 +10,7 @@ dust = "latest"
 yazi = "latest"
 gitui = "latest"
 delta = "latest"
+git-lfs = "latest"  # .gitconfig lfs filter is required=true; clones of LFS repos fail without it
 rumdl = "latest"
 uv = "latest"
 "npm:pyright" = "latest"  # provides pyright-langserver for the pyright-lsp Claude Code plugin

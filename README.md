@@ -2,60 +2,95 @@
 
 Personal dotfiles for a terminal-centric dev environment on macOS.
 
-## Installation
+## Fresh Mac setup
 
-### Prerequisites
+From an out-of-the-box Apple Silicon Mac to a working environment. Run the steps in order: later
+steps depend on earlier ones.
 
-- [Homebrew](https://brew.sh/) installed
-- `git` installed
+> [!IMPORTANT]
+> This repo is public. Keys, tokens, and machine-specific identity config never go in it.
+> Everything marked **(untracked)** below is created by hand or copied from the old machine over
+> a trusted channel (AirDrop, encrypted USB, Migration Assistant for `~/.ssh` only).
 
-### Step 1: clone
+### Step 1: command line tools + Homebrew
 
 ```console
-cd ~
-git clone https://github.com/glnds/dotfiles.git
+xcode-select --install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"   # current zsh session only; fish config handles it later
 ```
 
-### Step 2: bootstrap
+### Step 2: SSH key for GitHub (untracked)
+
+`.gitconfig` rewrites `https://github.com/` to SSH, so **every** GitHub clone after the symlink
+step (LazyVim plugins, tmux plugins, your repos) needs a working key first.
 
 ```console
+ssh-keygen -t ed25519 -C "<email>"                # set a passphrase
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub                    # add at github.com/settings/keys
+ssh -T git@github.com                             # accept host key, expect "Hi <user>!"
+```
+
+Also restore from the old machine, if used:
+
+- `~/.ssh/config`: host aliases for extra GitHub accounts (see `url.*.insteadOf` in `.gitconfig`)
+- `~/.gitconfig-*`: identity overrides pulled in by `includeIf` in `.gitconfig`
+
+### Step 3: clone + bootstrap
+
+```console
+git clone https://github.com/glnds/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 brew install mise      # one-time, seeds the task runner
-mise run bootstrap     # everything else
+mise trust             # this repo's .mise.toml defines the tasks
+mise run bootstrap
 ```
 
-`bootstrap` chains: `brew bundle` (Brewfile) → symlinks into `$HOME` →
-`mise install` (all mise-managed tools) → `hk install` (per-repo git
-hooks from `hk.pkl`). Idempotent — safe to re-run.
+`bootstrap` runs sequentially:
 
-Mise-managed tools also auto-install on first use
-(`not_found_auto_install = true` in `.config/mise/config.toml`). Available
-tasks: `mise tasks`.
+1. `install`: `brew bundle` (Brewfile)
+2. `link`: symlinks `.gitconfig`, `.tmux`, `.tmux.conf`, `.config` into `$HOME`. Fails instead of
+   nesting when a real file/dir is in the way, so move any pre-existing `~/.config` aside first
+3. `mise install`: every mise-managed tool
+4. `alacritty-update`: Alacritty from the upstream dmg (the Homebrew cask is disabled)
+5. `tpm`: clones the tmux plugin manager and installs the tmux plugins
+6. `hk install`: git hooks for this repo
+
+Idempotent, so it's safe to re-run. Available tasks: `mise tasks`.
 
 > [!TIP]
 > If the shell ever reports `mise: Unknown command`, mise itself is gone —
 > re-seed it with `brew install mise`. `update` can't recover this: it runs
 > `brew upgrade` (installed formulae only), not `brew bundle`.
 
-### Step 3: change shell
-
-Make [fish](https://github.com/fish-shell/fish-shell/) your default shell:
+### Step 4: fish as default shell
 
 ```console
 sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 chsh -s /opt/homebrew/bin/fish
 ```
 
-Periodically update fish completions:
+Open Alacritty: fish starts and tmux auto-attaches to session `main`. Refresh completions once with
+`fish_update_completions`.
 
-```console
-fish_update_completions
-```
+### Step 5: secrets + accounts (untracked)
 
-### Step 4: prepare nvim
+- `~/.config/fish/secrets.fish`: local env secrets, gitignored, sourced if present
+- `gh auth login` for each GitHub account, then per-directory `GH_TOKEN` (see
+  [GitHub Multi-Account](#github-multi-account))
+- `~/.claude/settings.json`: Claude Code settings + tmux bell hooks (see
+  [tmux Notifications](#tmux-notifications-for-claude-code))
 
-Open nvim — [LazyVim](https://www.lazyvim.org/) auto-installs plugins on
-first launch.
+### Step 6: nvim
+
+Open nvim: [LazyVim](https://www.lazyvim.org/) auto-installs plugins on first launch (needs the
+SSH key from step 2).
+
+### Step 7: macOS approvals
+
+LuLu, BlockBlock, and Malwarebytes each need their system extension / Full Disk Access approved
+under System Settings → Privacy & Security on first launch.
 
 ## Tool Management
 
@@ -281,39 +316,44 @@ in this repo).
 ## GitHub Multi-Account
 
 The `gh` CLI supports multiple accounts natively (v2.40+). Combined with
-direnv, account switching is automatic per directory.
+mise `[env]`, account switching is automatic per directory.
 
 ### Step 1: authenticate both accounts
 
 ```console
-gh auth login  # work account
-gh auth login  # private account (stacks)
+gh auth login  # private account
+gh auth login  # work account (stacks)
 ```
 
 Verify with `gh auth status`.
 
-### Step 2: automatic per-directory switching with direnv
+### Step 2: per-directory `GH_TOKEN` via mise (untracked)
 
-Create `.envrc` in each repos root:
+<!-- rumdl-disable MD013 -->
 
-Work repos (`~/work/.envrc`):
+Put a `mise.toml` at the root of each account's directory tree. It lives **outside** this repo:
+it resolves a token at runtime and never stores one.
 
-```bash
-export GH_TOKEN=$(gh auth token --user your-work-username 2>/dev/null)
+`~/source/mise.toml` (private, default for everything under `~/source`):
+
+```toml
+[env]
+GH_TOKEN = "{{ exec(command='/bin/sh -c \"$HOME/.local/share/mise/installs/gh/latest/*/bin/gh auth token --user <private-user>\"') }}"
 ```
 
-Private repos (`~/personal/.envrc`):
+`~/source/<work>/mise.toml` (overrides it for work repos):
 
-```bash
-export GH_TOKEN=$(gh auth token --user your-private-username 2>/dev/null)
+```toml
+[env]
+GH_TOKEN = "{{ exec(command='/bin/sh -c \"$HOME/.local/share/mise/installs/gh/latest/*/bin/gh auth token --user <work-user>\"') }}"
 ```
 
-Then `direnv allow` inside each folder.
+<!-- rumdl-enable MD013 -->
 
-`GH_TOKEN` overrides `gh auth switch`, so gh automatically uses the right
-account based on working directory — mirroring how SSH config works.
-The `2>/dev/null` variant dynamically pulls the current stored token
-rather than a hardcoded value.
+Then `mise trust` inside each folder. `GH_TOKEN` overrides `gh auth switch`, so gh uses the right
+account based on working directory. Re-auth an account and the token updates on the next shell
+entry.
 
-**Caveat:** if you re-auth an account, the token updates automatically
-since the `.envrc` evaluates `gh auth token` on each shell entry.
+> [!WARNING]
+> Call the real gh binary by path, as above — never plain `gh`. gh is mise-managed, so `gh` is
+> a mise shim, and invoking a shim from inside a mise `exec()` template deadlocks.
