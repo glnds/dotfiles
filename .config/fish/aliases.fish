@@ -118,12 +118,12 @@ alias tf='terraform'
 alias tfgi='terraform graph | dot -Tpng > graph.png'
 
 # Claude Code
-alias cc='claude'
-alias ccc='claude --continue'
-alias ccr='claude --resume'
-alias dcc='claude-dpg-seat'
-alias dccc='claude-dpg-seat --continue'
-alias dccr='claude-dpg-seat --resume'
+alias cc='claude --model opusplan --advisor claude-fable-5-1'
+alias ccc='claude --model opusplan --advisor claude-fable-5-1 --continue'
+alias ccr='claude --model opusplan --advisor claude-fable-5-1 --resume'
+alias dcc='claude-dpg-seat --model opusplan --advisor claude-fable-5-1'
+alias dccc='claude-dpg-seat --model opusplan --advisor claude-fable-5-1 --continue'
+alias dccr='claude-dpg-seat --model opusplan --advisor claude-fable-5-1 --resume'
 
 # Tmux
 alias tml="tmux list-sessions"
