@@ -32,7 +32,7 @@ command -q starship && starship init fish | source
 
 # Auto-start tmux in Alacritty
 if status is-interactive
-    and test "$TERM" = alacritty
+    and set -q ALACRITTY_WINDOW_ID
     and not set -q TMUX
     tmux new-session -As main
 end
