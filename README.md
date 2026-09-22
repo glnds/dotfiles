@@ -10,7 +10,7 @@ steps depend on earlier ones.
 > [!IMPORTANT]
 > This repo is public. Keys, tokens, and machine-specific identity config never go in it.
 > Everything marked **(untracked)** below is created by hand or copied from the old machine over
-> a trusted channel (AirDrop, encrypted USB, Migration Assistant for `~/.ssh` only).
+> a trusted channel (AirDrop, encrypted USB). SSH private keys are the exception: generate new ones.
 
 ### Step 1: command line tools + Homebrew
 
@@ -20,22 +20,51 @@ xcode-select --install
 eval "$(/opt/homebrew/bin/brew shellenv)"   # current zsh session only; fish config handles it later
 ```
 
-### Step 2: SSH key for GitHub (untracked)
+### Step 2: SSH keys (untracked)
 
 `.gitconfig` rewrites `https://github.com/` to SSH, so **every** GitHub clone after the symlink
 step (LazyVim plugins, tmux plugins, your repos) needs a working key first.
 
+**Generate fresh keys on the new machine — don't copy old private keys over.** One key per
+machine means a lost or retired Mac is revoked by deleting one public key, with nothing shared
+to rotate elsewhere.
+
+Rules for keeping keys secure and modern:
+
+- **ed25519 only.** Short, fast, the modern default. No new RSA keys; `ssh-keygen -t ed25519`.
+- **Always set a passphrase**, stored in the macOS Keychain so it's typed once.
+- **One key per account/purpose** (personal GitHub, work GitHub, work Bitbucket, home lab), so
+  each can be revoked independently.
+- **Comment = who + which machine** (`-C "<email> <machine>"`) so the key is identifiable in
+  GitHub's key list and `authorized_keys`.
+- **Private keys never leave the machine.** Not in this repo, not in cloud drives. If you want a
+  recovery copy, a password manager's SSH-key vault is the only acceptable place.
+
 ```console
-ssh-keygen -t ed25519 -C "<email>"                # set a passphrase
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-pbcopy < ~/.ssh/id_ed25519.pub                    # add at github.com/settings/keys
-ssh -T git@github.com                             # accept host key, expect "Hi <user>!"
+ssh-keygen -t ed25519 -C "<email> <machine>" -f ~/.ssh/<name>   # repeat per account/purpose
+ssh-add --apple-use-keychain ~/.ssh/<name>
+pbcopy < ~/.ssh/<name>.pub                    # GitHub: github.com/settings/keys
+ssh -T git@github.com                         # accept host key, expect "Hi <user>!"
 ```
 
-Also restore from the old machine, if used:
+`~/.ssh/config` contains no secrets but stays out of this public repo: copy it from the old
+machine, then point each `IdentityFile` at the new key names. Per host:
 
-- `~/.ssh/config`: host aliases for extra GitHub accounts (see `url.*.insteadOf` in `.gitconfig`)
-- `~/.gitconfig-*`: identity overrides pulled in by `includeIf` in `.gitconfig`
+```text
+Host <alias>
+  HostName <host>
+  IdentityFile ~/.ssh/<name>
+  IdentitiesOnly yes      # offer only this key, not every key in the agent
+  AddKeysToAgent yes
+  UseKeychain yes
+```
+
+Self-hosted machines (NAS, Pi, …): add the new public key to their `authorized_keys` **from the
+old machine**, which still has access. Keep it running until every host accepts the new key,
+then remove its old keys from GitHub/Bitbucket and `authorized_keys`.
+
+Also restore from the old machine, if used: `~/.gitconfig-*` identity overrides pulled in by
+`includeIf` in `.gitconfig`.
 
 ### Step 3: clone + bootstrap
 
