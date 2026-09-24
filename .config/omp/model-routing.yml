@@ -1,0 +1,71 @@
+modelRoles:
+  web: web/exa
+  default: anthropic/claude-sonnet-5:high
+  plan: anthropic/claude-opus-5-5:max
+  slow: anthropic/claude-opus-5-5:max
+  task: openai-codex/gpt-6-sol:high
+  vision: anthropic/claude-sonnet-5:high
+  smol: openai-codex/gpt-6-luna:low
+  commit: openai-codex/gpt-6-luna:low
+  tiny: openai-codex/gpt-6-luna:low
+  memory: openai-codex/gpt-6-luna:low
+  advisor: openai-codex/gpt-6-sol:medium
+
+cycleOrder:
+  - smol
+  - default
+  - slow
+
+modelProviderOrder:
+  - anthropic
+  - openai-codex
+
+advisor:
+  enabled: false
+
+retry:
+  fallbackChains:
+    web:
+      - web/perplexity
+      - google/gemini-2.5-flash
+      - anthropic/claude-haiku-4-5
+      - openai-codex/gpt-5.6-luna
+      - xai/grok-4.5
+      - web/zai
+      - web/tinyfish
+      - web/jina
+      - web/kagi
+      - web/tavily
+      - web/firecrawl
+      - web/brave
+      - web/kimi
+      - web/parallel
+      - web/synthetic
+      - web/ollama
+      - web/searxng
+      - web/startpage
+      - web/duckduckgo
+      - web/ecosia
+      - web/google
+      - web/mojeek
+      - web/public
+      - google-antigravity/gemini-2.5-flash
+      - openai-codex/gpt-5.6
+      - openai-codex/gpt-5.5
+      - xai-oauth/grok-4.5
+    default:
+      - openai-codex/gpt-6-sol:high
+    smol:
+      - anthropic/claude-haiku-4-5:minimal
+    plan:
+      - openai-codex/gpt-6-astra:max
+      - openai-codex/gpt-6-sol:max
+    slow:
+      - openai-codex/gpt-6-astra:max
+      - openai-codex/gpt-6-sol:max
+    task:
+      - anthropic/claude-sonnet-5:high
+    vision:
+      - openai-codex/gpt-6-sol:high
+    advisor:
+      - anthropic/claude-sonnet-5:medium

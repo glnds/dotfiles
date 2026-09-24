@@ -16,3 +16,4 @@ rust = "1.98.1"
 
 [env]
 UV_SYSTEM_CERTS = "1"
+PI_CONFIG_FILES = "{{env.HOME}}/.config/omp/model-routing.yml"
