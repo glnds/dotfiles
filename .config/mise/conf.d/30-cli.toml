@@ -1,5 +1,6 @@
 [tools]
 claude = "latest"
+codex = "latest"
 gh = "latest"
 jq = "latest"
 ripgrep = "latest"
