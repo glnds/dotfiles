@@ -1,0 +1,10 @@
+# Portable status-bar preferences only; the full Codex config stays local.
+# Merge into ~/.codex/config.toml; Codex does not load this fragment automatically.
+[tui]
+status_line = [
+  "model-with-reasoning",
+  "context-used",
+  "five-hour-limit",
+  "weekly-limit",
+  "git-branch",
+]

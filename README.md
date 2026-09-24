@@ -110,6 +110,8 @@ Open Alacritty: fish starts and tmux auto-attaches to session `main`. Refresh co
   [GitHub Multi-Account](#github-multi-account))
 - `~/.claude/settings.json`: Claude Code settings + tmux bell hooks (see
   [tmux Notifications](#tmux-notifications-for-claude-code))
+- `~/.codex/config.toml`: local Codex settings; restore the tracked
+  [status-bar preferences](#codex-status-bar) separately
 
 ### Step 6: nvim
 
@@ -324,6 +326,21 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
 > [TruffleHog](https://github.com/trufflesecurity/trufflehog) (secret
 > scanner) lives in each hk-enabled repo's `.mise.toml`, called from the
 > pre-commit hook — see this repo's `hk.pkl` for an example.
+
+## Codex status bar
+
+Only portable status-bar preferences are tracked in
+[.config/codex/statusline.toml](.config/codex/statusline.toml). The full `~/.codex/config.toml`
+stays local: it includes app-managed paths, project trust, and hook approval state.
+
+To restore, copy `status_line` into the existing `[tui]` table in `~/.codex/config.toml`, replacing
+that key if present. If `[tui]` is absent, append the whole fragment. Keep other settings intact;
+do not overwrite or symlink the full config. Restart the CLI to load the restored preferences.
+
+This is a manual restore fragment: `mise run link` does not install it into `~/.codex`, and Codex
+does not read it automatically. See [Codex configuration][codex-config].
+
+[codex-config]: https://learn.chatgpt.com/docs/config-file/config-basic
 
 ## Custom Shortcuts
 
