@@ -4,7 +4,8 @@ not_found_auto_install = true
 minimum_release_age = "7d"
 # hk: packslip's latest-lookup only checks the newest release vs the age gate, so a <7d hk
 # release makes hk=latest hard-fail install. Exempting keeps latest self-updating.
-minimum_release_age_excludes = ["claude", "codex", "hk"]
+# omp: always track newest release, no cooldown.
+minimum_release_age_excludes = ["claude", "codex", "hk", "github:can1357/oh-my-pi"]
 
 [tools]
 node = "26"
