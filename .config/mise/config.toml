@@ -9,7 +9,7 @@ minimum_release_age_excludes = ["claude", "codex", "hk", "github:can1357/oh-my-p
 
 [tools]
 node = "26"
-"npm:@earendil-works/pi-coding-agent" = "0.85.1"
+"npm:@earendil-works/pi-coding-agent" = "0.87.0"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 rust = "1.98.1"
