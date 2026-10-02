@@ -78,3 +78,7 @@ action = "ToggleMaximized"
 
 [general]
 live_config_reload = false
+
+[debug]
+# Hide WARN popups (NSPasteboard#writeObjects false positive, alacritty#8041)
+log_level = "Error"
