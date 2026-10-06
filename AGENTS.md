@@ -32,7 +32,7 @@ members: `btop`, `eza`. Give each such Brewfile line a one-line reason.
 .config/
   fish/        # shell config, aliases, exports, utils
   nvim/        # LazyVim-based neovim config
-  tmux.conf    # multiplexer config (in repo root)
+  (repo root)  # .tmux.conf — multiplexer config
   alacritty/   # terminal emulator config
   git/         # git config
   gh/          # GitHub CLI config
