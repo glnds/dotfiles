@@ -23,8 +23,9 @@ gated by `minimum_release_age` so new versions settle before they install.
 cannot install it — in practice, when upstream ships no prebuilt `aarch64-apple-darwin` binary, so
 no mise binary backend (aqua/ubi/github) can fetch it. For those tools the mise `asdf` plugin falls
 back to third-party rebuilds (cargo-quickinstall) that 404 on fresh releases, and `cargo:` would
-compile from source — both worse than a Homebrew bottle on a speed/lightweight setup. Current
-members: `btop`, `eza`. Give each such Brewfile line a one-line reason.
+compile from source — both worse than a Homebrew bottle on a speed/lightweight setup. Beyond the
+bootstrap and macOS-only sections, the current members are `btop`, `eza`. Give each such Brewfile
+line a one-line reason.
 
 ## Directory Structure
 
