@@ -4,8 +4,7 @@ not_found_auto_install = true
 minimum_release_age = "7d"
 # hk: packslip's latest-lookup only checks the newest release vs the age gate, so a <7d hk
 # release makes hk=latest hard-fail install. Exempting keeps latest self-updating.
-# omp: always track newest release, no cooldown.
-minimum_release_age_excludes = ["claude", "codex", "hk", "github:can1357/oh-my-pi"]
+minimum_release_age_excludes = ["claude", "codex", "hk"]
 
 [tools]
 node = "26"
@@ -16,4 +15,3 @@ rust = "1.98.1"
 
 [env]
 UV_SYSTEM_CERTS = "1"
-PI_CONFIG_FILES = "{{env.HOME}}/.config/omp/model-routing.yml"
