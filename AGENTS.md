@@ -12,7 +12,7 @@ Solo repo — trunk-based development, commit directly to `master`. No branches 
 - **Fish** shell (`.config/fish/`)
 - **Neovim** via LazyVim (`.config/nvim/`)
 - **tmux** terminal multiplexer (`.tmux.conf`)
-- **Alacritty** terminal emulator (`.config/alacritty/`)
+- **Ghostty** terminal emulator (`.config/ghostty/`)
 
 ## Tool Management
 
@@ -34,7 +34,7 @@ line a one-line reason.
   fish/        # shell config, aliases, exports, utils
   nvim/        # LazyVim-based neovim config
   (repo root)  # .tmux.conf — multiplexer config
-  alacritty/   # terminal emulator config
+  ghostty/     # terminal emulator config
   git/         # git config
   gh/          # GitHub CLI config
   yazi/        # file manager config (bookmarks)
@@ -46,4 +46,4 @@ line a one-line reason.
 - `aliases.fish` — aliases and shell functions
 - `export.fish` — environment variables and PATH
 - `secrets.fish` — local secrets (not tracked)
-- tmux auto-starts inside Alacritty terminal
+- tmux auto-starts inside Ghostty terminal

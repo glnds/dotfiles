@@ -30,9 +30,9 @@ command -q atuin && atuin init fish | source
 
 command -q starship && starship init fish | source
 
-# Auto-start tmux in Alacritty
+# Auto-start tmux in Ghostty
 if status is-interactive
-    and set -q ALACRITTY_WINDOW_ID
+    and test "$TERM_PROGRAM" = ghostty
     and not set -q TMUX
     tmux new-session -As main
 end

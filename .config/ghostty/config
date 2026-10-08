@@ -1,0 +1,34 @@
+# Cyberdream
+background = 16181a
+foreground = ffffff
+selection-background = 3c4048
+selection-foreground = ffffff
+palette = 0=#16181a
+palette = 1=#ff6e5e
+palette = 2=#5eff6c
+palette = 3=#f1ff5e
+palette = 4=#5ea1ff
+palette = 5=#bd5eff
+palette = 6=#5ef1ff
+palette = 7=#ffffff
+palette = 8=#3c4048
+palette = 9=#ff6e5e
+palette = 10=#5eff6c
+palette = 11=#f1ff5e
+palette = 12=#5ea1ff
+palette = 13=#bd5eff
+palette = 14=#5ef1ff
+palette = 15=#ffffff
+
+font-family = MesloLGM Nerd Font
+font-size = 14
+adjust-cell-height = 2
+
+maximize = true
+window-padding-x = 4
+window-padding-y = 4
+macos-option-as-alt = true
+command = /opt/homebrew/bin/fish
+scrollback-limit = 10000000
+
+keybind = cmd+shift+m=toggle_maximize

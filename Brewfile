@@ -17,9 +17,7 @@ brew "btop" # aqua/ubi/github backends have no darwin/arm64 build
 brew "eza"  # ships no darwin binary; mise asdf plugin relies on flaky cargo-quickinstall
 
 # Casks
-# alacritty: cask disabled 2026-09-01 (unsigned upstream dmg fails Gatekeeper).
-# Upstream is still active, so we keep it -- `mise run alacritty-update` takes the
-# dmg directly and strips quarantine. Chained into the `update` task.
+cask "ghostty" # GUI app, no mise backend ships an .app; signed, self-updating
 cask "font-hack-nerd-font"
 cask "font-meslo-lg-nerd-font"
 cask "finch"

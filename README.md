@@ -82,9 +82,8 @@ mise run bootstrap
 2. `link`: symlinks `.gitconfig`, `.tmux`, `.tmux.conf`, `.config` into `$HOME`. Fails instead of
    nesting when a real file/dir is in the way, so move any pre-existing `~/.config` aside first
 3. `mise install`: every mise-managed tool
-4. `alacritty-update`: Alacritty from the upstream dmg (the Homebrew cask is disabled)
-5. `tpm`: clones the tmux plugin manager and installs the tmux plugins
-6. `hk install`: git hooks for this repo
+4. `tpm`: clones the tmux plugin manager and installs the tmux plugins
+5. `hk install`: git hooks for this repo
 
 Idempotent, so it's safe to re-run. Available tasks: `mise tasks`.
 
@@ -100,7 +99,7 @@ sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 chsh -s /opt/homebrew/bin/fish
 ```
 
-Open Alacritty: fish starts and tmux auto-attaches to session `main`. Refresh completions once with
+Open Ghostty: fish starts and tmux auto-attaches to session `main`. Refresh completions once with
 `fish_update_completions`.
 
 ### Step 5: secrets + accounts (untracked)
@@ -250,7 +249,7 @@ Defined in `.config/mise/conf.d/99-tasks.toml`, the task chains:
 - **[atuin](https://atuin.sh/)** — SQLite-backed shell history with
   fuzzy search
 - **[tmux](https://github.com/tmux/tmux)** — terminal multiplexer
-- **[Alacritty](https://alacritty.org/)** — GPU-accelerated terminal
+- **[Ghostty](https://ghostty.org/)** — GPU-accelerated terminal
   emulator (`Cmd+Shift+M` to toggle maximize)
 
 ### Editor

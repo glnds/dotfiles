@@ -45,13 +45,12 @@ dir="{{config_root}}/.tmux/plugins/tpm"
 '''
 
 [tasks.bootstrap]
-description = "Full setup: brew bundle, symlinks, mise tools, alacritty, tmux plugins, hk hooks"
+description = "Full setup: brew bundle, symlinks, mise tools, tmux plugins, hk hooks"
 # Sequential on purpose: `depends` runs in parallel, and link must not race brew bundle.
 run = [
     "mise run install",
     "mise run link",
     "mise install",
-    "mise run alacritty-update",
     "mise run tpm",
     "hk install",
 ]
