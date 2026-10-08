@@ -28,7 +28,16 @@ maximize = true
 window-padding-x = 4
 window-padding-y = 4
 macos-option-as-alt = true
-command = /opt/homebrew/bin/fish
+command = /opt/homebrew/bin/tmux new-session -As main
 scrollback-limit = 10000000
+
+confirm-close-surface = false
+quit-after-last-window-closed = true
+window-save-state = never
+copy-on-select = clipboard
+macos-titlebar-style = hidden
+mouse-hide-while-typing = true
+font-thicken = true
+bell-features = attention,title
 
 keybind = cmd+shift+m=toggle_maximize

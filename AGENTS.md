@@ -46,4 +46,4 @@ line a one-line reason.
 - `aliases.fish` — aliases and shell functions
 - `export.fish` — environment variables and PATH
 - `secrets.fish` — local secrets (not tracked)
-- tmux auto-starts inside Ghostty terminal
+- Ghostty launches tmux directly (`command` in `.config/ghostty/config`), tmux runs fish

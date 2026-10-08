@@ -30,13 +30,6 @@ command -q atuin && atuin init fish | source
 
 command -q starship && starship init fish | source
 
-# Auto-start tmux in Ghostty
-if status is-interactive
-    and test "$TERM_PROGRAM" = ghostty
-    and not set -q TMUX
-    tmux new-session -As main
-end
-
 # Sync AWS_PROFILE to tmux status bar
 if set -q TMUX; and set -q AWS_PROFILE
     tmux set-option -g @aws-profile "$AWS_PROFILE"

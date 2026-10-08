@@ -99,7 +99,7 @@ sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 chsh -s /opt/homebrew/bin/fish
 ```
 
-Open Ghostty: fish starts and tmux auto-attaches to session `main`. Refresh completions once with
+Open Ghostty: tmux auto-attaches to session `main` (running fish). Refresh completions once with
 `fish_update_completions`.
 
 ### Step 5: secrets + accounts (untracked)
