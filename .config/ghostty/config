@@ -28,7 +28,8 @@ maximize = true
 window-padding-x = 4
 window-padding-y = 4
 macos-option-as-alt = true
-command = /opt/homebrew/bin/tmux new-session -As main
+# env -u TMUX: Ghostty launched from a tmux pane inherits $TMUX, tmux refuses to nest
+command = /usr/bin/env -u TMUX /opt/homebrew/bin/tmux new-session -As main
 scrollback-limit = 10000000
 
 confirm-close-surface = false
