@@ -14,6 +14,7 @@ delta = "latest"
 git-lfs = "latest"  # .gitconfig lfs filter is required=true; clones of LFS repos fail without it
 rumdl = "latest"
 uv = "latest"
+fnox = "latest"  # secrets loader; global so fish shell integration works in any repo, fnox.toml per repo
 "npm:pyright" = "latest"  # provides pyright-langserver for the pyright-lsp Claude Code plugin
 "github:stephenleo/cship" = "latest"  # Claude Code statusline; no registry entry, github backend fetches the release binary
 "npm:ccusage" = "latest"  # Claude Code usage/cost reporting; npm-only, ships no release binaries
