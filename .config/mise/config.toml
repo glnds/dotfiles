@@ -8,6 +8,7 @@ minimum_release_age_excludes = ["claude", "codex", "hk"]
 
 [tools]
 node = "26"
+"npm:mcp-remote" = "0.1.38"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 rust = "1.99.0"
