@@ -15,6 +15,7 @@ set -g -x PAGER less
 test -f $fish_path/secrets.fish && . $fish_path/secrets.fish
 
 command -q mise && mise activate fish | source
+command -q fnox && fnox activate fish | source
 
 # fish_vi_mode
 set fish_key_bindings fish_user_key_bindings
