@@ -1,0 +1,6 @@
+[providers.keychain]
+type = "keychain"
+service = "fnox"
+
+[secrets]
+OBSIDIAN_API_KEY = { provider = "keychain", value = "OBSIDIAN_API_KE" }
