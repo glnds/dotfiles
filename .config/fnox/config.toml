@@ -3,4 +3,4 @@ type = "keychain"
 service = "fnox"
 
 [secrets]
-OBSIDIAN_API_KEY = { provider = "keychain", value = "OBSIDIAN_API_KE" }
+OBSIDIAN_API_KEY = { provider = "keychain", value = "OBSIDIAN_API_KEY", description = "Obsidian Local REST API bearer token" }

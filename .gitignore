@@ -34,3 +34,5 @@ docs/
 # pgcli runtime log + query history
 .config/pgcli/log
 .config/pgcli/history
+# obsidian REST API plugin: machine-generated local CA cert
+.config/obsidian-local-rest-api/
