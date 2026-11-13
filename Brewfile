@@ -12,7 +12,7 @@ brew "tmux"
 brew "trash"
 brew "tree"
 
-# No prebuilt darwin binary -> mise can't fetch these, brew is the fallback (see CLAUDE.md)
+# No prebuilt darwin binary -> mise can't fetch these, brew is the fallback (see AGENTS.md)
 brew "btop" # aqua/ubi/github backends have no darwin/arm64 build
 brew "eza"  # ships no darwin binary; mise asdf plugin relies on flaky cargo-quickinstall
 

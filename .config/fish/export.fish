@@ -1,5 +1,4 @@
 set -x PATH /opt/homebrew/bin $PATH
-set -x PATH /opt/homebrew/sbin $PATH
 
 # zScaler Certificate fixes
 set -x AWS_CA_BUNDLE /etc/ssl/cert.pem
