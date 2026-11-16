@@ -1,8 +1,11 @@
 set -x PATH /opt/homebrew/bin $PATH
 
 # zScaler Certificate fixes
-set -x AWS_CA_BUNDLE /etc/ssl/cert.pem
-set -x REQUESTS_CA_BUNDLE /etc/ssl/cert.pem
+# /etc/ssl/cert.pem + Zscaler root (works with Zscaler on and off). Rebuild:
+#   cat /etc/ssl/cert.pem > ~/.config/certs/ca-bundle.pem
+#   security find-certificate -a -p -c Zscaler /Library/Keychains/System.keychain >> ~/.config/certs/ca-bundle.pem
+set -x AWS_CA_BUNDLE ~/.config/certs/ca-bundle.pem
+set -x REQUESTS_CA_BUNDLE ~/.config/certs/ca-bundle.pem
 set -x JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION true
 
 # Language Default

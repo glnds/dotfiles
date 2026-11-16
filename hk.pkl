@@ -10,9 +10,19 @@ local pre_commit_steps = new Mapping<String, Step> {
     ["trufflehog"] {
         check = "trufflehog filesystem {{files}} --no-update --fail"
     }
+    ["no-pem"] {
+        // block *.pem files and any PEM block; the obsidian CA cert is public and tracked on purpose
+        exclude = ".config/obsidian-local-rest-api/ca.crt"
+        check = #"sh -c 'bad=$(printf "%s\n" "$@" | grep -iE "\.pem$"; grep -lIE -e "-----BEGIN [A-Z ]*-----" -- "$@" 2>/dev/null); if [ -n "$bad" ]; then echo "PEM material, refusing:" >&2; echo "$bad" >&2; exit 1; fi' _ {{files}}"#
+    }
 }
 
 local pre_push_steps = new Mapping<String, Step> {
+    ["no-pem"] {
+        // block *.pem files and any PEM block; the obsidian CA cert is public and tracked on purpose
+        exclude = ".config/obsidian-local-rest-api/ca.crt"
+        check = #"sh -c 'bad=$(printf "%s\n" "$@" | grep -iE "\.pem$"; grep -lIE -e "-----BEGIN [A-Z ]*-----" -- "$@" 2>/dev/null); if [ -n "$bad" ]; then echo "PEM material, refusing:" >&2; echo "$bad" >&2; exit 1; fi' _ {{files}}"#
+    }
     ["cibars-boost"] {
         check = #"bash -c '_pidfile="$HOME/.cibars/pids/$(git rev-parse --show-toplevel | tr / _).pid"; kill -USR1 $(cat "$_pidfile" 2>/dev/null) 2>/dev/null || true'"#
     }

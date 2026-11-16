@@ -36,3 +36,7 @@ docs/
 .config/pgcli/history
 # obsidian REST API plugin: machine-generated local CA cert
 .config/obsidian-local-rest-api/
+# generated CA bundle (system roots + corporate proxy root); rebuild per machine
+.config/certs/
+# never commit PEM material (hk no-pem step enforces this too)
+*.pem
